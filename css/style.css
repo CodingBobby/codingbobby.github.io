@@ -492,7 +492,6 @@ p.paragraph_l {
 .left_side_bar h1 {
   font-size: 20px;
   padding: 0 0 0 10px;
-  ;
   margin-bottom: 10px;
 }
 
@@ -511,13 +510,13 @@ p.paragraph_l {
 }
 
 .left_side_bar .col_1 .box ul {
-  margin: 0px 0px -5px;
+  margin: 0px 0px -10px;
   padding: 0px 0px 0px;
 }
 
 .left_side_bar .col_1 .box ul li {
   margin: 0px 0px 0px;
-  padding: 0px 0px 5px;
+  padding: 0px 0px 10px;
   font-size: 13px;
   list-style-type: none;
   text-transform: lowercase;
