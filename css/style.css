@@ -374,7 +374,9 @@ a.btn:hover {
   width: 40px;
   height: 40px;
   margin-bottom: 0px;
+  display: block;
   position: absolute;
+  margin-left: -20px;
   -webkit-transition: opacity 0.2s ease-in-out;
   -moz-transition: opacity 0.2s ease-in-out;
   -o-transition: opacity 0.2s ease-in-out;
@@ -383,7 +385,6 @@ a.btn:hover {
 
 .to_top img.red {
   opacity: 0;
-
 }
 
 .to_top :hover > img.green {
