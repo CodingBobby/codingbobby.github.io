@@ -537,7 +537,7 @@ p.paragraph_l {
 #footer {
   clear: both;
   margin-top: 18px;
-  padding: 15px 0 0px 0;
+  padding: 15px 0px 0px 0px;
   height: 25px;
   text-align: center;
   font-size: 12px;
