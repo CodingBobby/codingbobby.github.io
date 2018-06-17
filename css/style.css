@@ -6,6 +6,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 100%;
   vertical-align: baseline;
   background: none;
+  scroll-behavior: smooth;
 }
 
 ol, ul {
@@ -101,6 +102,7 @@ h6 {
 a {
   color: #009688;
   text-decoration: none;
+  transition: color 0.2s linear, background 0.2s linear, opacity 0.2s linear;
 }
 
 a:hover {
@@ -371,12 +373,25 @@ a.btn:hover {
 .to_top img {
   width: 40px;
   height: 40px;
-  margin-bottom: 0px
+  margin-bottom: 0px;
+  position: absolute;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
-.to_top img:hover {
-  content: url(../images/up_solid_red.png);
-  background-size: 40px 40px;
+.to_top img.red {
+  opacity: 0;
+
+}
+
+.to_top :hover > img.green {
+  opacity: 0;
+}
+
+.to_top :hover > img.red {
+  opacity: 1;
 }
 
 .image {
@@ -536,7 +551,7 @@ p.paragraph_l {
 
 #footer {
   clear: both;
-  margin-top: 18px;
+  margin-top: 50px;
   padding: 15px 0px 0px 0px;
   height: 25px;
   text-align: center;
