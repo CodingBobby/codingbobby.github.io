@@ -157,6 +157,25 @@
               </p>
             </li>
 
+            <li id="tech_mac_tools_path_finder">
+              <h3>Display Path in Finder's Title Bar</h3>
+              <p>
+                To show the full path instead of just the current folder in the
+                title bar of your finder, just enter those lines in your terminal:
+              </p>
+              <div class="code_block">
+                <code>
+                  <span class="line">~/$</span>&ensp;&ensp;defaults write com.apple.finder _FXShowPosixPathInTitle -bool true<br>
+                  <span class="line">~/$</span>&ensp;&ensp;killall Finder
+                </code>
+              </div>
+              <P>
+                If you ever want to change it back, enter the same thing again,
+                but change the <span><code>true</code></span> at the end of the
+                first line into a <span><code>false</code></span>.
+              </p>
+            </li>
+
           </ul>
         </div>
       </div>
