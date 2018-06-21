@@ -47,7 +47,7 @@
           <ul>
             <li><a href="#tech_geek_tools">Geek Tools</a></li>
             <li><a href="#tech_photo_tools">Photo Tools</a></li>
-            <li><a href="#tech_mac_tools">Mac Tools</a></li>
+            <li><a href="#tech_mac_tools">Mac Tools & Commands</a></li>
             <li><a href="#tech_code_snippets">Code Snippets</a></li>
           </ul>
         </div>
@@ -101,15 +101,6 @@
               </p>
             </li>
 
-            <li id="tech_geek_tools_devdocs_desktop">
-              <h3><a target="_blank" href="https://devdocs.egoist.moe">DevDocs Desktop app</a></h3>
-              <p>
-                Its unofficial but super cool. No need to rage about finding DevDocs
-                in a ton of browsertabs, just fire up the app. No limitations compared
-                to the website.
-              </p>
-            </li>
-
             <li id="tech_geek_tools_pattern_maker">
               <h3><a target="_blank" href="http://patternico.com">Pattern Maker</a></h3>
               <p>
@@ -144,7 +135,7 @@
 
       <div class="common_content" id="tech_mac_tools">
         <div class="ref">
-          <h2>Mac Tools</h2>
+          <h2>Mac Tools & Commands</h2>
           <hr>
           <ul>
 
@@ -154,6 +145,15 @@
                 Install this and you get a finder integration that lets you jump
                 straight into the shell at the current directory. That helps. More
                 than you think.
+              </p>
+            </li>
+
+            <li id="tech_geek_tools_devdocs_desktop">
+              <h3><a target="_blank" href="https://devdocs.egoist.moe">DevDocs Desktop app</a></h3>
+              <p>
+                Its unofficial but super cool. No need to rage about finding DevDocs
+                in a ton of browsertabs, just fire up the app. No limitations compared
+                to the website.
               </p>
             </li>
 
@@ -173,6 +173,29 @@
                 If you ever want to change it back, enter the same thing again,
                 but change the <span><code>true</code></span> at the end of the
                 first line into a <span><code>false</code></span>.
+              </p>
+            </li>
+
+            <li id="tech_mac_tools_diable_reportcrash">
+              <h3>Disable ReportCrash</h3>
+              <p>
+                If you experience a high CPU-usage of the probably-helpful ReportCrash
+                that fires up everytime Photoshop gives up living, you can disable
+                that feature manually. Here's how:
+              </p>
+              <div class="code_block">
+                <code>
+                  <span class="line">~/$</span>&ensp;&ensp;launchctl unload -w /System/Library/LaunchAgents/com.apple.ReportCrash.plist<br>
+                  <span class="line">~/$</span>&ensp;&ensp;sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.ReportCrash.Root.plist
+                </code>
+              </div>
+              <p>
+                The second line is basically the same as the first but makes sure,
+                ReportCrash is also disabled for applications you're running with higher
+                permissions. You may be asked for root's password to execute it.
+                To enable ReportCrash again, run the same lines with
+                <span><code>load</code></span> instead of <span><code>unload</code></span>
+                in the beginning.
               </p>
             </li>
 
