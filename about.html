@@ -1,68 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>CodingBobby | About</title>
-<meta name="description" content="CodingBobby's website">
-<meta name="keywords" content="coding,facts,blog,science,mac,terminal,programming">
-<link href="css/style.css" rel="stylesheet" type="text/css">
+  <title>CodingBobby | About</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="CodingBobby's website">
+    <meta name="keywords" content="coding,facts,blog,science,mac,terminal,programming">
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+      $(function() {
+        let includes = $('[data-include]');
+        jQuery.each(includes, function() {
+          let file = './blocks/' + $(this).data('include') + '.html';
+          $(this).load(file);
+        });
+      });
+    </script>
 </head>
 <body>
 
 <div id="wrapper">
 
-  <div id="header">
-
-    <div class="top_banner" >
-      <h1><a href="./index.html">The Coding Bobby</a></h1>
-      <p></p>
-    </div>
-
-  </div>
-
-  <nav id="nav">
-    <ul id="navigation">
-      <li><a href="./index.html" class="first">Home</a>
-        <!-- <ul>
-          <li><a href="#">Lower Item</a></li>
-        </ul> -->
-      </li>
-      <li><a href="./tech.html">Tech</a></li>
-      <li><a href="./blog.html">Blog</a></li>
-      <li class="last"><a href="./about.html">About</a></li>
-    </ul>
-  </nav>
+  <div data-include="header"></div>
+  <div data-include="navigation"></div>
 
   <div id="page_content">
 
     <div class="left_side_bar">
 
-      <div class="col_1">
-        <h1>Links</h1>
-        <div class="box">
-          <p>
-            Here you can find me on the internet:
-          </p>
-          <ul>
-            <li><a href="https://github.com/CodingBobby" target="_blank">GitHub</a></li>
-            <li><a href="https://trakt.tv/users/bobbycoulson/" target="_blank">Trakt</a></li>
-            <li><a href="https://www.instagram.com/eop.graphy/" target="_blank">Instagram</a></li>
-            <li><a href="https://open.spotify.com/user/boobwalter?si=DU246lCjQNi0IZfACUKZtQ" target="_blank">Spotify</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col_1">
-        <h1>Contact</h1>
-        <div class="box">
-          <p>
-            Feel free to contact me via e-mail:
-          </p>
-          <ul>
-            <li><a href="mailto:contact@codingbobby.xyz">contact@codingbobby.xyz</a></li>
-          </ul>
-        </div>
-      </div>
+      <div data-include="weblink_box"></div>
+      <div data-include="email"></div>
 
     </div>
 
@@ -138,23 +109,8 @@
       </div>
     </div>
 
-    <div class="clear"></div>
-
-    <div class="to_top">
-      <a href="#wrapper">
-        <img class="green" src="./images/up_line_green.png">
-        <img class="red" src="./images/up_solid_red.png">
-      </a>
-    </div>
-
-    <div class="clear"></div>
-
-    <div id="footer">
-			<p>a site by <a href="./about.html">CodingBobby</a></p>
-			<br>
-			<a><img src="https://s01.flagcounter.com/mini/S75P/bg_1A1E29/txt_BFC2C0/border_BFC2C0/flags_0/" alt="View Counter"></a>
-
-    </div>
+    <div data-include="to_top"></div>
+    <div data-include="footer"></div>
 
   </div>
 

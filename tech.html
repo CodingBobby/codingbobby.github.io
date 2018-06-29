@@ -1,45 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>CodingBobby | Tech</title>
 
-<meta charset="UTF-8">
-<title>CodingBobby | Tech</title>
-<meta name="description" content="CodingBobby's website">
-<meta name="keywords" content="coding,facts,blog,science,mac,terminal,programming">
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="description" content="CodingBobby's website">
+  <meta name="keywords" content="coding,facts,blog,science,mac,terminal,programming">
 
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script>
+    $(function() {
+      let includes = $('[data-include]');
+      jQuery.each(includes, function() {
+        let file = './blocks/' + $(this).data('include') + '.html';
+        $(this).load(file);
+      });
+    });
+  </script>
 </head>
 <body>
 
 <div id="wrapper">
 
-  <div id="header">
-
-    <div class="top_banner">
-      <h1>The Coding Bobby</h1>
-      <p></p>
-    </div>
-
-  </div>
-
-  <nav id="nav">
-    <ul id="navigation">
-      <li><a href="./index.html" class="first">Home</a>
-        <!-- <ul>
-          <li><a href="#">Lower Item</a></li>
-        </ul> -->
-      </li>
-      <li><a href="./tech.html">Tech</a></li>
-      <li><a href="./blog.html">Blog</a></li>
-      <li class="last"><a href="./about.html">About</a></li>
-    </ul>
-  </nav>
+  <div data-include="header"></div>
+  <div data-include="navigation"></div>
 
   <div id="page_content">
 
     <div class="left_side_bar">
-
 
       <div class="col_1">
         <h1>Content</h1>
@@ -54,40 +45,11 @@
         </div>
       </div>
 
-      <div class="col_1">
-        <h1>whoami</h1>
-        <div class="box">
-          <p>
-            Bobby is a very enthusiastic person when it comes to science,
-            maths, coding or photography. He also likes metalcore.
-          </p>
-          <a href="./about.html">find out more</a>
-        </div>
-      </div>
+      <div data-include="whoami"></div>
+
     </div>
 
     <div class="right_section">
-      <!-- content -->
-
-      <!-- template
-        <div class="common_content" id="">
-          <div class="ref">
-            <h2></h2>
-            <hr>
-            <ul>
-
-              <li id="">
-                <h3><a target="_blank" href=""></a></h3>
-                <p>
-
-                </p>
-              </li>
-
-            </ul>
-          </div>
-        </div>
-      -->
-
       <div class="common_content" id="tech_geek_tools">
         <div class="ref">
           <h2>Geek Tools</h2>
@@ -301,27 +263,12 @@
 
     </div>
 
-    <div class="clear"></div>
-
-    <div class="to_top">
-      <a href="#wrapper">
-        <img class="green" src="./images/up_line_green.png">
-        <img class="red" src="./images/up_solid_red.png">
-      </a>
-    </div>
-
-    <div class="clear"></div>
-
-    <div id="footer">
-			<p>a site by <a href="./about.html">CodingBobby</a></p>
-      <br>
-      <a><img src="https://s01.flagcounter.com/mini/S75P/bg_1A1E29/txt_BFC2C0/border_BFC2C0/flags_0/" alt="View Counter"></a>
-    </div>
+    <div data-include="to_top"></div>
+    <div data-include="footer"></div>
 
   </div>
 
 </div>
 
 </body>
-
 </html>
