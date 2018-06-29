@@ -418,7 +418,7 @@ a.btn:hover {
 }
 
 .common_content .ref {
-  padding: 0 0 25px;
+  padding: 0 0 15px;
 }
 
 .common_content .ref ul {
@@ -428,7 +428,7 @@ a.btn:hover {
 
 .common_content .ref ul li {
   margin: 20px 0px 0px;
-  padding: 0px 0px 0px;
+  padding: 0px 0px 10px;
   list-style-type: none;
   text-transform: lowercase;
 }
@@ -447,6 +447,18 @@ a.btn:hover {
   line-height: 21px;
 }
 
+.further_reading, .less_reading {
+  cursor: pointer;
+}
+
+.hidden_text, .hide_container {
+  display: none;
+}
+
+.show_container {
+  display: block!important;
+}
+
 .code_block {
   font-size: 13px;
   text-transform: none;
@@ -457,23 +469,23 @@ a.btn:hover {
   border: #bfc2c0 dotted 1px;
 }
 
-.code_block .var {
+.code_block .var, .red {
   color: #e04d69;
 }
 
-.code_block .default {
+.code_block .default, .default {
   color: #bfc2c0;
 }
 
 .code_block .string {
   color: #ca708a;
 }
-
+  
 .code_block .comment {
   color: #485375;
 }
 
-.code_block .line {
+.code_block .line, .green {
   color: #009688;
 }
 

@@ -238,8 +238,8 @@
           <hr>
           <ul>
 
-            <li>
-              <h3>JS Method to get object length</h3>
+            <li id="tech_code_snippets_0001">
+              <h3>Method to get object length in <span class="red">JavaScript</span></h3>
               <div class="code_block">
                 <code>
                   <span class="line">01</span>&ensp;&ensp;<span class="fkt">Object</span>.getLength = <span class="var">function</span>(oTmpObject)  {<br>
@@ -253,6 +253,33 @@
                 </code>
               </div>
             </li>
+
+            <li id="tech_code_snippets_0002">
+              <h3>Sort 2D array for specific element in <span class="red">JavaScript</span></h3>
+              <div class="code_block">
+                <code>
+                  <span class="line">01</span>&ensp;&ensp;<span class="var">function</span> sortArr(arr, sort) {<br>
+                  <span class="line">02</span>&ensp;&ensp;&ensp;&ensp;<span class="var">let</span> swapp,<br>
+                  <span class="line">03</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;n = <span class="fkt">arr</span>.<span class="fkt">length</span>-<span class="string">1</span>,<br>
+                  <span class="line">04</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;s = sort-<span class="string">1</span> || <span class="string">0</span>;<br>
+                  <span class="line">05</span>&ensp;&ensp;&ensp;&ensp;<span class="var">do</span> {<br>
+                  <span class="line">06</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;swapp = <span class="string">false</span>;<br>
+                  <span class="line">07</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="var">for</span>(<span class="var">var</span> i = <span class="string">0</span>; i < n; i<span class="var">++</span>) {<br>
+                  <span class="line">08</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="var">if</span>(arr[i][s] < arr[i+<span class="string">1</span>][s]) {<br>
+                  <span class="line">09</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="var">let</span> tmp = arr[i];<br>
+                  <span class="line">10</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;arr[i] = arr[i+<span class="string">1</span>];<br>
+                  <span class="line">11</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;arr[i+<span class="string">1</span>] = tmp;<br>
+                  <span class="line">12</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;swapp = <span class="string">true</span>;<br>
+                  <span class="line">13</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;}<br>
+                  <span class="line">14</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;} n<span class="var">--</span>;<br>
+                  <span class="line">15</span>&ensp;&ensp;&ensp;&ensp;} <span class="var">while</span>(swap);<br>
+                  <span class="line">16</span>&ensp;&ensp;&ensp;&ensp;<span class="var">return</span> arr;<br>
+                  <span class="line">17</span>&ensp;&ensp;};
+                </code>
+              </div>
+            </li>
+
+
 
           </ul>
         </div>
@@ -289,7 +316,6 @@
 			<p>a site by <a href="./about.html">CodingBobby</a></p>
       <br>
       <a><img src="https://s01.flagcounter.com/mini/S75P/bg_1A1E29/txt_BFC2C0/border_BFC2C0/flags_0/" alt="View Counter"></a>
-
     </div>
 
   </div>
