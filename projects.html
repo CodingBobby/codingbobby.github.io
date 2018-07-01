@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CodingBobby | Projects</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="CodingBobby's website">
+    <meta name="keywords" content="coding,facts,blog,science,mac,terminal,programming">
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121643726-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-121643726-3');
+    </script>
+
+    <script>
+      $(function() {
+        let includes = $('[data-include]');
+        jQuery.each(includes, function() {
+          let file = './blocks/' + $(this).data('include') + '.html';
+          $(this).load(file);
+        });
+      });
+    </script>
+</head>
+<body>
+
+<div id="wrapper">
+  <div data-include="header"></div>
+  <div data-include="navigation"></div>
+
+  <div id="page_content">
+
+    <div class="left_side_bar">
+
+      <div class="col_1">
+        <h1>Content</h1>
+        <div class="box">
+          <ul>
+            <li><a href="#coding_projects">Coding Projects</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div data-include="whoami"></div>
+
+    </div>
+
+    <div class="right_section">
+      <div class="common_content" id="coding_projects">
+
+        <div class="ref">
+          <h2>Coding Projects</h2>
+          <hr>
+          <ul>
+
+            <li id="coding_projects_algebrarium">
+              <h3>Algebrarium</h3>
+              <p>
+                Weekend project that turned out to be very time consuming... I just wanted to build something real quick that'll save me some time but as you can imagine that's not how life works.
+              </p>
+              <br>
+              <p>
+                Click <span><a href="./algebrarium.html">here</a></span> if you want to find out more about <span><code>algebrarium</code></span>.
+              </p>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div data-include="to_top"></div>
+    <div data-include="footer"></div>
+
+  </div>
+</div>
+
+</body>
+</html>
