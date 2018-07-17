@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CodingBobby | Tech</title>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="CodingBobby's website">
+  <meta name="keywords" content="coding,facts,blog,science,mac,terminal,programming">
+
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121643726-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-121643726-3');
+  </script>
+
+  <script>
+    $(function() {
+      let includes = $('[data-include]');
+      jQuery.each(includes, function() {
+        let file = './blocks/' + $(this).data('include') + '.html';
+        $(this).load(file);
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <div id="wrapper">
+
+    <div data-include="header"></div>
+    <div data-include="navigation"></div>
+
+    <div id="page_content">
+
+      <div class="left_side_bar">
+
+        <div class="col_1">
+          <h1>Content</h1>
+          <div class="box">
+            <ul>
+              <li><a href="#music_genres">Music Genres</a></li>
+              <li><a href="#music_artists">Great Artists</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div data-include="whoami"></div>
+      </div>
+      <div class="right_section">
+
+        <div class="common_content" id="music_genres">
+          <div class="ref">
+            <h2>Music Genres</h2>
+            <hr>
+            <ul>
+
+              <li id="music_genres_metalcore">
+                <h3><a target="_blank" href="">Metalcore</a></h3>
+                <p>
+                  ... is a sub-genre of heavy metal. Metalcore fuses together
+                  contrasty elements from various genres reaching from hardcore
+                  punk over thrash metal to electronic music which makes it very
+                  diverse and interesting to discover.
+                </p><br>
+                <p>
+                  Sub-genres of metalcore are <span>
+                  <a href="#music_genres_electronicore">electronicore</a></span>,
+                  <span><a href="">deathcore</a></span> or <span>
+                    <a href="">melodic metalcore</a></span>.
+                </p>
+              </li>
+
+              <!-- <li id="music_genres_post_screamo">
+                <h3><a target="_blank" href="">Post Screamo</a></h3>
+                <p></p>
+              </li>
+
+              <li id="music_genres_nu_metal">
+                <h3><a href="">Nu Metal</a></h3>
+                <p></p>
+              </li>
+
+              <li id="music_genres_electronicore">
+                <h3><a href="">Electronicore</a></h3>
+                <p></p>
+              </li>
+
+              <li id="music_genres_trancecore">
+                <h3><a href="">Trancecore</a></h3>
+                <p></p>
+              </li>
+
+              <li id="music_genres_mardcore_punk">
+                <h3><a href="">Hardcore Punk</a></h3>
+                <p></p>
+              </li> -->
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="common_content" id="music_artists">
+          <div class="ref">
+            <h2>Great Artists</h2>
+            <hr>
+            <ul>
+
+              <li id="music_artists_scarlett_ohara">
+                <h3><a href="">Scarlett O'Hara</a></h3>
+                <p>
+                  ... is a <span><a href="#music_genres_metalcore">metalcore</a></span>
+                  and <span><a href="#music_genres_electronicore">electronicore</a></span>
+                  band from McAllen in Texas, formed in 2007.
+                </p><br>
+                <p>
+                  In 2007 they released their first EP "Call It Reckless" which
+                  had six songs on it. Their full length album "Lost In Existence",
+                  released in 2010 quickly gained popularity. In 2015 the Single
+                  "Lit" was meant to be released but it flopped right away so the
+                  only source left where you can listen to this song is the
+                  <span><a href="https://youtu.be/QpqHKfYu4qU">unlisted youtube
+                  video</a></span>. Most recently, in August 2017, the two singles
+                  "Locked From Within" and "Welcome Back To The Brodeo (Step
+                  Right Up)" got released.
+                </p>
+              </li>
+
+              <!-- <li id="music_artists_outline_in_color">
+                <h3><a href="">Outline In Color</a></h3>
+                <p>
+                  trancecore, metalcore, post-hardcore
+                </p>
+              </li>
+
+              <li id="music_artists_">
+                <h3><a href="">Upon This Dawning</a></h3>
+                <p>
+                  melodic metalcore
+                </p>
+              </li>
+
+              <li id="music_artists_">
+                <h3><a href="">blessthefall</a></h3>
+                <p>
+                  metalcore
+                </p>
+              </li>
+
+              <li id="music_artists_">
+                <h3><a href="">If I Were You</a></h3>
+                <p></p>
+              </li> -->
+
+              <li id="music_artists_villain_of_the_story">
+                <h3><a href="">Villain Of The Story</a></h3>
+                <p>
+                  ... is a <span><a href="#music_genres_metalcore">metalcore</a></span>
+                  band from Minneapolis in Minnesota, formed in 2013.
+                </p><br>
+                <P>
+                  By now they released a total of 12 singles, three of which most recently
+                  in 2018. Besides them the EP "The Prologue" and the full length
+                  album "Wrapped In Vines, Covered In Thorns" got released in 2015
+                  and 2017 respectively.
+                </P>
+              </li>
+
+              <!-- <li id="music_artists_">
+                <h3><a href="">The Wise Man's Fear</a></h3>
+                <p>
+                  melodic metalcore
+                </p>
+              </li> -->
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div data-include="to_top"></div>
+    <div data-include="footer"></div>
+  </div>
+</body>
+</html>
