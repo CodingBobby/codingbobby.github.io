@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CodingBobby | Tutorials</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="CodingBobby's website">
+    <meta name="keywords" content="coding,facts,blog,science,mac,terminal,programming">
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121643726-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-121643726-3');
+    </script>
+
+    <script>
+      $(function() {
+        let includes = $('[data-include]');
+        jQuery.each(includes, function() {
+          let file = './blocks/' + $(this).data('include') + '.html';
+          $(this).load(file);
+        });
+      });
+    </script>
+</head>
+<body>
+
+<div id="wrapper">
+
+  <div data-include="header"></div>
+  <div data-include="navigation"></div>
+
+  <div id="page_content">
+
+    <div class="left_side_bar">
+
+      <div class="col_1">
+        <h1>Tutorials</h1>
+        <div class="box">
+          <ul>
+            <li><a href="#bqpt_08">BQPT #8</a></li>
+            <li><a href="#bqpt_07">BQPT #7</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div data-include="whoami"></div>
+
+    </div>
+
+    <div class="right_section">
+      <!-- content -->
+      <div class="common_content" id="bqpt_08">
+        <div class="ref">
+
+          <h2>Bob's Quick Photoshop Tutorial #8</h2>
+          <hr>
+          <ul>
+
+            <li>
+              <h3>Today's Topic:</h3>
+              <p>
+                Produce a crisp, influencer-ready filter look. Featuring Bob's Squarema™ technique.
+              </p>
+            </li>
+
+            <li>
+              <h3>Step 1:</h3>
+              <p>
+                Get your photo. You can just take one and crop it squary afterwards or, as I did in this example, take two images you can combine to a Squarema™ (panorama that is not panorama but square).
+              </p>
+              <div class="image">
+                <img src="./images/bqpt/no08/step01.png">
+              </div>
+            </li>
+
+            <li>
+              <h3>Step 2:</h3>
+              <p>
+                In case you decided to make a Squarema™, you open both pictures in Camera Raw and start with your basic lens corrections on one of the two photos. Clone the settings to the second image and combine them as a panorama.
+              </p>
+              <div class="image">
+                <img src="./images/bqpt/no08/step02.png">
+              </div>
+            </li>
+
+            <li>
+              <h3>Step 3:</h3>
+              <p>
+                After doing so, make a few more corrections such as white balance, dynaming and presharpening in Camera Raw. To get a basic instagram-ish look, apply an adobe profile from the "modern" section. Drag down the blacks to limit the flatness.
+              </p>
+              <div class="image">
+                <img src="./images/bqpt/no08/step03.png">
+              </div>
+            </li>
+
+            <li>
+              <h3>Step 4:</h3>
+              <p>
+                After importing the resulting DNG into PS, continue with some retouching. In my example I cleaned the minimal panorama errors and got rid of some tourists.
+              </p>
+              <div class="image">
+                <img src="./images/bqpt/no08/step04a.png">
+              </div>
+              <div class="image">
+                <img src="./images/bqpt/no08/step04b.png">
+              </div>
+            </li>
+
+            <li>
+              <h3>Step 5:</h3>
+              <p>
+                Now the actual filtering starts. Push up less dominant colors and desaturate the more present ones by using the saturation effect layer.
+              </p>
+              <div class="image">
+                <img src="./images/bqpt/no08/step05.png">
+              </div>
+            </li>
+
+            <li>
+              <h3>Step 6:</h3>
+              <p>
+                To create a more balanced look, separate shadows and highlights. Warm up the dark parts and make the light's warmth a lot less. You can achieve that by applying luminosity masks on yellow and blue filters.
+              </p>
+              <div class="image">
+                <img src="./images/bqpt/no08/step06.png">
+              </div>
+            </li>
+
+            <li>
+              <h3>Step 6:</h3>
+              <p>
+                Finally, crop the image to 1:1 ratio and straighten the horizon if necessary. Add some vignette and finish your instagram-ready photo with post-sharpening.
+              </p>
+              <div class="image">
+                <img src="./images/bqpt/no08/step07a.png">
+              </div>
+              <div class="image">
+                <img src="./images/bqpt/no08/step07b.png">
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="common_content" id="bqpt_07">
+        <div class="ref">
+
+          <h2>Bob's Quick Photoshop Tutorial #7</h2>
+          <hr>
+          <ul>
+
+            <li>
+              <h3>Today's Topic:</h3>
+              <p>
+                Get back color which got faded away by hard backlight.
+              </p>
+            </li>
+
+            <li>
+              <h3>Step 1:</h3>
+              <p>
+                Lie down into the grass, search for some great composition of a flower and take your shot.
+              </p>
+              <div class="image">
+                <img src="./images/bqpt/no07/step01.png">
+              </div>
+            </li>
+
+            <li>
+              <h3>Step 2:</h3>
+              <p>
+                Do your basic editing by using the Camera-Raw smartfilter. With saturation adjustments, you can start getting back colors which are important in your photo.
+              </p>
+              <div class="image">
+                <img src="./images/bqpt/no07/step02.png">
+              </div>
+            </li>
+
+            <li>
+              <h3>Step 3:</h3>
+              <p>
+                To get control over the washed-out look, separate bright and shadow areas and adjust their exposure. This is an easy task when using luminosity masks on filter layers.
+              </p>
+              <div class="image">
+                <img src="./images/bqpt/no07/step03.png">
+              </div>
+            </li>
+
+            <li>
+              <h3>Step 4:</h3>
+              <p>
+                Now the Bob™-ish part smashes in. Get down on the color level and throw in some unicorn poop.
+              </p>
+              <div class="image">
+                <img src="./images/bqpt/no07/step04.png">
+              </div>
+            </li>
+
+            <li>
+              <h3>Step 5:</h3>
+              <p>
+                Publish your work on instagram and watch the follower counter boom af.
+              </p>
+              <div class="image">
+                <img src="./images/bqpt/no07/step05.png">
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div data-include="to_top"></div>
+    <div data-include="footer"></div>
+
+  </div>
+</div>
+
+</body>
+</html>
