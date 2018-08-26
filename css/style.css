@@ -447,7 +447,7 @@ a.btn:hover {
   line-height: 21px;
 }
 
-.further_reading, .less_reading {
+.further_reading a, .less_reading a {
   cursor: pointer;
 }
 
