@@ -173,10 +173,12 @@ hr {
 
 .left {
   float: left;
+  width: 50%;
 }
 
 .right {
   float: right;
+  width: 50%
 }
 
 .copyright {
@@ -398,6 +400,7 @@ a.btn:hover {
 .image {
   text-align: center;
   margin: 15px 0px 15px;
+  width: 100%;
 }
 
 .image img {
@@ -406,20 +409,21 @@ a.btn:hover {
   margin-left: auto;
   margin-right: auto;
   pointer-events: none;
+  margin-bottom: 10px;
 }
 
-.image p {
+/* .image p {
   margin-top: 5px;
   margin-bottom: -5px;
-}
+} */
 
 .common_content {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
-.common_content .ref {
+/* .common_content .ref {
   padding: 0 0 15px;
-}
+} */
 
 .common_content .ref ul {
   margin: 0px;
