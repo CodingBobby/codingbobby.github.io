@@ -181,6 +181,20 @@ hr {
   width: 50%
 }
 
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.profile img {
+  width: 100%;
+  border-radius: 100%;
+  margin: auto;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.75);
+}
+.profile div {
+  margin: auto 0 auto 20px;
+}
+
 .copyright {
   border: 0px;
   height: 1px;
