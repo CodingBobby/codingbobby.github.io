@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>algebrarium</title>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="algebrarium start page">
+  <meta name="keywords" content="calculators, simulations, interactive programs and other helpful stuff for science and engineering students">
+
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121643726-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-121643726-3');
+  </script>
+
+  <script>
+    $(function() {
+      let includes = $('[data-include]');
+      jQuery.each(includes, function() {
+        let file = './blocks/' + $(this).data('include') + '.html';
+        $(this).load(file);
+      });
+    });
+  </script>
+</head>
+
+<body>
+<div id="wrapper">
+
+  <div id="header">
+
+    <div class="top_banner_algebrarium" >
+      <h1><a href="#">algebrarium</a></h1>
+      <p></p>
+    </div>
+
+  </div>
+
+  <div id="page_content">
+
+    <div class="left_side_bar">
+      <div class="col_1">
+        <div class="box">
+          <ul>
+            <li><a href="./">back home</a></li>
+          </ul>
+        </div>
+      </div>
+      <br>
+
+      <div class="col_1">
+        <h1>Content</h1>
+        <div class="box">
+          <ul>
+            <li><a href="#geometry">geometry</a></li>
+            <li><a href="#algebra">algebra</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="right_section">
+      <!-- content -->
+      <div class="common_content" id="geometry">
+        <div class="ref">
+          <h2>Geometry</h2>
+          <hr>
+          <ul>
+
+            <li id="geometry_polygon_transform">
+              <h3><a href="#">transform a polygon into another</a></h3>
+              <p>
+                This interactive program will let you draw two polygons which are then cut into pieces in such a way to be able to get rearranged to form the other one. Tool is still in beta.
+              </p>
+            </li>
+
+            <li id="geometry_triangle_functions">
+              <h3><a href="#">triangle functions</a></h3>
+              <p>
+                An interactive tool that shows you the connection between rectangular triangles and the geomertic functions sine, cosine and tangens.
+              </p>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="common_content" id="algebra">
+        <div class="ref">
+          <h2>Algebra</h2>
+          <hr>
+          <ul>
+
+            <li id="">
+              <p>
+                Still under construction...
+              </p>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <p>
+        MORE COMING SOON
+      </p>
+    </div>
+
+    <div data-include="to_top"></div>
+    <div data-include="footer"></div>
+
+  </div>
+</div>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src="./scripts/frame.js"></script>
+</body>
+</html>

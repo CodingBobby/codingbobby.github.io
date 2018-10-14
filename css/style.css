@@ -228,6 +228,21 @@ hr {
   border-radius: 5px;
 }
 
+.top_banner_algebrarium {
+  background-color: #2d314a;
+  width: 70%;
+  padding-top: 20px;
+  padding-bottom: 13px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  border-radius: 5px;
+}
+.top_banner_algebrarium h1 {
+  text-transform: lowercase!important;
+  text-align: center;
+}
+
 #header h1 {
   font-size: 32px;
   color: #bfc2c0;
