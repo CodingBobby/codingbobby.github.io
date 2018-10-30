@@ -18,7 +18,7 @@ let btn = {   // buttons
   start: {
     text: () => {
       if(running) return 'PAUSE'
-      else return '  PLAY'
+      else return '  PLAY' // spaces to center it
     },
     x: 5,
     y: 5,
@@ -118,17 +118,6 @@ function draw() {
   textSize(10)
   text(btn.reset.text,btn.reset.x+5,textStart-21)
   pop()
-  // // WAY GRAPH
-  // push()
-  // stroke(220,60,10) // sphere a
-  // for(var i in wayPoints.a)
-  //   point(wayPoints.a[i].x,wayPoints.a[i].y)
-  // pop()
-  // push()
-  // stroke(10,200,60) // sphere b
-  // for(var i in wayPoints.b)
-  //   point(wayPoints.b[i].x,wayPoints.b[i].y)
-  // pop()
   // SPEED GRAPH
   push()
   stroke(220,60,10) // sphere a
@@ -180,7 +169,7 @@ function draw() {
           y: canvas.height-Math.abs(wayPoints.a[t-2].y-wayPoints.a[t-1].y)*100
         })
         speedPoints.b.push({
-          x: wayPoints.b[t-1].x,
+          x: wayPoints.b[t-1].x+2.5,
           y: canvas.height-Math.abs(wayPoints.b[t-2].y-wayPoints.b[t-1].y)*100
         })
         speedPoints.s.push({
