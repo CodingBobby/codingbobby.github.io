@@ -14,7 +14,7 @@ let cvs = {
   height: 600,
   width: 600
 }
-let btn = {   // buttons
+let btn = { // buttons
   start: {
     text: () => {
       if(running) return 'PAUSE'
@@ -163,7 +163,7 @@ function draw() {
         x: t*5,
         y: canvas.height-Math.abs(spheres.a.x+spheres.a.r-spheres.b.x-spheres.b.r)
       })
-      if(t>1) {
+      if(t>1) { // otherwise array element does not exist
         speedPoints.a.push({
           x: wayPoints.a[t-1].x,
           y: canvas.height-Math.abs(wayPoints.a[t-2].y-wayPoints.a[t-1].y)*100
