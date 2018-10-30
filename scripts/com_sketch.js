@@ -1,8 +1,8 @@
 /*
 AUTHOR: CodingBobby
-DATE: 26/10/2018
-VERSION: 2.0
-PROJECT: algebrarium/...
+DATE: 30/10/2018
+VERSION: 2.2
+PROJECT: algebrarium/conservation of momentum
 */
 let t = 0     // time count
 let g = 10    // gravitation constant
@@ -33,9 +33,15 @@ let btn = {   // buttons
     width: 42
   }
 }
-let points = {
+let wayPoints = { // for way plot
   a: [],
-  b: []
+  b: [],
+  s: []
+}
+let speedPoints = { // for speed points
+  a: [],
+  b: [],
+  s: [] // velocity of the distance between a and b
 }
 let spheres = {
   a: {}, // left sphere
@@ -67,21 +73,21 @@ function setup() {
   textSize(50)
   frameRate(fr)
   // SLIDERS
-  aSlider = createSlider(5,200,80)
+  aSlider = createSlider(5,300,80)
   aSlider.position(10,2*textStart)
   aSlider.style('width','80px')
-  bSlider = createSlider(5,200,10)
+  bSlider = createSlider(5,300,10)
   bSlider.position(10,3*textStart)
   bSlider.style('width','80px')
 }
 function draw() {
   if(t==0) { // position at time start
-    spheres.a.x = canvas.width*1/4
-    spheres.a.y = canvas.height/2
     spheres.a.r = aSlider.value()
-    spheres.b.x = canvas.width*3/4
-    spheres.b.y = canvas.height/2
+    spheres.a.x = canvas.width*1/4-spheres.a.r
+    spheres.a.y = canvas.height/2
     spheres.b.r = bSlider.value()
+    spheres.b.x = canvas.width*3/4+spheres.b.r
+    spheres.b.y = canvas.height/2
   }
   background(60)
   fill(60)
@@ -112,16 +118,32 @@ function draw() {
   textSize(10)
   text(btn.reset.text,btn.reset.x+5,textStart-21)
   pop()
-  // GRAPH
+  // // WAY GRAPH
+  // push()
+  // stroke(220,60,10) // sphere a
+  // for(var i in wayPoints.a)
+  //   point(wayPoints.a[i].x,wayPoints.a[i].y)
+  // pop()
+  // push()
+  // stroke(10,200,60) // sphere b
+  // for(var i in wayPoints.b)
+  //   point(wayPoints.b[i].x,wayPoints.b[i].y)
+  // pop()
+  // SPEED GRAPH
   push()
-  stroke(220,60,10)
-  for(var i in points.a)
-    point(points.a[i].x,points.a[i].y)
+  stroke(220,60,10) // sphere a
+  for(var i in speedPoints.a)
+    point(speedPoints.a[i].x,speedPoints.a[i].y)
   pop()
   push()
-  stroke(10,200,60)
-  for(var i in points.b)
-    point(points.b[i].x,points.b[i].y)
+  stroke(10,200,60) // sphere b
+  for(var i in speedPoints.b)
+    point(speedPoints.b[i].x,speedPoints.b[i].y)
+  pop()
+  push()
+  stroke(30,80,200) // difference
+  for(var i in speedPoints.s)
+    point(speedPoints.s[i].x,speedPoints.s[i].y)
   pop()
   // SPHERES
   let aBool = Boolean(spheres.a.x && spheres.a.y)
@@ -140,14 +162,32 @@ function draw() {
     if(running) {
       t++
       spheres.move()
-      points.a.push({
-        x: t*7,
-        y: spheres.a.x+canvas.width*2/4
+      wayPoints.a.push({
+        x: t*5,
+        y: spheres.a.x+spheres.a.r+canvas.width*2/4-5
       })
-      points.b.push({
-        x: t*7,
-        y: canvas.height-spheres.b.x+canvas.width*2/4
+      wayPoints.b.push({
+        x: t*5,
+        y: canvas.height-spheres.b.x+spheres.b.r+canvas.width*2/4-5
       })
+      wayPoints.s.push({
+        x: t*5,
+        y: canvas.height-Math.abs(spheres.a.x+spheres.a.r-spheres.b.x-spheres.b.r)
+      })
+      if(t>1) {
+        speedPoints.a.push({
+          x: wayPoints.a[t-1].x,
+          y: canvas.height-Math.abs(wayPoints.a[t-2].y-wayPoints.a[t-1].y)*100
+        })
+        speedPoints.b.push({
+          x: wayPoints.b[t-1].x,
+          y: canvas.height-Math.abs(wayPoints.b[t-2].y-wayPoints.b[t-1].y)*100
+        })
+        speedPoints.s.push({
+          x: wayPoints.s[t-1].x,
+          y: canvas.height-Math.abs(wayPoints.s[t-2].y-wayPoints.s[t-1].y)*100
+        })
+      }
     }
   }
 }
@@ -164,7 +204,8 @@ function mousePressed() {
   // RESET BUTTON
   else if(onButton(btn.reset,x,y)) {
     t = 0
-    points = {a:[],b:[]}
+    wayPoints = {a:[],b:[],s:[]}
+    speedPoints = {a:[],b:[],s:[]}
     running = false
     touched = false
   }
