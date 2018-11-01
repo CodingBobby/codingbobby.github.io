@@ -1,11 +1,10 @@
 /*
 AUTHOR: CodingBobby
 DATE: 30/10/2018
-VERSION: 2.2
+VERSION: 2.3
 PROJECT: algebrarium/conservation of momentum
 */
 let t = 0     // time count
-let g = 10    // gravitation constant
 let fr = 90   // framerate
 let v = fr/20 // velocity
 let running = false
@@ -54,8 +53,10 @@ let spheres = {
       this.b.x-=v
     }
     else {
-      this.b.x+=v*this.a.r/(this.a.r+this.b.r)
-      this.a.x-=v*this.b.r/(this.a.r+this.b.r)
+      let m1 = this.a.r
+      let m2 = this.b.r
+      this.a.x -= v*((2*m2)/(m1+m2))
+      this.b.x += v*((2*m1)/(m1+m2))
     }
   }
 }
@@ -166,15 +167,15 @@ function draw() {
       if(t>1) { // otherwise array element does not exist
         speedPoints.a.push({
           x: wayPoints.a[t-1].x,
-          y: canvas.height-Math.abs(wayPoints.a[t-2].y-wayPoints.a[t-1].y)*100
+          y: canvas.height-Math.abs(wayPoints.a[t-2].y-wayPoints.a[t-1].y)*50
         })
         speedPoints.b.push({
           x: wayPoints.b[t-1].x+2.5,
-          y: canvas.height-Math.abs(wayPoints.b[t-2].y-wayPoints.b[t-1].y)*100
+          y: canvas.height-Math.abs(wayPoints.b[t-2].y-wayPoints.b[t-1].y)*50
         })
         speedPoints.s.push({
           x: wayPoints.s[t-1].x,
-          y: canvas.height-Math.abs(wayPoints.s[t-2].y-wayPoints.s[t-1].y)*100
+          y: canvas.height-Math.abs(wayPoints.s[t-2].y-wayPoints.s[t-1].y)*50
         })
       }
     }
