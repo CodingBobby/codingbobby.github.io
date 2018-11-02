@@ -1,7 +1,7 @@
 /*
 AUTHOR: CodingBobby
-DATE: 01/11/2018
-VERSION: 1.0
+DATE: 02/11/2018
+VERSION: 1.4
 PROJECT: algebrarium/balance of masses
 */
 // SKETCH PROPERTIES
@@ -50,6 +50,10 @@ let floor = {
     y: cvs.height*1/3
   }
 }
+let floorAngle = angle({ // angle of the floor's slope
+  f: floor.start,
+  t: floor.end
+})
 let roll = { r: 60 } // radius is also distance between floor and rope
 let boxes = {
   a: {},
@@ -74,10 +78,13 @@ function draw() {
     // BOX a (on slope)
     boxes.a.m = aSlider.value()
     boxes.a.y = cvs.height-(cvs.height-floor.end.y)/2
-    boxes.a.x = pyth([Math.pow(boxes.a.y),"x",distance(floor.start,floor.end)/2]) - pyth([,roll.r,"x"])
+    let xMid = pyth([boxes.a.y,"x",distance(floor.start,floor.end)/2])
+    let slopePart = roll.r/2 * ( Math.sin(rad(90)) / Math.sin(floorAngle))
+    boxes.a.x = xMid-slopePart-roll.r*2
+    // boxes.a.x = xMid-2*roll.r/(Math.sin(floorAngle))
     // BOX b (hanging)
     boxes.b.m = bSlider.value()
-    boxes.b.x = floor.end.x+roll.r
+    boxes.b.x = floor.end.x+roll.r/2
     boxes.b.y = boxes.a.y
   }
   background(60)
@@ -120,6 +127,48 @@ function draw() {
   endShape(CLOSE)
   ellipse(floor.end.x,floor.end.y,roll.r) // roll
   pop()
+  push() // roll center
+  stroke(60)
+  point(floor.end.x,floor.end.y)
+  pop()
+  // ROPE from box a
+  push()
+  stroke(220,60,10)
+  let aSeg = roll.r/2 * ( Math.sin(floorAngle) )
+  let bSeg = roll.r/2 * ( Math.cos(floorAngle) )
+  line(boxes.a.x,boxes.a.y,floor.end.x-aSeg,floor.end.y-bSeg)
+  pop()
+  // ROPE from box b
+  push()
+  stroke(10,200,60)
+  line(boxes.b.x,boxes.b.y,floor.end.x+roll.r/2,floor.end.y)
+  pop()
+  // ROPE between boxes a and b
+  push()
+  stroke(30,80,200)
+  line(boxes.a.x,boxes.a.y,boxes.b.x,boxes.b.y)
+  pop()
+  // BOXES
+  let aBool = Boolean(boxes.a.x && boxes.a.y) // checks existence of box coordinates
+  let bBool = Boolean(boxes.b.x && boxes.b.y)
+  if(aBool && bBool) { // draw boxes after adding it
+    push()
+    stroke(220,60,10)
+    noFill()
+    point(boxes.a.x,boxes.a.y)
+    ellipse(boxes.a.x,boxes.a.y,roll.r)
+    pop()
+    push()
+    stroke(10,200,60)
+    noFill()
+    point(boxes.b.x,boxes.b.y)
+    ellipse(boxes.b.x,boxes.b.y,roll.r)
+    pop()
+    if(running) {
+      t++
+      boxes.move()
+    }
+  }
 }
 function mousePressed() {
   let x = mouseX
@@ -152,13 +201,27 @@ function distance(p,q) {
   return Math.sqrt(d.x*d.x-d.y*d.y)
 }
 function pyth([a,b,c]) {
-  if(c == "x")
-    return Math.sqrt(Math.pow(a,2)+Math.pow(b,2)) // get hypotinuse
+  let p = a
+  if(c == "x") {
+    return Math.sqrt(Math.pow(a,2)+Math.pow(b,2)) // get hypotenuse
+  }
   else {
     if(a == "x")
-      let p = b
-    else
-      let p = a
-    return Math.sqrt(Math.pow(c,2)Math.pow(p,2)) // get catete
+      p = b
+    return Math.sqrt(Math.abs(Math.pow(c,2)-Math.pow(p,2))) // get leg
   }
+}
+function slope(p,q) {
+  let x = Math.abs(p.x-q.x)
+  let y = Math.abs(p.y-q.y)
+  return y*100/x
+}
+function angle(a) { // a is line with points f and t
+  return Math.atan(slope(a.f,a.t))
+}
+function rad(a) { // converts angle into radian
+  return a*Math.PI/180
+}
+function slopeFromAngle(a) {
+  return Math.tan(a)
 }
