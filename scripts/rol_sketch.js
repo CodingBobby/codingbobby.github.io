@@ -55,13 +55,13 @@ let maa = {
 
 let media = { // media
   u: { // upper medium
-    n: 1.333, // refraction index
+    n: 1.000293, // refraction index
     f: function() {
       return 100/this.n
     }
   },
   l: { // lower medium
-    n: 1.000293,
+    n: 1.333,
     f: function() {
       return 100/this.n
     }
@@ -171,7 +171,7 @@ let btn = { // buttons
   switch: {
     text: 'SWITCH',
     x: 5,
-    y: 25,
+    y: 28,
     height: 20,
     width: 49
   }
@@ -230,7 +230,7 @@ function draw() {
   fill(120)
   noStroke()
   rect(btn.switch.x,btn.switch.y,btn.switch.width,btn.switch.height)
-  textStart = btn.switch.height + 40
+  textStart = btn.switch.height + 43
   fill(240)
   textSize(10)
   text(btn.switch.text,btn.switch.x+5,textStart-21)
