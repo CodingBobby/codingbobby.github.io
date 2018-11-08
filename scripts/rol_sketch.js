@@ -202,7 +202,7 @@ function setup() {
   // SLIDERS
   iSlider = createSlider(-85,85,0)
   iSlider.position(10,10)
-  iSlider.style('width','80px')
+  iSlider.style('width','250px')
 }
 function draw() {
   // INITS
