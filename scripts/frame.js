@@ -1,51 +1,52 @@
 /*
 AUTHOR: CodingBobby
-DATE: 27/08/2018
-VERSION: 1.0
+DATE: 13/12/2018
+VERSION: 1.1
 */
 
-let init = 'hidden_text';
-let hidables = [];
-let k = 0;
+// initialization
+let init = 'hidden_text'; // class of hidden html element
+let hidables = []; // all hidden text containers in array
+let k = 0; // counting variable for array
 let initToggleButton = 'Interested? <a>Read more...</a>';
 
 Element.prototype.insertChildAtIndex = function(child, index) {
-  if (!index) index = 0
-  if (index >= this.children.length) {
-    this.appendChild(child)
+  if(!index) index = 0
+  if(index >= this.children.length) {
+    this.appendChild(child) // just add it to the end
   } else {
-    this.insertBefore(child, this.children[index])
+    this.insertBefore(child, this.children[index]) // add it before an element at index
   }
 }
 
-$(document).find('.hidden_text').each(function() {
-  hidables.push({
-    parentID: this.closest('.common_content').id,
-    hidable: this,
+$(document).find('.hidden_text').each(function() { // looping through all containers with class
+  hidables.push({ // add array element with object of following
+    parentID: this.closest('.common_content').id, // the parent with .common_content
+    hidable: this, // hidden container for later reference
     status: init,
-    toggle: function() {
-      if(this.status == 'hidden_text') {
+    toggle: function() { // method to show or hide container
+      if(this.status == init) { // shows when text got expanded
         this.status = 'show_container';
         div.innerHTML = 'Finished reading? <a>Collapse...</a>';
       }
       else {
-        this.status = 'hidden_text';
+        this.status = init; // shows when text got/is collapsed
         div.innerHTML = initToggleButton;
       }
-      this.hidable.className = this.status;
+      this.hidable.className = this.status; // update div's class with the set status
     }
   });
-  let div = document.createElement('div');
+  let div = document.createElement('div'); // adding div first time
   div.className = 'further_reading';
   div.innerHTML = initToggleButton;
-  let parent = document.getElementById(hidables[k++].parentID);
-  parent.insertChildAtIndex(div, (parent.children.length-1));
+  let parent = document.getElementById(hidables[k++].parentID); // parent element of the container
+  parent.insertChildAtIndex(div, (parent.children.length-1)); // get second last element in parent
 });
 
 $('.further_reading').on('click', function() {
-  let p = this.closest(".common_content");
-  let q = hidables.filter(obj => {
+  let p = this.closest(".common_content"); // parent of clicked element
+  let q = hidables.filter(obj => { // search for parent in hidable array which got loaded first
     return obj.parentID == p.id;
   })[0];
-  q.toggle();
+  q.toggle(); // switch beteen collapsed and exposed
 });
