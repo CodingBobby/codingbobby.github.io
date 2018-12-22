@@ -1,8 +1,11 @@
 /*
 AUTHOR: CodingBobby
-DATE: 13/12/2018
-VERSION: 1.1
+DATE: 22/12/2018
+VERSION: 1.4
 */
+
+
+// HIDE ARTICLES
 
 // initialization
 let init = 'hidden_text'; // class of hidden html element
@@ -49,4 +52,19 @@ $('.further_reading').on('click', function() {
     return obj.parentID == p.id;
   })[0];
   q.toggle(); // switch beteen collapsed and exposed
+});
+
+
+
+// CODE SNIPPETS
+
+$(document).find('.auto_code').each(function() {
+  let parent = this.closest('.code_block'); // a single code block
+  $(this).find('cl').each(x => { // code line elements
+    let num = ('0' + (x+1)).slice(-2); // add 0 when line index < 10
+    parent.querySelector('.code_lines').insertAdjacentHTML(
+      'beforeend', // add line index after the already added ones
+      `<span class="line">${num}</span><br>`
+    );
+  });
 });

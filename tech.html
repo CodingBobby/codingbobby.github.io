@@ -225,15 +225,15 @@
             <li id="tech_code_snippets_0001">
               <h3>Method to get object length in <span class="red">JavaScript</span></h3>
               <div class="code_block">
-                <code>
-                  <span class="line">01</span>&ensp;&ensp;<span class="fkt">Object</span>.getLength = <span class="var">function</span>(oTmpObject)  {<br>
-                  <span class="line">02</span>&ensp;&ensp;&ensp;&ensp;<span class="var">let</span> iLength = <span class="string">0</span>;<br>
-                  <span class="line">03</span><br>
-                  <span class="line">04</span>&ensp;&ensp;&ensp;&ensp;<span class="var">for</span>(<span class="var">var</span> sKey <span class="var">in</span> oTmpObject)<br>
-                  <span class="line">05</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="var">if</span>(<span class="fkt">oTmpObject</span>.<span class="fkt">hasOwnProperty</span>(sKey))<br>
-                  <span class="line">06</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;iLength<span class="var">++</span>;<br>
-                  <span class="line">07</span>&ensp;&ensp;&ensp;&ensp;<span class="var">return</span> iLength;<br>
-                  <span class="line">08</span>&ensp;&ensp;};
+                <code class="code_lines"></code>
+                <code class="auto_code">
+                  <cl><span class="fkt">Object</span>.getLength = <span class="var">function</span>(obj)  {</cl><br>
+                  <cl>&ensp;&ensp;<span class="var">let</span> iLength = <span class="string">0</span>;</cl><br>
+                  <cl>&ensp;&ensp;<span class="var">for</span>(<span class="var">var</span> sKey <span class="var">in</span> obj)</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;<span class="var">if</span>(<span class="fkt">obj</span>.<span class="fkt">hasOwnProperty</span>(sKey))</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;iLength<span class="var">++</span>;</cl><br>
+                  <cl>&ensp;&ensp;<span class="var">return</span> iLength;</cl><br>
+                  <cl>};</cl>
                 </code>
               </div>
             </li>
@@ -241,29 +241,60 @@
             <li id="tech_code_snippets_0002">
               <h3>Sort 2D array for specific element in <span class="red">JavaScript</span></h3>
               <div class="code_block">
-                <code>
-                  <span class="line">01</span>&ensp;&ensp;<span class="var">function</span> sortArr(arr, sort) {<br>
-                  <span class="line">02</span>&ensp;&ensp;&ensp;&ensp;<span class="var">let</span> swapp,<br>
-                  <span class="line">03</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;n = <span class="fkt">arr</span>.<span class="fkt">length</span>-<span class="string">1</span>,<br>
-                  <span class="line">04</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;s = sort-<span class="string">1</span> || <span class="string">0</span>;<br>
-                  <span class="line">05</span>&ensp;&ensp;&ensp;&ensp;<span class="var">do</span> {<br>
-                  <span class="line">06</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;swapp = <span class="string">false</span>;<br>
-                  <span class="line">07</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="var">for</span>(<span class="var">var</span> i = <span class="string">0</span>; i < n; i<span class="var">++</span>) {<br>
-                  <span class="line">08</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="var">if</span>(arr[i][s] < arr[i+<span class="string">1</span>][s]) {<br>
-                  <span class="line">09</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="var">let</span> tmp = arr[i];<br>
-                  <span class="line">10</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;arr[i] = arr[i+<span class="string">1</span>];<br>
-                  <span class="line">11</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;arr[i+<span class="string">1</span>] = tmp;<br>
-                  <span class="line">12</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;swapp = <span class="string">true</span>;<br>
-                  <span class="line">13</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;}<br>
-                  <span class="line">14</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;} n<span class="var">--</span>;<br>
-                  <span class="line">15</span>&ensp;&ensp;&ensp;&ensp;} <span class="var">while</span>(swap);<br>
-                  <span class="line">16</span>&ensp;&ensp;&ensp;&ensp;<span class="var">return</span> arr;<br>
-                  <span class="line">17</span>&ensp;&ensp;};
+                <code class="code_lines"></code>
+                <code class="auto_code">
+                  <cl><span class="var">function</span> sortArr(arr, sort) {</cl><br>
+                  <cl>&ensp;&ensp;<span class="var">let</span> swapp,</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;n = <span class="fkt">arr</span>.<span class="fkt">length</span>-<span class="string">1</span>,</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;s = sort-<span class="string">1</span> || <span class="string">0</span>;</cl><br>
+                  <cl>&ensp;&ensp;<span class="var">do</span> {</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;swapp = <span class="string">false</span>;</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;<span class="var">for</span>(<span class="var">var</span> i = <span class="string">0</span>; i < n; i<span class="var">++</span>) {</n><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="var">if</span>(arr[i][s] < arr[i+<span class="string">1</span>][s]) {</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="var">let</span> tmp = arr[i];</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;arr[i] = arr[i+<span class="string">1</span>];</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;arr[i+<span class="string">1</span>] = tmp;</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;swapp = <span class="string">true</span>;</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;}</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;} n<span class="var">--</span>;</cl><br>
+                  <cl>&ensp;&ensp;} <span class="var">while</span>(swap);</cl><br>
+                  <cl>&ensp;&ensp;<span class="var">return</span> arr;</cl><br>
+                  <cl>};</cl>
                 </code>
               </div>
             </li>
 
-
+            <li id="tech_code_snippets_0003">
+              <h3>Print n first primes in <span class="red">JavaScript</span></h3>
+              <div class="code_block">
+                <code class="code_lines"></code>
+                <code class="auto_code">
+                  <cl><span class="var">function</span> prime(x) {</cl><br>
+                  <cl>&ensp;&ensp;<span class="var">let</span> isP = <span class="string">true</span>;</cl><br>
+                  <cl>&ensp;&ensp;<span class="var">if</span>([<span class="string">2</span>,<span class="string">3</span>].<span class="fkt">includes</span>(x))</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;<span class="var">return</span> isP;</cl><br>
+                  <cl>&ensp;&ensp;<span class="var">let</span> half = x % <span class="string">2</span> != <span class="string">0</span> <span class="var">?</span> (x - <span class="string">1</span>) / <span class="string">2</span> <span class="var">:</span> x / <span class="string">2</span>;</cl><br>
+                  <cl>&ensp;&ensp;<span class="var">for</span>(<span class="var">var</span> i=<span class="string">2</span>; i<=half; i<span class="var">++</span>) {</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;<span class="var">let</span> div = x / i;</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;<span class="var">if</span>(<span class="mod">Math</span>.<span class="fkt">round</span>(div) == div) {</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;isP = <span class="string">false</span>;</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="var">break</span>;</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;}</cl><br>
+                  <cl>&ensp;&ensp;}</cl><br>
+                  <cl>&ensp;&ensp;<span class="var">return</span> isP;</cl><br>
+                  <cl>};</cl><br>
+                  <cl></cl><br>
+                  <cl><span class="var">function</span> print(n) {</cl><br>
+                  <cl>&ensp;&ensp;<span class="var">let</span> c = <span class="string">1</span>, i = <span class="string">2</span>;</cl><br>
+                  <cl>&ensp;&ensp;<span class="var">while</span>(c <= n) {</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;<span class="var">if</span>(<span class="fkt">prime</span>(i))</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="mod">console</span>.<span class="fkt">log</span>(c<span class="var">++</span> +<span class="string">'/'</span>+ n +<span class="string">': '</span>+ i);</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;i<span class="var">++</span>;</cl><br>
+                  <cl>&ensp;&ensp;}</cl><br>
+                  <cl>};</cl>
+                </code>
+              </div>
+            </li>
 
           </ul>
         </div>
@@ -291,6 +322,7 @@
   </div>
 
 </div>
-
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src="./scripts/frame.js"></script>
 </body>
 </html>

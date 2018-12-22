@@ -505,28 +505,45 @@ a.btn:hover {
   border: #bfc2c0 dotted 1px;
 }
 
-.code_block .var, .red {
+.clode_lines {
+  float: left;
+}
+
+.auto_code {
+  margin-left: 1em;
+}
+
+code {
+  display: inline-block;
+}
+
+
+code .var, .red {
   color: #e04d69;
 }
 
-.code_block .default, .default {
+code .default, .default {
   color: #bfc2c0;
 }
 
-.code_block .string {
+code .string {
   color: #ca708a;
 }
 
-.code_block .comment {
+code .comment {
   color: #485375;
 }
 
-.code_block .line, .green {
+code .line, .green {
   color: #009688;
 }
 
-.code_block .fkt {
+code .fkt {
   color: #65759b;
+}
+
+code .mod {
+  color: #7fbbd8;
 }
 
 p.paragraph_l {
