@@ -495,6 +495,12 @@ a.btn:hover {
   display: block!important;
 }
 
+.lyrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
 .code_block {
   font-size: 13px;
   text-transform: none;
