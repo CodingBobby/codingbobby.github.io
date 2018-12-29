@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>bob</title>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="bob start page">
+  <meta name="keywords" content="coding language, bob, javascript">
+
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121643726-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-121643726-3');
+  </script>
+
+  <script>
+    $(function() {
+      let includes = $('[data-include]');
+      jQuery.each(includes, function() {
+        let file = './blocks/' + $(this).data('include') + '.html';
+        $(this).load(file);
+      });
+    });
+  </script>
+</head>
+
+<body>
+<div id="wrapper">
+
+  <div id="header">
+
+    <div class="top_banner_algebrarium" >
+      <h1><a href="#">bob</a></h1>
+      <p></p>
+    </div>
+
+  </div>
+
+  <div id="page_content">
+
+    <div class="left_side_bar">
+      <div class="col_1">
+        <div class="box">
+          <ul>
+            <li><a href="./">back home</a></li>
+          </ul>
+        </div>
+      </div>
+      <br>
+
+      <div class="col_1">
+        <h1>Content</h1>
+        <div class="box">
+          <ul>
+            <li><a href="#intro">a short introduction</a></li>
+            <li><a href="#examples">some examples</a></li>
+            <li><a href="#algorithms">algorithms</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="right_section">
+      <!-- content -->
+      <div class="common_content" id="intro">
+        <div class="ref">
+          <h2>A Short Introduction</h2>
+          <hr>
+          <ul>
+
+            <li id="intro_about">
+              <h3>What Bob Is About</h3>
+              <p>
+                Bob is word-heavier than you might expect from a coding language. In Bob you don't need to end each line with a semicolon, you don't have to stuggle with parenthesis or punctuation as much as you normally do. You can write Bob in every editor as you don't necessarily need auto-completion, auto-bracketing and all that stuff to make your life easier because it is already as easy as it gets!
+              </p><br>
+              <p>
+                In Bob, all you need to care about is the right grammar. With that, we literally mean grammar as you know it from spoken languages. Thus, Bob is unfortunately not Yoda-friendly.
+              </p>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="common_content" id="examples">
+        <div class="ref">
+          <h2>Some Examples</h2>
+          <hr>
+          <p>To start off, I will show you a few examples. Not to make you nervous, but to show you how easy it is to code something in Bob. You will see that Bob is similar to spoken language and doesn't require much awareness about syntax.</p>
+          <ul>
+
+            <li id="examples_print_string">
+              <h3>Print String</h3>
+              <p>
+                This simple code would print <code>hello world!</code> to the console.
+              </p>
+              <div class="code_block">
+                <code class="code_lines"></code>
+                <code class="auto_code">
+                  <cl><span class="fkt">say</span> <span class="string">'hello world!'</span></cl>
+                </code>
+              </div>
+            </li>
+
+            <li id="examples_print_table">
+              <h3>Print Table</h3>
+              <p>
+                Here we create an object with some key-value pairs and then show it as a table in the console. This functions is very useful when you want to keep track how the value of variables changes.
+              </p>
+              <div class="code_block">
+                <code class="code_lines"></code>
+                <code class="auto_code">
+                  <cl><span class="var">let</span> object <span class="fkt">have</span></cl><br>
+                  <cl>&ensp;&ensp;a: 100</cl><br>
+                  <cl>&ensp;&ensp;b: 200</cl><br>
+                  <cl>&ensp;&ensp;c: 300</cl><br>
+                  <cl></cl><br>
+                  <cl><span class="fkt">list</span> object</cl>
+                </code>
+              </div>
+            </li>
+
+            <li id="examples_if_condition">
+              <h3>If Condition</h3>
+              <p>
+                In this example we assign a value to the variable <code>foo</code>. An if-condition with a statement follows. Inside, we multiply the vaiable by <code>3</code> and print it to the console.
+              </p>
+              <div class="code_block">
+                <code class="code_lines"></code>
+                <code class="auto_code">
+                  <cl><span class="var">let</span> foo <span class="fkt">be</span> <span class="string">100</span></cl><br>
+                  <cl></cl><br>
+                  <cl><span class="var">if</span> foo <span class="fkt">is</span> <span class="string">100</span></cl><br>
+                  <cl>&ensp;&ensp;foo * <span class="string">3</span></cl><br>
+                  <cl>&ensp;&ensp;<span class="fkt">say</span> foo</cl>
+                </code>
+              </div>
+            </li>
+
+            <li id="example_steady_loop">
+              <h3>Steady Loop</h3>
+              <p>Here we create an array that has a few values in it. Because we are lazy to enter each value, we can give a range of values by a starting value, an ending value and a gap value. In this example, <code>array</code> would get the values <code>100, 150, 200, 250, 300</code>.</p><br>
+              <p>Afterwards we loop over the array and check if the current value is a multiple of <code>100</code>. If yes, we print it to the console. In our case, Bob will just print <code>100</code>, <code>200</code> and <code>300</code>.</p>
+              <div class="code_block">
+                <code class="code_lines"></code>
+                <code class="auto_code">
+                  <cl><span class="var">let</span> array <span class="fkt">have</span></cl><br>
+                  <cl>&ensp;&ensp;<span class="string">100</span> <span class="fkt">to</span> <span class="string">300</span> <span class="fkt">in</span> <span class="string">50</span></cl><br>
+                  <cl></cl><br>
+                  <cl><span class="var">for</span> <span class="fkt">each</span> i <span class="fkt">in</span> array</cl><br>
+                  <cl>&ensp;&ensp;<span class="var">if</span> array|i| <span class="fkt">fits</span> <span class="string">100</span></cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;<span class="fkt">say</span> array|i|</cl>
+                </code>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="common_content" id="algorithms">
+        <div class="ref">
+          <h2>Algorithms</h2>
+          <hr>
+          <ul>
+
+            <li id="algorithms_bubble_sort">
+              <h3>Bubble Sort</h3>
+              <p>
+                Lets first create an array we want to sort.
+              </p>
+              <div class="code_block">
+                <code class="code_lines"></code>
+                <code class="auto_code">
+                  <cl><span class="var">let</span> array <span class="fkt">have</span></cl><br>
+                  <cl>&ensp;&ensp;4, 54, 1, 32, 18, 24, 7</cl>
+                </code>
+              </div>
+              <p>
+                As we will need to swap places of some of the array's values, we can initialize a separate function for that.
+              </p>
+              <div class="code_block">
+                <code class="code_lines"></code>
+                <code class="auto_code">
+                  <cl><span class="var">init</span> swap <span class="fkt">with</span> arr, i, j</cl><br>
+                  <cl>&ensp;&ensp;<span class="var">let</span> tmp <span class="fkt">be</span> arr|i|</cl><br>
+                  <cl>&ensp;&ensp;arr|i| <span class="fkt">be</span> arr|j|</cl><br>
+                  <cl>&ensp;&ensp;arr|j| <span class="fkt">be</span> tmp</cl>
+                </code>
+              </div>
+              <p>
+                Now that we have that, we can finally get to the actual algorithm.
+              </p>
+              <div class="code_block">
+                <code class="code_lines"></code>
+                <code class="auto_code">
+                  <cl><span class="var">init</span> bubbleSort <span class="fkt">with</span> arr</cl><br>
+                  <cl>&ensp;&ensp;<span class="var">let</span> swapped</cl><br>
+                  <cl>&ensp;&ensp;<span class="var">while</span> swapped <span class="fkt">is</span> <span class="string">true</span></cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;swapped <span class="fkt">be</span> <span class="string">false</span></cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;<span class="var">for</span> <span class="fkt">each</span> i <span class="fkt">in</span> arr</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="var">if</span> arr|i| <span class="fkt">and</span> arr|i+<span class="string">1</span>| <span class="fkt">and</span> arr|i| > arr|i+<span class="string">1</span>|</cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;swap <span class="fkt">with</span> arr, i, i+<span class="string">1</span></cl><br>
+                  <cl>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;swapped <span class="fkt">be</span> <span class="string">true</span></cl><br>
+                  <cl>&ensp;&ensp;<span class="var">throw</span> arr</cl>
+                </code>
+              </div>
+              <p>
+                To sort the array we've created in the beginning and print it to the console, simply write:
+              </p>
+              <div class="code_block">
+                <code class="code_lines"></code>
+                <code class="auto_code">
+                  <cl><span class="fkt">say</span> bubbleSort <span class="fkt">with</span> array</cl>
+                </code>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div data-include="to_top"></div>
+    <div data-include="footer"></div>
+
+  </div>
+</div>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src="./scripts/frame.js"></script>
+</body>
+</html>
