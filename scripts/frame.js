@@ -55,7 +55,6 @@ $('.further_reading').on('click', function() {
 });
 
 
-
 // CODE SNIPPETS
 
 $(document).find('.auto_code').each(function() {
@@ -66,5 +65,31 @@ $(document).find('.auto_code').each(function() {
       'beforeend', // add line index after the already added ones
       `<span class="line">${num}</span><br>`
     );
+  });
+});
+
+
+// SIDEBAR
+
+$(function() {
+  var $sidebar   = $(".left_side_bar"),
+      $topper    = $("#to_top"),
+      $window    = $(window),
+      offset     = $sidebar.offset(),
+      topPadding = 15;
+  $topper.addClass("hide_container");
+
+  $window.scroll(function() {
+    if ($window.scrollTop() > offset.top) {
+      $sidebar.stop().animate({
+        marginTop: $window.scrollTop() - offset.top + topPadding
+      });
+      $topper.removeClass("hide_container");
+    } else {
+      $sidebar.stop().animate({
+        marginTop: 0
+      });
+      $topper.addClass("hide_container");
+    }
   });
 });
