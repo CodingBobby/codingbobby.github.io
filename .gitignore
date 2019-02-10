@@ -1,6 +1,6 @@
-
-todo.html
-scripts/template_interactive.js
-scripts/template_sketch.js
+todo.*
 *.bak
-images/pfs/.DS_Store
+*/.DS_Store
+.idea
+*.p.*
+*template*
