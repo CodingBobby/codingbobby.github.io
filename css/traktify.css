@@ -150,10 +150,12 @@ body {
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 100vh 100vh;
+
+  overflow-x: hidden;
 }
 
 .page {
-  width: 100%;
+  width: 0;
   height: 100%
 }
 
@@ -191,7 +193,8 @@ body {
   padding: 10px 30px;
   border-radius: 20px;
   cursor: pointer;
-  transition: all 200ms ease;
+  transition: ease 0.3s;
+  background-color: var(--red);
 }
 
 a {
@@ -199,7 +202,8 @@ a {
 }
 
 .btn:hover {
-  filter: grayscale(20%);
+  transition: ease 0.3s;
+  background-color: var(--red_d);
 }
 .btn.selected {
   background-color: var(--red);
@@ -288,21 +292,20 @@ a {
   transition: ease 0.2s;
 }
 
-.login .right_box:hover {
-  transform: scale(1.03, 1.03);
-  transition: ease 0.2s;
-}
-
 .login .left_box {
   margin-right: 5%;
   transition: ease 0.2s;
 }
 
-.login .left_box:hover {
+.login .right_box, .left_box {
+  width: 220px;
+  overflow-x: visible; 
+}
+
+.login .right_box:hover, .left_box:hover {
   transform: scale(1.03, 1.03);
   transition: ease 0.2s;
 }
-
 
 .login h1 {
   font-size: 32px;
