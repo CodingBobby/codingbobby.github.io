@@ -144,14 +144,38 @@
 /*---components---*/
 body {
   margin: 0;
-  background: url("../images/retro-furnish.png") repeat var(--black_d);
   font-family: manrope;
-
+  height: 100vh;
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 100vh 100vh;
-
   overflow-x: hidden;
+}
+
+.scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+  height: 100vh;
+}
+
+.scroll-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.base-scroll {
+  transform: translateZ(0);
+}
+
+.back-scroll {
+  height: 200%;
+  overflow-y: hidden;
+  background: url("../images/retro-furnish.png") repeat var(--black_d);
+  transform: translateZ(-4px) scale(5.1);
 }
 
 .page {
