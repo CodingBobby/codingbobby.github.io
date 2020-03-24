@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Traktify</title>
+   <title>Traktify Docs</title>
 
    <meta charset="UTF-8">
    <meta name="description" content="Trakify's webpage">
@@ -36,37 +36,14 @@
                   </a>
 
                   <br>
-            
-                  <script type="text/javascript">
-                     $(document).ready(function() {
-                        $.get('.', function(list) {
-                           let tmp = document.createElement('div')
-                           tmp.innerHTML = list
-                           tmp.id = 'TMP'
-                           // $('#branches').append(tmp)
-                           let wrapper = tmp.children.namedItem('wrapper')
-                           let files = wrapper.children.namedItem('files')
-                           let dirs = files.getElementsByClassName('icon-directory')
-
-                           for(let i=0; i<dirs.length; i++) {
-                              let link = String(dirs.item(i).href)
-                              if(link.includes('traktify')) {
-                                 let name = link.split('/traktify/')
-                                 let branchLink = document.createElement('a')
-                                 branchLink.href = link+'/index'
-                                 branchLink.classList = 'btn fw600 fs14 red_d_b white_t tu'
-                                 branchLink.innerText = name[name.length-1]
-                                 $('#branches').append(branchLink)
-                                 $('#branches').append('<br><br>')
-                              }
-                           }
-                        });
-                     });
-                  </script>
 
                   <h1 class="white_t">Documentation</h1>
                   <p class="fs16 white_t">Choose a branch:</p>
-                  <div id="branches"></div>
+                  <div id="branches">
+                     <a class="btn fw600 fs14 red_d_b white_t tu" href="./master/index">Master</a>
+                     <br><br>
+                     <a class="btn fw600 fs14 red_d_b white_t tu" href="./development/index">Development</a>
+                  </div>
                </div>
             </div>
          </div>
