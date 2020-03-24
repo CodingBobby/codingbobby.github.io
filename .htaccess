@@ -4,6 +4,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 
 RewriteRule ^([^/]+)/$ $1.html
 RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/$ /$1/$2/$3.html
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

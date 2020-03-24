@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Traktify</title>
+
+   <meta charset="UTF-8">
+   <meta name="description" content="Trakify's webpage">
+   <meta name="keywords" content="traktify,shows,tracking,tv,movies,app,trakt.tv">
+
+   <link href="../css/traktify.css" rel="stylesheet" type="text/css">
+   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121643726-3"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-121643726-3');
+   </script>
+</head>
+
+<body>
+   <div class="scroll">
+      <div class="scroll-layer back-noscroll"></div>
+
+      <div class="scroll-layer base-scroll">
+   
+         <div class="page">
+            <div class="wrapper flex login">
+               <div class="login black_d_b shadow_h">
+                  <br>
+                  <a class="logo" href='../traktify'>
+                     <div class="fw700 red_t tu">traktify<br><span>a trakt.tv desktop app</span></div>
+                  </a>
+
+                  <br>
+            
+                  <script type="text/javascript">
+                     $(document).ready(function() {
+                        $.get('.', function(list) {
+                           let tmp = document.createElement('div')
+                           tmp.innerHTML = list
+                           tmp.id = 'TMP'
+                           // $('#branches').append(tmp)
+                           let wrapper = tmp.children.namedItem('wrapper')
+                           let files = wrapper.children.namedItem('files')
+                           let dirs = files.getElementsByClassName('icon-directory')
+
+                           for(let i=0; i<dirs.length; i++) {
+                              let link = String(dirs.item(i).href)
+                              if(link.includes('traktify')) {
+                                 let name = link.split('/traktify/')
+                                 let branchLink = document.createElement('a')
+                                 branchLink.href = link+'/index'
+                                 branchLink.classList = 'btn fw600 fs14 red_d_b white_t tu'
+                                 branchLink.innerText = name[name.length-1]
+                                 $('#branches').append(branchLink)
+                                 $('#branches').append('<br><br>')
+                              }
+                           }
+                        });
+                     });
+                  </script>
+
+                  <h1 class="white_t">Documentation</h1>
+                  <p class="fs16 white_t">Choose a branch:</p>
+                  <div id="branches"></div>
+               </div>
+            </div>
+         </div>
+   
+      </div>
+   </div>
+
+   <a class="btn bottom right fw300 fs14 red_b white_t" href="https://buymeacoff.ee/CodingBobby" target="_blank">Buy us a coffee?</a>
+</body>

@@ -150,6 +150,7 @@ body {
   grid-template-columns: 100vw;
   grid-template-rows: 100vh 100vh;
   overflow-x: hidden;
+  background-color: var(--black_d);
 }
 
 .scroll {
@@ -176,6 +177,10 @@ body {
   overflow-y: hidden;
   background: url("../images/retro-furnish.png") repeat var(--black_d);
   transform: translateZ(-4px) scale(5.1);
+}
+
+.back-noscroll {
+  background: url("../images/retro-furnish.png") repeat var(--black_d);
 }
 
 .page {
