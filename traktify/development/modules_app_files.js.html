@@ -27,7 +27,7 @@
 
 <nav >
     
-    <h2><a href="index.html">Home</a></h2><h2><a href="https://codingbobby.xyz/traktify" target="_blank" class="menu-item" id="website_link" >Project Website</a></h2><h2><a href="https://github.com/CodingBobby/traktify/issues" target="_blank" class="menu-item" id="issues_link" >Bugs & Issues</a></h2><h2><a href="https://discord.gg/BJNAMcj" target="_blank" class="menu-item" id="discord_link" >Discord Server</a></h2><h3>Tutorials</h3><ul><li><a href="tutorial-cache_.html">Cache</a></li><li><a href="tutorial-config.html">Configuration</a></li><li><a href="tutorial-contributing.html">Contributing</a></li><li><a href="tutorial-helpers.html">Helpers</a></li><li><a href="tutorial-items.html">Items</a></li></ul><h3>Classes</h3><ul><li><a href="Cache.html">Cache</a><ul class='methods'><li data-type='method'><a href="Cache.html#getKey">getKey</a></li><li data-type='method'><a href="Cache.html#remove">remove</a></li><li data-type='method'><a href="Cache.html#removeKey">removeKey</a></li><li data-type='method'><a href="Cache.html#save">save</a></li><li data-type='method'><a href="Cache.html#setKey">setKey</a></li></ul></li><li><a href="Queue.html">Queue</a><ul class='methods'><li data-type='method'><a href="Queue.html#_duplicates">_duplicates</a></li></ul></li><li><a href="showBuffer.html">showBuffer</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addHistoryUpdates">addHistoryUpdates</a></li><li><a href="global.html#cacheRequest">cacheRequest</a></li><li><a href="global.html#cacheSave">cacheSave</a></li><li><a href="global.html#clone">clone</a></li><li><a href="global.html#getUnfinishedProgressList">getUnfinishedProgressList</a></li><li><a href="global.html#initFileStructure">initFileStructure</a></li><li><a href="global.html#nthParent">nthParent</a></li><li><a href="global.html#openInfoCard">openInfoCard</a></li><li><a href="global.html#postHistoryUpdates">postHistoryUpdates</a></li><li><a href="global.html#requestAndLoadImage">requestAndLoadImage</a></li><li><a href="global.html#requestHistoryUpdatePosting">requestHistoryUpdatePosting</a></li><li><a href="global.html#shadeHexColor">shadeHexColor</a></li><li><a href="global.html#showAlertBoxAndWait">showAlertBoxAndWait</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://codingbobby.xyz/traktify" target="_blank" class="menu-item" id="website_link" >Project Website</a></h2><h2><a href="https://github.com/CodingBobby/traktify/issues" target="_blank" class="menu-item" id="issues_link" >Bugs & Issues</a></h2><h2><a href="https://discord.gg/BJNAMcj" target="_blank" class="menu-item" id="discord_link" >Discord Server</a></h2><h3>Tutorials</h3><ul><li><a href="tutorial-cache_.html">Cache</a></li><li><a href="tutorial-config.html">Configuration</a></li><li><a href="tutorial-contributing.html">Contributing</a></li><li><a href="tutorial-helpers.html">Helpers</a></li><li><a href="tutorial-items.html">Items</a></li></ul><h3>Classes</h3><ul><li><a href="Cache.html">Cache</a><ul class='methods'><li data-type='method'><a href="Cache.html#getKey">getKey</a></li><li data-type='method'><a href="Cache.html#remove">remove</a></li><li data-type='method'><a href="Cache.html#removeKey">removeKey</a></li><li data-type='method'><a href="Cache.html#save">save</a></li><li data-type='method'><a href="Cache.html#setKey">setKey</a></li></ul></li><li><a href="Queue.html">Queue</a><ul class='methods'><li data-type='method'><a href="Queue.html#_duplicates">_duplicates</a></li></ul></li><li><a href="showBuffer.html">showBuffer</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addHistoryUpdates">addHistoryUpdates</a></li><li><a href="global.html#cacheRequest">cacheRequest</a></li><li><a href="global.html#cacheSave">cacheSave</a></li><li><a href="global.html#clone">clone</a></li><li><a href="global.html#getAPIKeys">getAPIKeys</a></li><li><a href="global.html#getUnfinishedProgressList">getUnfinishedProgressList</a></li><li><a href="global.html#initFileStructure">initFileStructure</a></li><li><a href="global.html#nthParent">nthParent</a></li><li><a href="global.html#openInfoCard">openInfoCard</a></li><li><a href="global.html#postHistoryUpdates">postHistoryUpdates</a></li><li><a href="global.html#requestAndLoadImage">requestAndLoadImage</a></li><li><a href="global.html#requestHistoryUpdatePosting">requestHistoryUpdatePosting</a></li><li><a href="global.html#shadeHexColor">shadeHexColor</a></li><li><a href="global.html#showAlertBoxAndWait">showAlertBoxAndWait</a></li></ul>
 </nav>
 
 <div id="main">
@@ -49,6 +49,7 @@ const dirTree = require('directory-tree')
 const storeDir = path.join(process.env.HOME, '.traktify')
 
 /**
+ * Paths of system files that are saved outside the app.
  * @typedef SystemPaths
  * @property {String} cache
  * @property {String} log
@@ -56,7 +57,8 @@ const storeDir = path.join(process.env.HOME, '.traktify')
  */
 
 /**
- * 
+ * Initializes a directory tree that is used for system files.
+ * It detects existing files and does not overwrite them to keep custom settings.
  * @returns {Promise.&lt;SystemPaths>} Resolves paths of system files
  */
 function initFileStructure() {
@@ -77,11 +79,17 @@ function initFileStructure() {
       // add missing files
       let firstChildren = storeDirStructure.children.map(c => c.name)
       let desired = ['.cache', '.log', 'config.json']
+      // TODO: This will only work if the default file structure does not consist of multiple directory levels. Create helper function to make this possible if a more structured default tree is required.
 
       desired.map(d => {
          if(!firstChildren.includes(d)) return d
       }).filter(n => n).forEach(m => {
-         fs.outputFileSync(path.join(storeDir, m), defaults[m])
+         if(typeof defaults[m] == 'object') {
+            // in this case, the missing element was a directory
+            fs.ensureDirSync(path.join(storeDir, m))
+         } else {
+            fs.outputFileSync(path.join(storeDir, m), defaults[m])
+         }
       })
 
       // fix config file if necessary
@@ -105,8 +113,62 @@ function initFileStructure() {
 }
 
 
+/**
+ * Keys, secrets and tokens used for API requests.
+ * @typedef APIKeys
+ * @property {String} trakt_id
+ * @property {String} trakt_secret
+ * @property {String} fanart_key
+ */
+
+/**
+ * Searches for existing keyfiles and returns the contents.
+ * If a secret version exists and is complete, it will be used over dev keys.
+ * Useful to automate keys in different environment setups.
+ * @returns {APIKeys} Object with API keys
+ */
+function getAPIKeys() {
+   const onDev = process.env.NODE_ENV !== 'production'
+   const appPath = process.env.APP_PATH
+   const secretPath = path.join(appPath, 'keys.secret.json')
+   const devPath = path.join(appPath, 'keys.dev.json')
+
+   const requiredKeys = ['trakt_id', 'trakt_secret', 'fanart_key']
+
+   let hasSecret = fs.existsSync(secretPath)
+   
+   if(hasSecret) {
+      /** @type {APIKeys} */
+      let secretKeys = fs.readJSONSync(secretPath)
+      let fulfills = requiredKeys.map(k => Object.keys(secretKeys).includes(k))
+      
+      if(!fulfills.includes(false)) {
+         return secretKeys
+      } else if(!onDEV) {
+         throw new Error('keyfile is missing keys')
+      }
+   }
+
+   let hasDev = fs.existsSync(devPath)
+
+   if(onDev &amp;&amp; hasDev) {
+      /** @type {APIKeys} */
+      let devKeys = fs.readJSONSync(devPath)
+      let fulfills = requiredKeys.map(k => Object.keys(devKeys).includes(k))
+      
+      if(!fulfills.includes(false)) {
+         return devKeys
+      } else {
+         throw new Error('no usable keyfile found')
+      }
+   }
+}
+
+
 module.exports = {
-   initFileStructure,
+   initFileStructure, getAPIKeys,
+
+   /** @type {SystemPaths} */
    PATHS: {
       cache: path.join(storeDir, '.cache'),
       log: path.join(storeDir, '.log'),
