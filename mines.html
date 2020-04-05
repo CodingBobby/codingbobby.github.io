@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Minesweeper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/minesweeper.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Minesweeper</h1>
+    </header>
+
+    <form id="field_size" onsubmit="return processFieldUpdate(event);">
+        <input type="number" id="width" name="width">
+        x
+        <input type="number" id="height" name="height">
+        <br><br>
+        <input type="submit" value="update">
+    </form>
+
+    <p>
+        ALT-click to flag.
+    </p>
+
+    <div class="section" id="game">
+        <div class="section" id="scoreboard">
+            <div id="timer">00:00</div>
+            <div id="bombs">0</div>
+            <div id="score">00000</div>
+        </div>
+    
+        <div class="section" id="playground">
+    
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            A page created by <a href="https://codingbobby.xyz">CodingBobby</a>
+        </p>
+    </footer>
+    <script src="scripts/minesweeper.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+body {
+    background-color: #293636;
+    color: #BABBBC;
+    text-align: center;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: initial;
+}
+
+#game {
+    width: max-content;
+    height: max-content;
+    border: solid #BABBBC 2px;
+    margin: 0 auto;
+}
+
+#scoreboard {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: inherit;
+    background-color: #293636;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#timer {
+    text-align: left;
+    float: left;
+    padding-left: 20px;
+}
+
+#score {
+    padding-right: 20px;
+    text-align: right;
+}
+
+#playground {
+    height: max-content;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.field_row {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+}
+
+.field {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border: solid #BABBBC 0.5px;
+    background-color: #006A6B;
+    cursor: pointer;
+}
+
+.field:hover {
+    background-color: #3EADAC;
+}
+
+.revealed {
+    color: #293636;
+    background-color: #3EADAC;
+}
+
+.lost {
+    background-color: #6B130B;
+}
+
+.won {
+    background-color: #1E6B10;
+}
+
+input[type=number] {
+    width: 50px;
+} 
