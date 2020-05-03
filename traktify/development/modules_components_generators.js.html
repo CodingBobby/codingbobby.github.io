@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>modules/components/generators.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/CodingBobby/traktify/issues" target="_blank" class="menu-item" id="issues_link" >Bugs & Issues</a></h2><h2><a href="https://circleci.com/gh/CodingBobby/traktify" target="_blank" class="menu-item" id="build_link" >Build Log</a></h2><h2><a href="https://discord.gg/BJNAMcj" target="_blank" class="menu-item" id="discord_link" >Discord Server</a></h2><h3>Tutorials</h3><ul><li><a href="tutorial-cache_.html">Cache</a></li><li><a href="tutorial-config.html">Configuration</a></li><li><a href="tutorial-contributing.html">Contributing</a></li><li><a href="tutorial-helpers.html">Helpers</a></li><li><a href="tutorial-items.html">Items</a></li></ul><h3>Classes</h3><ul><li><a href="Cache.html">Cache</a><ul class='methods'><li data-type='method'><a href="Cache.html#getKey">getKey</a></li><li data-type='method'><a href="Cache.html#remove">remove</a></li><li data-type='method'><a href="Cache.html#removeKey">removeKey</a></li><li data-type='method'><a href="Cache.html#save">save</a></li><li data-type='method'><a href="Cache.html#setKey">setKey</a></li></ul></li><li><a href="Queue.html">Queue</a><ul class='methods'><li data-type='method'><a href="Queue.html#_duplicates">_duplicates</a></li></ul></li><li><a href="showBuffer.html">showBuffer</a></li></ul><h3>Namespaces</h3><ul><li><a href="generators.html">generators</a><ul class='methods'><li data-type='method'><a href="generators.html#.infoCardContent">infoCardContent</a></li><li data-type='method'><a href="generators.html#.infoCardDummy">infoCardDummy</a></li><li data-type='method'><a href="generators.html#.searchResult">searchResult</a></li><li data-type='method'><a href="generators.html#.upNextPoster">upNextPoster</a></li><li data-type='method'><a href="generators.html#.upNextTitle">upNextTitle</a></li></ul></li><li><a href="helper.html">helper</a><ul class='methods'><li data-type='method'><a href="helper.html#.clone">clone</a></li><li data-type='method'><a href="helper.html#.debugLog">debugLog</a></li><li data-type='method'><a href="helper.html#.inRange">inRange</a></li><li data-type='method'><a href="helper.html#.nthParent">nthParent</a></li><li data-type='method'><a href="helper.html#.shadeHexColor">shadeHexColor</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#addHistoryUpdates">addHistoryUpdates</a></li><li><a href="global.html#APP_PATH">APP_PATH</a></li><li><a href="global.html#cacheListener">cacheListener</a></li><li><a href="global.html#cacheRequest">cacheRequest</a></li><li><a href="global.html#cacheSave">cacheSave</a></li><li><a href="global.html#getAPIKeys">getAPIKeys</a></li><li><a href="global.html#getUnfinishedProgressList">getUnfinishedProgressList</a></li><li><a href="global.html#initFileStructure">initFileStructure</a></li><li><a href="global.html#newActivitiesAvailable">newActivitiesAvailable</a></li><li><a href="global.html#openInfoCard">openInfoCard</a></li><li><a href="global.html#PATHS">PATHS</a></li><li><a href="global.html#postHistoryUpdates">postHistoryUpdates</a></li><li><a href="global.html#readConfig">readConfig</a></li><li><a href="global.html#removeCacheFiles">removeCacheFiles</a></li><li><a href="global.html#requestAndLoadImage">requestAndLoadImage</a></li><li><a href="global.html#requestHistoryUpdatePosting">requestHistoryUpdatePosting</a></li><li><a href="global.html#resetConfig">resetConfig</a></li><li><a href="global.html#saveConfig">saveConfig</a></li><li><a href="global.html#show">show</a></li><li><a href="global.html#showAlertBoxAndWait">showAlertBoxAndWait</a></li><li><a href="global.html#startsWithFilter">startsWithFilter</a></li><li><a href="global.html#toggleClass">toggleClass</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">modules/components/generators.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * The generators module includes functions that either return HTMLElements or HTML-formatted strings
+ * that are used as templates for building blocks of the app.
+ * Most functions take arguments providing content to fill these templates.
+ * @namespace generators
+ */
+
+module.exports = {
+  infoCardDummy, infoCardContent,
+  searchResult, upNextPoster, upNextTitle
+}
+
+
+/**
+ * Generates an element containing the basic html structure of a single info card.
+ * @memberof generators
+ * @param {'left_stack'|'middle_stack'|'right_stack'} stack Card stack it will be placed onto
+ * @param {Number} index Position of this card in the total stack
+ * @param {String} id Reference ID for trakt database
+ * @returns {HTMLElement}
+ */
+function infoCardDummy(stack, index, id) {
+  let infocard = document.createElement('div')
+  infocard.classList = 'infocard shadow_b '+stack
+  infocard.id = 'card_'+index
+  infocard.dataset.trakt_id = id
+  infocard.innerHTML = `
+    &lt;ul class="btns z4">
+      &lt;li>
+        &lt;div class="btn icon red_b shadow_b" id="close_button_info" onclick="triggerInfoCardOverlay()">
+          &lt;img src="../../assets/icons/app/close.svg">
+        &lt;/div>
+      &lt;/li>
+    &lt;/ul>
+    &lt;div class="cardcontent">
+      &lt;div class="center">
+        &lt;img class="logo gray-animation" style="height: 200px" src="../../assets/icons/traktify/512x512.png">
+      &lt;/div>
+    &lt;/div>
+  `
+  return infocard
+}
+
+
+/**
+ * Generates html-string containing all elements that are placed inside one info card.
+ * @memberof generators
+ * @param {Object} item 
+ * @param {Number} item.ratingPercent
+ * @param {Number} item.seasonNumber
+ * @param {Number} item.episodeNumber
+ * @param {String} item.episodeTitle
+ * @param {String} item.description
+ * @returns {String}
+ */
+function infoCardContent(item) {
+  let html = ` 
+    &lt;div class="infocard_child black_b z4">
+      &lt;div class="infocard_banner">
+        &lt;img src="">
+        &lt;div id="infocard_close" class="black_d_b" onclick="triggerInfoCardOverlay()">&lt;img src="../../assets/icons/app/close.svg">&lt;/div>
+      &lt;/div>
+      &lt;div class="infocard_stripe black_d_b">&lt;/div>
+      &lt;div style="max-width: 920px;margin:auto;">
+        &lt;div class="infocard_titles infocard_padding black_d_b tOverflow">
+          &lt;div class="rating">
+            &lt;img src="../../assets/icons/app/heart.svg">
+            &lt;span class="white_t fs18 fw700">${item.ratingPercent}%&lt;/span>
+          &lt;/div>
+          &lt;div class="vertical_border">&lt;/div>
+          &lt;div class="fw500 white_t tOverflow">
+            ${item.seasonNumber}x${item.episodeNumber} ${item.episodeTitle}
+          &lt;/div>  
+        &lt;/div>
+        &lt;div class="infocard_poster z1">   
+          &lt;img class="shadow_h" src="../../assets/loading_placeholder.gif">
+          &lt;div class="beta_action_btns">
+            &lt;div class="beta_action_btn play">&lt;img src="../../assets/icons/app/play.svg">&lt;/div>
+            &lt;div class="beta_action_btn watchlist">&lt;img src="../../assets/icons/app/list.svg">&lt;/div>
+            &lt;div class="beta_action_btn watched" onclick="requestHistoryUpdatePosting(nthParent(this,5).dataset.trakt_id,{type:'episode',season:${item.seasonNumber},episode:${item.episodeNumber}});moveCards('right')">&lt;img src="../../assets/icons/app/check.svg">&lt;/div>
+          &lt;/div>
+        &lt;/div>
+        &lt;p class="infocard_description infocard_padding white_t fs18 fw200">${item.description}&lt;/p>
+      &lt;/div>
+    &lt;/div> 
+  `
+  return html
+}
+
+
+/**
+ * Generates a html element for one search result and adds it to the sidebar.
+ * @memberof generators
+ * @param {Object} item 
+ * @param {String} item.img
+ * @param {String} item.title
+ * @param {String} item.description
+ * @param {Number} item.rating
+ * @param {Number} item.id Reference ID for TMDB database
+ * @returns {HTMLElement}
+ */
+function searchResult(item) {
+  let panel_box = document.createElement('div')
+  panel_box.classList.add('panel_box', 'search', 'animation_slide_right')
+
+  let poster_img = document.createElement('img')
+  poster_img.classList.add('poster')
+  poster_img.src = item.img
+
+  let panel_box_container = document.createElement('div')
+  panel_box_container.classList.add('panel_box_container')
+
+  let h3 = document.createElement('h3')
+  h3.classList.add('fs18', 'tOverflow')
+  h3.innerText = item.title
+
+  let p = document.createElement('p')
+  p.classList.add('tOverflow', 'normal')
+  p.innerText = item.description
+
+  let poster_content = document.createElement('div')
+  poster_content.classList.add('poster-content')
+
+  let poster_content_left = document.createElement('div')
+  poster_content_left.classList.add('poster-content-left')
+
+  let heart = document.createElement('img')
+  heart.src = '../../assets/icons/app/heart.svg'
+
+  let span = document.createElement('span')
+  span.classList.add('fs16')
+  span.innerText = item.rating + "%"
+
+  let poster_content_right = document.createElement('div')
+  poster_content_right.classList.add('poster-content-right')
+  poster_content_right.append(...createActionButtons(item.id))
+
+  poster_content_left.appendChild(heart)
+  poster_content_left.appendChild(span)
+
+  poster_content.appendChild(poster_content_left)
+  poster_content.appendChild(poster_content_right)
+
+  panel_box_container.appendChild(h3)
+  panel_box_container.appendChild(p)
+  panel_box_container.appendChild(poster_content)
+
+  panel_box.appendChild(poster_img)
+  panel_box.appendChild(panel_box_container)
+
+  return panel_box
+}
+
+
+// used in the above function
+function createActionButtons(item) {
+  // TODO: change `item` to matcher so it includes more info
+  let playNow = document.createElement('div')
+  playNow.classList.add('action_btn', 'play')
+  playNow.innerHTML = '&lt;img src="../../assets/icons/app/play.svg">'
+  playNow.setAttribute('onclick', `playNow(${item})`)
+
+  let addToList = document.createElement('div')
+  addToList.classList.add('action_btn', 'list')
+  addToList.innerHTML = '&lt;img src="../../assets/icons/app/list.svg">'
+  addToList.setAttribute('onclick', `addToWatchlist(${item})`)
+
+  let addToHistory = document.createElement('div')
+  addToHistory.classList.add('action_btn', 'history')
+  addToHistory.innerHTML = '&lt;img src="../../assets/icons/app/check.svg">'
+  addToHistory.setAttribute('onclick', `addToHistory(${item})`)
+
+  return [playNow, addToList, addToHistory]
+}
+
+
+/**
+ * Generates the an element for a single poster that is displayed on the up-next dashboard.
+ * @memberof generators
+ * @param {Object} item
+ * @param {String} item.title
+ * @param {String} item.subtitle
+ * @param {Number} item.rating
+ * @param {String} item.id Reference ID for TVDB database
+ * @param {Number} item.season
+ * @param {String} item.matcher
+ * @returns {HTMLElement}
+ */
+function upNextPoster(item) {
+  let li = document.createElement('li')
+
+  li.classList.add('poster', 'poster_dashboard')
+  li.setAttribute('data_title', item.title)
+  li.setAttribute('data_subtitle', item.subtitle)
+  li.setAttribute('onmouseover', 'animateText(this, true)')
+  li.setAttribute('onmouseleave', 'animateText(this, false)')
+
+  let posterTile = document.createElement('div')
+  posterTile.classList.add('hidden')
+
+  // as values in onclicks will be added without formatting, we have to wrap them in quotes manually
+  let q = "'"
+
+  posterTile.innerHTML = `&lt;div class="poster_tile shadow_h">
+    &lt;div class="poster_rating">&lt;img src="../../assets/icons/app/heart.svg">&lt;span class="fw700 white_t">${Math.round(item.rating*10)}%&lt;/span>&lt;/div>
+    &lt;div class="beta_action_btns">
+      &lt;div class="beta_action_btn play"
+        onclick="playNow(${q+item.matcher+q})">
+        &lt;img src="../../assets/icons/app/play.svg">
+      &lt;/div>
+      &lt;div class="beta_action_btn watchlist"
+        onclick="addToWatchlist(${q+item.matcher+q})">
+        &lt;img src="../../assets/icons/app/list.svg">
+      &lt;/div>
+      &lt;div class="beta_action_btn watched"
+        onclick="addToHistory(${q+item.matcher+q})">
+        &lt;img src="../../assets/icons/app/check.svg">
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>`
+
+  li.appendChild(posterTile)
+
+  requestAndLoadImage({
+    parent: li,
+    use: 'poster',
+    type: 'season',
+    itemId: item.id,
+    reference: item.season,
+    classes: ['shadow_h', 'z1'],
+    attributes: {
+      'style': 'cursor:pointer',
+      'onclick': 'openInfoCard(this)',
+      'data_matcher': item.matcher
+    }
+  }, () => {
+    posterTile.classList.remove('hidden')
+  })
+
+  return li
+}
+
+
+/**
+ * Generates html-string used for the title block on the up-next dashboard.
+ * @memberof generators
+ * @param {Object} item 
+ * @param {String} item.title
+ * @param {String} item.subtitle
+ * @returns {String}
+ */
+function upNextTitle(item) {
+  let html = `
+    &lt;h3 class="h3 red_t tu">
+      up next to watch
+    &lt;/h3>
+    &lt;h1 class="h1 white_t tu tOverflow">
+      ${item.title}
+    &lt;/h1>
+    &lt;h1 class="h1 white_d_t tOverflow">
+      ${item.subtitle}
+    &lt;/h1>
+  `
+  return html
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated with <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+
+</body>
+</html>
