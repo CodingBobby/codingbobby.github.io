@@ -251,10 +251,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  github-pages
+  github-pages (~> 206)
+  jekyll (~> 3.8.7)
   jekyll-feed (~> 0.12)
   jekyll-seo-tag
-  no-style-please
+  no-style-please (~> 0.2.0)
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)

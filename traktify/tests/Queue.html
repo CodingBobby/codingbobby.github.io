@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Traktify API Documentation: Queue</title>
+    
+      <link type="text/css" rel="stylesheet" href="styles/vendor/prism-custom.css">
+    
+    <link type="text/css" rel="stylesheet" href="styles/styles.css">
+    
+</head>
+<body>
+
+<header class="layout-header">
+  
+    <a href="./">
+      <img
+        src="https://i.imgur.com/Y5rSPSm.png"
+        alt="Traktify API Documentation"
+      >
+    </a>
+  
+  <h1>
+    <a href="./index.html">
+      Traktify API Documentation
+    </a>
+  </h1>
+  <nav class="layout-nav">
+    <ul><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class" title="class">C</span><span class="nav-item-name"><a href="Cache.html">Cache</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="Cache.html#getKey">getKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="Cache.html#remove">remove</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="Cache.html#removeKey">removeKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="Cache.html#save">save</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="Cache.html#setKey">setKey</a></span></li><li class="nav-heading"><span class="nav-item-type type-class" title="class">C</span><span class="nav-item-name"><a href="Queue.html">Queue</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="Queue.html#_duplicates">_duplicates</a></span></li><li class="nav-heading"><span class="nav-item-type type-class" title="class">C</span><span class="nav-item-name"><a href="showBuffer.html">showBuffer</a></span></li></ul><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#addHistoryUpdates">addHistoryUpdates</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#cacheRequest">cacheRequest</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#cacheSave">cacheSave</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#clone">clone</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#getUnfinishedProgressList">getUnfinishedProgressList</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#initFileStructure">initFileStructure</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#nthParent">nthParent</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#openInfoCard">openInfoCard</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#postHistoryUpdates">postHistoryUpdates</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#requestAndLoadImage">requestAndLoadImage</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#requestHistoryUpdatePosting">requestHistoryUpdatePosting</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#shadeHexColor">shadeHexColor</a></span></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name"><a href="global.html#SystemPaths">SystemPaths</a></span></li>
+  </nav>
+</header>
+
+
+<main class="layout-main ">
+  <div class="container">
+    <p class="page-kind">Class</p>
+    <h1 class="page-title">Queue</h1>
+    
+
+
+
+
+<section>
+
+
+<header class="class">
+
+
+    
+        
+        <!-- <h2>Queue</h2> -->
+
+        
+
+        
+
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+
+
+
+    
+        
+
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="Queue">new Queue<span class="signature">(options<span class="signature-attributes">opt</span>, mergeCallback<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"></span>
+    </h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">options</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>Object</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Optional settings for the queue</p></div>
+            
+                <p class="param-properties">Properties</p>
+                
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">frequency</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>Number</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Ticks per second</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">reverse</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>Boolean</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Set to true to always run the latest task first</p></div>
+            
+        </li>
+
+    
+</ul>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">mergeCallback</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>function</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="modules_queue.js.html">modules/queue.js</a><a href="modules_queue.js.html#source.8">, line 8</a>
+        </li>
+    </ul>
+
+
+
+    
+    </div>
+
+    
+
+    
+
+     
+
+    
+
+    
+
+
+    
+
+    
+        <h3 class="subtitle">Methods</h3>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="_duplicates">_duplicates<span class="signature">(j, onlyCallback)</span><span class="return-type-signature"></span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Returns the index positions of jobs that look identical to the given one.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">j</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>Task</code>
+    </span>
+    
+
+            
+
+            
+
+            
+
+            <div class="param-description"><p>The newly added job</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">onlyCallback</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>Boolean</code>
+    </span>
+    
+
+            
+
+            
+
+            
+
+            <div class="param-description"><p>Only compare the callbacks and not the passed arguments</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="modules_queue.js.html">modules/queue.js</a><a href="modules_queue.js.html#source.109">, line 109</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+  </div>
+</main>
+
+<footer class="layout-footer">
+  <div class="container">
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Tue Mar 24 2020 18:09:44 GMT+0000 (Coordinated Universal Time)
+  </div>
+</footer>
+
+
+
+<script src="scripts/prism.dev.js"></script>
+</body>
+</html>

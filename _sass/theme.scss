@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'JetBrains';
-    src: url('../JetBrainsMono-Regular.woff') format('woff');
+    src: url('/assets/fonts/JetBrainsMono-Regular.woff') format('woff');
 }
 
 html {
     color: black;
-    background-color: #CCCBCB;
+    background-color: rgb(240, 240, 240);
     font-family: JetBrains;
     font-size: 1rem;
     line-height: 1.5;
@@ -90,13 +90,6 @@ blockquote {
 
 img {
     image-rendering: optimizeSpeed;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -o-crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: pixelated;
-    image-rendering: opimize-contrast;
-    -ms-interpolation-mode: nearest-neighbor;
-
     margin: 0 auto 0;
     display: block;
     max-width: 100%;

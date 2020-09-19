@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>Tutorial: Items - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/CodingBobby/traktify/issues" target="_blank" class="menu-item" id="issues_link" >Bugs & Issues</a></h2><h2><a href="https://circleci.com/gh/CodingBobby/traktify" target="_blank" class="menu-item" id="build_link" >Build Log</a></h2><h2><a href="https://discord.gg/BJNAMcj" target="_blank" class="menu-item" id="discord_link" >Discord Server</a></h2><h3>Tutorials</h3><ul><li><a href="tutorial-cache_.html">Cache</a></li><li><a href="tutorial-config.html">Configuration</a></li><li><a href="tutorial-contributing.html">Contributing</a></li><li><a href="tutorial-helpers.html">Helpers</a></li><li><a href="tutorial-items.html">Items</a></li></ul><h3>Classes</h3><ul><li><a href="Cache.html">Cache</a><ul class='methods'><li data-type='method'><a href="Cache.html#getKey">getKey</a></li><li data-type='method'><a href="Cache.html#remove">remove</a></li><li data-type='method'><a href="Cache.html#removeKey">removeKey</a></li><li data-type='method'><a href="Cache.html#save">save</a></li><li data-type='method'><a href="Cache.html#setKey">setKey</a></li></ul></li><li><a href="Queue.html">Queue</a><ul class='methods'><li data-type='method'><a href="Queue.html#_duplicates">_duplicates</a></li></ul></li><li><a href="showBuffer.html">showBuffer</a></li></ul><h3>Namespaces</h3><ul><li><a href="dashboard.html">dashboard</a><ul class='methods'><li data-type='method'><a href="dashboard.html#.showAlertBoxAndWait">showAlertBoxAndWait</a></li></ul></li><li><a href="generators.html">generators</a><ul class='methods'><li data-type='method'><a href="generators.html#.actionButtons">actionButtons</a></li><li data-type='method'><a href="generators.html#.confirmActionAlertBox">confirmActionAlertBox</a></li><li data-type='method'><a href="generators.html#.infoCardContent">infoCardContent</a></li><li data-type='method'><a href="generators.html#.infoCardDummy">infoCardDummy</a></li><li data-type='method'><a href="generators.html#.searchResult">searchResult</a></li><li data-type='method'><a href="generators.html#.upNextPoster">upNextPoster</a></li><li data-type='method'><a href="generators.html#.upNextTitle">upNextTitle</a></li></ul></li><li><a href="helper.html">helper</a><ul class='methods'><li data-type='method'><a href="helper.html#.clone">clone</a></li><li data-type='method'><a href="helper.html#.debugLog">debugLog</a></li><li data-type='method'><a href="helper.html#.inRange">inRange</a></li><li data-type='method'><a href="helper.html#.nthParent">nthParent</a></li><li data-type='method'><a href="helper.html#.shadeHexColor">shadeHexColor</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#addHistoryUpdates">addHistoryUpdates</a></li><li><a href="global.html#APP_PATH">APP_PATH</a></li><li><a href="global.html#cacheListener">cacheListener</a></li><li><a href="global.html#cacheRequest">cacheRequest</a></li><li><a href="global.html#cacheSave">cacheSave</a></li><li><a href="global.html#getAPIKeys">getAPIKeys</a></li><li><a href="global.html#getUnfinishedProgressList">getUnfinishedProgressList</a></li><li><a href="global.html#initFileStructure">initFileStructure</a></li><li><a href="global.html#newActivitiesAvailable">newActivitiesAvailable</a></li><li><a href="global.html#openInfoCard">openInfoCard</a></li><li><a href="global.html#PATHS">PATHS</a></li><li><a href="global.html#postHistoryUpdates">postHistoryUpdates</a></li><li><a href="global.html#readConfig">readConfig</a></li><li><a href="global.html#removeCacheFiles">removeCacheFiles</a></li><li><a href="global.html#requestAndLoadImage">requestAndLoadImage</a></li><li><a href="global.html#requestHistoryUpdatePosting">requestHistoryUpdatePosting</a></li><li><a href="global.html#resetConfig">resetConfig</a></li><li><a href="global.html#saveConfig">saveConfig</a></li><li><a href="global.html#show">show</a></li><li><a href="global.html#startsWithFilter">startsWithFilter</a></li><li><a href="global.html#toggleClass">toggleClass</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Tutorial: Items</h1>
+    
+
+    <section>
+
+<header>
+    
+</header>
+
+<article>
+    <h2>Episode Request Structure</h2>
+<p>Fetching a list of all episodes a show contains requires some workflow as it can't be done in one single step. This first seems like a problem but later helps to improve the requesting-caching-system.</p>
+<p>In the following, the request tree is shown. You can see that retrieving extended data is possible when requesting a list of seasons but not for a list of episodes, where a separate request for each episode is required.</p>
+<pre class="prettyprint source"><code>shows/${show_id}/seasons -> season[]
+   season: { ?extended=full
+      number,
+      ids: { trakt, tvdb, tmdb },
+      ...
+   }
+
+   shows/${show_id}/seasons/${season.number} -> episode[]
+      episode: {
+         season,
+         number,
+         title,
+         ids: { trakt, tvdb, tmdb }
+      }
+
+      shows/${show_id}/seasons/${season.number}/episodes/${episode.number} -> episodeData
+         episodeData: { ?extended=full
+            ...
+         }
+</code></pre>
+<p>Lets say, this is the structure of a show that I just came up with:</p>
+<pre class="prettyprint source"><code>show:
+   season 1:
+      episode 1
+      episode 2
+   season 2:
+      episode 3
+      episode 5
+      episode 6
+</code></pre>
+<p>Then you would need 9 total requests to get all available data of this exact data structure—one for the list of seasons, two for the lists of episodes of each of its seasons and finally six for each of the episodes these lists contain.</p>
+<p>Unfortunately it is not possible to predict how many requests will be required in total as the general show info would only provide the amount of episodes and not the amount of seasons. However, with the first request that provides a list of seasons, you can calculate just that. In the following pseudo-code, <code>show</code> is equivalent to the result <code>season[]</code> of the first request shown in the block above. Thus, <code>totalRequests</code> does not include this required first request into the calculation.</p>
+<pre class="prettyprint source"><code>seasons = show.length
+episodes = 0
+
+for season in show:
+   episodes += season.episode_count
+
+totalRequests = seasons + episodes
+</code></pre>
+<h2>Card Slider</h2>
+<p>The info-card feature of traktify is the most obvious usecase of the above described workflow. When the user clicks on a recommended episode that is shown in the up-next-dashboard, a slider will show up that allows the user to look at all episodes the corresponding show contains. This slider will open up with an initial position of the episode seen before on the dashboard.</p>
+<p>Because many shows contain hundrets if not thousands of episodes, it will be impractical to request all of them in one go. To reduce API stress and loading time dramatically, only a few episodes need to be requested when opening the slider.</p>
+<p>For better illustration, I will represent the list of episodes a show contains with a line of dashes where every character stands for one episode:</p>
+<ul>
+<li><code>-</code> means unrequested</li>
+<li><code>x</code> means requested</li>
+<li><code>o</code> means requested and currently shown</li>
+</ul>
+<p>In the following example, the 11th item of a show containing 17 total episodes is opened. The slider will be opened in the second you clicked on it but the content is shown later when the requests finished. To improve user experience, the data of the clicked episode will be requested first.</p>
+<p>When clicked:</p>
+<pre class="prettyprint source"><code>----------o------
+</code></pre>
+<p>After buffer requests finished:</p>
+<pre class="prettyprint source"><code>--------xxoxx----
+</code></pre>
+<p>When moving one episode to the right, the required data is already requested in the background and can be shown immediately. After this, more of the hidden episodes can be requested to keep a buffer of two around the currently visible one.</p>
+<p>When moved one to the right:</p>
+<pre class="prettyprint source"><code>--------xxxox----
+</code></pre>
+<p>After buffer requests finished:</p>
+<pre class="prettyprint source"><code>--------xxxoxx---
+</code></pre>
+<p>A similar procedure can be used to show the items inside a watchlist or when clicking on a result in the search-panel.</p>
+</article>
+
+</section>
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated with <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>Home - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/CodingBobby/traktify/issues" target="_blank" class="menu-item" id="issues_link" >Bugs & Issues</a></h2><h2><a href="https://circleci.com/gh/CodingBobby/traktify" target="_blank" class="menu-item" id="build_link" >Build Log</a></h2><h2><a href="https://discord.gg/BJNAMcj" target="_blank" class="menu-item" id="discord_link" >Discord Server</a></h2><h3>Tutorials</h3><ul><li><a href="tutorial-cache_.html">Cache</a></li><li><a href="tutorial-config.html">Configuration</a></li><li><a href="tutorial-contributing.html">Contributing</a></li><li><a href="tutorial-helpers.html">Helpers</a></li><li><a href="tutorial-items.html">Items</a></li></ul><h3>Classes</h3><ul><li><a href="Cache.html">Cache</a><ul class='methods'><li data-type='method'><a href="Cache.html#getKey">getKey</a></li><li data-type='method'><a href="Cache.html#remove">remove</a></li><li data-type='method'><a href="Cache.html#removeKey">removeKey</a></li><li data-type='method'><a href="Cache.html#save">save</a></li><li data-type='method'><a href="Cache.html#setKey">setKey</a></li></ul></li><li><a href="Queue.html">Queue</a><ul class='methods'><li data-type='method'><a href="Queue.html#_duplicates">_duplicates</a></li></ul></li><li><a href="showBuffer.html">showBuffer</a></li></ul><h3>Namespaces</h3><ul><li><a href="helper.html">helper</a><ul class='methods'><li data-type='method'><a href="helper.html#.clone">clone</a></li><li data-type='method'><a href="helper.html#.debugLog">debugLog</a></li><li data-type='method'><a href="helper.html#.inRange">inRange</a></li><li data-type='method'><a href="helper.html#.nthParent">nthParent</a></li><li data-type='method'><a href="helper.html#.shadeHexColor">shadeHexColor</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#addHistoryUpdates">addHistoryUpdates</a></li><li><a href="global.html#APP_PATH">APP_PATH</a></li><li><a href="global.html#cacheListener">cacheListener</a></li><li><a href="global.html#cacheRequest">cacheRequest</a></li><li><a href="global.html#cacheSave">cacheSave</a></li><li><a href="global.html#getAPIKeys">getAPIKeys</a></li><li><a href="global.html#getUnfinishedProgressList">getUnfinishedProgressList</a></li><li><a href="global.html#initFileStructure">initFileStructure</a></li><li><a href="global.html#newActivitiesAvailable">newActivitiesAvailable</a></li><li><a href="global.html#openInfoCard">openInfoCard</a></li><li><a href="global.html#PATHS">PATHS</a></li><li><a href="global.html#postHistoryUpdates">postHistoryUpdates</a></li><li><a href="global.html#readConfig">readConfig</a></li><li><a href="global.html#removeCacheFiles">removeCacheFiles</a></li><li><a href="global.html#requestAndLoadImage">requestAndLoadImage</a></li><li><a href="global.html#requestHistoryUpdatePosting">requestHistoryUpdatePosting</a></li><li><a href="global.html#resetConfig">resetConfig</a></li><li><a href="global.html#saveConfig">saveConfig</a></li><li><a href="global.html#showAlertBoxAndWait">showAlertBoxAndWait</a></li><li><a href="global.html#startsWithFilter">startsWithFilter</a></li></ul>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+    <section class="package">
+        <h3> </h3>		
+    </section>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    <section class="readme usertext">
+        <article><p align="center">
+  <img src="https://i.imgur.com/Y5rSPSm.png" width="128"/>
+</p>
+<h1 align="center"> <a href="https://codingbobby.xyz/traktify">Traktify</a> </h1>
+<blockquote>
+<p>A multi platform desktop app for trakt.tv</p>
+</blockquote>
+<p><img src="https://img.shields.io/circleci/build/github/CodingBobby/traktify/master?label=build&amp;style=flat-square" alt="master_build">
+<img src="https://img.shields.io/circleci/build/github/CodingBobby/traktify/development?label=dev%20build&amp;style=flat-square" alt="dev_build"></p>
+<p><img src="https://img.shields.io/codacy/grade/a68c06c191d54df0879b854c05c2ea79/master.svg?style=flat-square" alt="quality">
+<img src="https://img.shields.io/github/repo-size/CodingBobby/traktify.svg?style=flat-square" alt="size">
+<img src="https://img.shields.io/github/languages/top/CodingBobby/traktify.svg?style=flat-square" alt="top_lang">
+<img src="https://img.shields.io/github/package-json/dependency-version/CodingBobby/traktify/dev/electron.svg?style=flat-square" alt="electron"></p>
+<p>Traktify provides super easy super fast access to your trakt.tv account. User experience is our top priority.</p>
+<p>Visit the project's website <a href="https://codingbobby.xyz/traktify">here</a>.</p>
+<h2>Features</h2>
+<p>So let us tell you what traktify can do—because thats what you really care about right?</p>
+<h3>Fast-access dashboard</h3>
+<p><img src="https://i.imgur.com/XOTBUlz.png" alt="screen_dashboard"></p>
+<p>Traktify's dashboard offers a clean overview of whats up next to watch for you. From here, you can add episodes you just watched to your history. The search panel allows blazing-fast access to the entire trakt database. Via shortcuts, filtering search results is made very easy.</p>
+<h3>Keyboard shortcuts</h3>
+<p>If you're a keyboard orientated person, we've got you. Simple commands allow you to quickly jump through traktify's pages and panels.</p>
+<h3>Customization</h3>
+<p>A wide range of settings let you customize the look and feel of your app. You can apply different accent colors, background textures and more.</p>
+<h3>Discord integration</h3>
+<p>If you wish, you can let traktify show a beautiful rich-presence on your Discord profile. All you need to do is clicking a button.</p>
+<p>You can find more images in this <a href="https://imgur.com/a/1BFUMGm">gallery</a>.</p>
+<h2>Getting started</h2>
+<p>Traktify is currently at it's climax of development. You can dive in really soon.</p>
+<h3>Requirements</h3>
+<p>Traktify is an electron based app and thus requires a Windows 7 (and higher) or macOS 10.10 (and higher) machine to run on. You'll also need a <a href="https://nodejs.org/en/download/">Node.js</a> installation. Traktify is tested on versions higher than <code>v10.10.0</code> but we recommend the latest <code>LTS</code> release.</p>
+<p>If you want to use the Discord Rich-Presence integration, you'll also have to install <a href="https://www.python.org/downloads/">Python</a>.</p>
+<h2>Contributing</h2>
+<p>Contributions are very welcome! To report issues and start pull requests, please use github's integrated systems.</p>
+<p>A detailed documentation for developers is available <a href="https://codingbobby.xyz/traktify/docs">here</a>. Please note that this might not be complete.</p>
+<h3>Quickstart</h3>
+<p>To start working on Traktify, you first need to clone this repository:</p>
+<pre class="prettyprint source lang-sh"><code>git clone https://github.com/CodingBobby/traktify.git
+cd traktify
+</code></pre>
+<p>After that, you install the required dependencies. This might take a while.</p>
+<pre class="prettyprint source lang-sh"><code>brew install node npm
+npm i
+</code></pre>
+<p>Because Traktify uses several APIs, you will need keys for them. We provide development keys that are used by default but you can use your own.</p>
+<p>You can now hop in and do several things:</p>
+<ul>
+<li>Start app in development mode: <code>npm start</code></li>
+<li>Run test suites: <code>npm run test</code></li>
+<li>Package the app for your operating system: <code>npm run pack</code></li>
+</ul>
+<p>When building, make sure to set the environment to <code>'production'</code> at the start of <code>app.js</code>.</p>
+<h2>Credits</h2>
+<h3>Authors</h3>
+<ul>
+<li><a href="https://github.com/Bumbleboss">Bumbleboss</a>: Frontend developer &amp; Graphics designer</li>
+<li><a href="https://github.com/CodingBobby">CodingBobby</a>: Fullstack developer</li>
+</ul>
+<h3>3rd Party Dependencies</h3>
+<ul>
+<li><a href="https://github.com/vankasteelj">Jean van Kasteel</a>: <code>trakt.tv</code> and <code>fanart.tv</code></li>
+<li><a href="https://github.com/royriojas">Roy Riojas</a>: <code>flat-cache</code></li>
+</ul>
+<!-- long links --></article>
+    </section>
+
+
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated with <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+
+</body>
+</html>

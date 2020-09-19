@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Traktify API Documentation: modules/api/getters.js</title>
+    
+      <link type="text/css" rel="stylesheet" href="styles/vendor/prism-custom.css">
+    
+    <link type="text/css" rel="stylesheet" href="styles/styles.css">
+    
+</head>
+<body>
+
+<header class="layout-header">
+  
+    <a href="./">
+      <img
+        src="https://i.imgur.com/Y5rSPSm.png"
+        alt="Traktify API Documentation"
+      >
+    </a>
+  
+  <h1>
+    <a href="./index.html">
+      Traktify API Documentation
+    </a>
+  </h1>
+  <nav class="layout-nav">
+    <ul><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class" title="class">C</span><span class="nav-item-name"><a href="Cache.html">Cache</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="Cache.html#getKey">getKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="Cache.html#remove">remove</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="Cache.html#removeKey">removeKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="Cache.html#save">save</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="Cache.html#setKey">setKey</a></span></li><li class="nav-heading"><span class="nav-item-type type-class" title="class">C</span><span class="nav-item-name"><a href="Queue.html">Queue</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="Queue.html#_duplicates">_duplicates</a></span></li><li class="nav-heading"><span class="nav-item-type type-class" title="class">C</span><span class="nav-item-name"><a href="showBuffer.html">showBuffer</a></span></li></ul><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#addHistoryUpdates">addHistoryUpdates</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#cacheRequest">cacheRequest</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#cacheSave">cacheSave</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#clone">clone</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#getUnfinishedProgressList">getUnfinishedProgressList</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#initFileStructure">initFileStructure</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#nthParent">nthParent</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#openInfoCard">openInfoCard</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#postHistoryUpdates">postHistoryUpdates</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#requestAndLoadImage">requestAndLoadImage</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#requestHistoryUpdatePosting">requestHistoryUpdatePosting</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name"><a href="global.html#shadeHexColor">shadeHexColor</a></span></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name"><a href="global.html#SystemPaths">SystemPaths</a></span></li>
+  </nav>
+</header>
+
+
+<main class="layout-main  layout-content--source">
+  <div class="container">
+    <p class="page-kind">source</p>
+    <h1 class="page-title">modules/api/getters.js</h1>
+    
+
+
+
+    
+
+<section>
+    <article>
+        <pre id="source" class="source-page line-numbers"><code class="language-js">const {
+   debugLog
+} = require('./../helper.js')
+
+
+module.exports = {
+   getUnfinishedProgressList,
+   getSeasonList,
+   getEpisodeData,
+   getShowImages,
+   getShowList
+}
+
+const {
+   requestShowList,
+   requestShowProgress,
+   requestSeasonList,
+   requestEpisodeData,
+   requestShowImages
+} = require('./requesters.js')
+
+const {
+   cacheSave,
+   cacheRequest,
+   flushCache
+} = require('./cachers.js')
+
+
+/** 
+ * Gets an array of n shows and it's progress that are not finished yet. If argument update is true, the updated items are re-requested instead of directly restored from cache.
+ * @param {Number} n Number of sequential shows with unseen episodes to get
+ * @param {Boolean} update If cached data should be checked against possible updates
+ * @param {Function} loadingCallback A callback that sends the percentage of progression
+ */
+function getUnfinishedProgressList(n, update, loadingCallback) {
+   // empty function in case its not incuded in the function call
+   loadingCallback = loadingCallback || function(n) {}
+
+   return new Promise(async (resolve, rej) => {
+      let visible = []
+      
+      // holds ids of shows that require re-requests
+      let updatedIDs = []
+
+      if(update) {
+         /** 
+          * This contains a freshly requested show list which could have the last_watched_at property of one or more shows updated and/or one or more additional shows at the start of the list. In the first case, the order of the already stored shows changed. In the second case, all already stored shows are shifted down by some indices. */
+
+         let updated = await getShowList(true, percent => {
+            loadingCallback(0 + percent*4/7)
+         })
+         loadingCallback(4.5/7)
+
+         updated.forEach(item => {
+            let oldIndex = visible.map(v => {
+               return v.show.ids.trakt
+            }).indexOf(item.show.ids.trakt)
+
+            // store show id if it already exists but had updated watching progress
+            if(oldIndex > -1) {
+               if(visible[oldIndex].last_watched_at !== item.last_watched_at) {
+                  updatedIDs.push(item.show.ids.trakt)
+               }
+            }
+         })
+         loadingCallback(5/7)
+
+         // overwrite old data with new
+         visible = updated
+      } else {
+         visible = await getShowList()
+         loadingCallback(5/7)
+      }
+
+      let list = []
+
+      for(let i=0; i&lt;n &amp;&amp; n&lt;visible.length; i++) {
+         let id = visible[i].show.ids.trakt
+         let progress = await getShowProgress(id, updatedIDs.includes(id))
+         loadingCallback(5/7 + (i+1)/n * 1.5/7)
+
+         if(progress.completed &lt; progress.aired) {
+            list.push({
+               show: visible[i],
+               progress: progress
+            })
+         } else {
+            // show is completed, jump to the next one
+            n++
+         }
+      }
+
+      cacheSave('showProgress')
+      loadingCallback(7/7)
+
+      resolve(list)
+   })
+}
+
+function getShowList(update, progressCallback) {
+   progressCallback = progressCallback || function(n) {}
+
+   if(update) {
+      flushCache('itemList', 'shows')
+   }
+
+   return cacheRequest('itemList', 'shows', () => {
+      return requestShowList(progressCallback)
+   }, true)
+}
+
+function getShowProgress(id, update) {
+   if(update) {
+      flushCache('showProgress', id)
+   }
+
+   return cacheRequest('showProgress', id, () => {
+      return requestShowProgress(id)
+   }, false)
+}
+
+function getSeasonList(id, update) {
+   if(update) {
+      flushCache('seasonList', id)
+   }
+
+   return cacheRequest('seasonList', id, () => {
+      return requestSeasonList(id)
+   }, true)
+}
+
+function getEpisodeData(id, season, episode, update) {
+   let cacheId = id+'_'+season+'_'+episode
+
+   if(update) {
+      flushCache('episodeData', cacheId)
+   }
+
+   return cacheRequest('episodeData', cacheId, () => {
+      return requestEpisodeData(id, season, episode)
+   }, true)
+}
+
+function getShowImages(id, update) {
+   if(update) {
+      flushCache('images', id)
+   }
+
+   return cacheRequest('images', id, () => {
+      return requestShowImages(id)
+   }, true)
+}
+</code></pre>
+    </article>
+</section>
+
+
+
+
+  </div>
+</main>
+
+<footer class="layout-footer">
+  <div class="container">
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Tue Mar 24 2020 18:09:44 GMT+0000 (Coordinated Universal Time)
+  </div>
+</footer>
+
+
+
+<script src="scripts/prism.dev.js"></script>
+</body>
+</html>
