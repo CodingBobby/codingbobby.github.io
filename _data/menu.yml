@@ -1,0 +1,13 @@
+entries:
+  - title: about me and this website
+    url: /about
+    entries: false
+
+  - title: projects I'm working on
+    url: /projects
+    entries: false
+
+  - title: blog posts
+    post_list: true
+    url: false
+    entires: false
