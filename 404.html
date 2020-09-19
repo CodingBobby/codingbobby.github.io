@@ -1,63 +1,25 @@
 ---
 permalink: /404.html
+layout: default
 ---
-<!DOCTYPE html>
-<html>
-<head>
-  <title>CodingBobby | 404</title>
 
-  <meta charset="UTF-8">
-  <meta name="description" content="CodingBobby's website">
-  <meta name="keywords" content="coding,facts,blog,science,mac,terminal,programming">
+<style type="text/css" media="screen">
+  .container {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+</style>
 
-  <link rel="shortcut icon" type="image/ico" href="{{ "/images/favicon.ico"  | absolute_url }}">
+<div class="container">
+  <h1>404</h1>
 
-  <link href="css/style.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121643726-3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-121643726-3');
-  </script>
-
-  <script>
-    (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:1147025,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
-
-  <script>
-    $(function() {
-      let includes = $('[data-include]');
-      jQuery.each(includes, function() {
-        let file = './blocks/' + $(this).data('include') + '.html';
-        $(this).load(file);
-      });
-    });
-  </script>
-</head>
-
-<body>
-  <div id="wrapper">
-    <div data-include="header"></div>
-    <div class="content" id="page_content">
-      <div class="image">
-        <img src="./images/vincent.gif" alt="404">
-      </div>
-      <h2 style="text-align: center">You're lost mate.</h2>
-    </div>
-    <div class="content">
-      <h3 style="text-align: center"><a href="./">Get to homepage...</a></h3>
-    </div>
-  </div>
-</body>
+  <p><strong>Page not found :(</strong></p>
+  <p>The requested page could not be found.</p>
+</div>

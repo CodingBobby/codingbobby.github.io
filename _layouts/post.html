@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<a href="{{ site.url }}">{{ site.theme_config.back_home_text }}</a>
+<h1>{{ page.title }}</h1>
+{% if page.date %}
+   <span class="post_date">
+      {{ page.date | date: site.theme_config.date_format }}
+   </span>
+   {% if page.authors %}|
+      {% for author in page.authors %}
+         <a href="/authors#{{ author }}">
+         {{ author }}</a>{% if forloop.last == false %}, {% endif %}
+      {% endfor %}
+   {% endif %}
+{% endif %}
+{{ content }}
