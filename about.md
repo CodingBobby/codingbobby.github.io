@@ -19,7 +19,7 @@ Take care, *Bob*.
 ---
 
 ### Who I am
-My name is Bob Walter and I love several things:
+My name is Bob Walter[^2] and I love several things:
 
 - coding in JavaScript, Python and Julia
 - photography and being outdoors
@@ -45,3 +45,4 @@ Here, you can see in which projects I currently participate:
 {: data-content="footnotes"}
 
 [^1]: This website is based on [Riccardo Graziosi](https://github.com/riggraz)'s theme [no-style-please](https://github.com/riggraz/no-style-please) which I modified to fit my needs.
+[^2]: I won't bother you with nationalities etc. because this is the internet which is by definition worldwide. Nobody should care.

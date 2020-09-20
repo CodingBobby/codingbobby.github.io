@@ -17,6 +17,7 @@ Why?
 Because I have now switched to [jekyll](https://jekyllrb.com).
 With it, it's relatively easy to program websites dynamically, and let them built as static, which allows me to better organize blog entries and pages.
 If you are a developer, this might make sense to you.
+Actually, in case you are interested, you can still visit the old version of this site [here](https://old.codingbobby.xyz).
 
 Anyways, I wanted to put the news here, we will see how it develops.
 I hope you had a successful day too, and if not, I wish you one now.
