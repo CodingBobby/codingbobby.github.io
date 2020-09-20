@@ -1,9 +1,17 @@
 {% if site.posts.size > 0 %}
+  {% assign showed_posts = 6 %}
+
   <ul>
-    {% for post in site.posts %}
+    {% for post in site.posts limit: showed_posts %}
       <li>
         {{ post.date | date: site.theme_config.date_format }} <a href="{{ post.url | relative_url }}">{{ post.title | downcase }}</a>
       </li>
     {% endfor %}
   </ul>
+
+  {% if site.posts.size > showed_posts %}
+    <li>
+      <a href="archive">see all posts</a>
+    </li>
+  {% endif %}
 {% endif %}
