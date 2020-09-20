@@ -16,3 +16,36 @@ layout: default
    {% endif %}
 {% endif %}
 {{ content }}
+
+{% if site.posts.size > 0 %}
+   {% assign post_urls = "" | split: ',' %}
+
+   {% for post in site.posts %}
+      {% assign post_urls = post_urls | push: post.url %}
+
+      {% if post.title == page.title and post.date == page.date %}
+         {% assign post_position = forloop.index %}
+      {% endif %}
+   {% endfor %}
+
+   <div class="horizon" style="width: 100%;">
+      {% if post_position < site.posts.size %}
+         {% assign previous_index = post_position | plus: 0 %}
+         <a href="{{ post_urls[previous_index] | relative_url }}">
+            <- previous post
+         </a>
+      {% else %}
+         <div></div>
+      {% endif %}
+
+      {% if post_position > 1 %}
+         {% assign next_index = post_position | minus: 2 %}
+         <a href="{{ post_urls[next_index] | relative_url }}">
+            next post ->
+         </a>
+      {% else %}
+         <div></div>
+      {% endif %}
+      <span class="stretch"></span>
+   </div>
+{% endif %}
