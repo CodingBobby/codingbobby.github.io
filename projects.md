@@ -11,3 +11,8 @@ You can read more on the dedicated [website](/traktify) or check out the [repo](
 ## Rectipy
 A python module intended to help students in chemical engineering.
 Find out more on the [repo](https://github.com/CodingBobby/rectipy) and if you're interested, stay tuned for the next version which is under way!
+
+## codingbobby.xyz
+The very website you are most likely browsing right now.
+It is written in [HTML](https://html.spec.whatwg.org/), [Liquid](https://shopify.github.io/liquid/), [Sass](https://sass-lang.com/) and [Markdown](https://daringfireball.net/projects/markdown/) which is then compiled with [Jekyll](https://jekyllrb.com/) into a static website.
+If you like to check out the repository, you can find it [here](https://github.com/CodingBobby/codingbobby.github.io).
