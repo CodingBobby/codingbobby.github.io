@@ -48,4 +48,8 @@ layout: default
       {% endif %}
       <span class="stretch"></span>
    </div>
+
+   {% if page.comments == true %}
+      {% include comments.html %}
+   {% endif %}
 {% endif %}

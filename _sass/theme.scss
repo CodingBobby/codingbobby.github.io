@@ -67,6 +67,7 @@ blockquote {
 
 .horizon {
     width: 20%;
+    height: 1.5em;
     min-width: max-content;
     margin-left: auto;
     margin-right: auto;
@@ -79,6 +80,10 @@ blockquote {
     vertical-align: middle;
     display: inline-block;
     *display: inline;
+}
+
+.horizon img {
+    height: 1.5em;
 }
 
 .stretch {
@@ -97,6 +102,7 @@ img {
 
 a {
     color: rgb(255, 76, 31);
+    cursor: pointer;
 }
 
 .post_date {

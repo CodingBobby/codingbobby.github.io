@@ -4,6 +4,7 @@ title:  "A quick overview of nordic mythology"
 date:   2018-10-02
 tags: [mythology, norse edda, gods]
 authors: [Bob]
+comments: true
 ---
 The first ever creature in nordic mythology was **Ymir**. It was born as the cold glacial ice of **Niflheim** came upon the blazing fire of **Muspellsheim**. Ymir had both genders and thus was able to breed new creatures as it fell asleep. In the Prose Edda there was another original being, the cow **Audhumbla** from which Ymir drunk milk to sleep easier.
 

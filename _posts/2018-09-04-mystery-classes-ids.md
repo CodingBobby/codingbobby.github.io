@@ -4,6 +4,7 @@ title:  "The mystery about classes and IDs"
 date:   2018-09-04
 tags: [coding, html, css, weird-chats]
 authors: [Bumbleboss, Bob]
+comments: true
 ---
 Previously we talked about the hours we spent on coding a part of his website...
 

@@ -204,10 +204,6 @@ GEM
       jekyll-seo-tag (~> 2.1)
     minitest (5.14.2)
     multipart-post (2.1.1)
-    no-style-please (0.2.0)
-      jekyll (~> 3.8.7)
-      jekyll-feed (~> 0.13.0)
-      jekyll-seo-tag (~> 2.6.1)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     octokit (4.18.0)
@@ -255,7 +251,6 @@ DEPENDENCIES
   jekyll (~> 3.8.7)
   jekyll-feed (~> 0.12)
   jekyll-seo-tag
-  no-style-please (~> 0.2.0)
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)

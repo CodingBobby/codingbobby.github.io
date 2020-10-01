@@ -4,6 +4,7 @@ title:  "Photobooks are nice!"
 date:   2018-02-06
 tags: [review, photography, printing]
 authors: [Bob]
+comments: true
 ---
 After a long time not printing any of my photographs I thought about it again. Keeping everything digitally has a lot of advantages for sure but photography should be something more reachable, something you can hold in your hands at any time.
 

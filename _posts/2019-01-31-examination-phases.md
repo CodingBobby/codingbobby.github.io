@@ -4,6 +4,7 @@ title: "Examination phases are creepy!"
 date: 2019-01-31
 tags: [studying, exams, procastination, journal]
 authors: [Bob]
+comments: true
 ---
 Good day people.
 Do you know that moment when everyone is building up distance to each other and you are left alone with stress and fatigue?

@@ -4,6 +4,7 @@ title: "A Rant About Modern Music"
 date: 2020-09-27
 tags: [music, rant, mainstream, industry, celebrities]
 authors: [Bob]
+comments: true
 ---
 Oh well.
 Looks like the time has come for me to shout all of this out into the world.

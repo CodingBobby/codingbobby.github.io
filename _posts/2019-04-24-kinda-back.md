@@ -4,6 +4,7 @@ title: "I'm kinda back"
 date: 2019-04-24
 tags: [coding, studying, journal]
 authors: [Bob]
+comments: true
 ---
 Good evening internet.
 Oh man it's been a while...

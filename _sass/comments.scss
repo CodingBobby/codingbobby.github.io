@@ -1,0 +1,192 @@
+// comment styles inspired from
+// https://github.com/willymcallister/willymcallister.github.io/blob/fbc7f396fbe80186b1abc63e436ec509190c1b3a/assets/main.scss
+
+$base-font-size:    18px !default;
+$comment-font-size: 17px !default;
+
+
+//
+// Staticman new comment form
+//
+input, select, textarea, label, button {
+    @extend html;
+    border-radius: .3em;
+    margin-left: 0;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+// each staticman text field is wrapped in this div
+.textfield {
+    max-width: 100%;
+    padding-bottom: 1rem;
+}
+
+// fields except the comment field get this class too
+// to keep them a reasonable size
+.narrowfield {
+    width: 420px;
+}
+
+.hp {
+    display: none;
+}
+
+textarea {
+    vertical-align: top;
+}
+
+.textfield__input {
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: .3em;
+    padding: .4em;
+    width: 100%;
+    max-width: -webkit-fill-available;
+}
+
+.notify-me, .g-recaptcha {
+    padding-bottom: 1rem;
+    max-width: min-content;
+}
+
+.button {
+    border: 1px solid rgba(0,0,0,.12);
+    background: rgb(240, 240, 240);
+    border-radius: .3em;
+    padding: .4em;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: rgb(240, 240, 240);
+}
+
+
+//
+// Staticman existing comments
+//
+.comment__date {
+    font-size: 0.85em;
+}
+.comment__body {
+    font-size: 0.85em;
+    line-height: 1.3;
+}
+.comment__body h1 {
+    font-size: 2em;
+}
+.comment__body h1, .comment__body h2, .comment__body h3, .comment__body h4, .comment__body h5, .comment__body h6 {
+    color: #666;
+    margin-top: 0;
+    margin-block-start: 1.45em;
+    margin-block-end: .85em;
+}
+.comment {
+    padding: 0px 0px 0px 0px;
+    margin-bottom: 1em;
+}
+.comment.child {
+    margin-left: 3em;
+}
+
+//
+// Pop-up modal window for Staticman comments
+//
+.show-modal {
+    overflow: hidden;
+    position: relative;
+}
+.show-modal:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(220, 220, 220, 0.85);
+}
+.show-modal .modal {
+    display: block;
+}
+.mdl-card {
+    min-height: 200px;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    background: #fff;
+    box-sizing: border-box;
+}
+.modal {
+    display: none;
+    position: fixed;
+    width: 36ch;
+    top: 50%;
+    left: 50%;
+    margin-left: -18ch;
+    margin-top: 0; // set in main.js via jQuery to have it centered
+    min-height: 0;
+    z-index: 9999;
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: .3em;
+    padding: 0 1em 1em 1em;
+    background: white;
+}
+.mdl-shadow--16dp {
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,.14),0 6px 30px 5px rgba(0,0,0,.12),0 8px 10px -5px rgba(0,0,0,.2);
+}
+.mdl-card__supporting-text {
+    overflow: hidden;
+    padding-bottom: 1em;
+}
+
+.disabled {
+    input,
+    button,
+    textarea,
+    label {
+        pointer-events: none;
+        cursor: not-allowed;
+        filter: alpha(opacity=65);
+        box-shadow: none;
+        opacity: 0.65;
+    }
+}
+
+// ellipsis animation from Christofer Vilander
+.one, .two, .three {
+    opacity: 0;
+    animation: dot 1.3s infinite;
+    -webkit-animation: dot 1.3s infinite;
+}
+.one {
+    animation-delay: 0.0s;
+    -webkit-animation-delay: 0.0s;
+}
+
+.two {
+    animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+}
+
+.three {
+    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+}
+
+@keyframes dot {
+      0% { opacity: 0; }
+     75% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes dot {
+    0% { opacity: 0; }
+   75% { opacity: 0; }
+  100% { opacity: 1; }
+}
