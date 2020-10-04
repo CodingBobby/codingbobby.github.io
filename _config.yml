@@ -37,7 +37,7 @@ theme_config:
   show_description: false
 
 goat_counter: "codingbobby"
-permalink: /:slug.html
+permalink: /:slug/
 
 favicon: "./favicon.png"
 
