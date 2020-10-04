@@ -4,7 +4,7 @@
   <ul>
     {% for post in site.posts limit: showed_posts %}
       <li>
-        {{ post.date | date: site.theme_config.date_format }} <a href="{{ post.url | relative_url }}">{{ post.title | downcase }}</a>
+        {{ post.date | date: site.theme_config.date_format }} <a href="{{ post.url | relative_url | replace: ".html", "/" }}">{{ post.title | downcase }}</a>
       </li>
     {% endfor %}
 
