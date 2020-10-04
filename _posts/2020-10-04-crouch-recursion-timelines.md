@@ -42,6 +42,7 @@ First, some notes to support further understanding of the mechanics of the chair
 
 Below is a small preview of what I've put together.
 Click on it to open the diagram in a new tab where you can zoom in and pan around; zoom controls are on the top left of the screen.
+If you read this on a phone, you should long-hold the image and open the picture instead as navigation is easier here.
 Check the legend box on the right first to understand what each line or symbol means.
 
 <a href="viewer" target="_blank">
