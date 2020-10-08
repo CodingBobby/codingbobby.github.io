@@ -23,7 +23,7 @@ My name is Bob Walter[^2] and I love several things:
 
 - coding in JavaScript, Python and Julia
 - photography and being outdoors
-- music, mostly metal and neo classic
+- [music](/favourite-songs), mostly metal and neo classic
 - physics and science in general
 
 ![github stats](https://github-readme-stats.vercel.app/api?username=CodingBobby&hide=contribs&show_icons=true&hide_border=true&title_color=000)
@@ -31,7 +31,7 @@ My name is Bob Walter[^2] and I love several things:
 ---
 
 ### Distributed Computing
-I highly recommend you to learn about [BOINC](https://boinc.berkeley.edu) if you haven't already.
+I highly recommend you learn about [BOINC](https://boinc.berkeley.edu) if you haven't already.
 It gives you the opportunity to join distributed computing networks of your choice and take part in real science research by donating some of your PC's power.
 
 Especially in the current situation, I can only encourage you to join [Rosetta@home](https://boinc.bakerlab.org/rosetta/) to contribute to research on the corona virus.

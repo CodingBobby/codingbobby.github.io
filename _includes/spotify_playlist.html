@@ -1,0 +1,90 @@
+<div id="song_list"></div>
+
+<script>
+   (async () => {
+      const authURL = 'https://accounts.spotify.com/api/token'
+      const client_id = '{{ site.spotify.id }}'
+      const client_secret = '{{ site.spotify.secret }}'
+
+      try {
+         const response = await fetch(authURL, {
+            method: 'POST',
+            body : `grant_type=client_credentials&client_id=${client_id}&client_secret=${client_secret}`,
+            headers: {
+               'Content-Type': 'application/x-www-form-urlencoded'
+            }
+         })
+
+         if (response.ok) {
+            let json = await response.json()
+            let token = json['access_token']
+            
+            getSongList(token)
+         } else {
+            throw new Error(`HTTP-Error: ${response.status}`)
+         }
+      } catch(err) {
+         console.error(err)
+      }
+   })()
+
+   async function getSongList(bearer) {
+      const playlistURL = 'https://api.spotify.com/v1/playlists/5gVaGUzDsU5Aw5qVFBCtVF/tracks'
+      try {
+         const response = await fetch(playlistURL, {
+            method: 'GET',
+            headers: {
+               'Authorization': `Bearer ${bearer}`,
+               'Content-Type': 'application/x-www-form-urlencoded'
+            }
+         })
+
+         if (response.ok) {
+            let json = await response.json()
+            let items = json.items
+
+            let div = document.getElementById('song_list')
+
+            items.forEach((item, item_index) => {
+               let html = ''
+               let trackName = (item.track.name)
+                  .replace(/\W*[fF]eat[\W*\w*]*/g, '')
+                  .replace(/\W*[rR]emaster[\W*\w*]*/g, '')
+
+               html += `
+                  <div class="song_item">
+                     <h3 class="rank">${item_index+1}.</h3>
+                     <a href="${item.track.external_urls.spotify}"><img src="${item.track.album.images[0].url}"></a>
+                     <div class="song_info">
+                        <h3>${trackName}</h3>
+                        <h4>
+               `
+
+               item.track.artists.forEach((artist, artist_index) => {
+                  if (artist_index > 0) html += ', '
+
+                  html += `<a href="${artist.external_urls.spotify}" target="_blank">${artist.name}</a>`
+               })
+
+               html += `
+                        </h4>
+                     </div>
+                  </div>
+               `
+
+               if (item_index === 4) {
+                  html += `<hr>`
+               } else {
+                  html += `<div class="spacer"></div>`
+               }
+
+               div.innerHTML += html
+            })
+         } else {
+            throw new Error(`HTTP-Error: ${response.status}`)
+         }
+      } catch(err) {
+         console.error(err)
+      }
+   }
+</script>
