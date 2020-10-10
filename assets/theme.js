@@ -5,7 +5,7 @@ let lightModeHTML = `
    <img src="https://img.icons8.com/material-sharp/64/f0f0f0/sun.png" alt="Light Mode"/>
 `
 let darkModeHTML = `
-   <img src="https://img.icons8.com/material-sharp/24/000000/moon.png" alt="Dark Mode"/>
+   <img src="https://img.icons8.com/material-sharp/64/000000/moon.png" alt="Dark Mode"/>
 `
 
 function themeButton(theme) {
