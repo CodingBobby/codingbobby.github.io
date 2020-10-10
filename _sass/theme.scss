@@ -26,9 +26,45 @@
     font-style: italic;
 }
 
+
+// variables and theme
+
 html {
-    color: black;
-    background-color: rgb(240, 240, 240);
+    @extend html[data-theme="light"];
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        @extend html[data-theme="dark"]
+    }
+
+    html[data-theme="light"] {
+        --page-back-color: rgb(240, 240, 240);
+        --main-text-color: rgb(0, 0, 0);
+        --main-back-color: rgb(255, 255, 255);
+        --link-text-color: rgb(255, 76, 31);
+        --github-icon-url: url(https://img.icons8.com/material-sharp/64/000000/github.png);
+        --twitter-icon-url: url(https://img.icons8.com/material-sharp/64/000000/twitter-squared.png);
+        --email-icon-url: url(https://img.icons8.com/material-sharp/64/000000/email.png);
+        --coffee-icon-url: url(https://img.icons8.com/material-sharp/64/000000/kawaii-coffee.png);
+    }
+    
+    html[data-theme="dark"] {
+        --page-back-color: rgb(27, 27, 27);
+        --main-text-color: rgb(240, 240, 240);
+        --main-back-color: rgb(17, 17, 17);
+        --link-text-color: rgb(120, 217, 113);
+        --github-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/github.png);
+        --twitter-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/twitter-squared.png);
+        --email-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/email.png);
+        --coffee-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/kawaii-coffee.png);
+    }
+}
+
+// styling 
+html {
+    color: var(--main-text-color);
+    background-color: var(--page-back-color);
     font-family: JetBrains;
     font-size: 1rem;
     line-height: 1.5;
@@ -46,7 +82,7 @@ li { margin: 0.4rem 0; }
 *:target { background-color: yellow; }
 
 .wrapper {
-    background-color: white;
+    background-color: var(--main-back-color);
     min-height: calc(100vh - 8rem);
     max-width: 70ch;
     margin: 2rem auto;
@@ -63,14 +99,14 @@ hr {
 
 table, th, td {
     width: 100%;
-    border: thin solid black;
+    border: thin solid var(--main-text-color);
     border-collapse: collapse;
     padding: 0.4rem;
 }
 
 code {
-    color: white;
-    background-color: black;
+    color: var(--main-back-color);
+    background-color: var(--main-text-color);
     padding: 0.15rem;
 }
 
@@ -82,10 +118,21 @@ div.highlighter-rouge code {
 
 blockquote {
     font-style: italic;
-    border: thin solid black;
+    border: thin solid var(--main-text-color);
     padding: 1rem;
 
-    p { margin: 0; }
+    p {
+        margin: 0;
+    }
+}
+
+.relative-horizon {
+    position: relative;
+
+    .horizon {
+        width: 100%;
+        position: absolute;
+    }
 }
 
 .horizon {
@@ -97,16 +144,16 @@ blockquote {
     text-align: justify;
     -ms-text-justify: distribute-all-lines;
     text-justify: distribute-all-lines;
-}
 
-.horizon a, .horizon div {
-    vertical-align: middle;
-    display: inline-block;
-    *display: inline;
-}
+    a, div {
+        vertical-align: middle;
+        display: inline-block;
+        *display: inline;
+    }
 
-.horizon img {
-    height: 1.5em;
+    img {
+        height: 1.5em;
+    }
 }
 
 .stretch {
@@ -124,7 +171,7 @@ img {
 }
 
 a {
-    color: rgb(255, 76, 31);
+    color: var(--link-text-color);
     cursor: pointer;
 }
 
@@ -133,6 +180,22 @@ a {
     font-style: italic;
     font-weight: bold;
     margin-bottom: 2rem;
+}
+
+.github_icon {
+    content: var(--github-icon-url);
+}
+
+.twitter_icon {
+    content: var(--twitter-icon-url);
+}
+
+.email_icon {
+    content: var(--email-icon-url);
+}
+
+.coffee_icon {
+    content: var(--coffee-icon-url);
 }
 
 // use for optional octicons

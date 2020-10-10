@@ -54,7 +54,7 @@ textarea {
 
 .button {
     border: 1px solid rgba(0,0,0,.12);
-    background: rgb(240, 240, 240);
+    background: var(--page-back-color);
     border-radius: .3em;
     padding: .4em;
     overflow: hidden;
@@ -62,8 +62,8 @@ textarea {
 }
 
 button:hover {
-    background-color: black;
-    color: rgb(240, 240, 240);
+    background-color: var(--main-text-color);
+    color: var(--main-back-color);
 }
 
 
@@ -76,22 +76,25 @@ button:hover {
 .comment__body {
     font-size: 0.85em;
     line-height: 1.3;
-}
-.comment__body h1 {
-    font-size: 2em;
-}
-.comment__body h1, .comment__body h2, .comment__body h3, .comment__body h4, .comment__body h5, .comment__body h6 {
-    color: #666;
-    margin-top: 0;
-    margin-block-start: 1.45em;
-    margin-block-end: .85em;
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #666;
+        margin-top: 0;
+        margin-block-start: 1.45em;
+        margin-block-end: .85em;
+    }
 }
 .comment {
     padding: 0px 0px 0px 0px;
     margin-bottom: 1em;
-}
-.comment.child {
-    margin-left: 3em;
+
+    .child {
+        margin-left: 3em;
+    }
 }
 
 //
@@ -100,26 +103,28 @@ button:hover {
 .show-modal {
     overflow: hidden;
     position: relative;
-}
-.show-modal:before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    background-color: rgba(220, 220, 220, 0.85);
-}
-.show-modal .modal {
-    display: block;
+
+    .modal {
+        display: block;
+    }
+
+    &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        background-color: rgba(220, 220, 220, 0.85);
+    }
 }
 .mdl-card {
     min-height: 200px;
     overflow: hidden;
     z-index: 1;
     position: relative;
-    background: #fff;
+    background: var(--main-text-color);
     box-sizing: border-box;
 }
 .modal {
@@ -135,7 +140,7 @@ button:hover {
     border: 1px solid rgba(0,0,0,.12);
     border-radius: .3em;
     padding: 0 1em 1em 1em;
-    background: white;
+    background: var(--main-text-color);
 }
 .mdl-shadow--16dp {
     box-shadow: 0 16px 24px 2px rgba(0,0,0,.14),0 6px 30px 5px rgba(0,0,0,.12),0 8px 10px -5px rgba(0,0,0,.2);
@@ -146,10 +151,7 @@ button:hover {
 }
 
 .disabled {
-    input,
-    button,
-    textarea,
-    label {
+    input, button, textarea, label {
         pointer-events: none;
         cursor: not-allowed;
         filter: alpha(opacity=65);

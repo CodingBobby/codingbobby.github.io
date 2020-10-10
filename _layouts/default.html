@@ -5,6 +5,15 @@
    <body>
       <main class="page-content" aria-label="Content">
          <div class="wrapper">
+            <div class="horizon" style="width: 100%;">
+               {% if page.layout != 'home' %}
+                  <a href="{{ site.url }}">{{ site.theme_config.back_home_text }}</a>
+               {% else %}
+                  <div></div>
+               {% endif %}
+               <a id="theme-toggle" onclick="modeSwitcher()"></a>
+               <span class="stretch"></span>
+            </div>
             {{ content }}
             {% include footer.html %}
          </div>

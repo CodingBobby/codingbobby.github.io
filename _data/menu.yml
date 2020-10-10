@@ -11,3 +11,9 @@ entries:
     post_list: true
     url: false
     entires: false
+
+  - title: lists of awesome things
+    url: false
+    entries:
+      - title: my top 15 songs
+        url: /favourite-songs
