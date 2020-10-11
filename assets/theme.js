@@ -1,4 +1,3 @@
-let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)")
 let theme = sessionStorage.getItem('theme')
 
 let lightModeHTML = `
@@ -38,24 +37,6 @@ function setTheme(theme) {
    }
 }
 
-if (systemInitiatedDark.matches) {
-   themeButton('light')
-} else {
-   themeButton('dark')
-}
-
-function prefersColorTest(systemInitiatedDark) {
-   if (systemInitiatedDark.matches) {
-      themeAttribute('dark')		
-      themeButton('light')
-      sessionStorage.setItem('theme', '')
-   } else {
-      themeAttribute('light')
-      themeButton('dark')
-      sessionStorage.setItem('theme', '')
-   }
-}
-systemInitiatedDark.addListener(prefersColorTest)
 
 function modeSwitcher() {
    let theme = sessionStorage.getItem('theme') 
@@ -63,15 +44,11 @@ function modeSwitcher() {
       setTheme('light')
    }	else if (theme === "light") {
       setTheme('dark')
-   } else if (systemInitiatedDark.matches) {	
-      setTheme('light')
-   } else {
-      setTheme('dark')
    }
 }
 
 if (theme === "dark") {
    setTheme('dark')
-} else if (theme === "light") {
+} else { // if light or none is set
    setTheme('light')
 }

@@ -30,36 +30,31 @@
 // variables and theme
 
 html {
-    @extend html[data-theme="light"];
+    @extend [data-theme="light"];
 }
 
-@media (prefers-color-scheme: dark) {
-    html {
-        @extend html[data-theme="dark"]
-    }
-
-    html[data-theme="light"] {
-        --page-back-color: rgb(240, 240, 240);
-        --main-text-color: rgb(0, 0, 0);
-        --main-back-color: rgb(255, 255, 255);
-        --link-text-color: rgb(255, 76, 31);
-        --github-icon-url: url(https://img.icons8.com/material-sharp/64/000000/github.png);
-        --twitter-icon-url: url(https://img.icons8.com/material-sharp/64/000000/twitter-squared.png);
-        --email-icon-url: url(https://img.icons8.com/material-sharp/64/000000/email.png);
-        --coffee-icon-url: url(https://img.icons8.com/material-sharp/64/000000/kawaii-coffee.png);
-    }
-    
-    html[data-theme="dark"] {
-        --page-back-color: rgb(27, 27, 27);
-        --main-text-color: rgb(240, 240, 240);
-        --main-back-color: rgb(17, 17, 17);
-        --link-text-color: rgb(120, 217, 113);
-        --github-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/github.png);
-        --twitter-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/twitter-squared.png);
-        --email-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/email.png);
-        --coffee-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/kawaii-coffee.png);
-    }
+html[data-theme="light"] {
+    --page-back-color: rgb(240, 240, 240);
+    --main-text-color: rgb(0, 0, 0);
+    --main-back-color: rgb(255, 255, 255);
+    --link-text-color: rgb(255, 76, 31);
+    --github-icon-url: url(https://img.icons8.com/material-sharp/64/000000/github.png);
+    --twitter-icon-url: url(https://img.icons8.com/material-sharp/64/000000/twitter-squared.png);
+    --email-icon-url: url(https://img.icons8.com/material-sharp/64/000000/email.png);
+    --coffee-icon-url: url(https://img.icons8.com/material-sharp/64/000000/kawaii-coffee.png);
 }
+
+html[data-theme="dark"] {
+    --page-back-color: rgb(27, 27, 27);
+    --main-text-color: rgb(240, 240, 240);
+    --main-back-color: rgb(17, 17, 17);
+    --link-text-color: rgb(120, 217, 113);
+    --github-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/github.png);
+    --twitter-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/twitter-squared.png);
+    --email-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/email.png);
+    --coffee-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/kawaii-coffee.png);
+}
+
 
 // styling 
 html {
