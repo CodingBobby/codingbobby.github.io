@@ -2,7 +2,7 @@
 layout: post
 title:  "The mystery about classes and IDs"
 date:   2018-09-04
-tags: [coding, html, css, weird-chats]
+tags: [coding, weird-chat]
 authors: [Bumbleboss, Bob]
 comments: true
 ---

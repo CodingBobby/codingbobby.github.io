@@ -2,7 +2,7 @@
 layout: post
 title:  "A quick overview of nordic mythology"
 date:   2018-10-02
-tags: [mythology, norse edda, gods]
+tags: [mythology]
 authors: [Bob]
 comments: true
 ---

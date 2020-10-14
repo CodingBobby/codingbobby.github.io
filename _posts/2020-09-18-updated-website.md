@@ -2,7 +2,7 @@
 layout: post
 title:  "My all-new website!"
 date:   2020-09-18 15:29:34 +0200
-tags: [update, website, theme, coding]
+tags: [coding, journal]
 authors: [Bob]
 comments: true
 ---

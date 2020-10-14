@@ -2,7 +2,7 @@
 layout: post
 title: "Examination phases are creepy!"
 date: 2019-01-31
-tags: [studying, exams, procastination, journal]
+tags: [studying, procastination, journal]
 authors: [Bob]
 comments: true
 ---

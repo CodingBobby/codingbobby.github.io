@@ -2,7 +2,7 @@
 layout: post
 title:  "Photobooks are nice!"
 date:   2018-02-06
-tags: [review, photography, printing]
+tags: [photography, opinion]
 authors: [Bob]
 comments: true
 ---

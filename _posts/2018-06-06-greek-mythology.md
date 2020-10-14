@@ -2,7 +2,7 @@
 layout: post
 title:  "The Greek mythology"
 date:   2018-06-06
-tags: [mythology, greek, gods, weird-chats]
+tags: [mythology, weird-chat]
 authors: [Pizzayaki, Tidanium]
 comments: true
 ---

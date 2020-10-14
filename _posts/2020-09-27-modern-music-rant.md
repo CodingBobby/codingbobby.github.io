@@ -2,7 +2,7 @@
 layout: post
 title: "A Rant About Modern Music"
 date: 2020-09-27
-tags: [music, rant, mainstream, industry, celebrities]
+tags: [music, mainstream, celebrities, opinion]
 authors: [Bob]
 comments: true
 ---
