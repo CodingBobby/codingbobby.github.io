@@ -92,7 +92,7 @@ button:hover {
     padding: 0px 0px 0px 0px;
     margin-bottom: 1em;
 
-    .child {
+    &.child {
         margin-left: 3em;
     }
 }
