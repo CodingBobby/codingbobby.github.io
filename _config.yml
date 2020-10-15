@@ -24,6 +24,9 @@ github_username: CodingBobby
 
 # Build settings
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

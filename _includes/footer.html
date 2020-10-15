@@ -16,3 +16,24 @@
 </div>
 
 <script src="{{ '/assets/theme.js' | relative_url }}"></script>
+
+<!-- Parse the Latex divs with Katex-->
+<script>
+   $("script[type='math/tex']").replaceWith(
+         function() {
+            let tex = $(this).text()
+            return katex.renderToString(tex, {
+               displayMode: false
+            })
+         }
+   );
+   
+   $("script[type='math/tex; mode=display']").replaceWith(
+      function() {
+         let tex = $(this).text()
+         return katex.renderToString(tex.replace(/%.*/g, ''), {
+            displayMode: true
+         })
+      }
+   );
+</script>

@@ -72,7 +72,17 @@ h2, h3, h4, h5, h6 { margin-top: 3rem; }
 
 hr { margin: 2rem 0; }
 
-p { margin: 1rem 0; }
+.katex {
+    margin-left: 2rem;
+}
+
+p {
+    margin: 1rem 0;
+
+    .katex {
+        margin-left: 0;
+    }
+}
 
 li { margin: 0.4rem 0; }
 
