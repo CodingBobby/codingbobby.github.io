@@ -7,8 +7,13 @@
          <div class="wrapper">
             <div class="horizon" style="width: 100%;">
                {% if page.layout != 'home' %}
-                  {% assign child_filter = page.slug | append: '/' %}
-                  <a href="{{ page.url | replace: child_filter, '' }}">{{ site.theme_config.back_home_text }}</a>
+                  {% if page.slug %}
+                     {% assign child_filter = page.slug | append: '/' %}
+                     {% assign back_url = page.url | replace: child_filter, '' %}
+                  {% else %}
+                     {% assign back_url = '/' %}
+                  {% endif %}
+                  <a href="{{ back_url }}">{{ site.theme_config.back_home_text }}</a>
                {% else %}
                   <div></div>
                {% endif %}
