@@ -2,19 +2,20 @@
 layout: post
 title: CodingBobby | The Authors
 ---
-### Bob
+
+<h3 id="Bob">Bob</h3>
 The guy behind this page.
 Read more about him [here](/about).
 
-### Pizzayaki
+<h3 id="Pizzayaki">Pizzayaki</h3>
 A cool dude, student of computer science in asia.
 It's a mystery if he loves pizza or what else it's doing in his name.
 
-### Tidanium
+<h3 id="Tidanium">Tidanium</h3>
 He got internet.
 Try get on his level.
 
-### Bumbleboss
+<h3 id="Bumbleboss">Bumbleboss</h3>
 Designer inspired mostly by anime characters.
 Not an entirely bad thing actually.
 He also has a website which you can visit [here](https://bumbleboss.xyz).

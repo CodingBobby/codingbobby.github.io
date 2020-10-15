@@ -1,4 +1,4 @@
 ---
 layout: tags
-title: Blog Tags
+title: CodingBobby | Blog Tags
 ---
