@@ -17,7 +17,7 @@ It is widely used across the world, virtually everyone has it installed and can 
 Also, to be honest, it actually can do a lot of things if you know how to, if you have a lot of time for google and forum searches[^documentation] and if you come with a very, very high frustration line.
 Wait, those are already bad things!
 Exactly!
-You cannot list one of Excel's few strengths without putting a footnote and list all the horrible things that come with it.
+You cannot talk about one of Excel's few strengths without putting a footnote and listing all the horrible things that come with it.
 
 Everytime I'm working with this software I'm embittered by numerus frustrations.
 Because of my little tolerance for this, I came up with the "Excel-equivalent unit of stress" .xlσ[^excel-sigma].
