@@ -29,7 +29,7 @@
    })()
 
    async function getSongList(bearer) {
-      const playlistURL = 'https://api.spotify.com/v1/playlists/5gVaGUzDsU5Aw5qVFBCtVF/tracks'
+      const playlistURL = 'https://api.spotify.com/v1/playlists/{{ page.playlist }}/tracks'
       try {
          const response = await fetch(playlistURL, {
             method: 'GET',
@@ -49,7 +49,7 @@
                let html = ''
                let trackName = (item.track.name)
                   .replace(/\W*[fF]eat[\W*\w*]*/g, '')
-                  .replace(/\W*[rR]emaster[\W*\w*]*/g, '')
+                  .replace(/\W*\d*\W*[rR]emaster[\W*\w*]*/g, '')
 
                html += `
                   <div class="song_item">
