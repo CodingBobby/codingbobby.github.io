@@ -26,6 +26,7 @@ On the far right hand side you can see an ordinary [RaspberryPi](https://raspber
 The detector hooked up to the Pi is made of a scintillator plate (wrapped in black light-blocking kevlar) that produces light flashes when muons pass through it, a photosensor that records them and a custom designed PCB that achieves an impressive time accuracy of the detection.
 The team has written a custom software stack which is partly hosted on their servers and partly on the RaspberryPi.
 It not only includes the actual algorithms that filter data and compute relationships between the recorded events but also the detector drivers, network infrastructure, their website, wiki page, forum and even a graphical interface for settings, statistics and measurement data the user can gaze at.
+And the best thing is that literally every piece of this is open source.
 
 I find the project very interesting and I am amazed by the sheer dedication and dilligence the members have been putting into this despite all the difficulties this year has brought us.
 They definitely will have my support in whatever form that will be.
@@ -33,7 +34,7 @@ So, if you are interested in physics, astronomy and DIY-projects, I highly encou
 Live data of what has been detected so far can be seen on their [monitor](grafana.muonpi.org:3000/d/KNmcHikMz/muonpi-overview).
 And if you are not interesed in physics, learn to be[^physics]!
 
-Huge thumbs up for this community project and see you soon when I have updates on this.
+Huge thumbs up for this open-everything community project and see you soon when I have updates on this.
 
 
 ---
