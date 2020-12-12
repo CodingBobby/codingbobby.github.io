@@ -6,7 +6,7 @@ tags: [science, journal, opinion]
 authors: [Bob]
 comments: true
 ---
-Yesterday I joined an online talk about the new[^project-start] and very promising open science project [MuonPi](https://muonpi.org) a team from the Justus-Liebig university in Gießen, Germany presented.
+Yesterday I joined an online talk about the new[^project-start] and very promising open science project [MuonPi](https://muonpi.org) a team from the Justus-Liebig-University in Gießen, Germany presented.
 Their goal is to record and analyze the paths and intensities of muon showers that happen around the globe potentially hundreds of thousands of times per day.
 
 <img src="https://pbs.twimg.com/media/Eo_Rt1YWEAIHkxX?format=jpg" alt="presentation on bbb" style="width: 75%;"/>
@@ -18,7 +18,7 @@ The half-life period of muons is very short but due to their super high speeds o
 Typically, the detection of muons happenes in rather large standalone research centers that are geologically limited to one area.
 MuonPi now aims to change that by providing (surprisingly) inexpensive detector units that are designed to be user friendly so that anyone can host their own measuring station at home.
 This way, a large number of small detectors can be spread around the world to form a network of recording locations that together act like one giant muon detector.
-By dramatically increasing the area coverage, it is hoped to be able to detect even very rate super high energy showers that are currently only theoretical.
+By dramatically increasing the area coverage, it is hoped to be able to detect even very rare super high energy showers that are currently only theoretical.
 Below, you can see the parts this new detector consists of.
 
 <img src="https://pbs.twimg.com/media/EgWZgLfWsAcFrN2?format=jpg" alt="parts of the MuonPi detector" style="width: 75%;"/>
