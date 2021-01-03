@@ -1,55 +1,19 @@
 <div id="song_list">
-   <div class="song_item">
-      <a href="https://www.goodreads.com/book/show/117047.The_Blind_Watchmaker" target="_blank"><img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553577503l/117047._SY475_.jpg"></a>
-      <div class="song_info">
-         <h3>Richard Dawkins – The Blind Watchmaker</h3>
-         <h4>on p. 176 / 466</h4>
-         <p>Wow. Achieving less than 0.3% error after copying data 20 billion times is unimaginably good. Natual selection made biology more advanced than any future technology could ever dream of becoming.</p>
-      </div>
-   </div>
-   <div class="spacer"></div>
-   <div class="song_item">
-      <a href="https://www.goodreads.com/book/show/117047.The_Blind_Watchmaker" target="_blank"><img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553577503l/117047._SY475_.jpg"></a>
-      <div class="song_info">
-         <h3>Richard Dawkins – The Blind Watchmaker</h3>
-         <h4>on p. 107 / 466</h4>
-         <p>What a well written and eye-opening book. Dawkins is so honest about his discovery of biomorphs that you can feel the joy and excitement he must have experienced.</p>
-      </div>
-   </div>
-   <div class="spacer"></div>
-   <div class="song_item">
-      <a href="https://www.goodreads.com/book/show/117047.The_Blind_Watchmaker" target="_blank"><img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553577503l/117047._SY475_.jpg"></a>
-      <div class="song_info">
-         <h3>Richard Dawkins – The Blind Watchmaker</h3>
-         <h4>on p. 61 / 466</h4>
-         <p>Funny how Dawkins destroys Bishop Montefiore's argument against natural selection by putting that very argument in other words. Also, I now love bats! The next thing I must get is a bat detector!</p>
-      </div>
-   </div>
-   <div class="spacer"></div>
-   <div class="song_item">
-      <a href="https://www.goodreads.com/book/show/14062004-thinking-fast-and-slow" target="_blank"><img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1337593393l/14062004.jpg"></a>
-      <div class="song_info">
-         <h3>Daniel Kahneman – Thinking, Fast and Slow</h3>
-         <h4>on p. 163 / 499</h4>
-         <p>Looks like people are worse in understanding percentages than absolute numbers. How come that the average makes more errors when being asked "what percentage of people are..." than when being asked "how many out of 100 people are..."? It is literally the exact same thing!</p>
-      </div>
-   </div>
-   <div class="spacer"></div>
-   <div class="song_item">
-      <a href="https://www.goodreads.com/book/show/6977509-the-greatest-show-on-earth" target="_blank"><img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442553970l/6359544._SY475_.jpg"></a>
-      <div class="song_info">
-         <h3>Richard Dawkins – The Greatest Show on Earth</h3>
-         <h4>on p. 38 / 480</h4>
-         <p>Dawkins is really giving the best possible examples: "If you started with a mutant child and made it pump iron as well […], you could probably end up with something more grotesque than Mr Universe."</p>
-      </div>
-   </div>
-   <div class="spacer"></div>
-   <div class="song_item">
-      <a href="https://www.goodreads.com/book/show/358692.Man_Who_Loved_Only_Numbers" target="_blank"><img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1174075803l/358692.jpg"></a>
-      <div class="song_info">
-         <h3>Paul Hoffman – The Man Who Loved Only Numbers</h3>
-         <h4>on p. 92 / 301</h4>
-         <p>Oh dear, Pi is written wrong.</p>
-      </div>
-   </div>
+   {% for update in site.data.bookEntries %}
+      {% if update.content != '' %}
+         {% if forloop.first == false %}
+            <div class="spacer"></div>
+         {% endif %}
+         <div class="song_item">
+            <a href="{{ update.bookURL }}" target="_blank">
+               <img src="{{ update.imageURL }}">
+            </a>
+            <div class="song_info">
+               <h3>{{ update.bookTitle }}</h3>
+               <h4>on p. {{ update.pageCurrent }} / {{ update.pageTotal }}</h4>
+               <p>{{ update.content }}</p>
+            </div>
+         </div>
+      {% endif %}
+   {% endfor %}
 </div>
