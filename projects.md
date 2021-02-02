@@ -4,7 +4,7 @@ title: CodingBobby | Projects
 ---
 
 ## Traktify
-A multi platform desktop app that provides super easy super fast access to your [trakt.tv](https://trakt.tv) account.
+A multi-platform desktop app that provides super easy super fast access to your [trakt.tv](https://trakt.tv) account.
 It's currently in development and I'm collaborating with [Bumbleboss](https://bumbleboss.xyz).
 You can read more on the dedicated [website](/traktify) or check out the [repo](https://github.com/CodingBobby/traktify).
 

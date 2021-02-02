@@ -2,7 +2,7 @@
 layout: post
 title: "The Timelines of Recursion"
 date: 2020-10-04
-tags: [book, visualization, science-fiction]
+tags: [book, visualisation, science-fiction]
 authors: [Bob]
 comments: true
 ---
