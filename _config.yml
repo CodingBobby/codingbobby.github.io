@@ -30,6 +30,7 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-katex
 
 sass:
   style: compressed
@@ -53,3 +54,9 @@ reCaptcha:
 spotify:
   id: 58a76bb63e7f462c8921ec0b13097434
   secret: f5d5fab54aa9463eac496d781ff9e9a2
+
+katex:
+  math_engine: null
+  rendering_options:
+    throw_error: true
+    error_color: "#cc0000"

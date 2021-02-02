@@ -6,9 +6,10 @@ tags: [journal, science, engineering, visualisation]
 authors: [Bob]
 comments: true
 ---
+
 Hello everyone,
 nice to see you again.
-I know this is a bit late, but I wish you a great new year nontheless.
+I know this is a bit late, but I wish you a great new year nonetheless.
 
 So I was in a lecture yesterday and the topic was the simulation of differential equations that are difficult or even impossible to solve analytically.
 The professor is one of my favourite lectures at my university – he is one of the older generations and often anecdotes from his time as a student arise, how they had just one central computer for the entire department with oh so amazing 1 MB of storage.
@@ -38,8 +39,8 @@ $$\dot{z} = x\, y - \gamma\, z$$
 
 If you don't get what you see, it's not much of a problem, because Wikipedia has a decent article about that system.[^wiki]
 As you can see, the set consists of three equation describing $$x$$, $$y$$ and $$z$$ ($$\alpha$$, $$\beta$$ and $$\gamma$$ are constants).
-Unfortunately, Excel's plots can only display two dimension at a time.
-Below you can see the attractor viewed from the three different axes:
+Unfortunately, Excel's plots can only display two dimensions at a time.
+Below, you can see the attractor viewed from the three different axes:
 
 <p style="display:flex">
 <a href="/assets/images/lorenz+z.svg" target="_blank"  style="flex:30%;width:30%"><img src="/assets/images/lorenz+z.svg"></a>
@@ -60,7 +61,6 @@ I would really want to create more similar wallpapers with other mathematical ob
 Or maybe even posters?
 If anything, the first place to share it will be here.
 Also, if you too want to set this one as your desktop background, you can click the image (the others above as well) to enlarge and then save it.
-
 
 ---
 {: data-content="footnotes"}
