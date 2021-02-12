@@ -54,7 +54,7 @@
                html += `
                   <div class="song_item">
                      <h3 class="rank">${item_index+1}.</h3>
-                     <a href="${item.track.external_urls.spotify}" target="_blank"><img src="${item.track.album.images[0].url}"></a>
+                     <a href="${item.track.external_urls.spotify}" target="_blank" rel="noreferrer"><img src="${item.track.album.images[0].url}"></a>
                      <div class="song_info">
                         <h3>${trackName}</h3>
                         <h4>
@@ -63,7 +63,7 @@
                item.track.artists.forEach((artist, artist_index) => {
                   if (artist_index > 0) html += ', '
 
-                  html += `<a href="${artist.external_urls.spotify}" target="_blank">${artist.name}</a>`
+                  html += `<a href="${artist.external_urls.spotify}" target="_blank" rel="noreferrer">${artist.name}</a>`
                })
 
                html += `

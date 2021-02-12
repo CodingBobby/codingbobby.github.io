@@ -43,15 +43,15 @@ Unfortunately, Excel's plots can only display two dimensions at a time.
 Below, you can see the attractor viewed from the three different axes:
 
 <p style="display:flex">
-<a href="/assets/images/lorenz+z.svg" target="_blank"  style="flex:30%;width:30%"><img src="/assets/images/lorenz+z.svg"></a>
-<a href="/assets/images/lorenz+y.svg" target="_blank"  style="flex:30%;width:30%"><img src="/assets/images/lorenz+y.svg"></a>
-<a href="/assets/images/lorenz+x.svg" target="_blank"  style="flex:30%;width:30%"><img src="/assets/images/lorenz+x.svg"></a>
+<a href="/assets/images/lorenz+z.svg" target="_blank" style="flex:30%;width:30%"><img src="/assets/images/lorenz+z.svg" loading="lazy"></a>
+<a href="/assets/images/lorenz+y.svg" target="_blank" style="flex:30%;width:30%"><img src="/assets/images/lorenz+y.svg" loading="lazy"></a>
+<a href="/assets/images/lorenz+x.svg" target="_blank" style="flex:30%;width:30%"><img src="/assets/images/lorenz+x.svg" loading="lazy"></a>
 </p>
 
 Then, after a while of tinkering around with the settings in Excel, I wanted even more because black thin lines aren't quite satisfactory. And this is the wallpaper I made for my desktop:
 
 <a href="/assets/images/lorenz_attractor_wp.png" target="_blank">
-![Lorenz Attractor Wallpaper](/assets/images/lorenz_attractor_wp.png)
+![Lorenz Attractor Wallpaper](/assets/images/lorenz_attractor_wp.png){:loading="lazy"}
 </a>
 
 ## Conclusion

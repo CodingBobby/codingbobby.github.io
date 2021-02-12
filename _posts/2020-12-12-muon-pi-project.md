@@ -9,7 +9,7 @@ comments: true
 Yesterday I joined an online talk about the new[^project-start] and very promising open science project [MuonPi](https://muonpi.org) a team from the Justus-Liebig-University in Gießen, Germany presented.
 Their goal is to record and analyze the paths and intensities of muon showers that happen around the globe potentially hundreds of thousands of times per day.
 
-<img src="https://pbs.twimg.com/media/Eo_Rt1YWEAIHkxX?format=jpg" alt="presentation on bbb" style="width: 75%;"/>
+![Presentation on BBB](https://pbs.twimg.com/media/Eo_Rt1YWEAIHkxX?format=jpg){:width='75%'}
 
 Muons are relatively heavy elementary particles[^muon-mass] that are produced in high quantity when cosmic radiation interacts with matter in our atmosphere and these radiation bursts are indicators for large stellar events.
 For the understanding of the universe and its history, the discovery of more of these events is crucial.
@@ -21,7 +21,7 @@ This way, a large number of small detectors can be spread around the world to fo
 By dramatically increasing the area coverage, it is hoped to be able to detect even very rare super high energy showers that are currently only theoretical.
 Below, you can see the parts this new detector consists of.
 
-<img src="https://pbs.twimg.com/media/EgWZgLfWsAcFrN2?format=jpg" alt="parts of the MuonPi detector" style="width: 75%;"/>
+![Parts of the MuonPi detector](https://pbs.twimg.com/media/EgWZgLfWsAcFrN2?format=jpg){:width='75%'}
 
 On the far right-hand side you can see an ordinary [RaspberryPi](https://raspberrypi.org) mini-computer that many makers and electronics fans already have at home or if not, is very cheap to get.
 The detector hooked up to the Pi is made of a scintillator plate (wrapped in black light-blocking kevlar) that produces light flashes when muons pass through it, a photosensor that records them and a custom-designed PCB that achieves an impressive time accuracy of the detection.
@@ -30,7 +30,7 @@ It not only includes the actual algorithms that filter data and compute relation
 And the best thing is that literally every piece of this is open source.
 
 ## Conclusion
-I find the project very interesting and I am amazed by the sheer dedication and dilligence the members have been putting into this despite all the difficulties this year has brought us.
+I find the project very interesting and I am amazed by the sheer dedication and diligence the members have been putting into this despite all the difficulties this year has brought us.
 I hope that MuonPi will eventually gain global attention, grow a large community and someday leads to discoveries we would not have made without this project.
 They definitely will have my support in whatever form that will be.
 
