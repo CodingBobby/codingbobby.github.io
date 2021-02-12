@@ -20,4 +20,6 @@ entries:
 
       - title: short reading updates
         url: /reading-updates
-      
+
+      - title: tools, services & projects
+        url: /awesome-tech
