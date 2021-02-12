@@ -73,7 +73,7 @@ This type of file consists of raw RGB pixel data put as a list which is easy to 
 It's for macOS only and you can get it from the official [Mac App Store](https://apps.apple.com/us/app/id414298354).
 
 ### iConvert Icons
-A small online tool you can convert *.png* files to *.ico* or *.icns*.
+A small and simple tool that can convert *.png* files to *.ico* or *.icns*.
 Very handy if you make an app logo and want to use it as a proper icon.
 
 ![iConvert Screenshot](/assets/images/iConvert_screenshot.png){:width='66%'}
@@ -104,7 +104,7 @@ You can find the GitHub repository [here](https://github.com/exelban/stats) wher
 ### Übersicht
 This widget manager lets you add mini-applications directly to your macOS desktop.
 From simple calendars over realtime system monitors to alternative menu bars with minimalistic looks, almost anything is possible.
-Reason for this is that those widgets are actually just small HTML-pages which run JavaScript in the background and can be styled by CSS.
+Reason for this is that those widgets are actually just small HTML-pages which run JavaScript in the background and can be styled with CSS.
 
 ![Übersicht Mockup](https://tracesof.net/uebersicht/images/screenshots/1.jpg){:width='66%'}
 
