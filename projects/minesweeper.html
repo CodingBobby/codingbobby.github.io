@@ -1,22 +1,17 @@
+---
+layout: post
+title: CodingBobby | Minesweeper
+---
+
 <style>
-body {
-    background-color: #293636;
-    color: #BABBBC;
+#container {
     text-align: center;
-}
-
-a {
-    color: inherit;
-}
-
-a:hover {
-    color: initial;
 }
 
 #game {
     width: max-content;
     height: max-content;
-    border: solid #BABBBC 2px;
+    border: 0 solid;
     margin: 0 auto;
 }
 
@@ -24,8 +19,6 @@ a:hover {
     width: 100%;
     height: 30px;
     line-height: 30px;
-    border-bottom: inherit;
-    background-color: #293636;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -45,6 +38,7 @@ a:hover {
     height: max-content;
     display: grid;
     grid-template-columns: 1fr;
+    border: solid var(--main-text-color) 0.5px;
 }
 
 .field_row {
@@ -59,18 +53,18 @@ a:hover {
     width: 25px;
     height: 25px;
     line-height: 25px;
-    border: solid #BABBBC 0.5px;
-    background-color: #006A6B;
+    border: solid var(--main-text-color) 0.5px;
+    background-color: var(--page-back-color);
     cursor: pointer;
 }
 
 .field:hover {
-    background-color: #3EADAC;
+    background-color: var(--target-highlight-color);
 }
 
 .revealed {
-    color: #293636;
-    background-color: #3EADAC;
+    color: var(--main-text-color);
+    background-color: var(--target-highlight-color);
 }
 
 .lost {
@@ -85,6 +79,8 @@ input[type=number] {
     width: 50px;
 } 
 </style>
+
+<div id="container">
 
 <form id="field_size" onsubmit="return processFieldUpdate(event);">
    <input type="number" id="width" name="width">
@@ -106,6 +102,8 @@ input[type=number] {
    </div>
 
    <div class="section" id="playground"></div>
+</div>
+
 </div>
 
 <script src="/assets/minesweeper.js"></script>
