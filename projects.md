@@ -16,3 +16,21 @@ Find out more on the [repo](https://github.com/CodingBobby/rectipy) and if you'r
 The very website you are most likely browsing right now.
 It is written in [HTML](https://html.spec.whatwg.org/), [Liquid](https://shopify.github.io/liquid/), [Sass](https://sass-lang.com/) and [Markdown](https://daringfireball.net/projects/markdown/) which is then compiled with [Jekyll](https://jekyllrb.com/) into a static website.
 If you like to check out the repository, you can find it [here](https://github.com/CodingBobby/codingbobby.github.io).
+
+## Smaller Pieces
+Some other weekend-projects that I have done (and finished so I would show them here).
+
+- [Simple Faces](simple-faces):
+  a set of minimalistic profile pictures of some friends
+
+- [Minesweeper](minesweeper):
+  my attempt of writing Minesweeper in vanilla JavaScript
+
+- [Coservation of Momentum](algebrarium-momentum):
+  a simple simulation of the law of conservation of momentum written in P5.js
+
+- [Physical Pendulum](algebrarium-pendulum):
+  another P5.js simulation of a swinging pendulum
+
+- [Refraction of Light](algebrarium-refraction):
+  simulation of a Snellius' law written in P5.js

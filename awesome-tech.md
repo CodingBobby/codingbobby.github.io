@@ -64,7 +64,7 @@ The website of the open-source software can be found [here](https://scantailor.o
 Small applications that only have one special job which they perform greatly.
 
 ### ToyViewer
-Image viewer that can open virtually any image format.
+An image viewer that can open virtually any image format.
 I started to use it because it can display various *.ppm* formats.
 This type of file consists of raw RGB pixel data put as a list which is easy to generate when you want to code a simple renderer or image processor.
 
