@@ -26,7 +26,7 @@ Some other weekend-projects that I have done (and finished so I would show them 
 - [Minesweeper](minesweeper):
   my attempt of writing Minesweeper in vanilla JavaScript
 
-- [Coservation of Momentum](algebrarium-momentum):
+- [Conservation of Momentum](algebrarium-momentum):
   a simple simulation of the law of conservation of momentum written in P5.js
 
 - [Physical Pendulum](algebrarium-pendulum):
