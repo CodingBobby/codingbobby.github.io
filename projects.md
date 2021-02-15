@@ -6,6 +6,7 @@ title: CodingBobby | Projects
 ## Traktify
 A multi-platform desktop app that provides super easy super fast access to your [trakt.tv](https://trakt.tv) account.
 It's currently in development and I'm collaborating with [Bumbleboss](https://bumbleboss.xyz).
+Traktify's logo was a project on its own, you can find more about it [here](#small-traktify).
 You can read more on the dedicated [website](/traktify) or check out the [repo](https://github.com/CodingBobby/traktify).
 
 ## Rectipy
@@ -20,11 +21,14 @@ If you like to check out the repository, you can find it [here](https://github.c
 ## Smaller Pieces
 Some other weekend-projects that I have done (and finished so I would show them here).
 
+- <span id="small-traktify">[Traktify Logo](traktify-logo)</span>:
+  the logo of [Traktify](#traktify)
+
 - [Simple Faces](simple-faces):
   a set of minimalistic profile pictures of some friends
 
 - [Minesweeper](minesweeper):
-  my attempt of writing Minesweeper in vanilla JavaScript
+  my attempt at writing Minesweeper in vanilla JavaScript
 
 - [Conservation of Momentum](algebrarium-momentum):
   a simple simulation of the law of conservation of momentum written in P5.js
