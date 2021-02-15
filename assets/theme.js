@@ -1,4 +1,4 @@
-let theme = sessionStorage.getItem('theme')
+let theme = localStorage.getItem('theme')
 
 let lightModeHTML = `
    <img src="https://img.icons8.com/material-sharp/64/f0f0f0/sun.png" alt="Light Mode"/>
@@ -28,18 +28,18 @@ function themeAttribute(theme) {
 function setTheme(theme) {
    if (theme === 'light') {
       themeAttribute('light')
-      sessionStorage.setItem('theme', 'light')
+      localStorage.setItem('theme', 'light')
       themeButton('dark')
    } else if (theme === 'dark') {
       themeAttribute('dark')
-      sessionStorage.setItem('theme', 'dark')
+      localStorage.setItem('theme', 'dark')
       themeButton('light')
    }
 }
 
 
 function modeSwitcher() {
-   let theme = sessionStorage.getItem('theme') 
+   let theme = localStorage.getItem('theme') 
    if (theme === "dark") {
       setTheme('light')
    }	else if (theme === "light") {
