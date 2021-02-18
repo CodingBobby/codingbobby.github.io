@@ -55,12 +55,16 @@ Then, after a while of tinkering around with the settings in Excel, I wanted eve
 </a>
 
 ## Conclusion
-Well what a day!
+Well, what a day!
 There is probably potential for optimisations, and this might just be the start of something.
 I would really want to create more similar wallpapers with other mathematical objects.
 Or maybe even posters?
 If anything, the first place to share it will be here.
 Also, if you too want to set this one as your desktop background, you can click the image (the others above as well) to enlarge and then save it.
+
+## Update from 2021-02-18
+I have just done a similar rendering of the Aizawa attractor and more are under way.
+You can find them [here](/projects/chaotic-shapes) now.
 
 ---
 {: data-content="footnotes"}
