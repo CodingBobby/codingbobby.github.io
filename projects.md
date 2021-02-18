@@ -21,8 +21,11 @@ If you like to check out the repository, you can find it [here](https://github.c
 ## Smaller Pieces
 Some other weekend-projects that I have done (and finished so I would show them here).
 
+- [Shapes of Chaos](chaotic-shapes):
+  wallpapers and posters of mathematical structures
+
 - <span id="small-traktify">[Traktify Logo](traktify-logo)</span>:
-  the logo of [Traktify](#traktify)
+  the logo and app icon of [Traktify](#traktify)
 
 - [Simple Faces](simple-faces):
   a set of minimalistic profile pictures of some friends
