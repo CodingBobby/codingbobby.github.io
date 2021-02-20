@@ -2,7 +2,7 @@
 layout: post
 title: CodingBobby | Awesome Tools, Services & Projects
 ---
-This is a list of great pieces of software and hardware that I found particularly useful and has served me over some time now.
+This is a list of great pieces of software and hardware that I found particularly useful and have served me over some time now.
 Most will be very specialised, so you might not realize why I've put them on here but maybe you'll stumble across something you have searched for ages.
 
 What you will find here[^screenshots]:
