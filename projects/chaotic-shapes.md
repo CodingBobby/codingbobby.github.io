@@ -7,6 +7,7 @@ My first encounter was with the Lorenz attractor, of course (read [this blog pos
 The pure beauty of its unpredictable but organic shape hooked me from the first minute – I believe this feeling will stay with me forever.
 
 So here is a small collection of rather simple but in a way artistic renderings of attractors I made for fun.
+You can click on the images to open them in high resolution.
 
 
 ## Lorenz Attractor
@@ -27,7 +28,7 @@ $$\beta = 28$$
 $$\gamma = 8/3$$
 
 <a href="/assets/images/lorenz_attractor_wp.png" target="_blank">
-   ![Lorenz Attractor](/assets/images/lorenz_attractor_wp.png){:loading='lazy'}
+   ![Lorenz Attractor](/assets/images/lorenz_attractor_wp_prev.webp){:loading='lazy'}
 </a>
 
 
@@ -55,7 +56,7 @@ $$\varepsilon = 0.25$$
 $$\zeta = 0.1$$
 
 <a href="/assets/images/aizawa_attractor_wp.png" target="_blank">
-   ![Aizawa Attractor](/assets/images/aizawa_attractor_wp.png){:loading='lazy'}
+   ![Aizawa Attractor](/assets/images/aizawa_attractor_wp_prev.webp){:loading='lazy'}
 </a>
 
 
@@ -83,5 +84,5 @@ $$\varepsilon = 1.833$$
 $$\zeta = 0.65$$
 
 <a href="/assets/images/dequan_li_attractor_wp.png" target="_blank">
-   ![Dequan-Li Attractor](/assets/images/dequan_li_attractor_wp.png){:loading='lazy'}
+   ![Dequan-Li Attractor](/assets/images/dequan_li_attractor_wp_prev.webp){:loading='lazy'}
 </a>
