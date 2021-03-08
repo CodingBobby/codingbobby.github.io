@@ -21,6 +21,9 @@ If you like to check out the repository, you can find it [here](https://github.c
 ## Smaller Pieces
 Some other weekend-projects that I have done (and finished so I would show them here).
 
+- [Tea Machine](tea-machine):
+  design concept of a simple tea brewing machine
+
 - [Shapes of Chaos](chaotic-shapes):
   wallpapers and posters of mathematical structures
 

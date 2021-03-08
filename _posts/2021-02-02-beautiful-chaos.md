@@ -2,7 +2,7 @@
 layout: post
 title: "Beautiful Chaos"
 date: 2021-02-02
-tags: [journal, science, engineering, visualisation]
+tags: [journal, science, engineering, mathematics, visualisation]
 authors: [Bob]
 comments: true
 ---
@@ -19,7 +19,7 @@ Prima facie, an idea of a cold and a hot plate you bring close to each other see
 But oh dear, the crazy stuff that comes out of it is just… jaw-dropping.
 Although, by the sketches the professor presented, things seemed somewhat familiar for me.
 I wondered why and when thoughtfully looking around, my eyes got stuck on my bookshelf where *Chaos* by James Gleick was smirkingly sitting.
-Jumped up, leaped across the room, grabbed the book, leaped across the room, plopped back down.
+Jumped up, leapt across the room, grabbed the book, leapt across the room, plopped back down.
 And yep, everything was in there.
 Not with mathematical details but with great descriptions, images and lots of history.
 
