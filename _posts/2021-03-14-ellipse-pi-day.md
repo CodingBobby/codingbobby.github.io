@@ -32,7 +32,7 @@ The perimeter of a circle with radius $$r$$ is rather simple:
 
 $$C = 2\,\pi\,r$$
 
-For ellipses with axes $$a$$ and $$b$$, textbooks (even academic literature!) show a simlilarly simple equation for their perimeter – without any note on how bad of an approximation it actually is:
+For ellipses with axes $$a$$ and $$b$$, textbooks (even academic literature!) show a similarly simple equation for their perimeter – without any note on how bad of an approximation it actually is:
 
 $$E \approx \pi\,(a + b)$$
 
@@ -77,7 +77,7 @@ So here, you have one showing the ellipse-number $$\iota(a,b)$$ for shapes rangi
 
 Now, you can take any ellipse, determine the ratio of axes $$b/a$$, look into this plot and find $$\iota$$ to roughly two decimal places.
 Doing so will give you *a lot* more accurate results.
-Here is a quick comparison:
+Here is a quick comparison[^ratio-values]:
 
 | Ellipse with ratio $$b/a = 1.5$$ | value | error |
 |:---:|:---:|:---:|
@@ -85,7 +85,7 @@ Here is a quick comparison:
 | $$E = \pi\,(a+b)$$ | $$7.8539\cdots$$ | $$0.99\%$$ |
 | $$E = \iota\,(a+b)$$, from plot: $$\iota = 3.18$$  | $$7.95$$ | $$0.22\%$$ |
 
-The errors of the rough approximation and the manual reading from the diagram are fairly similar and below $$1\%$$, but simply using $$\iota$$ with only two decimals is more accurate than using $$\pi$$ which is built into calculators with a lot more digits!
+The errors of the rough approximation and the manual reading from the diagram are fairly similar and below $$1\%$$, but simply using $$\iota$$ with only two decimals is already more accurate than using $$\pi$$ which is built into calculators with a lot more digits!
 
 | Ellipse with ratio $$b/a = 5.7$$ | value | error |
 |:---:|:---:|:---:|
@@ -102,7 +102,7 @@ Still far below $$1\%$$ error!
 | $$E = \pi\,(a+b)$$ | $$238.76\cdots$$ | $$20.28\%$$ |
 | $$E = \iota\,(a+b)$$, from plot: $$\iota = 3.95$$  | $$300.2$$ | $$0.23\%$$ |
 
-You might not need ellipses this wide, but when you do, you'll get a perimeter accuracy worse than what the Egyptians have done on papyrus.
+You might not need ellipses this wide, but when you do, you'll get a perimeter accuracy worse than what the Egyptians might accomplished on papyrus.
 With the plot, you are still get the same small error than with the other ratios.
 Not bad right?
 
@@ -126,3 +126,5 @@ Thanks for reading this unusually mathematical article and I hope you'll have a 
 [^oeis-sequence]: Entry in the Online Encyclopedia of Integer Sequences: [A056982](http://oeis.org/A056982)
 
 [^leibniz]: Very inefficient series but easy to show here. More details are in this [maths wiki](https://proofwiki.org/wiki/Leibniz's_Formula_for_Pi).
+
+[^ratio-values]: In these example calculations, $$a = 1$$ and $$b = 1\,b/a$$. The absolute value of the perimeter will change depending on $$a$$, but the errors will stay the same.
