@@ -103,14 +103,14 @@ Still far below $$1\%$$ error!
 | $$E = \iota\,(a+b)$$, from plot: $$\iota = 3.95$$  | $$300.2$$ | $$0.23\%$$ |
 
 You might not need ellipses this wide, but when you do, you'll get a perimeter accuracy worse than what the Egyptians might accomplished on papyrus.
-With the plot, you are still get the same small error than with the other ratios.
+Using the plot, you'll still get the same small error as for the other ratios.
 Not bad right?
 
 Also, just by the looks of it, you'll guess $$\iota$$ will eventually max out at $$4$$.
-Thats because at $$b/a \rightarrow \infty$$, the ellipse would stretch to two infinitely long and (almost) parallel lines of length $$2\,b$$, so $$4\,b$$.
+Thats because at $$b/a \rightarrow \infty$$, the ellipse would stretch to two (almost) parallel lines of length $$2\,b$$, so $$4\,b$$.
 In relation, $$a$$ is practically nothing, but the two lines would still be $$2\,a$$ away from each other.
 You'll have to add this gap on the left and right of the ellipse, so $$4\,a$$.
-Combined, the perimeter becomes $$E^{\infty} = 4\,(a+b)$$ – which is not useful because that ellipse is either a straight line or infinitely large.
+Combined, the perimeter becomes $$E^{\infty} = 4\,(a+b)$$, which is not very useful because that ellipse would either be a straight line or infinitely large.
 
 Thanks for reading this unusually mathematical article and I hope you'll have a joyful pi-day, too.
 
