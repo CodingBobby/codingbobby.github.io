@@ -71,8 +71,8 @@ function modeSwitcher() {
 // overly specific here to prevent usage of false storage contents
 if (theme === "dark") {
    setTheme('dark')
-} else if (theme === "light") {
-   setTheme('light')
 } else if (theme === "rainbow") {
    setTheme('rainbow')
+} else {
+   setTheme('light')
 }
