@@ -7,7 +7,7 @@ authors: [Bob]
 comments: true
 ---
 I am known for being quite picky about music and what comes with it.
-In a [past blog](../2020-09-27-modern-music-rant) I ranted about what hits the charts these days and I tried to understand the psychology of the attractiveness of that kind of music.
+In a [past blog](../modern-music-rant) I ranted about what hits the charts these days and I tried to understand the psychology of the attractiveness of that kind of music.
 And I must say that I didn't really succeed, neither in understanding it nor in delivering my thoughts adequately.
 So today, I want to show the other side of it and share some pieces that I find particularly interesting and joyful to listen to – personally.
 Out there, you will find tons of great similar and also very different artists, so of course, I can only show a selection.
