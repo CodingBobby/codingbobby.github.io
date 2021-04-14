@@ -12,7 +12,7 @@ And I must say that I didn't really succeed, neither in understanding it nor in 
 So today, I want to show the other side of it and share some pieces that I find particularly interesting and joyful to listen to – personally.
 Out there, you will find tons of great similar and also very different artists, so of course, I can only show a selection.
 
-If you are logged into Spotify on the browser you are reading this right now, you can play the full songs from here, otherwise, you'll only get a short prelisten.
+If you are logged into Spotify on the browser you are reading this with right now, you can play the full songs from here, otherwise, you'll only get a short prelisten.
 
 ## <a href="https://jamespaget.bandcamp.com/" target=blank_>James Paget</a>
 Very spacey and emotional tracks that are awesome to listen to whilst reading sci-fi novels.
@@ -66,7 +66,7 @@ Big fan of it!
 ## <a href="https://www.ninjatracks.com/" target=blank_>Ninja Tracks</a>
 Well, what could you say other than their tracks are totally ninja?
 I think they carry a very unique kind of force through their compositions – I don't know how you could call it, but it feels very elemental.
-Their soundstage is epic but what I probably like most is their interpretation of blues.
+Their soundstage is epic but what I probably like most is their interpretation of Blues.
 Listen yourself.
 
 <div id="song_list">
@@ -89,7 +89,7 @@ Listen yourself.
 
 
 ## <a href="" target=blank_>Joseph William Morgan</a>
-Morgan and Villanueva are composing classical interpretations of older popular songs and create massive soundstages to emerge in.
+Morgan and Villanueva are composing classical interpretations of older popular songs and create massive sounds to emerge in.
 If you know the originals your jaw will drop track after track and you'll realise how the true beauty was hidden in the songs all the time but got too little attention.
 
 <div id="song_list">
