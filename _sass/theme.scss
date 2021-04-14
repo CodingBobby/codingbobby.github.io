@@ -38,7 +38,7 @@ html[data-theme="light"] {
     --main-text-color: rgb(0, 0, 0);
     --main-back-color: rgb(255, 255, 255);
     --link-text-color: rgb(255, 76, 31);
-    --target-highlight-color: rgb(255, 255, 0);
+    --target-highlight-color: rgb(125, 0, 255);
     --github-icon-url: url(https://img.icons8.com/material-sharp/64/000000/github.png);
     --twitter-icon-url: url(https://img.icons8.com/material-sharp/64/000000/twitter-squared.png);
     --email-icon-url: url(https://img.icons8.com/material-sharp/64/000000/email.png);
@@ -50,11 +50,52 @@ html[data-theme="dark"] {
     --main-text-color: rgb(240, 240, 240);
     --main-back-color: rgb(17, 17, 17);
     --link-text-color: rgb(120, 217, 113);
-    --target-highlight-color: rgb(125, 0, 255);
+    --target-highlight-color: rgb(255, 255, 0);
     --github-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/github.png);
     --twitter-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/twitter-squared.png);
     --email-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/email.png);
     --coffee-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/kawaii-coffee.png);
+}
+
+html[data-theme="rainbow"] {
+    --page-back-color: rgba(27, 27, 27, 0);
+    --main-text-color: rgb(0, 0, 0);
+    --main-back-color: rgba(17, 17, 17, 0.22);
+    --link-text-color: rgb(125, 0, 255);
+    --target-highlight-color: rgb(255, 255, 0);
+    --github-icon-url: url(https://img.icons8.com/material-sharp/64/000000/github.png);
+    --twitter-icon-url: url(https://img.icons8.com/material-sharp/64/000000/twitter-squared.png);
+    --email-icon-url: url(https://img.icons8.com/material-sharp/64/000000/email.png);
+    --coffee-icon-url: url(https://img.icons8.com/material-sharp/64/000000/kawaii-coffee.png);
+
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+    // animation by Milan Nohejl
+    -webkit-animation: rainbow 13s ease infinite;
+    -z-animation: rainbow 13s ease infinite;
+    -o-animation: rainbow 13s ease infinite;
+    animation: rainbow 13s ease infinite;
+}
+  
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
 }
 
 
