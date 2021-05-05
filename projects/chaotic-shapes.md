@@ -86,3 +86,24 @@ $$\zeta = 0.65$$
 <a href="/assets/images/dequan_li_attractor_wp.png" target="_blank">
    ![Dequan-Li Attractor](/assets/images/dequan_li_attractor_wp_prev.webp){:loading='lazy'}
 </a>
+
+## Nose-Hoover Attractor
+Differential system:
+
+$$\dot{x} = y$$
+
+$$\dot{y} = -x + y\, z$$
+
+$$\dot{z} = \alpha - y^2$$
+
+Constants:
+
+$$\alpha = 1.5$$
+
+<a href="/assets/images/nose_hoover_attractor_wp.png" target="_blank">
+   ![Nose-Hoover Attractor](/assets/images/nose_hoover_attractor_wp_prev.webp){:loading='lazy'}
+</a>
+
+<a href="/assets/images/nose_hoover_attractor_02_wp.png" target="_blank">
+   ![Nose-Hoover Attractor](/assets/images/nose_hoover_attractor_02_wp_prev.webp){:loading='lazy'}
+</a>
