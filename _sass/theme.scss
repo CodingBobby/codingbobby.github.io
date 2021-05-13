@@ -43,6 +43,7 @@ html[data-theme="light"] {
     --twitter-icon-url: url(https://img.icons8.com/material-sharp/64/000000/twitter-squared.png);
     --email-icon-url: url(https://img.icons8.com/material-sharp/64/000000/email.png);
     --coffee-icon-url: url(https://img.icons8.com/material-sharp/64/000000/kawaii-coffee.png);
+    --search-icon-url: url(https://img.icons8.com/material-sharp/64/000000/search.png);
 }
 
 html[data-theme="dark"] {
@@ -55,6 +56,7 @@ html[data-theme="dark"] {
     --twitter-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/twitter-squared.png);
     --email-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/email.png);
     --coffee-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/kawaii-coffee.png);
+    --search-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/search.png);
 }
 
 html[data-theme="rainbow"] {
@@ -67,6 +69,7 @@ html[data-theme="rainbow"] {
     --twitter-icon-url: url(https://img.icons8.com/material-sharp/64/000000/twitter-squared.png);
     --email-icon-url: url(https://img.icons8.com/material-sharp/64/000000/email.png);
     --coffee-icon-url: url(https://img.icons8.com/material-sharp/64/000000/kawaii-coffee.png);
+    --search-icon-url: url(https://img.icons8.com/material-sharp/64/000000/search.png);
 
     background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
     background-size: 1800% 1800%;
@@ -246,6 +249,10 @@ a {
 
 .coffee_icon {
     content: var(--coffee-icon-url);
+}
+
+.search_icon {
+    content: var(--search-icon-url);
 }
 
 // use for optional octicons
