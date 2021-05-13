@@ -8,7 +8,7 @@ The guy behind this page.
 Read more about him [here](/about).
 
 <h3 id="Pizzayaki">Pizzayaki</h3>
-A cool dude, student of computer science in asia.
+A cool dude, student of computer science in Turkey.
 It's a mystery if he loves pizza or what else it's doing in his name.
 
 <h3 id="Tidanium">Tidanium</h3>
