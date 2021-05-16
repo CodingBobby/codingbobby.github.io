@@ -194,6 +194,11 @@ blockquote {
     }
 }
 
+.align-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .relative-horizon {
     position: relative;
 

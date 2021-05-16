@@ -48,7 +48,7 @@ One of my favourite parts of the book is an article from a museum's archive and 
 > These are all important distinctions, but the more important comparison is the one we make after this point.
 > Once we’ve made our mental checklists of variations, we begin to draw parallels -- not between the alien and ourselves, but between the alien and animals.
 >
-> -- Becky Chambers
+> <span class="align-right">-- Becky Chambers</span>
 
 
 I would recommend this to anyone -- it's not just sci-fi, it's a philosophy of life.
