@@ -112,6 +112,13 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
+article {
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
 h2, h3, h4, h5, h6 { margin-top: 3rem; }
 
 hr { margin: 2rem 0; }
@@ -128,10 +135,15 @@ p {
     }
 }
 
+.footnotes {
+    font-size: smaller;
+}
+
 li { margin: 0.4rem 0; }
 
 *:target {
     background-color: var(--target-highlight-color);
+    color: var(--main-back-color);
 }
 
 .wrapper {

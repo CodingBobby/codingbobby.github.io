@@ -3,7 +3,12 @@ layout: post
 title: "Blog heading"
 date: YYYY-MM-DD
 tags: []
-authors: []
+authors: [Bob]
 comments: true
 ---
 CONTENT
+
+---
+{: data-content="footnotes"}
+
+[^foot]: Note.
