@@ -2,12 +2,17 @@
 layout: post
 title: CodingBobby | Shapes of Chaos
 ---
-When studying fluid-dynamics and heat-transfer I learned about chaos and the attractors.
+When studying fluid dynamics and heat transfer I learned about chaos and the attractors.
 My first encounter was with the Lorenz attractor, of course (read [this blog post](/blog/beautiful-chaos)).
 The pure beauty of its unpredictable but organic shape hooked me from the first minute – I believe this feeling will stay with me forever.
 
 So here is a small collection of rather simple but in a way artistic renderings of attractors I made for fun.
 You can click on the images to open them in high resolution.
+
+0. [Lorenz Attractor](#lorenz-attractor)
+0. [Aizawa Attractor](#aizawa-attractor)
+0. [Dequan-Li Attractor](#dequan-li-attractor)
+0. [Nose-Hoover Attractor](#nose-hoover-attractor)
 
 
 ## Lorenz Attractor
@@ -30,6 +35,8 @@ $$\gamma = 8/3$$
 <a href="/assets/images/lorenz_attractor_wp.png" target="_blank">
    ![Lorenz Attractor](/assets/images/lorenz_attractor_wp_prev.webp){:loading='lazy'}
 </a>
+
+![Animated Lorenz Attractor](/assets/images/lorenz_attractor.gif){:width='60%'}
 
 
 ## Aizawa Attractor
