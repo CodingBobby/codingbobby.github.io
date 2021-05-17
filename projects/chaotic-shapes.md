@@ -1,6 +1,7 @@
 ---
 layout: post
 title: CodingBobby | Shapes of Chaos
+tags: [artwork, mathematics, differential systems, wallpaper]
 ---
 When studying fluid dynamics and heat transfer I learned about chaos and the attractors.
 My first encounter was with the Lorenz attractor, of course (read [this blog post](/blog/beautiful-chaos)).
@@ -36,8 +37,9 @@ $$\gamma = 8/3$$
    ![Lorenz Attractor](/assets/images/lorenz_attractor_wp_prev.webp){:loading='lazy'}
 </a>
 
-![Animated Lorenz Attractor](/assets/images/lorenz_attractor.gif){:width='60%'}
-
+<a href="/projects/lorenz-attractor">
+   ![Animated Lorenz Attractor](/assets/images/lorenz_attractor.gif){:width='60%'}
+</a>
 
 ## Aizawa Attractor
 Differential system:

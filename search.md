@@ -26,7 +26,7 @@ SimpleJekyllSearch({
   resultsContainer: document.getElementById('results-container'),
   json: '/search.json',
   searchResultTemplate: `<li>
-    <a href="{{ site.url }}{url}">
+    <a href="{url}">
       {title}
     </a>
   </li>`

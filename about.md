@@ -6,7 +6,7 @@ Hey!
 
 Awesome to see you here.
 
-This website[^copyright][^style] started a few years ago as a weekend project when I felt the need to combine my main interests in some way.
+This website[^copyright]<sup>,</sup>[^style] started a few years ago as a weekend project when I felt the need to combine my main interests in some way.
 Here I would like to share my thoughts with you and talk about things that otherwise have no place in my everyday life or are simply worth writing down.
 Sometimes I have ideas that may sound a little silly but still deserve some attention.
 Or I recently learned something amazing that I want more people to know about.
@@ -57,7 +57,7 @@ Have fun browsing on this minimalistic site.
 ---
 {: data-content="footnotes"}
 
-[^copyright]: <span class="copyright_icon" alt="(c)"></span> {{ 'now' | date: "%Y" }} CodingBobby. Powered by [Jekyll](https://jekyllrb.com).
+[^copyright]: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="cc_list"><span class="cc_icon" alt="cc"></span> <span class="attribution_icon"></span> <span class="non_com_icon"></span> <span class="share_alike_icon"></span></a> {{ 'now' | date: "%Y" }} CodingBobby. Powered by [Jekyll](https://jekyllrb.com).
 
 [^style]: This website is based on [Riccardo Graziosi](https://github.com/riggraz)'s theme [no-style-please](https://github.com/riggraz/no-style-please) which I (heavily) modified to fit my needs. All icons are from [Icons8](https://icons8.com).
 
