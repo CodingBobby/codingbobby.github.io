@@ -105,7 +105,7 @@ var Figlet = (typeof exports !== "undefined" ? exports : window).Figlet = {
       // $.get(fontPath + name+ '.flf',function(contents){
       //   fn(contents);
       // });
-      fetch(fontPath + name + '.txt').then(r => {
+      fetch("https://raw.githubusercontent.com/Marak/asciimo/master/fonts/Nancyj.flf").then(r => {
         return r.text()
       }).then(t => {
         fn(t)
