@@ -3,42 +3,78 @@
 (function ($) {
   var $comments = $('.js-comments');
 
-  // showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/CodingBobby/codingbobby.github.io/pulls">pending</a>. It will appear when approved.'); // for testing purposes
+  //showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/CodingBobby/codingbobby.github.io/pulls">pending</a>. It will appear when approved.'); // for testing purposes
+
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  let captcha = 0
+
+  function generateCaptcha() {
+    let a = getRandomInt(1, 15)
+    let b = getRandomInt(1, 15)
+    let o = ['+', '-'][getRandomInt(0, 1)]
+
+    let e = `${a}${o}${b}`
+    captcha = eval(e)
+
+    let t = e+'='
+
+    // nancyj, tanja or larry3d are nice
+    Figlet.write(t, 'nancyj', str => {
+      let container = document.getElementById('figfont-captcha')
+      container.innerHTML = str
+    })
+
+    setTimeout(generateCaptcha, getRandomInt(30e3, 60e3))
+  }
+
+  generateCaptcha()
 
   $('.js-form').submit(function () {
     var form = this;
-
 
     $("#comment-form-submit").html(
       'Sending<span class="one">.</span><span class="two">.</span><span class="three">.</span>'
     );
     $(form).addClass('disabled');
 
-    $.ajax({
-      type: $(this).attr('method'),
-      url: $(this).attr('action'),
-      data: $(this).serialize(),
-      contentType: 'application/x-www-form-urlencoded',
-      success: function (data) {
-        showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/CodingBobby/codingbobby.github.io/pulls">pending</a>. It will appear when approved.');
+    if ($("#comment-form-captcha").val() == captcha) {
+      // send data to staticman server
+      $.ajax({
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        contentType: 'application/x-www-form-urlencoded',
+        success: function (data) {
+          showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/CodingBobby/codingbobby.github.io/pulls">pending</a>. It will appear when approved.');
 
-        $("#comment-form-submit")
-          .html("Submit");
+          $("#comment-form-submit")
+            .html("Submit");
 
-        $(form)[0].reset();
-        $(form).removeClass('disabled');
-        grecaptcha.reset();
-      },
-      error: function (err) {
-        console.log(err);
-        var ecode = (err.responseJSON || {}).errorCode || "unknown";
-        showModal('Error', 'An error occured.<br>[' + ecode + ']');
-        $("#comment-form-submit").html("Submit")
-        $(form).removeClass('disabled');
-        grecaptcha.reset();
-      }
-    });
-    return false;
+          $(form)[0].reset();
+          $(form).removeClass('disabled');
+          // grecaptcha.reset();
+        },
+        error: function (err) {
+          console.log(err);
+          var ecode = (err.responseJSON || {}).errorCode || "unknown";
+          showModal('Error', 'An error occured.<br>[' + ecode + ']');
+          $("#comment-form-submit").html("Submit")
+          $(form).removeClass('disabled');
+          // grecaptcha.reset();
+        }
+      });
+    } else {
+      showModal('Error', 'How did you get that wrong? I\'ll give you another try.');
+      $("#comment-form-submit").html("Submit")
+      $(form).removeClass('disabled');
+      generateCaptcha()
+    }
+    return false
   });
 
   $('.js-close-modal').click(function () {

@@ -3,8 +3,6 @@
   <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
   <input type="hidden" id="comment-replying-to-uid" name="fields[replying_to_uid]" value="">
   <input type="hidden" name="options[slug]" value="{{ page.slug }}">
-  <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
-  <input type="hidden" name="options[reCaptcha][secret]"  value="{{ site.reCaptcha.secret }}">
 
   <hr data-content="write a comment">
   <a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">cancel reply</a>
@@ -27,14 +25,13 @@
     </label>
   </div>
 
-  <div class="textfield narrowfield hp">
-    <label for="hp">
-      <input class="textfield__input" name="fields[hp]" id="hp" type="text" placeholder="Leave blank">
+  <div class="textfield narrowfield">
+    <pre id="figfont-captcha"></pre>
+    <label for="comment-form-captcha">
+      <input class="textfield__input" name="options[captcha]" type="text" id="comment-form-captcha" placeholder="answer" required/>
     </label>
   </div>
-
-  <div id="reCaptcha" class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
-
+  
   <button class="button" id="comment-form-submit">
     Submit
   </button>
@@ -49,6 +46,8 @@
     <button class="button mdl-button--colored mdl-js-button mdl-js-ripple-effect js-close-modal">Close</button>
   </div>
 </article>
+
+<script src="/assets/asciimo/lib/asciimo.js"></script>
 
 {% comment %}
 	from: https://github.com/eduardoboucas/popcorn/blob/gh-pages/_includes/modal.html

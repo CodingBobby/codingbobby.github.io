@@ -49,6 +49,7 @@ html[data-theme="light"] {
     --attribution-icon-url: url(https://img.icons8.com/material-outlined/64/000000/creative-commons-by.png);
     --non_com-icon-url: url(https://img.icons8.com/material-outlined/64/000000/creative-commons-nc.png);
     --share_alike-icon-url: url(https://img.icons8.com/material-outlined/64/000000/creative-commons-sa.png);
+    --copyright-icon-url: url(https://img.icons8.com/material-outlined/64/000000/copyright.png);
 }
 
 html[data-theme="dark"] {
@@ -67,6 +68,7 @@ html[data-theme="dark"] {
     --attribution-icon-url: url(https://img.icons8.com/material-outlined/64/f0f0f0/creative-commons-by.png);
     --non_com-icon-url: url(https://img.icons8.com/material-outlined/64/f0f0f0/creative-commons-nc.png);
     --share_alike-icon-url: url(https://img.icons8.com/material-outlined/64/f0f0f0/creative-commons-sa.png);
+    --copyright-icon-url: url(https://img.icons8.com/material-outlined/64/f0f0f0/copyright.png);
 }
 
 html[data-theme="rainbow"] {
@@ -85,6 +87,7 @@ html[data-theme="rainbow"] {
     --attribution-icon-url: url(https://img.icons8.com/material-outlined/64/000000/creative-commons-by.png);
     --non_com-icon-url: url(https://img.icons8.com/material-outlined/64/000000/creative-commons-nc.png);
     --share_alike-icon-url: url(https://img.icons8.com/material-outlined/64/000000/creative-commons-sa.png);
+    --copyright-icon-url: url(https://img.icons8.com/material-outlined/64/000000/copyright.png);
 
     background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
     background-size: 1800% 1800%;
@@ -195,6 +198,16 @@ code {
     justify-content: center;
 }
 
+#figfont-captcha {
+    font-size: 0.45em;
+    line-height: 1;
+    color: var(--main-text-color);
+}
+
+article.modal {
+    background-color: var(--main-back-color);
+}
+
 div.highlighter-rouge code {
     display: block;
     overflow-x: auto;
@@ -298,6 +311,12 @@ a {
 
 a.cc_list {
     text-decoration: none;
+}
+
+.copyright_icon {
+    content: var(--copyright-icon-url);
+    height: 16px;
+    margin: -3px;
 }
 
 .cc_icon {

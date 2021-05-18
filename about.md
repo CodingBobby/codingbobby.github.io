@@ -57,8 +57,8 @@ Have fun browsing on this minimalistic site.
 ---
 {: data-content="footnotes"}
 
-[^copyright]: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="cc_list"><span class="cc_icon" alt="cc"></span> <span class="attribution_icon"></span> <span class="non_com_icon"></span> <span class="share_alike_icon"></span></a> {{ 'now' | date: "%Y" }} CodingBobby. Powered by [Jekyll](https://jekyllrb.com).
+[^copyright]: <span class="copyright_icon" alt="(c)"></span> {{ 'now' | date: "%Y" }} CodingBobby. <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="cc_list"><span class="cc_icon" alt="cc"></span> <span class="attribution_icon"></span> <span class="non_com_icon"></span> <span class="share_alike_icon"></span></a>. 
 
-[^style]: This website is based on [Riccardo Graziosi](https://github.com/riggraz)'s theme [no-style-please](https://github.com/riggraz/no-style-please) which I (heavily) modified to fit my needs. All icons are from [Icons8](https://icons8.com).
+[^style]: This website is based on [Riccardo Graziosi](https://github.com/riggraz)'s theme [no-style-please](https://github.com/riggraz/no-style-please) which I (heavily) modified to fit my needs. All icons are from [Icons8](https://icons8.com). Powered by [Jekyll](https://jekyllrb.com).
 
 [^myself]: I won't bother you with nationalities etc. because this is the internet which is by definition worldwide. Nobody should care.
