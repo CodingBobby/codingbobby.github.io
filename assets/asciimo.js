@@ -14,22 +14,18 @@
  * http://github.com/scottgonzalez/figlet-js
  */
 
+/**
+ * Modified by CodingBobby in 2021
+ * specifically for use in
+ * https://github.com/CodingBobby/codingbobby.github.io
+ */
 
 (function() {
 
-// Remark : not a very good env check
-var fontPath;
-if(typeof __dirname == 'undefined'){
-  fontPath = '/assets/asciimo/fonts/';
-}
-else{
-  fontPath = __dirname + '/../fonts/';
-}
-
-var Figlet = (typeof exports !== "undefined" ? exports : window).Figlet = {
+var Figlet = window.Figlet = {
   fonts: {},
   
-  parseFont: function(name, fn) { //        debug.log('parseFont', name);  
+  parseFont: function(name, fn) { // debug.log('parseFont', name);  
     if (name in Figlet.fonts) {
       fn();
     }
@@ -90,27 +86,11 @@ var Figlet = (typeof exports !== "undefined" ? exports : window).Figlet = {
   },
   
   loadFont: function(name, fn) {
-    if(typeof exports != 'undefined'){
-      var util = require('util');
-      require("fs").readFile(fontPath + name + ".flf", "utf-8", function(err, contents) {
-        if (err) {
-          util.puts(err);
-        }
-        else {
-          fn(contents);
-        }
-      });
-    }
-    else{
-      // $.get(fontPath + name+ '.flf',function(contents){
-      //   fn(contents);
-      // });
-      fetch("https://raw.githubusercontent.com/Marak/asciimo/master/fonts/Nancyj.flf").then(r => {
-        return r.text()
-      }).then(t => {
-        fn(t)
-      })
-    }   
+    fetch(`https://raw.githubusercontent.com/Marak/asciimo/master/fonts/${name}.flf`).then(r => {
+      return r.text()
+    }).then(t => {
+      fn(t)
+    })   
   }
 };
 

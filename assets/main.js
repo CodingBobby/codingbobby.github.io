@@ -24,7 +24,7 @@
     let t = e+'='
 
     // nancyj, tanja or larry3d are nice
-    Figlet.write(t, 'nancyj', str => {
+    Figlet.write(t, 'Nancyj', str => {
       let container = document.getElementById('figfont-captcha')
       container.innerHTML = str
     })
