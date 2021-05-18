@@ -105,7 +105,7 @@ var Figlet = (typeof exports !== "undefined" ? exports : window).Figlet = {
       // $.get(fontPath + name+ '.flf',function(contents){
       //   fn(contents);
       // });
-      fetch(fontPath + name + '.flf').then(r => {
+      fetch(fontPath + name + '.txt').then(r => {
         return r.text()
       }).then(t => {
         fn(t)
