@@ -12,6 +12,5 @@ The source code can be found on [GitHub](https://github.com/CodingBobby/codingbo
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
-<script src="https://unpkg.com/ccapture.js@1.1.0/build/CCapture.all.min.js"></script>
 
 <script src="/assets/attractor.js"></script>

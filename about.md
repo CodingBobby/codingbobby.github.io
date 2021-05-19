@@ -18,6 +18,7 @@ Take care, *Bob*.
 ---
 
 0. [Who I am ](#who-i-am)
+0. [512KB Club](#512kb-club)
 0. [Distributed Computing](#distributed-computing)
 0. [Cookie Policy](#cookie-policy)
 
@@ -34,6 +35,26 @@ My favourite things are:
 
 If you want to get in touch with me, you can find me on [Twitter](https://twitter.com/BobbyCoding) or write me an [email](mailto:contact@codingbobby.xyz).
 Comments on blog posts are also welcome if you would like to share your thoughts with other readers.
+
+### 512KB Club
+I am proud member of the orange team!
+
+<a href="https://512kb.club">
+  <img src="https://512kb.club/assets/images/orange-team.svg"/>
+</a>
+
+The internet has become a bloated mess.
+Massive JavaScript libraries, countless client-side queries and overly complex frontend frameworks are par for the course these days.
+
+When online newspapers like The Guardian are over 4MB in size, you know there's a problem.
+Why does an online newspaper need to be over 4MB in size?
+It's crazy.
+
+But we can make a difference -- all it takes is some optimisation.
+Do you really need that extra piece of JavaScript?
+Does your WordPress site need a theme that adds lots of functionality you're never going to use?
+Are those huge custom fonts really needed?
+Are your images optimised for the web?
 
 ### Distributed Computing
 I highly recommend you learn about [BOINC](https://boinc.berkeley.edu) if you haven't already.
