@@ -67,9 +67,10 @@ Here, you can see in which projects I currently participate:
 
 ![Boinc Statistics](https://boinc.mundayweb.com/stats.php?userID=15403&trans=off "Boinc Statistics")
 
-### Cookie Policy
-This website does only use cookies when embedding third-party content like reCAPTCHA in the comment sections of posts or inline Spotify players [here](/blog/modern-musical-masterpieces).
+### Privacy Policy
+This website does only use cookies when embedding third-party content like images or inline Spotify players [here](/blog/modern-musical-masterpieces).
 I have no influence on them and they are required for the functionalities.
+For visitor counting, I use [GoatCounter](https://www.goatcounter.com/) which is very lightweight and does only collect the very essentials and not your personal data.
 Elsewhere, this website does not use any other cookies or tracking techniques.
 Though, it is making use of your browser's local storage to save the currently set theme.
 This only takes a single key-value pair, so you shouldn't be bothered.
