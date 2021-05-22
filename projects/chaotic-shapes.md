@@ -14,6 +14,7 @@ You can click on the images to open them in high resolution.
 0. [Aizawa Attractor](#aizawa-attractor)
 0. [Dequan-Li Attractor](#dequan-li-attractor)
 0. [Nose-Hoover Attractor](#nose-hoover-attractor)
+0. [Thomas Attractor](#thomas-attractor)
 
 
 ## Lorenz Attractor
@@ -115,4 +116,21 @@ $$\alpha = 1.5$$
 
 <a href="/assets/images/nose_hoover_attractor_02_wp.png" target="_blank">
    ![Nose-Hoover Attractor](/assets/images/nose_hoover_attractor_02_wp_prev.webp){:loading='lazy'}
+</a>
+
+## Thomas Attractor
+Differential system:
+
+$$\dot{x} = \alpha\, x + \sin(y)$$
+
+$$\dot{y} = -\alpha\, y + \sin(z)$$
+
+$$\dot{z} = -\alpha\, z + \sin(x)$$
+
+Constants:
+
+$$\alpha = 0.19$$
+
+<a href="/assets/images/thomas_attractor_wp.png" target="_blank">
+   ![Thomas Attractor](/assets/images/thomas_attractor_wp_prev.webp){:loading='lazy'}
 </a>
