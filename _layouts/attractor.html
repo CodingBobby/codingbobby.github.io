@@ -7,26 +7,7 @@ layout: default
 <h1>{{ name }} Attractor</h1>
 
 <article lang="en">
-  Differential system:
-
-  {{ page.equations }}
-
-  Constants:
-
-  {{ page.constants }}
-
-  {% for image in page.images %}
-    {% if image.link %}
-      {% assign full_path = '' %}
-    {% endif %}
-    <p><a href="{{ full_path }}{{ image.full }}" target="_blank">
-      <img src="{{ path }}{{ image.preview }}" loading="lazy" alt="{{ name }}"
-        {% if image.width %}
-          style="width: {{ image.width }}"
-        {% endif %}
-      />
-    </a></p>
-  {% endfor %}
+  {{ content }}
 </article>
 
 {% if site.attractors.size > 0 %}

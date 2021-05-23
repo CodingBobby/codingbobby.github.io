@@ -3,8 +3,9 @@
 {% assign gallery_folder = '/assets/images/attractors/' %}
 
 {% for attractor in site.attractors %}
+  {% assign name = attractor.title | replace: ' ', '-' | append: ' Attractor'%}
   <a class="square" href='{{ attractor.url }}'>
-    <img src="{{ gallery_folder }}{{ attractor.thumbnail }}" alt="{{ attractor.title }}" loading="lazy" />
+    <img src="{{ gallery_folder }}{{ attractor.thumbnail }}" alt="{{ name }}" title="{{ name }}" loading="lazy" />
   </a>
 {% endfor %}
 

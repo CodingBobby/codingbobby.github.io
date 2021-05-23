@@ -1,0 +1,28 @@
+{% assign name = page.title | replace: ' ', '-' %}
+{% assign path = '/assets/images/attractors/' %}
+{% assign full_path = path %}
+
+Differential system:
+
+{% for equation in page.equations %}
+  {{ equation }}
+{% endfor %}
+
+Constants:
+
+{% for constant in page.constants %}
+  {{ constant }}
+{% endfor %}
+
+{% for image in page.images %}
+  {% if image.link %}
+    {% assign full_path = '' %}
+  {% endif %}
+  <p><a href="{{ full_path }}{{ image.full }}" target="_blank">
+    <img src="{{ path }}{{ image.preview }}" loading="lazy" alt="{{ name }}"
+      {% if image.width %}
+        style="width: {{ image.width }}"
+      {% endif %}
+    />
+  </a></p>
+{% endfor %}
