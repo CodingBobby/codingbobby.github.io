@@ -44,7 +44,7 @@ layout: default
       {% if post_position > 1 %}
          {% assign next_index = post_position | minus: 2 %}
          <a href="{{ post_urls[next_index] | relative_url | replace: ".html", "/" }}">
-            <- previous attractor
+            <- previous
          </a>
       {% else %}
          <div></div>
@@ -53,7 +53,7 @@ layout: default
       {% if post_position < site.attractors.size %}
          {% assign previous_index = post_position | plus: 0 %}
          <a href="{{ post_urls[previous_index] | relative_url | replace: ".html", "/" }}">
-            next attractor ->
+            next ->
          </a>
       {% else %}
          <div></div>
