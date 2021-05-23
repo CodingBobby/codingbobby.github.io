@@ -56,3 +56,8 @@ katex:
   rendering_options:
     throw_error: true
     error_color: "#cc0000"
+
+collections:
+  attractors:
+    output: true
+    permalink: /projects/chaotic-shapes/:name/

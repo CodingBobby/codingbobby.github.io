@@ -1,0 +1,66 @@
+---
+layout: default
+---
+{% assign name = page.title | replace: ' ', '-' %}
+{% assign path = '/assets/images/attractors/' %}
+{% assign full_path = path %}
+<h1>{{ name }} Attractor</h1>
+
+<article lang="en">
+  Differential system:
+
+  {{ page.equations }}
+
+  Constants:
+
+  {{ page.constants }}
+
+  {% for image in page.images %}
+    {% if image.link %}
+      {% assign full_path = '' %}
+    {% endif %}
+    <p><a href="{{ full_path }}{{ image.full }}" target="_blank">
+      <img src="{{ path }}{{ image.preview }}" loading="lazy" alt="{{ name }}"
+        {% if image.width %}
+          style="width: {{ image.width }}"
+        {% endif %}
+      />
+    </a></p>
+  {% endfor %}
+</article>
+
+{% if site.attractors.size > 0 %}
+   {% assign post_urls = "" | split: ',' %}
+
+   {% for attractor in site.attractors %}
+      {% assign post_urls = post_urls | push: attractor.url %}
+
+      {% if attractor.title == page.title %}
+         {% assign post_position = forloop.index %}
+      {% endif %}
+   {% endfor %}
+
+   <div class="horizon" style="width: 100%;">
+      {% if post_position > 1 %}
+         {% assign next_index = post_position | minus: 2 %}
+         <a href="{{ post_urls[next_index] | relative_url | replace: ".html", "/" }}">
+            <- previous attractor
+         </a>
+      {% else %}
+         <div></div>
+      {% endif %}
+
+      {% if post_position < site.attractors.size %}
+         {% assign previous_index = post_position | plus: 0 %}
+         <a href="{{ post_urls[previous_index] | relative_url | replace: ".html", "/" }}">
+            next attractor ->
+         </a>
+      {% else %}
+         <div></div>
+      {% endif %}
+      <span class="stretch"></span>
+   </div>
+{% endif %}
+
+<!-- load MathJax -->
+<script rel="preconnect" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>

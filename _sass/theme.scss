@@ -271,7 +271,6 @@ blockquote {
 }
 
 img {
-    image-rendering: optimizeSpeed;
     margin: 0 auto 0;
     display: block;
     max-width: 100%;
@@ -287,6 +286,25 @@ a {
     font-style: italic;
     font-weight: bold;
     margin-bottom: 2rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.5em;
+
+    .square {
+        position: relative;
+        padding-top: 100%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 }
 
 .github_icon {
