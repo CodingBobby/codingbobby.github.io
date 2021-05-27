@@ -12,5 +12,7 @@ images:
     full: nose-hoover-01.png
   - preview: nose-hoover-02.webp
     full: nose-hoover-02.png
+  - preview: nose-hoover-03.webp
+    full: nose-hoover-03.png
 ---
 {% include attractor_details.html %}
