@@ -38,19 +38,17 @@ const SYSTEMS = {
     ]
   },
   aizawa: function(x, y, z) {
-    const a = 0.7
-    const b = 3.5
+    const a = 0.95
+    const b = 0.7
     const c = 0.6
-    const d = 0.95
+    const d = 3.5
     const e = 0.25
-    const f = 0.1
-
-    let dz = c + d*z - z**3/3 - (1 - e*z)*(x**2 + y**2) + f*z*x**3
+    const f = 0.001
 
     return [
-      x*(z - a) - dz,
-      b*x + y*(z - a),
-      dz
+      x*(z - b) - d*y,
+      y*(z - b) + d*x,
+      c + a*z - z**3/3 - (1 + e*z)*(x**2 + y**2) + f*z*x**3
     ]
   },
   nose_hoover: function(x, y, z) {
