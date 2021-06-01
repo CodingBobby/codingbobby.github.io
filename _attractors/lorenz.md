@@ -41,7 +41,7 @@ The program is in 68k TI-Basic[^language], which is a modified version by Texas 
 
 ```
 lorenz()
- Prgm
+Prgm
  ClrDraw
  
  .1 → x
