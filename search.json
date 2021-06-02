@@ -24,5 +24,18 @@
         "content"     : "{{ page.content | strip_html | stript_newlines | normalize_whitespace | remove: '\' | remove: '-' | remove_chars | escape }}"
       {% endif %}
     }{% unless forloop.last %},{% endunless %}
+  {% endfor %},
+  {% for attractor in site.attractors %}
+    {
+      {% if attractor.title != nil %}
+        "title"       : "{{ attractor.title | replace: ' ', '-' | append: ' Attractor' | strip_html | escape }}",
+        "url"         : "{{ site.baseurl }}{{ attractor.url }}",
+        "category"    : "{{ attractor.categories | join: ', ' }}",
+        "tags"        : "{{ attractor.tags | join: ', ' }}",
+        "date"        : "{{ attractor.date }}",
+        "authors"     : "{{ attractor.authors }}",
+        "content"     : "{{ attractor.content | strip_html | stript_newlines | normalize_whitespace | remove: '\' | remove: '-' | remove_chars | escape }}"
+      {% endif %}
+    }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
