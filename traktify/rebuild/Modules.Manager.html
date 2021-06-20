@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>Manager - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/CodingBobby/traktify/issues" target="_blank" class="menu-item" id="issues_link" >Bugs & Issues</a></h2><h2><a href="https://circleci.com/gh/CodingBobby/traktify" target="_blank" class="menu-item" id="build_link" >Build Log</a></h2><h2><a href="https://discord.gg/BJNAMcj" target="_blank" class="menu-item" id="discord_link" >Discord Server</a></h2><h3>Classes</h3><ul><li><a href="Modules.Manager.Queue.html">Queue</a><ul class='methods'><li data-type='method'><a href="Modules.Manager.Queue.html#_doTick">_doTick</a></li><li data-type='method'><a href="Modules.Manager.Queue.html#_duplicates">_duplicates</a></li><li data-type='method'><a href="Modules.Manager.Queue.html#add">add</a></li></ul></li><li><a href="Modules.Manager.SwitchBoard.html">SwitchBoard</a><ul class='methods'><li data-type='method'><a href="Modules.Manager.SwitchBoard.html#on">on</a></li><li data-type='method'><a href="Modules.Manager.SwitchBoard.html#send">send</a></li></ul></li><li><a href="Modules.Manager.Task.html">Task</a><ul class='methods'><li data-type='method'><a href="Modules.Manager.Task.html#run">run</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="Modules.html">Modules</a></li><li><a href="Modules.API.html">API</a><ul class='methods'><li data-type='method'><a href="Modules.API.html#.authenticateUser">authenticateUser</a></li><li data-type='method'><a href="Modules.API.html#.connectUser">connectUser</a></li><li data-type='method'><a href="Modules.API.html#.formatSearch">formatSearch</a></li><li data-type='method'><a href="Modules.API.html#.getAPIKeys">getAPIKeys</a></li><li data-type='method'><a href="Modules.API.html#.startsWithFilter">startsWithFilter</a></li></ul></li><li><a href="Modules.App.html">App</a><ul class='methods'><li data-type='method'><a href="Modules.App.html#.buildLoadingWindow">buildLoadingWindow</a></li><li data-type='method'><a href="Modules.App.html#.initFileStructure">initFileStructure</a></li><li data-type='method'><a href="Modules.App.html#.initLogListener">initLogListener</a></li><li data-type='method'><a href="Modules.App.html#.readConfig">readConfig</a></li><li data-type='method'><a href="Modules.App.html#.saveConfig">saveConfig</a></li><li data-type='method'><a href="Modules.App.html#.startApp">startApp</a></li></ul></li><li><a href="Modules.Manager.html">Manager</a></li><li><a href="Modules.Renderer.html">Renderer</a><ul class='methods'><li data-type='method'><a href="Modules.Renderer.html#.report">report</a></li><li data-type='method'><a href="Modules.Renderer.html#.tracer">tracer</a></li></ul></li><li><a href="Traktify.html">Traktify</a></li></ul><h3>Global</h3><ul><li><a href="global.html#DEV_JOBS">DEV_JOBS</a></li><li><a href="global.html#JOBS">JOBS</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Manager</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="Modules.html">Modules</a>.</span>
+        
+        Manager
+        </h2>
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="main.js.html">main.js</a>, <a href="main.js.html#line41">line 41</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+            
+                <div class="description usertext"><p>Task management and automation.</p></div>
+            
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="Modules.Manager.Queue.html">Queue</a></dt>
+            <dd>Organisation of repetitive or time-consuming jobs.</dd>
+        
+            <dt><a href="Modules.Manager.SwitchBoard.html">SwitchBoard</a></dt>
+            <dd>Interface for communication between main and renderer or between renderers.</dd>
+        
+            <dt><a href="Modules.Manager.Task.html">Task</a></dt>
+            <dd>Wraps Promises for easier and more specific use.</dd>
+        </dl>
+    
+    
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id=".tracer"><span class="type-signature">(static, constant) </span>tracer<span class="type-signature"> :Tracer.Logger</span></h4>
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_manager_log.js.html">modules/manager/log.js</a>, <a href="modules_manager_log.js.html#line28">line 28</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+<div class="description usertext">
+    <p>Logging interface that formats different levels and saves to file defined in <a href="Modules.App.html#.PATHS"><code>Modules.App.PATHS</code></a>.</p>
+</div>
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>log</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>info</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>warn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>error</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>trace</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>debug</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fatal</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Tracer.Logger</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        
+                
+<h4 class="name" id=".LogLevel">LogLevel</h4>
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_manager_log.js.html">modules/manager/log.js</a>, <a href="modules_manager_log.js.html#line5">line 5</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">'log'</span>
+|
+
+<span class="param-type">'info'</span>
+|
+
+<span class="param-type">'warn'</span>
+|
+
+<span class="param-type">'error'</span>
+|
+
+<span class="param-type">'trace'</span>
+|
+
+<span class="param-type">'debug'</span>
+|
+
+<span class="param-type">'fatal'</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+            
+                
+
+    
+
+    <h4 class="name" id=".TASK_CB"><span class="type-signature"></span>TASK_CB<span class="signature">(args<span class="signature-attributes">opt</span>, progress<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_manager_queue.js.html">modules/manager/queue.js</a>, <a href="modules_manager_queue.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+<div class="description usertext">
+    <p>Callback function for <code>Task</code>s.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>argument for the Task, can be array, object, etc.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>progress</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TASK_PROG</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>callback to report an update</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>result that will be resolved after Task completion</p>
+</div>
+
+
+
+    
+
+
+
+            
+                
+
+    
+
+    <h4 class="name" id=".TASK_PROG"><span class="type-signature"></span>TASK_PROG<span class="signature">(fraction)</span><span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_manager_queue.js.html">modules/manager/queue.js</a>, <a href="modules_manager_queue.js.html#line11">line 11</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+<div class="description usertext">
+    <p>Callback function to run when <code>Task</code>'s progress updates.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fraction</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>progress in range 0–1</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated with <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+
+</body>
+</html>

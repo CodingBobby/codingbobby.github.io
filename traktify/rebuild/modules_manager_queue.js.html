@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>modules/manager/queue.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/CodingBobby/traktify/issues" target="_blank" class="menu-item" id="issues_link" >Bugs & Issues</a></h2><h2><a href="https://circleci.com/gh/CodingBobby/traktify" target="_blank" class="menu-item" id="build_link" >Build Log</a></h2><h2><a href="https://discord.gg/BJNAMcj" target="_blank" class="menu-item" id="discord_link" >Discord Server</a></h2><h3>Classes</h3><ul><li><a href="Modules.Manager.Queue.html">Queue</a><ul class='methods'><li data-type='method'><a href="Modules.Manager.Queue.html#_doTick">_doTick</a></li><li data-type='method'><a href="Modules.Manager.Queue.html#_duplicates">_duplicates</a></li><li data-type='method'><a href="Modules.Manager.Queue.html#add">add</a></li></ul></li><li><a href="Modules.Manager.SwitchBoard.html">SwitchBoard</a><ul class='methods'><li data-type='method'><a href="Modules.Manager.SwitchBoard.html#on">on</a></li><li data-type='method'><a href="Modules.Manager.SwitchBoard.html#send">send</a></li></ul></li><li><a href="Modules.Manager.Task.html">Task</a><ul class='methods'><li data-type='method'><a href="Modules.Manager.Task.html#run">run</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="Modules.html">Modules</a></li><li><a href="Modules.API.html">API</a><ul class='methods'><li data-type='method'><a href="Modules.API.html#.authenticateUser">authenticateUser</a></li><li data-type='method'><a href="Modules.API.html#.connectUser">connectUser</a></li><li data-type='method'><a href="Modules.API.html#.formatSearch">formatSearch</a></li><li data-type='method'><a href="Modules.API.html#.getAPIKeys">getAPIKeys</a></li><li data-type='method'><a href="Modules.API.html#.startsWithFilter">startsWithFilter</a></li></ul></li><li><a href="Modules.App.html">App</a><ul class='methods'><li data-type='method'><a href="Modules.App.html#.buildLoadingWindow">buildLoadingWindow</a></li><li data-type='method'><a href="Modules.App.html#.initFileStructure">initFileStructure</a></li><li data-type='method'><a href="Modules.App.html#.initLogListener">initLogListener</a></li><li data-type='method'><a href="Modules.App.html#.readConfig">readConfig</a></li><li data-type='method'><a href="Modules.App.html#.saveConfig">saveConfig</a></li><li data-type='method'><a href="Modules.App.html#.startApp">startApp</a></li></ul></li><li><a href="Modules.Manager.html">Manager</a></li><li><a href="Modules.Renderer.html">Renderer</a><ul class='methods'><li data-type='method'><a href="Modules.Renderer.html#.report">report</a></li><li data-type='method'><a href="Modules.Renderer.html#.tracer">tracer</a></li></ul></li><li><a href="Traktify.html">Traktify</a></li></ul><h3>Global</h3><ul><li><a href="global.html#DEV_JOBS">DEV_JOBS</a></li><li><a href="global.html#JOBS">JOBS</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">modules/manager/queue.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Callback function for {@link Task}s.
+ * @callback TASK_CB
+ * @param {*} [args] argument for the Task, can be array, object, etc.
+ * @param {TASK_PROG} [progress] callback to report an update
+ * @returns result that will be resolved after Task completion
+ * @memberof Modules.Manager
+ */
+
+
+/**
+ * Callback function to run when {@link Task}'s progress updates.
+ * @callback TASK_PROG
+ * @param {number} fraction progress in range 0–1
+ * @memberof Modules.Manager
+ */
+
+
+/**
+ * @memberof Modules.Manager
+ */
+class Queue {
+  
+  /**
+   * Organisation of repetitive or time-consuming jobs.
+   * @param {Object} [options] optional settings for the queue
+   * @param {Number} [options.frequency] ticks per second, default: 1 sec
+   * @param {Boolean} [options.reverse] if latest task should be run first, default: false
+   * @param {Function} [mergeCallback] 
+   */
+  constructor(options, mergeCallback) {
+    options = options || {}
+
+    /** @private */
+    this._timeOut = 1e3
+
+    if(options.frequency) {
+      this._timeOut = 1e3/options.frequency
+    }
+
+    /** @private */
+    this._reverse = options.reverse
+    /** @private */
+    this._taskList = []
+    /** @private */
+    this._mergeCallback = typeof mergeCallback == 'function' ? mergeCallback : false
+  }
+
+  /**
+   * Enqueue a new task.
+   * @param {TASK_CB} callback function to be run
+   * @param {Object} [options] 
+   * @param {*} [options.args] arguments for the task
+   * @param {boolean} [options.overwrite] if task should be removed when a similar one is already in the queue, default: false
+   */
+  add(callback, options) {
+    options = options || {}
+    let job = new Task(callback, options.args)
+
+    if(options.overwrite) {
+      let mergeWanted = this._mergeCallback !== false
+      let duplicates = this._duplicates(job, mergeWanted)
+
+      if(mergeWanted) {
+        let argList = duplicates.map(j => {
+          return this._taskList[j].args
+        })
+        
+        argList.push(job.args)
+
+        // overwrite arguments of new job with merged list which contains its own original args along with the args of all other enqueued jobs
+        job.args = this._mergeCallback(argList)
+      }
+
+      // previously found jobs that are identical to the new one can be removed now
+      duplicates.forEach(i => {
+        this._taskList.splice(i, 1)
+      })
+    }
+
+    // enqueuing job
+    this._enqueue(job)
+
+    // start the queue if it hasn't already
+    if(!this._interval) {
+      // starting ticker
+      this._interval = setInterval(() => {
+        let result = this._doTick()
+        if(!result) {
+          // stopping ticker
+          clearInterval(this._interval)
+          this._interval = null
+        }
+      }, this._timeOut)
+    }
+  }
+
+  _enqueue(job) {
+    this._taskList.push(job)
+  }
+
+  /**
+   * Runs the next Task in the queue and removes it from the list after completion.
+   * @returns {*} the Task's result
+   */
+  _doTick() {
+    let jobIndex
+    if(this._reverse) {
+      jobIndex = 0
+    } else {
+      jobIndex = this._taskList.length - 1
+    }
+    
+
+    if(this._taskList.length === 0) {
+      // no job available
+      return null
+    } else {
+      // ticking
+      let job = this._taskList[jobIndex]
+      // console.log('ticking', job.description)
+      // TODO: add .description to all job enqueuerings that can be shown in the log
+      let result = job.run()
+        .then(r => r)
+        .catch(e => e)
+      
+      if(this._reverse) {
+        this._taskList.shift()
+      } else {
+        this._taskList.pop()
+      }
+      
+      return result
+    }
+  }
+
+  /**
+   * Returns the index positions of jobs that look identical to the given one.
+   * @param {Task} newTask the newly added Task
+   * @param {Boolean} onlyCallback only compare the callbacks and not the passed arguments
+   */
+  _duplicates(newTask, onlyCallback) {
+    let indices = []
+    this._taskList.forEach((oldTask, index) => {
+      if((onlyCallback ? true : String(newTask.args) == String(oldTask.args))
+      &amp;&amp; String(newTask.callback) == String(oldTask.callback)) {
+        // found duplicate
+        indices.push(index)
+      }
+    })
+    return indices
+  }
+}
+
+
+/**
+ * @memberof Modules.Manager
+ */
+class Task {
+
+  /**
+   * Wraps Promises for easier and more specific use.
+   * The {@link Queue} will create new Tasks internally but they can be used manually for asynchronous jobs.
+   * @param {TASK_CB} callback the function to run
+   * @param {Object} [args] optional arguments to be used in the Task's function
+   * @param {TASK_PROG} [progress] runs when callback reports an update; for that callback itself needs a callback
+   * @example new Task(args => sum(args.nums), { nums: [1, 2, 3] })
+   * // argument declaration can also be skipped when not required
+   * new Task(() => sum([1, 2, 3]))
+   * // but it can be usedful in specific cases
+   * new Task(sum, [1, 2, 3])
+   */
+  constructor(callback, args, progress) {
+    this.time = Date.now()
+    this.callback = callback
+    this.args = args || {}
+    this.progress = progress || function(i) {}
+  }
+
+  /**
+   * called by the queue when it's time
+   * @returns {Promise} result which got returned by the Task's callback
+   */
+  run() {
+    return new Promise(async (resolve, rej) => {
+      let result
+
+      try {
+        result = await this.callback(this.args, this.progress)
+      } catch(err) {
+        if(err) rej(err)
+      }
+
+      resolve(result)
+    })
+  }
+}
+
+
+module.exports = {
+  Queue, Task
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated with <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+
+</body>
+</html>

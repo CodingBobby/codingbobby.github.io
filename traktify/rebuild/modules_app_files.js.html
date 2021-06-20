@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>modules/app/files.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/CodingBobby/traktify/issues" target="_blank" class="menu-item" id="issues_link" >Bugs & Issues</a></h2><h2><a href="https://circleci.com/gh/CodingBobby/traktify" target="_blank" class="menu-item" id="build_link" >Build Log</a></h2><h2><a href="https://discord.gg/BJNAMcj" target="_blank" class="menu-item" id="discord_link" >Discord Server</a></h2><h3>Classes</h3><ul><li><a href="Modules.Manager.Queue.html">Queue</a><ul class='methods'><li data-type='method'><a href="Modules.Manager.Queue.html#_doTick">_doTick</a></li><li data-type='method'><a href="Modules.Manager.Queue.html#_duplicates">_duplicates</a></li><li data-type='method'><a href="Modules.Manager.Queue.html#add">add</a></li></ul></li><li><a href="Modules.Manager.SwitchBoard.html">SwitchBoard</a><ul class='methods'><li data-type='method'><a href="Modules.Manager.SwitchBoard.html#on">on</a></li><li data-type='method'><a href="Modules.Manager.SwitchBoard.html#send">send</a></li></ul></li><li><a href="Modules.Manager.Task.html">Task</a><ul class='methods'><li data-type='method'><a href="Modules.Manager.Task.html#run">run</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="Modules.html">Modules</a></li><li><a href="Modules.API.html">API</a><ul class='methods'><li data-type='method'><a href="Modules.API.html#.authenticateUser">authenticateUser</a></li><li data-type='method'><a href="Modules.API.html#.connectUser">connectUser</a></li><li data-type='method'><a href="Modules.API.html#.formatSearch">formatSearch</a></li><li data-type='method'><a href="Modules.API.html#.getAPIKeys">getAPIKeys</a></li><li data-type='method'><a href="Modules.API.html#.startsWithFilter">startsWithFilter</a></li></ul></li><li><a href="Modules.App.html">App</a><ul class='methods'><li data-type='method'><a href="Modules.App.html#.buildLoadingWindow">buildLoadingWindow</a></li><li data-type='method'><a href="Modules.App.html#.initFileStructure">initFileStructure</a></li><li data-type='method'><a href="Modules.App.html#.initLogListener">initLogListener</a></li><li data-type='method'><a href="Modules.App.html#.readConfig">readConfig</a></li><li data-type='method'><a href="Modules.App.html#.saveConfig">saveConfig</a></li><li data-type='method'><a href="Modules.App.html#.startApp">startApp</a></li></ul></li><li><a href="Modules.Manager.html">Manager</a></li><li><a href="Modules.Renderer.html">Renderer</a><ul class='methods'><li data-type='method'><a href="Modules.Renderer.html#.report">report</a></li><li data-type='method'><a href="Modules.Renderer.html#.tracer">tracer</a></li></ul></li><li><a href="Traktify.html">Traktify</a></li></ul><h3>Global</h3><ul><li><a href="global.html#DEV_JOBS">DEV_JOBS</a></li><li><a href="global.html#JOBS">JOBS</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">modules/app/files.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const fs = require('fs-extra')
+const path = require('path')
+const dirTree = require('directory-tree')
+const tracer = require('../manager/log.js')
+const PATHS = require('./paths.js')
+
+
+// default configuration file
+const defConfigDir = path.join(PATHS.app, 'def_config.json')
+const defConfigRaw = fs.readFileSync(defConfigDir, 'utf8')
+
+
+/**
+ * Initializes a directory tree that is used for system-files.
+ * It detects existing files and does not overwrite them to keep custom settings.
+ * @returns {Promise&lt;PATHS.SystemPaths>} resolves paths of system-files
+ * @memberof Modules.App
+ */
+function initFileStructure() {
+  try {
+    fs.ensureDirSync(PATHS.data)
+  } catch (err) {
+    tracer.error(err)
+    return new Promise((resolve, reject) => {
+      reject('directory access failed, enough permissions?')
+    })
+  }
+  
+
+  const storeDirStructure = dirTree(PATHS.data)
+
+  const defaultContent = {
+    '.cache': {},
+    '.log': 'TRAKTIFY LOG\n\n',
+    'config.json': defConfigRaw
+  }
+
+  return new Promise((resolve, reject) => {
+    // add missing files
+
+    // TODO: This will only work if the default file structure does not consist of multiple directory levels. Create helper function to make this possible if a more structured default tree is required.
+    let presentFiles = storeDirStructure.children.map(c => c.name)
+    let desired = ['.cache', '.log', 'config.json']
+
+    // false if anything had to be modified
+    let noFixing = true
+
+    desired.map(d => {
+      // only pass items that are not yet present
+      if (!presentFiles.includes(d)) return d
+    }).filter(n => n).forEach(m => {
+      noFixing = false
+
+      if (typeof defaultContent[m] == 'object') {
+        // in this case, the missing element was a directory
+        fs.ensureDirSync(path.join(PATHS.data, m))
+      } else {
+        fs.outputFileSync(path.join(PATHS.data, m), defaultContent[m])
+      }
+    })
+
+    if (!noFixing) tracer.warn('system-files are created')
+
+    // fix config file if necessary
+    const configDir = path.join(PATHS.data, 'config.json')
+    const configRaw = fs.readFileSync(configDir, 'utf8')
+
+    try {
+      // this fails if content is not JSONifyable (is that a word?)
+      const config = JSON.parse(configRaw)
+
+      let missing = !Object.keys(config).includes('client')
+        || !Object.keys(config).includes('user')
+
+      if (missing) {
+        throw 'config file is missing important content'
+      }
+    } catch (err) {
+      noFixing = false
+
+      tracer.error(err)
+      fs.outputFileSync(configDir, defaultContent['config.json'])
+      tracer.warn('overwritten config with defaults')
+    }
+
+    if (noFixing) tracer.log('system-files are present and as expected')
+
+    resolve(PATHS)
+  })
+}
+
+
+/**
+ * Configuration settings for the app.
+ * @typedef Config
+ * @property {Object} client
+ * @property {Object} client.settings
+ * @property {Object} client.rpc
+ * @property {Object} user
+ * @property {Object} user.trakt
+ * @property {Object|false} user.trakt.auth
+ * @property {Boolean} user.trakt.status
+ * @memberof Modules.App
+ */
+
+/**
+ * Reads configuration file from disk.
+ * @returns {Config} configuration settings
+ * @memberof Modules.App
+ */
+function readConfig() {
+  try {
+    return JSON.parse(fs.readFileSync(PATHS.config, 'utf8'))
+  } catch (err) {
+    tracer.error(err)
+  }
+}
+
+
+/**
+ * Writes changes to the configuration file.
+ * @param {Config} unsaved config object with possibly unsaved changes
+ * @memberof Modules.App
+ */
+function saveConfig(unsaved) {
+  try {
+    return fs.writeFileSync(PATHS.config, JSON.stringify(unsaved))
+  } catch (err) {
+    tracer.error(err)
+  }
+}
+
+
+module.exports = {
+  initFileStructure, readConfig, saveConfig
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated with <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+
+</body>
+</html>

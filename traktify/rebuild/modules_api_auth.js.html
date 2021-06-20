@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>modules/api/auth.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/CodingBobby/traktify/issues" target="_blank" class="menu-item" id="issues_link" >Bugs & Issues</a></h2><h2><a href="https://circleci.com/gh/CodingBobby/traktify" target="_blank" class="menu-item" id="build_link" >Build Log</a></h2><h2><a href="https://discord.gg/BJNAMcj" target="_blank" class="menu-item" id="discord_link" >Discord Server</a></h2><h3>Classes</h3><ul><li><a href="Modules.Manager.Queue.html">Queue</a><ul class='methods'><li data-type='method'><a href="Modules.Manager.Queue.html#_doTick">_doTick</a></li><li data-type='method'><a href="Modules.Manager.Queue.html#_duplicates">_duplicates</a></li><li data-type='method'><a href="Modules.Manager.Queue.html#add">add</a></li></ul></li><li><a href="Modules.Manager.SwitchBoard.html">SwitchBoard</a><ul class='methods'><li data-type='method'><a href="Modules.Manager.SwitchBoard.html#on">on</a></li><li data-type='method'><a href="Modules.Manager.SwitchBoard.html#send">send</a></li></ul></li><li><a href="Modules.Manager.Task.html">Task</a><ul class='methods'><li data-type='method'><a href="Modules.Manager.Task.html#run">run</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="Modules.html">Modules</a></li><li><a href="Modules.API.html">API</a><ul class='methods'><li data-type='method'><a href="Modules.API.html#.authenticateUser">authenticateUser</a></li><li data-type='method'><a href="Modules.API.html#.connectUser">connectUser</a></li><li data-type='method'><a href="Modules.API.html#.formatSearch">formatSearch</a></li><li data-type='method'><a href="Modules.API.html#.getAPIKeys">getAPIKeys</a></li><li data-type='method'><a href="Modules.API.html#.startsWithFilter">startsWithFilter</a></li></ul></li><li><a href="Modules.App.html">App</a><ul class='methods'><li data-type='method'><a href="Modules.App.html#.buildLoadingWindow">buildLoadingWindow</a></li><li data-type='method'><a href="Modules.App.html#.initFileStructure">initFileStructure</a></li><li data-type='method'><a href="Modules.App.html#.initLogListener">initLogListener</a></li><li data-type='method'><a href="Modules.App.html#.readConfig">readConfig</a></li><li data-type='method'><a href="Modules.App.html#.saveConfig">saveConfig</a></li><li data-type='method'><a href="Modules.App.html#.startApp">startApp</a></li></ul></li><li><a href="Modules.Manager.html">Manager</a></li><li><a href="Modules.Renderer.html">Renderer</a><ul class='methods'><li data-type='method'><a href="Modules.Renderer.html#.report">report</a></li><li data-type='method'><a href="Modules.Renderer.html#.tracer">tracer</a></li></ul></li><li><a href="Traktify.html">Traktify</a></li></ul><h3>Global</h3><ul><li><a href="global.html#DEV_JOBS">DEV_JOBS</a></li><li><a href="global.html#JOBS">JOBS</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">modules/api/auth.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const tracer = require('../manager/log.js')
+const Trakt = require('trakt.tv')
+const { getAPIKeys } = require('./init.js')
+const { readConfig, saveConfig } = require('../app/files.js')
+
+const apiKeys = getAPIKeys()
+
+const trakt = new Trakt({
+  client_id: apiKeys.trakt_id,
+  client_secret: apiKeys.trakt_secret
+})
+
+
+/**
+ * Starts login procedure for the user.
+ * @param {Function} onSuccess fires when authenticaion was successful
+ * @param {Function} onFailure fires when user couldn't be logged in
+ * @memberof Modules.API
+ */
+function connectUser(onSuccess, onFailue) {
+  let config = readConfig()
+
+  return trakt.get_codes().then(poll => {
+    tracer.info(`please visit ${poll.verification_url}`)
+    tracer.info(`and enter the code ${poll.user_code}`)
+
+    return trakt.poll_access(poll)
+  }).then(auth => {
+    tracer.log('successfully connected new user')
+    trakt.import_token(auth)
+
+    config.user.trakt.auth = auth
+    config.user.trakt.status = true
+    saveConfig(config)
+
+    onSuccess()
+    return true
+  }).catch(err => {
+    if (err) {
+      tracer.warn('authentication failed, removing user credentials')
+
+      config.user.trakt.auth = false
+      config.user.trakt.status = false
+      saveConfig(config)
+
+      onFailue()
+    }
+  })
+}
+
+
+/**
+ * Tries to login to trakt with user credentials saved in the config.
+ * @param {Function} onSuccess fires when authenticaion was successful
+ * @param {Function} onFailure fires when user couldn't be logged in
+ * @memberof Modules.API
+ */
+function authenticateUser(onSuccess, onFailue) {
+  let config = readConfig()
+  let auth = config.user.trakt.auth
+
+  trakt.import_token(auth).then(() => {
+    trakt.refresh_token(auth).then(newAuth => {
+      // update config with latest credentials
+      config.user.trakt.auth = newAuth
+      config.user.trakt.status = true
+      saveConfig(config)
+
+      onSuccess()
+    }).catch(err => {
+      if (err) {
+        tracer.warn('authentication failed, removing user credentials')
+
+        config.user.trakt.auth = false
+        config.user.trakt.status = false
+        saveConfig(config)
+
+        onFailue()
+      }
+    })
+  })
+}
+
+
+module.exports = {
+  trakt, connectUser, authenticateUser
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated with <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+
+</body>
+</html>
