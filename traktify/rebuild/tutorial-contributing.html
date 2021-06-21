@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Home - Documentation</title>
+    <title>Tutorial: Contributing - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -34,83 +34,34 @@
 
 <div id="main">
     
-
+    <h1 class="page-title">Tutorial: Contributing</h1>
     
 
+    <section>
 
-
+<header>
     
+</header>
 
-
-    <section class="package">
-        <h3> </h3>		
-    </section>
-
-
-
-
-
-
-
-
-
-    
-
-
-
-    <section class="readme usertext">
-        <article><p align="center">
-  <img src="https://i.imgur.com/Y5rSPSm.png" width="128"/>
-</p>
-<h1 align="center"> <a href="https://codingbobby.xyz/traktify">Traktify</a> </h1>
-<blockquote>
-<p>A multi platform desktop app for trakt.tv</p>
-</blockquote>
-<p><img src="https://img.shields.io/circleci/build/github/CodingBobby/traktify/master?label=build&amp;style=flat-square" alt="master_build">
-<img src="https://img.shields.io/circleci/build/github/CodingBobby/traktify/development?label=dev%20build&amp;style=flat-square" alt="dev_build"></p>
-<p><img src="https://img.shields.io/codacy/grade/a68c06c191d54df0879b854c05c2ea79/master.svg?style=flat-square" alt="quality">
-<img src="https://img.shields.io/github/repo-size/CodingBobby/traktify.svg?style=flat-square" alt="size">
-<img src="https://img.shields.io/github/languages/top/CodingBobby/traktify.svg?style=flat-square" alt="top_lang">
-<img src="https://img.shields.io/github/package-json/dependency-version/CodingBobby/traktify/dev/electron.svg?style=flat-square" alt="electron"></p>
-<p>Traktify provides super easy super fast access to your trakt.tv account.
-User experience is our top priority.</p>
-<p>Visit the project's website <a href="https://codingbobby.xyz/traktify">here</a>.</p>
-<h2>Here We Go Again (2021-04-17)</h2>
-<p>Major problems resulted in frustration and we decided to partly restart this project.
-As no actual release was completed yet, we don't expect problems on other people's ends.
-This new branch will help to kickstart the changes we planned and will later be merged into the usual branches for further development.
-Fingers crossed!</p>
-<h2>Features</h2>
-<p>So let us tell you what traktify can do—because thats what you really care about right?</p>
-<h3>Fast-access dashboard</h3>
-<p><img src="https://i.imgur.com/XOTBUlz.png" alt="screen_dashboard"></p>
-<p>Traktify's dashboard offers a clean overview of whats up next to watch for you. From here, you can add episodes you just watched to your history.
-The search panel allows blazing-fast access to the entire trakt database.
-Via shortcuts, filtering search results is made very easy.</p>
-<h3>Keyboard shortcuts</h3>
-<p>If you're a keyboard orientated person, we've got you.
-Simple commands allow you to quickly jump through traktify's pages and panels.</p>
-<h3>Customization</h3>
-<p>A wide range of settings let you customize the look and feel of your app.
-You can apply different accent colors, background textures and more.</p>
-<h3>Discord integration</h3>
-<p>If you wish, you can let traktify show a beautiful rich-presence on your Discord profile.
-All you need to do is clicking a button.</p>
-<p>You can find more images in this <a href="https://imgur.com/a/1BFUMGm">gallery</a>.</p>
-<h2>Getting started</h2>
-<p>Traktify is currently at it's climax of development.
-You can dive in really soon.</p>
-<h3>Requirements</h3>
-<p>Traktify is an electron based app and thus requires a Windows 7 (and higher) or macOS 10.10 (and higher) machine to run on.
-You'll also need a <a href="https://nodejs.org/en/download/">Node.js</a> installation.
-Traktify is tested on versions higher than <code>v10.10.0</code> but we recommend the latest <code>LTS</code> release.</p>
-<p>If you want to use the Discord Rich-Presence integration, you'll also have to install <a href="https://www.python.org/downloads/">Python</a>.</p>
-<h2>Contributing</h2>
-<p>Contributions are very welcome!
-To report issues and start pull requests, please use github's integrated systems.</p>
-<p>A detailed documentation for developers is available <a href="https://codingbobby.xyz/traktify/docs">here</a>.
-Please note that this might not be complete.</p>
-<h3>Quickstart</h3>
+<article>
+    <p>Nice to see you considering to contribute to Traktify in some form.
+You are very welcome to fork the repo and improve some code, fix issues or even add your own ideas.
+Please make sure to include a detailed description and reasoning when raising pull requests on <a href="https://github.com/CodingBobby/traktify/pulls">GitHub</a>.</p>
+<p>If you encounter an issue or bug, find out if someone else already reported similar problems on the <a href="https://github.com/CodingBobby/traktify/issues">issue tracker</a> before you submit a new issue.
+Please do not ask about geneal support there, instead you can join our <a href="https://discord.gg/BJNAMcj">Discord Server</a> and contact an admin or send us an <a href="mailto:traktify@codingbobby.xyz">email</a>.</p>
+<p>Please read the <a href="https://codingbobby.xyz/traktify/docs">documentation</a> so you can further understand how this project works.</p>
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#guidelines">Guidelines</a>
+<ul>
+<li><a href="#code-standards">Code Standards</a></li>
+<li><a href="#commits">Commits</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="quickstart"></a></p>
+<h2>Quickstart</h2>
 <p>To start working on Traktify, you first need to clone this repository and move into the branch of interest:</p>
 <pre class="prettyprint source lang-sh"><code>git clone https://github.com/CodingBobby/traktify.git
 cd traktify
@@ -135,24 +86,48 @@ Required for functionlity is at least the <code>trakt.tv</code> API -- you can o
 <li>Run test suites: <code>npm run test</code></li>
 <li>Generate documentation locally: <code>npm run build-docs</code></li>
 </ul>
-<h2>Credits</h2>
-<h3>Authors</h3>
+<p><a name="guidelines"></a></p>
+<h2>Guidelines</h2>
+<p><a name="code-standards"></a></p>
+<h4>Code Standards</h4>
+<p>Readable code is top priority.
+When contributing, follow a general code standard like <a href="https://standardjs.com/rules.html">StandardJS</a> to ensure this.
+We are not very consistent ourselves but please, avoid weird code formatting.</p>
+<p>We also encourage you to document your code using the <a href="https://jsdoc.app">JSDoc</a> syntax.
+This enables us to work type-sensitive which is awesome.
+Instead of:</p>
+<pre class="prettyprint source lang-js"><code>// This function returns the sum of numbers inside an array.
+function sumArray (arr) {
+   let sum = arr.reduce((a, b) => a + b, 0)
+   return sum
+}
+</code></pre>
+<p>… do:</p>
+<pre class="prettyprint source lang-js"><code>/**
+ * Adds the values inside an array.
+ * @param {Array.&lt;Number>} arr The array to sum
+ * @returns {Number} Sum of array
+ */
+function sumArray (arr) {
+   let sum = arr.reduce((a, b) => a + b, 0)
+   return sum
+}
+</code></pre>
+<p><a name="commits"></a></p>
+<h4>Commits</h4>
+<p>First of all, do not worry about &quot;too little&quot; changes.
+If a single additional line of code fixes a bug, thats commit-worthy.
+Do not gather a bunch of additions or modifications and combine them into one commit but split them into &quot;topics&quot; they are related to.</p>
+<p>Inside your commit message, you will need to brievely explain</p>
 <ul>
-<li><a href="https://github.com/Bumbleboss">Bumbleboss</a>: Frontend developer &amp; Graphics designer</li>
-<li><a href="https://github.com/CodingBobby">CodingBobby</a>: Backend developer</li>
+<li>what you did</li>
+<li>why it was necessary</li>
+<li>what side effects result from it.</li>
 </ul>
-<h3>3rd Party Dependencies</h3>
-<ul>
-<li><a href="https://github.com/vankasteelj">Jean van Kasteel</a>: <code>trakt.tv</code> and <code>fanart.tv</code></li>
-<li><a href="https://github.com/royriojas">Roy Riojas</a>: <code>flat-cache</code></li>
-</ul>
-<!-- long links --></article>
-    </section>
+<p>Please describe your changes in <strong>full sentences</strong> and make sure to start with a descriptive title that indicates whether a bug was fixed, a feature added or the code improved in any other sense.</p>
+</article>
 
-
-
-
-
+</section>
 
     
     

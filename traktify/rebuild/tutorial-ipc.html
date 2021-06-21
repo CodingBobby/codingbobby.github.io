@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>server/tasks.js - Documentation</title>
+    <title>Tutorial: Internal Communication - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -34,170 +34,101 @@
 
 <div id="main">
     
-    <h1 class="page-title">server/tasks.js</h1>
+    <h1 class="page-title">Tutorial: Internal Communication</h1>
     
 
-    
-
-
-
-    
     <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>const path = require('path')
-process.env.BASE_PATH = path.join(__dirname, '..')
 
-const klyft = require('klyft')
-const Trakt = require('trakt.tv')
+<header>
+    
+</header>
 
-const init = require('../modules/init')
-const keys = init.getAPIKeys()
+<article>
+    <p>An electron app consists of at least two separate processes:</p>
+<ul>
+<li>main <code>node.js</code> process (backend)</li>
+<li>web-like renderer process (frontend)</li>
+</ul>
+<p>The renderer process is what the user gets to see and controls when clicking around in the app.
+It handles <code>onclick</code> events, <code>DOM</code> modification, etc.—just what a normal webside would and could do.
+But a &quot;native&quot; app is much more than just a website and requires communication with a backend to retreive data, access local files or to modify the app window itself which is not part of the &quot;website&quot;.</p>
+<p>Fortunately, communication between front- and backend inside an electron app is easier than using traditional <code>HTTP</code> requests.
+It uses <code>ipcMain</code> and <code>ipcRenderer</code> but to make it more documentable and unified througout traktify, the class <a href="Modules.Manager.SwitchBoard.html"><code>Modules.Manager.SwitchBoard</code></a> was implemented.</p>
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#front-back">Frontend Calls Backend</a></li>
+<li><a href="#back-front">Backend Calls Frontend</a></li>
+</ul>
+<p><a name="front-back"></a></p>
+<h2>Frontend Calls Backend</h2>
+<p>The frontend might want to display data that is currently only available to the backend.
+Inside <code>index.js</code> loaded by <code>index.html</code>:</p>
+<pre class="prettyprint source lang-js"><code>const SB = new SwitchBoard()
 
-const trakt = new Trakt({
-  client_id: keys.trakt_id,
-  client_secret: keys.trakt_secret
+// request property `age` of the user
+SB.send('user-data', 'age').then(age => {
+  // do stuff with the reply
+  console.log(`the user is ${age} years old`)
+})
+</code></pre>
+<p>Inside <code>main.js</code> called by node:</p>
+<pre class="prettyprint source lang-js"><code>// an electron app was stared which loaded `index.html`
+const win = new electron.BrowserWindow()
+...
+
+// data available to the app only
+const user = {
+  name: 'Alice',
+  age: 27,
+  job: 'developer'
+}
+
+const SB = new SwitchBoard({
+  window: win // browser-window to connect with
 })
 
-const { formatSearch } = require('../modules/filters')
-
-
-// Type Definitions
-
-/**
- * @callback JobDone
- * @param {*} [result]
- */
-
-/**
- * @callback JobFunction
- * @param {*} args
- * @param {JobDone} done
- */
-
-
-// Job Collections
-
-/**
- * @type {Object.&lt;string,JobFunction>}
- */
-const DEV_JOBS = {
-  /**
-   * Simple job for testing with an artificial delay.
-   * @param {number} duration
-   */
-  delay: function(duration, done) {
-    console.log(`starting ${duration} delay`)
-  
-    setTimeout(() => {
-      console.log(`finished ${duration} delay`)
-  
-      return done()
-    }, duration)
-  },
-}
-
-
-/**
- * @type {Object.&lt;string,JobFunction>}
- */
-const JOBS = {
-  /**
-   * Filter and format raw search text to be used by the API.
-   * @param {string} input
-   */
-  prepareSearch: function(input, done) {
-    let queryObject = formatSearch(input)
-    return done(queryObject)
-  },
-
-  /**
-   * Search the trakt.tv database.
-   * @param {Object} query
-   * @param {'movie'|'show'|'episode'|'person'} query.type
-   * @param {string} query.query
-   * @param {'full'} [query.extended]
-   */
-  traktSearch: function(query, done) {
-    let results = trakt.search.text(query)
-    return done(results)
-  },
-
-  /**
-   * @typedef {Object} TRAKT_IDS
-   * @property {number} trakt
-   * @property {string} slug
-   * @property {number} tvdb
-   * @property {number} tmdb
-   * @property {sting} imdb
-   * @property {number} tvrage
-   */
-
-  /**
-   * @typedef {Object} TRAKT_SEARCH_OBJECT
-   * @property {'movie'|'show'|'episode'|'person'} type
-   * @property {number} score
-   * @property {Object} [movie]
-   * @property {string} [movie.title]
-   * @property {number} [movie.year]
-   * @property {TRAKT_IDS} [movie.ids]
-   * @property {Object} [episode]
-   * @property {string} [episode.title]
-   * @property {number} [episode.year]
-   * @property {TRAKT_IDS} [episode.ids]
-   * @property {Object} [show]
-   * @property {string} [show.title]
-   * @property {number} [show.year]
-   * @property {TRAKT_IDS} [show.ids]
-   * @property {Object} [person]
-   * @property {string} [person.name]
-   * @property {TRAKT_IDS} [person.ids]
-   */
-
-  /**
-   * Get more details about an item.
-   * @param {TRAKT_SEARCH_OBJECT} searchResult
-   */
-  extractSearchResultDetails: async function(searchResult, done) {
-    let resultID = searchResult[searchResult.type].ids.trakt
-    let result;
-
-    switch (searchResult.type) {
-      case 'movie':
-        result = await trakt.movies.summary(resultID)
-        break;
-      case 'show':
-        result = await trakt.shows.summary(resultID)
-        break;
-      case 'episode':
-        result = await trakt.episodes.summary(resultID)
-        break;
-      case 'person':
-        result = await trakt.people.summary({
-          id: resultID
-        })
-        break;
-    }
-
-    return done(result)
-  }
-}
-
-
-// Job Initialisation
-
-for (jobName in DEV_JOBS) {
-  new klyft.Job(jobName, DEV_JOBS[jobName])
-}
-
-for (jobName in JOBS) {
-  new klyft.Job(jobName, JOBS[jobName])
-}
+// listen for requests coming from the browser-window
+SB.on('user-data', (key, send) => {
+  // send back the requested data
+  send(user[key])
+})
 </code></pre>
-        </article>
-    </section>
+<p><a name="back-front"></a></p>
+<h2>Backend Calls Frontend</h2>
+<p>The backend might want to instruct the frontend to display something.
+Inside <code>main.js</code> called by node:</p>
+<pre class="prettyprint source lang-js"><code>// an electron app was stared which loaded `index.html`
+const win = new electron.BrowserWindow()
+...
 
+// data available to the app only
+const user = {
+  name: 'Alice',
+  age: 27,
+  job: 'developer'
+}
 
+const SB = new SwitchBoard({
+  window: win // browser-window to connect with
+})
 
+SB.send('display', `Good morning, ${user.name}!`)
+</code></pre>
+<p>Inside <code>index.js</code> loaded by <code>index.html</code>:</p>
+<pre class="prettyprint source lang-js"><code>const SB = new SwitchBoard()
+
+// wait for instructions from the app
+SB.on('display', (message, done) => {
+  // here, we have access to the DOM
+  document.alert(message)
+
+  // main is not waiting for anything but otherwise a timeout would be thrown
+  done()
+})
+</code></pre>
+</article>
+
+</section>
 
     
     
