@@ -48,6 +48,7 @@ html[data-theme="light"] {
     --email-icon-url: url(https://img.icons8.com/material-sharp/64/000000/email.png);
     --coffee-icon-url: url(https://img.icons8.com/material-sharp/64/000000/kawaii-coffee.png);
     --webring-icon-url: url(https://webring.xxiivv.com/icon.black.svg);
+    --rss-icon-url: url(https://img.icons8.com/material/64/000000/rss.png);
     --search-icon-url: url(https://img.icons8.com/material-sharp/64/000000/search.png);
     --cc-icon-url: url(https://img.icons8.com/material-outlined/64/000000/creative-commons.png);
     --attribution-icon-url: url(https://img.icons8.com/material-outlined/64/000000/creative-commons-by.png);
@@ -67,6 +68,7 @@ html[data-theme="dark"] {
     --email-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/email.png);
     --coffee-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/kawaii-coffee.png);
     --webring-icon-url: url(https://webring.xxiivv.com/icon.white.svg);
+    --rss-icon-url: url(https://img.icons8.com/material/64/f0f0f0/rss.png);
     --search-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/search.png);
     --cc-icon-url: url(https://img.icons8.com/material-outlined/64/f0f0f0/creative-commons.png);
     --attribution-icon-url: url(https://img.icons8.com/material-outlined/64/f0f0f0/creative-commons-by.png);
@@ -86,6 +88,7 @@ html[data-theme="rainbow"] {
     --email-icon-url: url(https://img.icons8.com/material-sharp/64/000000/email.png);
     --coffee-icon-url: url(https://img.icons8.com/material-sharp/64/000000/kawaii-coffee.png);
     --webring-icon-url: url(https://webring.xxiivv.com/icon.black.svg);
+    --rss-icon-url: url(https://img.icons8.com/material/64/000000/rss.png);
     --search-icon-url: url(https://img.icons8.com/material-sharp/64/000000/search.png);
     --cc-icon-url: url(https://img.icons8.com/material-outlined/64/000000/creative-commons.png);
     --attribution-icon-url: url(https://img.icons8.com/material-outlined/64/000000/creative-commons-by.png);
@@ -333,6 +336,10 @@ a {
 
 .webring_icon {
     content: var(--webring-icon-url);
+}
+
+.rss_icon {
+    content: var(--rss-icon-url);
 }
 
 a.cc_list {
