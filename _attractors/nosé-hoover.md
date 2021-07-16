@@ -48,6 +48,12 @@ With $$T = 1.5$$:
   <img src="/assets/images/attractors/nose-hoover-03.webp" loading="lazy" alt="Nosé-Hoover-3"/>
 </a></p>
 
+## Framing It
+I liked the third render so much, that I printed it on 45x35 cm fine-art paper and framed it.
+Read more in my [blog post](/blog/printing-digital-art).
+
+![Printed Nosé-Hoover Attractor](/assets/images/attractors/nose-hoover-print.webp){:width='60%'}
+
 ---
 {: data-content="footnotes"}
 
