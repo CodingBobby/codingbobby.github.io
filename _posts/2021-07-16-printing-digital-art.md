@@ -9,7 +9,7 @@ comments: true
 Printing on high quality paper, especially in the digital age, is a very satisfying thing to do -- you can lift it up, feel the weight and texture, and most importantly, you don't stare directly into the LEDs of a screen.
 This does not apply to photographs only, but also, who would have thought so, to digital art.
 I've seen a lot of great artists on the internet who create stunning drawings or illustrations only to post them on Instagram or DeviantArt.
-More often than not, they are designing the images solely for that platform, and they think because most people don't have large 4K displays, tiny resolutions suffice and everyone is okay with 800x800 pixels, as they won't zoom in or even spend more than a few seconds looking at it.
+More often than not, they are designing the images solely for that platform, and they think because most people don't have large 4K displays, tiny resolutions suffice and everyone is okay with 800×800 pixels, as they won't zoom in or even spend more than a few seconds looking at it.
 Fair enough, you don't have to pay that much attention to clean lines and mistakes, but guys, you're killing your options!
 
 I'm not drawing digital paintings myself, but my [attractor renders](/projects/chaotic-shapes) could be considered digital art.

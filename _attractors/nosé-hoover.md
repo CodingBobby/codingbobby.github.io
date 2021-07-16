@@ -49,7 +49,7 @@ With $$T = 1.5$$:
 </a></p>
 
 ## Framing It
-I liked the third render so much, that I printed it on 45x35 cm fine-art paper and framed it.
+I liked the third render so much, that I printed it on 45×35 cm fine-art paper and framed it.
 Read more in my [blog post](/blog/printing-digital-art).
 
 ![Printed Nosé-Hoover Attractor](/assets/images/attractors/nose-hoover-print.webp){:width='60%'}
