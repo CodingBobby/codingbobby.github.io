@@ -2,7 +2,7 @@
 layout: post
 title: "The Gem Struggle"
 date: 2021-05-13
-tags: [coding]
+tags: [coding, linux, guide]
 authors: [Bob]
 comments: true
 ---

@@ -13,7 +13,7 @@ background-color: white;
 </style>
 
 
-Have you ever wondered why some colours look weird and unnatural when taking a picture with them on your phone?
+Have you ever wondered why some colours look weird and unnatural when taking a picture of them on your phone?
 I'm seeing this in photos of vibrant flowers quite often.
 For example, take a look at this one I took with a bad phone camera to emphasise the problem:
 
