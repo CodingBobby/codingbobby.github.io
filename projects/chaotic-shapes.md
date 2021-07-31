@@ -39,6 +39,6 @@ Center of the image is at $$z = -0.1079 + 0.0566\,i$$.
 ---
 {: data-content="footnotes"}
 
-[^convergence]: Depending on the form of $$z$$ and the numbers of iterations reached before diverging out of the set bounds, the displayed pixels are coloured differently. Pickover introduced three tests in his book *CPCB*[^pickover-book] and accidentally found a fourth one because of a bug in his code.
+[^convergence]: Depending on the form of $$z$$ and the number of iterations reached before diverging out of the set bounds, the displayed pixels are coloured differently. Pickover introduced three tests in his book *CPCB*[^pickover-book] and accidentally found a fourth one because of a bug in his code.
 
 [^pickover-book]: C.A. Pickover, 1990. \"Computers, Pattern, Chaos, and Beauty\". St. Martin's Press. pp 102–104, p 119. ISBN: 0312041233.
