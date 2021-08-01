@@ -36,6 +36,13 @@ Center of the image is at $$z = -0.1079 + 0.0566\,i$$.
   <img src="/assets/images/fractals/julia-01.webp" loading="lazy" alt="Julia-Set" style="width: 60%"/>
 </a></p>
 
+The same set but with $$70$$ maximum iterations and no halftone shading.
+Center of the image is at $$z = 0.046 -0.849\,i$$.
+
+<p><a href="/assets/images/fractals/julia-02.png" target="_blank">
+  <img src="/assets/images/fractals/julia-02.webp" loading="lazy" alt="Julia-Set" style="width: 60%"/>
+</a></p>
+
 ---
 {: data-content="footnotes"}
 

@@ -76,6 +76,9 @@ Though, it is making use of your browser's local storage to save the currently s
 This only takes a single key-value pair, so you shouldn't be bothered.
 Have fun browsing on this minimalistic site.
 
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
 ---
 {: data-content="footnotes"}
 
