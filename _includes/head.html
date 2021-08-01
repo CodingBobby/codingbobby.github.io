@@ -14,7 +14,12 @@
   {% seo title=false %}
   {% feed_meta %}
 
-  <link rel="shortcut icon" type="image/x-icon" href="/{{ site.favicon }}" />
-  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="/{{ site.favicon }}"/>
+  <link rel="stylesheet" href="/assets/css/main.css"/>
   <link rel="preload" href="/assets/fonts/JetBrainsMono-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+
+  <script type='text/javascript'>
+    document.__defineGetter__?(document.__defineGetter__("cookie",function(){return""}),document.__defineSetter__("cookie",function(){})):Object.defineProperty(document,"cookie",{get:function(){return""},set:function(){return!0}});
+  </script>
+
 </head>
