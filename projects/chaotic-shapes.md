@@ -23,6 +23,14 @@ Click on the images to find out more about them.
 
 ## Fractals
 
+Today's fractal of the day by [J.C. Sprott](https://sprott.physics.wisc.edu/):
+
+<p><a href="https://sprott.physics.wisc.edu/FRACTALS.HTM" target="_blank">
+  <img src="https://sprott.physics.wisc.edu/fractals/FRACDAY0.GIF" loading="lazy" alt="Sprott's Fractal of The Day" style="width: 80%"/>
+</a></p>
+
+Here are some of my own graphics:
+
 Julia-Set, "chaotic curl"
 
 $$f(z) \rightarrow z^2 + \mu$$
@@ -41,6 +49,19 @@ Center of the image is at $$z = 0.046 -0.849\,i$$.
 
 <p><a href="/assets/images/fractals/julia-02.png" target="_blank">
   <img src="/assets/images/fractals/julia-02.webp" loading="lazy" alt="Julia-Set" style="width: 60%"/>
+</a></p>
+
+Generalized Julia-Set, "biomorph" of
+
+$$f(z) \rightarrow z^z + z^5 + \mu$$
+
+$$\mu = -0.746 + b\,i$$
+
+where $$b$$ is animated in the range $$0.00$$–$$1.00$$ in steps of $$0.05$$.
+Center of the animation is at $$z = 0$$ and it was shaded using Pickover's "bugged" convergence-test.
+
+<p><a href="/assets/images/fractals/julia-03.gif" target="_blank">
+  <img src="/assets/images/fractals/julia-03.gif" loading="lazy" alt="animated Julia-Set" style="width: max-content"/>
 </a></p>
 
 ---
