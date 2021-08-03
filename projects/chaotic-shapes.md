@@ -45,7 +45,7 @@ Center of the image is at $$z = -0.1079 + 0.0566\,i$$.
 </a></p>
 
 The same set but with $$70$$ maximum iterations and no halftone shading.
-Center of the image is at $$z = 0.046 -0.849\,i$$.
+Center of the image is at $$z = 0.046 - 0.849\,i$$.
 
 <p><a href="/assets/images/fractals/julia-02.png" target="_blank">
   <img src="/assets/images/fractals/julia-02.webp" loading="lazy" alt="Julia-Set" style="width: 60%"/>
@@ -58,11 +58,24 @@ $$f(z) \rightarrow z^z + z^5 + \mu$$
 $$\mu = -0.746 + b\,i$$
 
 where $$b$$ is animated in the range $$0.00$$–$$1.00$$ in steps of $$0.05$$.
-Center of the animation is at $$z = 0$$ and it was shaded using Pickover's "bugged" convergence-test.
+Center of the animation is at $$z = 0$$ and it was shaded using Pickover's convergence-test $$4$$.
 
 <p><a href="/assets/images/fractals/julia-03.gif" target="_blank">
   <img src="/assets/images/fractals/julia-03.gif" loading="lazy" alt="animated Julia-Set" style="width: max-content"/>
 </a></p>
+
+Here is a magnification of the $$\mu$$-plane of
+
+$$f(z) \rightarrow \cosh{z} + \mu$$
+
+where the iteration is started at $$z_0 = 0$$.
+Center of the image is at $$z = 1.12 + 2.4\,i$$; convergence-test $$4$$ was used.
+Notice the (slightly deformed) Mandelbrot-Set embedded in the map in the lower middle.
+
+<p><a href="/assets/images/fractals/cosh-01.png" target="_blank">
+  <img src="/assets/images/fractals/cosh-01.webp" loading="lazy" alt="Cosh-Set" style="width: 60%"/>
+</a></p>
+
 
 ---
 {: data-content="footnotes"}
