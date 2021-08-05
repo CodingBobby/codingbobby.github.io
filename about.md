@@ -17,8 +17,7 @@ Take care, *Bob*.
 
 ---
 
-0. [Who I am ](#who-i-am)
-0. [512KB Club](#512kb-club)
+0. [Who I am](#who-i-am)
 0. [Distributed Computing](#distributed-computing)
 0. [Privacy Policy](#privacy-policy)
 
@@ -36,25 +35,27 @@ My favourite things are:
 If you want to get in touch with me, you can find me on [Twitter](https://twitter.com/BobbyCoding) or write me an [email](mailto:contact@codingbobby.xyz).
 Comments on blog posts are also welcome if you would like to share your thoughts with other readers.
 
-### 512KB Club
-I am proud member of the orange team!
+---
+
+I am a proud member of the orange team of the 512KB Club!
 
 <a href="https://512kb.club">
   <img src="https://512kb.club/assets/images/orange-team.svg"/>
 </a>
 
-The internet has become a bloated mess.
-Massive JavaScript libraries, countless client-side queries and overly complex frontend frameworks are par for the course these days.
-
-When online newspapers like The Guardian are over 4MB in size, you know there's a problem.
-Why does an online newspaper need to be over 4MB in size?
-It's crazy.
-
+The internet has become a bloated mess because of massive JavaScript libraries, tons of popups, huge images and other media that requires years to request and download.
 But we can make a difference -- all it takes is some optimisation.
-Do you really need that extra piece of JavaScript?
-Does your WordPress site need a theme that adds lots of functionality you're never going to use?
-Are those huge custom fonts really needed?
-Are your images optimised for the web?
+
+I am also part of the [IndieWeb Webring](https://xn--sr8hvo.ws/directory) you can explore here:
+
+<div class="horizon">
+  <a href="https://xn--sr8hvo.ws/%F0%9F%8F%86%C2%A9%EF%B8%8F%F0%9F%8C%A8/previous"><-</a> 🕸 💍 <a href="https://xn--sr8hvo.ws/%F0%9F%8F%86%C2%A9%EF%B8%8F%F0%9F%8C%A8/next">-></a>
+   <span class="stretch"></span>
+</div>
+
+This website was last compiled on {{ site.time | date: "%Y-%m-%d" }} with Jekyll and 💚.
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
 ### Distributed Computing
 I highly recommend you learn about [BOINC](https://boinc.berkeley.edu) if you haven't already.
@@ -75,10 +76,6 @@ Elsewhere, this website does not use any other cookies or tracking techniques.
 Though, it is making use of your browser's local storage to save the currently set theme.
 This only takes a single key-value pair, so you shouldn't be bothered.
 Have fun browsing on this minimalistic site.
-
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-
-This website was last compiled on {{ site.time | date: "%Y-%m-%d" }}.
 
 ---
 {: data-content="footnotes"}
