@@ -7,9 +7,9 @@ tags: [artwork, mathematics, fractals, digital-art]
 On this page you will find a collection of some fractal images I computed on my own.
 
 I was inspired by Pickover's great book *CPCB*[^pickover-book] to explore the chaotic maps using self-written code.
-But I am no expert and if you want to know how this stuff work, you'd be better off reading his book.
+But I am no expert and if you want to know how this stuff works, you'd be better off reading his book.
 
-Basically, for each pixel in these images, a feedback-loop is run on their position's coordinates until one of several conditions is fulfilled that causes the loop to halt.
+Basically, for each pixel in these images, a feedback-loop is run on their coordinates until one of several conditions is fulfilled that causes the loop to halt.
 Depending on the exact parameters reached when stopping, the computed pixel is coloured differently.
 These conditional checks are also called [convergence-tests](#convergence-tests) of which Pickover introduced three and accidentally found a fourth one because of a bug in his code.[^book-pages]
 
