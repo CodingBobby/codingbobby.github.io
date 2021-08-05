@@ -20,7 +20,7 @@ Take care, *Bob*.
 0. [Who I am ](#who-i-am)
 0. [512KB Club](#512kb-club)
 0. [Distributed Computing](#distributed-computing)
-0. [Cookie Policy](#cookie-policy)
+0. [Privacy Policy](#privacy-policy)
 
 ### Who I am
 I am CodingBobby but you can call me Bob.[^myself]
@@ -76,8 +76,9 @@ Though, it is making use of your browser's local storage to save the currently s
 This only takes a single key-value pair, so you shouldn't be bothered.
 Have fun browsing on this minimalistic site.
 
-
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
+This website was last compiled on {{ site.time | date: "%Y-%m-%d" }}.
 
 ---
 {: data-content="footnotes"}
