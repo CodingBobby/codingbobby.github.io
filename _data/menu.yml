@@ -5,7 +5,9 @@ entries:
 
   - title: projects I'm working on
     url: /projects
-    entries: false
+    entries:
+      - title: "featured: shapes of chaos"
+        url: /projects/chaotic-shapes
 
   - title: blog posts
     post_list: true

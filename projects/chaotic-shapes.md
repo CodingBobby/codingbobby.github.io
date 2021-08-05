@@ -29,57 +29,8 @@ Today's fractal of the day by [J.C. Sprott](https://sprott.physics.wisc.edu/):
   <img src="https://sprott.physics.wisc.edu/fractals/FRACDAY0.GIF" loading="lazy" alt="Sprott's Fractal of The Day" style="width: 80%"/>
 </a></p>
 
-Here are some of my own graphics:
+You can find some of my own graphics [here](fractals).
 
-Julia-Set, "chaotic curl"
-
-$$f(z) \rightarrow z^2 + \mu$$
-
-$$\mu = -0.746 + 0.172\,i$$
-
-with $$400$$ maximum iterations using Pickover's convergence-test $$3$$ and halftone shading.[^convergence]
-Center of the image is at $$z = -0.1079 + 0.0566\,i$$.
-
-<p><a href="/assets/images/fractals/julia-01.png" target="_blank">
-  <img src="/assets/images/fractals/julia-01.webp" loading="lazy" alt="Julia-Set" style="width: 60%"/>
-</a></p>
-
-The same set but with $$70$$ maximum iterations and no halftone shading.
-Center of the image is at $$z = 0.046 - 0.849\,i$$.
-
-<p><a href="/assets/images/fractals/julia-02.png" target="_blank">
-  <img src="/assets/images/fractals/julia-02.webp" loading="lazy" alt="Julia-Set" style="width: 60%"/>
-</a></p>
-
-Generalized Julia-Set, "biomorph" of
-
-$$f(z) \rightarrow z^z + z^5 + \mu$$
-
-$$\mu = -0.746 + b\,i$$
-
-where $$b$$ is animated in the range $$0.00$$–$$1.00$$ in steps of $$0.05$$.
-Center of the animation is at $$z = 0$$ and it was shaded using Pickover's convergence-test $$4$$.
-
-<p><a href="/assets/images/fractals/julia-03.gif" target="_blank">
+<p><a href="fractals">
   <img src="/assets/images/fractals/julia-03.gif" loading="lazy" alt="animated Julia-Set" style="width: max-content"/>
 </a></p>
-
-Here is a magnification of the $$\mu$$-plane of
-
-$$f(z) \rightarrow \cosh{z} + \mu$$
-
-where the iteration is started at $$z_0 = 0$$.
-Center of the image is at $$z = 1.12 + 2.4\,i$$; convergence-test $$4$$ was used.
-Notice the (slightly deformed) Mandelbrot-Set embedded in the map in the lower middle.
-
-<p><a href="/assets/images/fractals/cosh-01.png" target="_blank">
-  <img src="/assets/images/fractals/cosh-01.webp" loading="lazy" alt="Cosh-Set" style="width: 60%"/>
-</a></p>
-
-
----
-{: data-content="footnotes"}
-
-[^convergence]: Depending on the form of $$z$$ and the number of iterations reached before diverging out of the set bounds, the displayed pixels are coloured differently. Pickover introduced three tests in his book *CPCB*[^pickover-book] and accidentally found a fourth one because of a bug in his code.
-
-[^pickover-book]: C.A. Pickover, 1990. \"Computers, Pattern, Chaos, and Beauty\". St. Martin's Press. pp 102–104, p 119. ISBN: 0312041233.
