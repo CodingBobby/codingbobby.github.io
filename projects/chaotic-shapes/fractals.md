@@ -49,6 +49,33 @@ The center is $$z_c = 0$$.
 </a></p>
 
 
+## Network
+
+$$f(z) \rightarrow (a + b)^2$$
+
+$$a = 2\,z^2$$
+
+$$b = 0.176 + 2\,i$$
+
+around $$z_c = -0.595 + 0.515\,i$$.
+This organismic fractal is the result of a simple network of adding and squaring.
+
+<p><a href="/assets/images/fractals/net-01.png" target="_blank">
+  <img src="/assets/images/fractals/net-01.webp" loading="lazy" alt="Network" style="width: 60%"/>
+</a></p>
+
+Modifying this network slightly leads to something interesting that reminds me of mitosis:
+
+$$f(z) \rightarrow (a + b)^2 + n\,a$$
+
+where $$n$$ is animated in the range $$0$$–$$2$$ in steps of $$0.1$$.
+The center of the image was adjusted in each frame so that the biomorph doesn't move as much.
+
+<p><a href="/assets/images/fractals/net-02.gif" target="_blank">
+  <img src="/assets/images/fractals/net-02.gif" loading="lazy" alt="Network Mitosis" style="width: max-content"/>
+</a></p>
+
+
 ## Cosh-Map
 
 $$f(z) \rightarrow \cosh{z} + \mu$$
