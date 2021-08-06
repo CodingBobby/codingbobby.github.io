@@ -59,12 +59,13 @@ $$b = 0.176 + 2\,i$$
 
 around $$z_c = -0.595 + 0.515\,i$$.
 This organismic fractal is the result of a simple network of adding and squaring.
+Convergence-test $$4$$ was used.
 
 <p><a href="/assets/images/fractals/net-01.png" target="_blank">
   <img src="/assets/images/fractals/net-01.webp" loading="lazy" alt="Network" style="width: 60%"/>
 </a></p>
 
-Modifying this network slightly leads to something interesting that reminds me of mitosis:
+Modifying this network slightly leads to something interesting that reminds me of mitosis of microorganisms:
 
 $$f(z) \rightarrow (a + b)^2 + n\,a$$
 
