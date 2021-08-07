@@ -10,6 +10,8 @@ thumbnail: sprott-d-01.webp
 images:
   - preview: sprott-d-01.webp
     full: sprott-d-01.png
+  - preview: sprott-d-02.webp
+    full: sprott-d-02.png
 ---
 Searching for the most simple systems that would behave chaotic around an attractor in 1994, Julien Clinton Sprott[^sprott] found 19 distinct cases from A through S which have at most 6 terms across three dimensions[^original-paper].
 This is case D.
