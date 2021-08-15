@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>modules/api/getters.js - Documentation</title>
+    <title>modules/manager/cache.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -34,7 +34,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">modules/api/getters.js</h1>
+    <h1 class="page-title">modules/manager/cache.js</h1>
     
 
     
@@ -44,178 +44,162 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>const tracer = require('../manager/log.js')
-const Trakt = require('trakt.tv')
-const filters = require('./filters.js') // required for docs
-const { Queue, Task } = require('../manager/queue.js')
-
+            <pre class="prettyprint source linenums"><code>const flatCache = require('flat-cache')
+const tracer = require('./log.js')
+const PATHS = require('../app/paths.js')
 
 /**
- * @typedef {Object} TRAKT_IDS
- * @property {number} trakt
- * @property {string} slug
- * @property {number} [tvdb]
- * @property {number} [tmdb]
- * @property {sting} [imdb]
- * @property {number} [tvrage]
- * @memberof Modules.API
+ * @memberof Modules.Manager
  */
-
-/**
- * @typedef {Object} TRAKT_SEARCH_OBJECT
- * @property {'movie'|'show'|'episode'|'person'} type
- * @property {number} score
- * @property {Object} [movie]
- * @property {string} [movie.title]
- * @property {number} [movie.year]
- * @property {TRAKT_IDS} [movie.ids]
- * @property {Object} [episode]
- * @property {string} [episode.title]
- * @property {number} [episode.year]
- * @property {TRAKT_IDS} [episode.ids]
- * @property {Object} [show]
- * @property {string} [show.title]
- * @property {number} [show.year]
- * @property {TRAKT_IDS} [show.ids]
- * @property {Object} [person]
- * @property {string} [person.name]
- * @property {TRAKT_IDS} [person.ids]
- * @memberof Modules.API
- */
-
-/**
- * @typedef {Object} TRAKT_MOVIE_SUMMARY
- * @property {string} title
- * @property {number} year release year
- * @property {TRAKT_IDS} ids
- * @property {string} tagline very short shout
- * @property {string} overview short description of story
- * @property {string} released full release date
- * @property {number} runtime duration in minutes
- * @property {string} country 2-letter code of origin
- * @property {string} trailer link to youtube
- * @property {string} homepage link to website
- * @property {string} status release status
- * @property {number} rating float from 0–10
- * @property {number} votes count of votes
- * @property {number} comment_count comments on trakt.tv
- * @property {string} updated_at date of last change
- * @property {string} language 2-letter code of original language
- * @property {Array.&lt;string>} available_translations list of 2-letter codes
- * @property {Array.&lt;string>} genres list of categories
- * @property {string} certification PG-age recommendation
- * @memberof Modules.API
- */
-
-/**
- * @typedef {Object} TRAKT_SHOW_SUMMARY
- * @property {string} title
- * @property {number} year release year
- * @property {TRAKT_IDS} ids
- * @property {string} overview short description of story
- * @property {string} first_aired full date of first release
- * @property {Object} airs
- * @property {string} airs.date weekday
- * @property {string} airs.time time in 24h
- * @property {string} airs.timezone zone the airtime refers to
- * @property {number} runtime duration in minutes
- * @property {number} aired_episodes count of released episodes
- * @property {string} network name of TV-channel
- * @property {string} country 2-letter code of origin
- * @property {string} trailer link to youtube
- * @property {string} homepage link to website
- * @property {string} status release status
- * @property {number} rating float from 0–10
- * @property {number} votes count of votes
- * @property {number} comment_count comments on trakt.tv
- * @property {string} updated_at date of last change
- * @property {string} language 2-letter code of original language
- * @property {Array.&lt;string>} available_translations list of 2-letter codes
- * @property {Array.&lt;string>} genres list of categories
- * @property {string} certification PG-age recommendation
- * @memberof Modules.API
- */
-
-/**
- * @typedef {Modules.API.TRAKT_MOVIE_SUMMARY|Modules.API.TRAKT_SHOW_SUMMARY} TRAKT_SEARCH_DETAILS
- * @memberof Modules.API
- */
-
-
-/**
- * @memberof Modules.API
- */
-class Traktor {
+class Cache {
   /**
-   * Backend side of the internal API.
-   * All methods should return Promises.
-   * @param {Trakt} trakt authenticated API instance of trakt.tv
+   * Wraps an instance of `flatCache` into a more specific setup.
+   * @param {string} name identifier of the Cache instance
+   * @param {number} [cacheTime] time to keep data, 0 for never expire
    */
-  constructor(trakt) {
-    this.trakt = trakt
+  constructor(name, cacheTime=0) {
+    this.name = name
+    this.path = PATHS.cache
+    this.cache = flatCache.load(name, this.path)
+    this.expire = cacheTime === 0 ? false : cacheTime * 1000 * 60
   }
 
 
   /**
-   * Search the trakt.tv database.
-   * @param {Modules.API.FILTERED_EXT} query result from {@link Modules.API.formatSearch}
-   * @returns {Promise.&lt;Array.&lt;Modules.API.TRAKT_SEARCH_OBJECT>>}
+   * Only checks the status of a key without modifying anything.
+   * @param {string} key identifier
+   * @returns {'empty'|'expired'|'valid'}
    */
-  traktSearch(query) {
-    return this.trakt.search.text({
-      type: query.type,
-      query: query.filtered
+  keyStatus(key) {
+    let now = new Date().getTime()
+    let value = this.cache.getKey(key)
+
+    if (value === undefined) {
+      return 'empty'
+    } else if (value.expire !== false &amp;&amp; value.expire &lt; now) {
+      return 'expired'
+    }
+  
+    return 'valid'
+  }
+
+
+  /**
+   * Should only be called when new data for the key is available.
+   * @callback UPDATE_CB
+   * @param {*} update new data
+   * @returns {void}
+   */
+
+  /**
+   * @callback EMPTY_CB
+   * @param {UPDATE_CB} onUpdates fires when the key should be (re)created
+   * @returns {void}
+   */
+
+  /**
+   * @callback VALID_CB
+   * @param {*} value the key's content
+   * @param {UPDATE_CB} onUpdates fires when updates should be written into the key
+   * @returns {void}
+   */
+
+  /**
+   * Handler for retrieval of the content of a key.
+   * Callbacks accept another callback to optionally send back updated data to be saved in the key.
+   * @param {string} key 
+   * @param {EMPTY_CB} onEmpty fires when key isn't present yet or was expired
+   * @param {VALID_CB} onValid fires when key contains data
+   */
+  retrieve(key, onEmpty, onValid) {
+    let value = this.getKey(key, true)
+
+    if (value === undefined) {
+      onEmpty(update => {
+        this.setKey(key, update)
+      })
+
+    } else {
+      onValid(value, update => {
+        this.setKey(key, update)
+      })
+    }
+  }
+
+
+  /**
+   * Retrieve data saved under given key.
+   * @param {string} key key which will be read
+   * @param {boolean} [removeIfExpired] whether to remove key when expired
+   * @returns {*} stored data
+   */
+  getKey(key, removeIfExpired=false) {
+    let now = new Date().getTime()
+    let value = this.cache.getKey(key)
+    if (value === undefined) {
+      return undefined
+
+    } else if (value.expire !== false &amp;&amp; value.expire &lt; now) {
+      tracer.warn(`cache-key ${key} is expired`)
+
+      if (removeIfExpired) {
+        this.removeKey(key)
+        tracer.warn('removed expired key')
+      }
+      
+      return undefined
+      
+    } else {
+      tracer.info('valid content was found in cache')
+      return value.data
+    }
+  }
+
+
+  /**
+   * Save data under a given key.
+   * @param {string} key key that should represent the data
+   * @param {*} value data to be stored
+   */
+  setKey(key, value) {
+    let now = new Date().getTime()
+    this.cache.setKey(key, {
+      expire: this.expire === false ? false : now + this.expire,
+      data: value
     })
   }
 
 
   /**
-   * Get more details about an item.
-   * @param {Modules.API.TRAKT_SEARCH_OBJECT} searchResult
-   * @returns {Promise.&lt;Modules.API.TRAKT_SEARCH_DETAILS>}
+   * Remove key from cache and delete associated data.
+   * @param {string} key key to remove
    */
-  extractSearchResultDetails(searchResult) {
-    let resultID = searchResult[searchResult.type].ids.trakt
-    let options = {
-      id: resultID,
-      extended: 'full'
-    }
-    let result;
-
-    switch (searchResult.type) {
-      case 'movie':
-        result = this.trakt.movies.summary(options)
-        break;
-      case 'show':
-        result = this.trakt.shows.summary(options)
-        break;
-      case 'episode':
-        result = this.trakt.episodes.summary(options)
-        break;
-      case 'person': // only because of this, a switch is needed
-        result = this.trakt.people.summary(options)
-        break;
-    }
-
-    return result
+  removeKey(key) {
+    this.cache.removeKey(key)
   }
 
 
   /**
-   * Get list of methods that are available through the trakt API.
-   * @returns {Promise.&lt;Array.&lt;string>>}
+   * Write entire cache to disk.
    */
-  availableMethods() {
-    return new Promise((res, _rej) => {
-      res(Object.keys(this.trakt))
-    })
+  save() {
+    let timer = Date.now()
+    this.cache.save(true)
+    tracer.info(`cache was saved in ${Date.now() - timer} ms`)
+  }
+
+
+  /**
+   * Permanently delete entire cache.
+   */
+  remove() {
+    flatCache.clearCacheById(this.name, this.path)
+    tracer.warn(`cache ${this.name} was deleted`)
   }
 }
 
 
-module.exports = {
-  Traktor
-}
+module.exports = Cache
 </code></pre>
         </article>
     </section>
