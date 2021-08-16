@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Renderer - Documentation</title>
+    <title>CachedTraktor - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -34,7 +34,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Renderer</h1>
+    <h1 class="page-title">CachedTraktor</h1>
     
 
     
@@ -47,9 +47,9 @@
 <header>
     
         <h2>
-            <span class="ancestors"><a href="Modules.html">Modules</a>.</span>
+            <span class="ancestors"><a href="Modules.html">Modules</a><a href="Modules.API.html">.API</a>.</span>
         
-        Renderer
+        CachedTraktor
         </h2>
         
     
@@ -61,218 +61,9 @@
         
             
 
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pages_communicator.js.html">pages/communicator.js</a>, <a href="pages_communicator.js.html#line1">line 1</a>
-    </li></ul></dd>
     
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-            
-                <div class="description usertext"><p>API available to the render process.
-It is preloaded into all pages and makes communication with the main node process possible.
-Methods and constants are exposed through <code>window.traktify</code>.
-Note: Logging must also be channelled through this because otherwise messages would only appear in the dev-tools and not in the terminal or in log files.</p></div>
-            
-
-            
-                <h3>Example</h3>
-                
-    <pre class="prettyprint"><code>// log like this instead of using `console.log`
-window.traktify.tracer({ level: 'warn', msg: 'to get attention' })</code></pre>
-
-            
-        
-        </div>
-    
-
-    
-
-    
-
-    
-    
-    
-
-     
-
-    
-        <h3 class="subsection-title">Namespaces</h3>
-
-        <dl>
-            <dt><a href="Modules.Renderer.Get.html">Get</a></dt>
-            <dd>Get requests wrapping the trakt.tv API.</dd>
-        </dl>
-    
-
-    
-        <h3 class="subsection-title">Members</h3>
-
-        
-            
-<h4 class="name" id=".get"><span class="type-signature">(static) </span>get<span class="type-signature"> :Object.&lt;string, function()></span></h4>
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pages_communicator.js.html">pages/communicator.js</a>, <a href="pages_communicator.js.html#line63">line 63</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>search</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Object.&lt;string, function()></span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-
-        
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    <h4 class="name" id=".auth"><span class="type-signature">(static) </span>auth<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;<a href="Modules.API.html#.TraktAuthPoll">Modules.API.TraktAuthPoll</a>>}</span></h4>
+    <h4 class="name" id="CachedTraktor"><span class="type-signature"></span>new CachedTraktor<span class="signature">(trakt)</span><span class="type-signature"></span></h4>
 
 
 
@@ -283,7 +74,7 @@ window.traktify.tracer({ level: 'warn', msg: 'to get attention' })</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pages_communicator.js.html">pages/communicator.js</a>, <a href="pages_communicator.js.html#line47">line 47</a>
+        <a href="modules_api_getters.js.html">modules/api/getters.js</a>, <a href="modules_api_getters.js.html#line211">line 211</a>
     </li></ul></dd>
     
 
@@ -321,111 +112,7 @@ window.traktify.tracer({ level: 'warn', msg: 'to get attention' })</code></pre>
 
 
 <div class="description usertext">
-    <p>Request a link and user-code for authentication in an external browser.</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;<a href="Modules.API.html#.TraktAuthPoll">Modules.API.TraktAuthPoll</a>></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id=".tracer"><span class="type-signature">(static) </span>tracer<span class="signature">(data)</span><span class="type-signature"></span></h4>
-
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pages_communicator.js.html">pages/communicator.js</a>, <a href="pages_communicator.js.html#line37">line 37</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-<div class="description usertext">
-    <p>Routes to the actual <a href="Modules.Manager.html#.tracer"><code>Modules.Manager.tracer</code></a> instance of the main process for logging on the same level.</p>
+    <p>A cached version of the class <a href="Modules.API.Traktor.html"><code>Modules.API.Traktor</code></a> which looks for content saved in cache which could be served instead of doing the actual API request.</p>
 </div>
 
 
@@ -465,13 +152,13 @@ window.traktify.tracer({ level: 'warn', msg: 'to get attention' })</code></pre>
 
         <tr>
             
-                <td class="name"><code>data</code></td>
+                <td class="name"><code>trakt</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Object</span>
+<span class="param-type">Trakt</span>
 
 
             
@@ -481,9 +168,194 @@ window.traktify.tracer({ level: 'warn', msg: 'to get attention' })</code></pre>
 
             
 
-            <td class="description last">
-                <h6>Properties</h6>
-                
+            <td class="description last"><p>authenticated API instance of trakt.tv</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="cache"><span class="type-signature"></span>cache<span class="type-signature"> :Object.&lt;string, Cache></span></h4>
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_api_getters.js.html">modules/api/getters.js</a>, <a href="modules_api_getters.js.html#line222">line 222</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object.&lt;string, Cache></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="cacheware"><span class="type-signature"></span>cacheware<span class="signature">(prop, args)</span><span class="type-signature"> &rarr; {Promise.&lt;*>}</span></h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="modules_api_getters.js.html">modules/api/getters.js</a>, <a href="modules_api_getters.js.html#line244">line 244</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+<div class="description usertext">
+    <p>This middleware wraps the original get-methods into <a href="Modules.Manager.Cache.html"><code>Modules.Manager.Cache</code></a>'s <code>retrieval</code> method.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
 
 <table class="params">
     <thead>
@@ -507,7 +379,7 @@ window.traktify.tracer({ level: 'warn', msg: 'to get attention' })</code></pre>
 
         <tr>
             
-                <td class="name"><code>msg</code></td>
+                <td class="name"><code>prop</code></td>
             
 
             <td class="type">
@@ -523,20 +395,20 @@ window.traktify.tracer({ level: 'warn', msg: 'to get attention' })</code></pre>
 
             
 
-            <td class="description last"><p>the log message</p></td>
+            <td class="description last"><p>method's name which to execute from super</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>lvl</code></td>
+                <td class="name"><code>args</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="Modules.Manager.html#.LogLevel">Modules.Manager.LogLevel</a></span>
+<span class="param-type">*</span>
 
 
             
@@ -546,14 +418,7 @@ window.traktify.tracer({ level: 'warn', msg: 'to get attention' })</code></pre>
 
             
 
-            <td class="description last"><p>log-level</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
+            <td class="description last"><p>whatever should be passed to that method</p></td>
         </tr>
 
     
@@ -575,6 +440,28 @@ window.traktify.tracer({ level: 'warn', msg: 'to get attention' })</code></pre>
 
 
 
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>whatever the original method would return</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;*></span>
+
+
+    </dd>
+</dl>
+
+    
 
 
 
