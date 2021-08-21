@@ -6,7 +6,7 @@ Hey!
 
 Awesome to see you here.
 
-This website[^copyright]<sup>,</sup>[^style] started a few years ago as a weekend project when I felt the need to combine my main interests in some way.
+This website[^style] started a few years ago as a weekend project when I felt the need to combine my main interests in some way.
 Here I would like to share my thoughts with you and talk about things that otherwise have no place in my everyday life or are simply worth writing down.
 Sometimes I have ideas that may sound a little silly but still deserve some attention.
 Or I recently learned something amazing that I want more people to know about.
@@ -20,6 +20,7 @@ Take care, *Bob*.
 0. [Who I am](#who-i-am)
 0. [Distributed Computing](#distributed-computing)
 0. [Privacy Policy](#privacy-policy)
+0. [Copyright](#copyright)
 
 ### Who I am
 I am CodingBobby but you can call me Bob.[^myself]
@@ -49,7 +50,7 @@ But we can make a difference -- all it takes is some optimisation.
 I am also part of the [IndieWeb Webring](https://xn--sr8hvo.ws/directory) you can explore here:
 
 <div class="horizon">
-  <a href="https://xn--sr8hvo.ws/%F0%9F%8F%86%C2%A9%EF%B8%8F%F0%9F%8C%A8/previous"><-</a> 🕸 💍 <a href="https://xn--sr8hvo.ws/%F0%9F%8F%86%C2%A9%EF%B8%8F%F0%9F%8C%A8/next">-></a>
+  <a href="https://xn--sr8hvo.ws/%F0%9F%8F%86%C2%A9%EF%B8%8F%F0%9F%8C%A8/previous" target="_blank"><-</a> 🕸 💍 <a href="https://xn--sr8hvo.ws/%F0%9F%8F%86%C2%A9%EF%B8%8F%F0%9F%8C%A8/next" target="_blank">-></a>
    <span class="stretch"></span>
 </div>
 
@@ -77,11 +78,20 @@ Though, it is making use of your browser's local storage to save the currently s
 This only takes a single key-value pair, so you shouldn't be bothered.
 Have fun browsing on this minimalistic site.
 
+
+### Copyright
+This website and all its original contents including text, images, animations and code which are not embedded or cited from other sources[^external-sources] are licensed under a *Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License*:
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+  <img alt="Creative Commons License" src="/assets/images/cc-by-nc-sa.png"/>
+</a>
+
+
 ---
 {: data-content="footnotes"}
-
-[^copyright]: <span class="copyright_icon" alt="(c)"></span> {{ 'now' | date: "%Y" }} CodingBobby. <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="cc_list"><span class="cc_icon" alt="cc"></span> <span class="attribution_icon"></span> <span class="non_com_icon"></span> <span class="share_alike_icon"></span></a>. 
 
 [^style]: This website is based on [Riccardo Graziosi](https://github.com/riggraz)'s theme [no-style-please](https://github.com/riggraz/no-style-please) which I (heavily) modified to fit my needs. All icons are from [Icons8](https://icons8.com). Powered by [Jekyll](https://jekyllrb.com).
 
 [^myself]: I won't bother you with nationalities etc. because this is the internet which is by definition worldwide. Nobody should care.
+
+[^external-sources]: When external media is embedded into this website, a click onto it will take you to the original source. References will always be listed in the footnotes section of the sites which are citing them.
