@@ -106,14 +106,15 @@ function shuffleArray(array) {
  * @param {string} path directory of the image
  * @returns {string} 
  */
- function createSlide(path) {
+function createSlide(path) {
   return `
   &lt;div class="wrapper">
     &lt;h1 class="fs32 fwSemiBold">${path.split('/').pop().replace('.png', '')}&lt;/h1>
     &lt;img src="${path}">
   &lt;/div>
   `
-}</code></pre>
+}
+</code></pre>
         </article>
     </section>
 
