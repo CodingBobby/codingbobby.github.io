@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>modules/app/files.js - Documentation</title>
+    <title>Tutorial: Internal API - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -34,158 +34,45 @@
 
 <div id="main">
     
-    <h1 class="page-title">modules/app/files.js</h1>
+    <h1 class="page-title">Tutorial: Internal API</h1>
     
 
-    
-
-
-
-    
     <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>const fs = require('fs-extra')
-const path = require('path')
-const dirTree = require('directory-tree')
-const tracer = require('../manager/log.js')
-const PATHS = require('./paths.js')
 
+<header>
+    
+</header>
 
-// default configuration file
-const defConfigDir = path.join(PATHS.app, 'def_config.json')
-const defConfigRaw = fs.readFileSync(defConfigDir, 'utf8')
+<article>
+    <p>For easy data request and retrieval, an internal API is provided to the frontent of the app.
+It is generally accessible through <code>window.traktify</code> for the renderer.
+This object wraps the API-class <a href="Modules.API.Traktor.html"><code>Modules.API.Traktor</code></a> as well as the <a href="Modules.Manager.html#.tracer"><code>Modules.Manager.tracer</code></a> logging module.
+Detailed documentation about the exposed methods can be found in <a href="Modules.Renderer.html"><code>Modules.Renderer</code></a>.</p>
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#frontend">Frontend</a></li>
+<li><a href="#backend">Backend</a>
+<ul>
+<li><a href="#traktor-class">Traktor-Class</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="frontend"></a></p>
+<h2>Frontend</h2>
+<p>When the user does things like searching for a movie, opening one of the results, adding it to a list and marking it as watched, data has to be retreived from and sent to the trakt.tv database.
+For this, the <code>trakt.js</code> module is used as an API.
+But many actions the user can perform require more than just one API request and beyond that also require various kinds of processing of the raw results.
+Most of these tasks are performed by the <a href="#backend">backend</a> in order to keep the rendering process free from heavy workloads.
+For the frontend, an internal API is provided which communicates with the backend and the available methods wrap multiple requests or processing funtions together to form a much simpler interface.
+More details on how the communication between front- and backend works can be found under <a href="tutorial-ipc.html">Internal Communication</a>.</p>
+<p><a name="backend"></a></p>
+<h2>Backend</h2>
+<p><a name="traktor-class"></a></p>
+<h4>Traktor-Class</h4>
+<p>This class is the last station before using the trakt.tv API and provides an internal structure that allows easier usage, combination of multiple methods and the integration of a caching system.</p>
+</article>
 
-
-/**
- * Initializes a directory tree that is used for system-files.
- * It detects existing files and does not overwrite them to keep custom settings.
- * @returns {Promise&lt;PATHS.SystemPaths>} resolves paths of system-files
- * @memberof Modules.App
- */
-function initFileStructure() {
-  try {
-    fs.ensureDirSync(PATHS.data)
-  } catch (err) {
-    tracer.error(err)
-    return new Promise((resolve, reject) => {
-      reject('directory access failed, enough permissions?')
-    })
-  }
-  
-
-  const storeDirStructure = dirTree(PATHS.data)
-
-  const defaultContent = {
-    '.cache': {},
-    '.log': 'TRAKTIFY LOG\n\n',
-    'config.json': defConfigRaw
-  }
-
-  return new Promise((resolve, reject) => {
-    // add missing files
-
-    // TODO: This will only work if the default file structure does not consist of multiple directory levels. Create helper function to make this possible if a more structured default tree is required.
-    let presentFiles = storeDirStructure.children.map(c => c.name)
-    let desired = ['.cache', '.log', 'config.json']
-
-    // false if anything had to be modified
-    let noFixing = true
-
-    desired.map(d => {
-      // only pass items that are not yet present
-      if (!presentFiles.includes(d)) return d
-    }).filter(n => n).forEach(m => {
-      noFixing = false
-
-      if (typeof defaultContent[m] == 'object') {
-        // in this case, the missing element was a directory
-        fs.ensureDirSync(path.join(PATHS.data, m))
-      } else {
-        fs.outputFileSync(path.join(PATHS.data, m), defaultContent[m])
-      }
-    })
-
-    if (!noFixing) tracer.warn('system-files are created')
-
-    // fix config file if necessary
-    const configDir = path.join(PATHS.data, 'config.json')
-    const configRaw = fs.readFileSync(configDir, 'utf8')
-
-    try {
-      // this fails if content is not JSONifyable (is that a word?)
-      const config = JSON.parse(configRaw)
-
-      let missing = !Object.keys(config).includes('client')
-        || !Object.keys(config).includes('user')
-
-      if (missing) {
-        throw 'config file is missing important content'
-      }
-    } catch (err) {
-      noFixing = false
-
-      tracer.error(err)
-      fs.outputFileSync(configDir, defaultContent['config.json'])
-      tracer.warn('overwritten config with defaults')
-    }
-
-    if (noFixing) tracer.log('system-files are present and as expected')
-
-    resolve(PATHS)
-  })
-}
-
-
-/**
- * Configuration settings for the app.
- * @typedef Config
- * @property {Object} client
- * @property {Object} client.settings
- * @property {Object} client.rpc
- * @property {Object} user
- * @property {Object} user.trakt
- * @property {Object|false} user.trakt.auth
- * @property {Boolean} user.trakt.status
- * @memberof Modules.App
- */
-
-/**
- * Reads configuration file from disk.
- * @returns {Config} configuration settings
- * @memberof Modules.App
- */
-function readConfig() {
-  try {
-    return JSON.parse(fs.readFileSync(PATHS.config, 'utf8'))
-  } catch (err) {
-    tracer.error(err)
-  }
-}
-
-
-/**
- * Writes changes to the configuration file.
- * @param {Config} unsaved config object with possibly unsaved changes
- * @memberof Modules.App
- */
-function saveConfig(unsaved) {
-  try {
-    return fs.writeFileSync(PATHS.config, JSON.stringify(unsaved))
-  } catch (err) {
-    tracer.error(err)
-  }
-}
-
-
-module.exports = {
-  initFileStructure, readConfig, saveConfig
-}
-</code></pre>
-        </article>
-    </section>
-
-
-
+</section>
 
     
     
