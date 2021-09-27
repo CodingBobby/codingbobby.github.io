@@ -12,6 +12,8 @@ thumbnail: roessler-01.webp
 images:
   - preview: roessler-01.webp
     full: roessler-01.png
+  - preview: roessler-02.webp
+    full: roessler-02.png
 ---
 After the [Lorenz attractor](../lorenz) was found and intensively studied, the German biochemist Otto Eberhard Rössler simplified the model in 1976 and discovered a system that contains only one wing[^original-paper].
 
