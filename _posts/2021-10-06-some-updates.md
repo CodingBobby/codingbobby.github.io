@@ -18,7 +18,7 @@ Well, in short:
 0. [absorbed three Revelation Space books](#revelation-space)
 
 ## German Elections
-Some say it was a major re-orientation, some say that too little changed.
+Some say it was a major re-orientation, some say that too little has changed.
 I'm of the latter fraction, and not just because of the sole reason that almost a quarter of voters either didn't care if the resulting chancellor would be an absolute retard or didn't recognise how plain stupid he is.
 Both cases raise concern for me.
 But why did it happen?
@@ -47,3 +47,4 @@ I also started reading books from the [*Revelation Space* universe by Alastair R
 After finishing *"Revelation Space"*, I continued with *"Redemption Ark"* and while I was waiting for the next books to arrive, the novel collection *"Diamond Dogs and Turqoise Days"* was a quick read.
 Next up will be *"Chasm City"* for me which is not the third book of the original trilogy but I couldn't find a nearby seller who has the correct edition of *"Absolution Gap"* in stock.
 Yes, I like to have matching versions in my shelf, and I'd rather wait or pay more than taking a copy that is visually completely different.
+So, 2000 pages in and roughly 3300 ahead of me -- I'm excited.
