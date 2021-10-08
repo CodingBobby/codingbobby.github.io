@@ -29,8 +29,68 @@
    })()
 
    async function getSongList(bearer) {
+      const recPlaylistURL = 'https://api.spotify.com/v1/playlists/{{ page.rec_playlist }}/tracks'
       const playlistURL = 'https://api.spotify.com/v1/playlists/{{ page.playlist }}/tracks'
+
       try {
+         // DAILY RECOMMENDATION
+         const response = await fetch(recPlaylistURL, {
+            method: 'GET',
+            headers: {
+               'Authorization': `Bearer ${bearer}`,
+               'Content-Type': 'application/x-www-form-urlencoded'
+            }
+         })
+
+         if (response.ok) {
+            let json = await response.json()
+            let items = json.items
+
+            let div = document.getElementById('song_list')
+
+            let item = items[items.length - 1]
+
+            div.innerHTML += `
+               <h2 id="daily-recommendation">Daily Recommendation</h2>
+            `
+
+            let html = ''
+            let trackName = (item.track.name)
+               .replace(/\W*[fF]eat[\W*\w*]*/g, '')
+               .replace(/\W*\d*\W*[rR]emaster[\W*\w*]*/g, '')
+
+            html += `
+               <div class="song_item">
+                  <h3 class="rank"></h3>
+                  <a href="${item.track.external_urls.spotify}" target="_blank" rel="noreferrer"><img src="${item.track.album.images[0].url}"></a>
+                  <div class="song_info">
+                     <h3>${trackName}</h3>
+                     <h4>
+            `
+
+            item.track.artists.forEach((artist, artist_index) => {
+               if (artist_index > 0) html += ', '
+
+               html += `<a href="${artist.external_urls.spotify}" target="_blank" rel="noreferrer">${artist.name}</a>`
+            })
+
+            html += `
+                     </h4>
+                  </div>
+               </div>
+               <div class="spacer"></div>
+            `
+
+            div.innerHTML += html
+         } else {
+            throw new Error(`HTTP-Error: ${response.status}`)
+         }
+      } catch(err) {
+         console.error(err)
+      }
+
+      try {
+         // TOP 15
          const response = await fetch(playlistURL, {
             method: 'GET',
             headers: {
@@ -44,6 +104,10 @@
             let items = json.items
 
             let div = document.getElementById('song_list')
+
+            div.innerHTML += `
+               <h2 id="all-time-top-15">All-Time Top 15</h2>
+            `
 
             items.forEach((item, item_index) => {
                let html = ''
