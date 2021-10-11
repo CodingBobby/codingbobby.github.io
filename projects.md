@@ -21,6 +21,9 @@ If you like to check out the repository, you can find it [here](https://github.c
 ## Smaller Pieces
 Some other weekend-projects that I have done (and finished so I would show them here).
 
+- [Digits of Pi](pi-graphics):
+  visualisations of the digits of pi
+
 - [Lorenz Attractor](lorenz-attractor):
   real-time simulation of Lorenz' differential system
 
