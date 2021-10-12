@@ -21,7 +21,7 @@ Inspiration for this project was Cliff Pickover's book *CPCB*[^pickover-book] --
 
 ## Plane Tesselation
 
-Perhabs the simplest forms $$f$$ can take in order to produce a repeating pattern is this:
+Perhaps the simplest forms $$f$$ can take in order to produce a repeating pattern is this:
 
 $$f(u) = \sin(u)$$
 
