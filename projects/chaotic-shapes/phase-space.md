@@ -123,7 +123,7 @@ Here is a magnification of the transition between non-random to random walk (in 
   <img src="{{ gal }}/phase-001a.png" loading="lazy" alt="Phase-Space Magnification" style="width: 60%"/>
 </a></p>
 
-The "moment" when a trajectory is deflected towards another attractor is clealy visible.
+The "moment" when a trajectory is deflected towards another attractor is clearly visible.
 These are the same points but they are moving with half the velocity (like in the larger images above):
 
 <p><a href="{{ gal }}/phase-002a.png" target="_blank">
