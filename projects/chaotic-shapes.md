@@ -1,9 +1,9 @@
 ---
 layout: post
 title: CodingBobby | Shapes of Chaos
-tags: [artwork, mathematics, differential systems, wallpaper]
+tags: [artwork, mathematics, differential systems, wallpaper, fractals]
 ---
-## Attractors
+## Strange Attractors
 
 When studying fluid dynamics and heat transfer I learned about chaos and the attractors.
 My first encounter was with the Lorenz attractor, of course (read [this blog post](/blog/beautiful-chaos)).
@@ -20,6 +20,17 @@ Click on the images to find out more about them.
 >
 > <span class="align-right">-- Julien Clinton Sprott</span>
 
+
+## Chaos in Phase Space
+
+There are also attractors in two dimensions.
+When not only one trajectory is shown (like for the attractors above), but many initial starting points across the 2D plane are fed into a differential system, 
+we call the result the phase space of that respective system.
+[Here](phase-space), you can see some interesting patterns I've found.
+
+<p><a href="phase-space">
+  <img src="/assets/images/phase-space/phase-003a.png" loading="lazy" alt="Phase-Space" style="width: 60%"/>
+</a></p>
 
 ## Fractals
 
