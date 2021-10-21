@@ -19,6 +19,7 @@ images:
 ---
 The first ever attractor of its kind was discovered by Edward Norton Lorenz in 1963 during research about weather behaviour and its predictability[^original-paper].
 For a historical introduction to this attractor and chaos theory in general, I can recommend *Chaos* by James Gleick[^chaos-book].
+A well researched article by *Quanta Magazine* gives more insight to the daily work of Lorenz and his colleagues Ellen Fetter and Margaret Hamilton[^quanta-article].
 
 ## Renders
 
@@ -79,5 +80,7 @@ yscl = 1
 [^original-paper]: E.N. Lorenz, 1963. \"Deterministic nonperiodic flow\". J. Atmos. Sci. 20(2). [doi:10.1175/1520-0469(1963)020<0130:DNF>2.0.CO;2](https://doi.org/10.1175/1520-0469(1963)020<0130:DNF>2.0.CO;2).
 
 [^chaos-book]: \"Chaos: Making a New Science\" by James Gleick (1988) on [Goodreads](https://www.goodreads.com/book/show/64582.Chaos).
+
+[^quanta-article]: \"The Hidden Heroines of Chaos\" published in 2019 by [Quanta Magazine](https://www.quantamagazine.org/hidden-heroines-of-chaos-ellen-fetter-and-margaret-hamilton-20190520/).
 
 [^language]: A great resource on the language is this [forum/wiki](http://tibasicdev.wikidot.com/68k:home).
