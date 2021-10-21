@@ -1,21 +1,39 @@
+{% assign fullurl = site.url | append: page.url %}
+{% assign relpath = page.path | remove: fullurl %}
+{% assign githubedit = 'https://github.com/CodingBobby/codingbobby.github.io/blob/master/' %}
+
 <hr>
-<div class="horizon">
-   <a href="https://github.com/CodingBobby" target="_blank" rel="me">
-      <img class="github_icon" alt="github"/>
-   </a>
-   <a href="https://twitter.com/BobbyCoding" target="_blank" rel="me">
-      <img class="twitter_icon" alt="twitter"/>
-   </a>
-   <a href="/feed.xml">
-      <img class="rss_icon" alt="rss"/>
-   </a>
-   <a href="mailto:contact@codingbobby.xyz" target="_blank">
-      <img class="email_icon" alt="email"/>
-   </a>
-   <a href="https://www.buymeacoffee.com/CodingBobby" target="_blank" rel="noreferrer">
-      <img class="coffee_icon" alt="buymeacoffee"/>
-   </a>
+<div class="horizon" style="width: 100%;">
+   <div style="font-size: 0.7rem;">
+      <a href="https://xn--sr8hvo.ws/%F0%9F%8F%86%C2%A9%EF%B8%8F%F0%9F%8C%A8/previous"><-</a>
+      🕸 💍
+      <a href="https://xn--sr8hvo.ws/%F0%9F%8F%86%C2%A9%EF%B8%8F%F0%9F%8C%A8/next">-></a>
+   </div>
+
+   <div>
+      <a href="https://github.com/CodingBobby" target="_blank" rel="me">
+         <img class="github_icon" alt="github"/>
+      </a>
+      <a href="https://twitter.com/BobbyCoding" target="_blank" rel="me">
+         <img class="twitter_icon" alt="twitter"/>
+      </a>
+      <a href="/feed.xml">
+         <img class="rss_icon" alt="rss"/>
+      </a>
+      <a href="mailto:contact@codingbobby.xyz" target="_blank">
+         <img class="email_icon" alt="email"/>
+      </a>
+      <a href="https://www.buymeacoffee.com/CodingBobby" target="_blank" rel="noreferrer">
+         <img class="coffee_icon" alt="buymeacoffee"/>
+      </a>
+   </div>
+
+   <div style="font-size: 0.7rem;">
+      <a href="{{ githubedit | append: relpath | append: '?plain=1' }}" target="_blank">source code</a>
+   </div>
    <span class="stretch"></span>
 </div>
+
+
 
 <script src="{{ '/assets/theme.js' | relative_url }}"></script>

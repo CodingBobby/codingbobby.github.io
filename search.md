@@ -10,6 +10,7 @@ title: CodingBobby | Search
   #search-input {
     margin: 0 20% 1em;
     width: -webkit-fill-available;
+    width: -moz-available;
   }
 </style>
 
