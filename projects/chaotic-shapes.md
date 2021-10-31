@@ -21,9 +21,20 @@ Click on the images to find out more about them.
 > <span class="align-right">-- Julien Clinton Sprott</span>
 
 
+## 2D Attractors
+
+A different kind of attactor emerge from non-differential systems that involve trigonometric functions like $$\sin$$ and $$\cos$$.
+They do not describe how a point moves along a smooth trajectory but rather where a given point jumps next.
+The result looks like smoke from a blown out candle that takes a strangely beautiful shape.
+You'll find a gallery of interesting renders [here](2d-attractors).
+
+<p><a href="2d-attractors">
+  <img src="/assets/images/attractors/2d/attr-01.png" loading="lazy" alt="2D-Attractor" style="width: 60%"/>
+</a></p>
+
+
 ## Chaos in Phase Space
 
-There are also attractors in two dimensions.
 When not only one trajectory is shown (like for the attractors above), but many initial starting points across the 2D plane are fed into a differential system, 
 we call the result the phase space of that respective system.
 [Here](phase-space), you can see some interesting patterns I've found.
@@ -32,8 +43,11 @@ we call the result the phase space of that respective system.
   <img src="/assets/images/phase-space/phase-003a.png" loading="lazy" alt="Phase-Space" style="width: 60%"/>
 </a></p>
 
+
 ## Fractals
 
+Self-similar objects are called fractals.
+They offer literally infinite detail -- you can zoom in as much as you want and you will always find more.
 Today's fractal of the day by [J.C. Sprott](https://sprott.physics.wisc.edu/):
 
 <p><a href="https://sprott.physics.wisc.edu/FRACTALS.HTM" target="_blank">
