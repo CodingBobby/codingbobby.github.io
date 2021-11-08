@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Modules - Documentation</title>
+    <title>pages/main/index.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -34,119 +34,214 @@
 
 <div id="main">
     
-    <h1 class="page-title">Modules</h1>
+    <h1 class="page-title">pages/main/index.js</h1>
     
 
     
 
 
 
-
-<section>
-
-<header>
     
-        <h2>
-        Modules
-        </h2>
-        
-    
-</header>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const dummyData = [
+  {
+    id: 65930,
+    title: 'My Hero Academia',
+    poster: 'https://walter.trakt.tv/images/shows/000/104/311/posters/thumb/af633add9b.jpg',
+    poster_wide: 'https://walter.trakt.tv/images/shows/000/104/311/fanarts/full/22c3c6efc2.jpg',
+    watched: 89,
+    aired: 113,
+    season: {
+      count: 5,
+      poster: 'https://walter.trakt.tv/images/seasons/000/236/954/posters/thumb/76b746ab1e.jpg'
+    },
+    episode: {
+      id: 65930,
+      title: 'Vestiges',
+      count: 2,
+      absolute_count: 90,
+      rating: 7.8,
+      runtime: 24,
+    }
+  },
+  {
+    id: 123446,
+    title: 'The Great Jahy Will Not Be Defeated!',
+    poster: 'https://walter.trakt.tv/images/seasons/000/255/423/posters/thumb/09aa5ef81e.jpg',
+    poster_wide: 'https://walter.trakt.tv/images/shows/000/179/526/fanarts/full/adbedecb31.jpg',
+    watched: 8,
+    aired: 14,
+    season: {
+      count: 1,
+    },
+    episode: {
+      id: 123446,
+      title: 'Saurva Can\'t Catch a Break...',
+      count: 9,
+      rating: 7.1,
+      runtime: 24,
+    }
+  },
+  {
+    id: 118821,
+    title: 'The World\'s Finest Assassin Gets Reincarnated in Another World as an Aristocrat',
+    poster: 'https://walter.trakt.tv/images/shows/000/175/074/posters/thumb/5515ffd419.jpg',
+    poster_wide: 'https://walter.trakt.tv/images/shows/000/175/074/fanarts/full/271fc6689c.jpg',
+    watched: 4,
+    aired: 5,
+    season: {
+      count: 1,
+    },
+    episode: {
+      id: 118821,
+      title: 'Qualifications of Assassins',
+      count: 5,
+      rating: 7.1,
+      runtime: 24,
+    }
+  },
+]
+/**
+ * Will be fully documented once there has been a proper API as its subject to change completely once implemented.
+ */
+setTimeout(() => {
+  untw.querySelectorAll('[loading]').forEach(elm => {
+    elm.removeAttribute('loading')
+  });
 
-<article>
-    
-        <div class="container-overview">
-        
-            
+  Array.from(untw.children).forEach((elm, i) => {
+    if (i > 0) {
+      if (dummyData[i-1]) {
+        setTileData(i, dummyData[i-1])
+      } else {
+        elm.style = 'background-color:var(--watchlist);'
+      }
+    }
+  })
 
-<dl class="details">
+  setTextUNTW(untw.querySelector('[data-untw-latest]'))
+}, 2000)
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="main.js.html">main.js</a>, <a href="main.js.html#line26">line 26</a>
-    </li></ul></dd>
-    
+function setTileData(order, data) {
+  let tile = untw.children[order];
 
-    
+  tile.dataset.untwId = data.episode.id;
+  tile.dataset.untwTitle = data.title;
+  tile.dataset.untwEpisode = parseEpisodeTitle(data);
+  tile.style.backgroundImage = `url(${parseEpisodeImage(tile, data)})`;
 
-    
+  tile.innerHTML = `
+    &lt;div>
+      &lt;div class="fs16 fwSemiBold">
+        &lt;div class="actions">
+          &lt;div class="btn small">&lt;/div>
+          &lt;div class="btn small">&lt;/div>
+        &lt;/div>
+        &lt;div class="rating">&lt;i class="icon-heart">&lt;/i> ${data.episode.rating}&lt;/div>
+      &lt;/div>
+      &lt;div class="progress">
+        &lt;div style="width:${getProgressRatio(data.watched, data.aired)}%">&lt;/div>
+      &lt;/div>
+    &lt;/div>
+  `;
 
-    
+  tile.onmouseover = () => setTextUNTW(tile);
+  tile.onmouseleave = () => setTextUNTW(untw.children[1]);
 
-    
+  setTileActionButton(tile, data, 'play', false);
+  setTileActionButton(tile, data, 'watchlist', true)
+}
 
-    
+/**
+ * Sets the tile action buttons with the configured settings, its type (play, watchlist, history) and if its the main or secondary button.
+ * @param {HTMLElement} tile 
+ * @param {string} type
+ * @param {boolean} secondary
+ */
+function setTileActionButton(tile, data, type, secondary) {
+  let message;
+  let actionContent;
 
-    
+  // when api is available, callback will change according to action type
+  let callback = () => {window.location.reload()};
 
-    
+  let actionBtns = tile.children[0].children[0].children[0];
+  let btn = secondary ? actionBtns.children[1] : actionBtns.children[0];
 
-    
+  if (type == 'play') {
+    message = `Start playing &lt;span>${data.title}: ${parseEpisodeTitle(data)}&lt;/span>?`;
+    actionContent = secondary ? '&lt;i class="icon-play">&lt;/i>' : 'play now'
+  } else if (type == 'watchlist') {
+    message = `Add &lt;span>${data.title}: ${parseEpisodeTitle(data)}&lt;/span> to your watchlist?`;
+    actionContent = secondary ? '&lt;i class="icon-watchlist">&lt;/i>' : 'add to watchlist'
+  } else if (type == 'history') {
+    message = `Add &lt;span>${data.title}: ${parseEpisodeTitle(data)}&lt;/span> to your history?`;
+    actionContent = secondary ? '&lt;i class="icon-history">&lt;/i>' : 'add to history'
+  }
 
-    
+  btn.innerHTML = actionContent;
+  btn.style.backgroundColor = `var(--${type == 'play' ? 'red' : type})`
+  btn.onclick = () => {
+    setAlertbox('Info', message, {text: 'OK', cb: callback}, {text: 'revert action', cb: () => toggleAlert(false)})
+    toggleAlert(true)
+  }
+}
 
-    
+/**
+ * Updates show and episode name in UNTW.
+ * @param {HTMLElement} tile 
+ */
+function setTextUNTW(tile) {
+  let text = untw.children[0];
 
-    
+  text.children[0].innerHTML = 'up next to watch';
+  text.children[1].innerHTML = tile.dataset.untwTitle;
+  text.children[2].innerHTML = tile.dataset.untwEpisode
+}
 
-    
+/**
+ * Checks if the tile provided is the main tile, the one that takes most space.
+ * @param {HTMLElement} tile
+ * @returns {boolean}
+ */
+function isMainTile(tile) {
+  return tile.dataset.untwLatest == ''
+}
 
-    
+/**
+ * Calculates the ratio between number of episodes watched to total aired episodes in percentage for progress bar.
+ * @param {number} number number of episodes watched 
+ * @param {number} total number of episodes that have aired
+ * @returns {number} float in range 0.0–100.0
+ */
+ function getProgressRatio(number, total) {
+  return ((number/total)*100).toFixed(1)
+}
 
-    
+/**
+ * Parses the data from the API to provided a constructed episode title for UNTW.
+ * @returns {string} "0 x 00 (0) Episode Title"
+ */
+function parseEpisodeTitle(data) {
+  let show_count = data.episode.absolute_count;
+  return `${data.season.count} &amp;#215; ${data.episode.count} ${show_count ? `(${show_count})`: ''} ${data.episode.title}`
+}
 
-    
-</dl>
-
-
-            
-                <div class="description usertext"><p>Collection of methods, classes and objects that are used by the main.</p></div>
-            
-
-            
-        
-        </div>
-    
-
-    
-
-    
-
-    
-    
-    
-
-     
-
-    
-        <h3 class="subsection-title">Namespaces</h3>
-
-        <dl>
-            <dt><a href="Modules.API.html">API</a></dt>
-            <dd>Methods and utilities related to API requests.</dd>
-        
-            <dt><a href="Modules.App.html">App</a></dt>
-            <dd>Entry point of the electron.js app.</dd>
-        
-            <dt><a href="Modules.Manager.html">Manager</a></dt>
-            <dd>Task management and automation.</dd>
-        
-            <dt><a href="Modules.Renderer.html">Renderer</a></dt>
-            <dd>API available to the render process.</dd>
-        </dl>
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+/**
+ * Optimal image for the tiles with fallback for non-existent ones.
+ * @param {HTMLElement} tile 
+ * @returns {string} image url
+ */
+ function parseEpisodeImage(tile, data) {
+  if (isMainTile(tile)) {
+    return data.season.poster || data.poster
+  } else {
+    return data.season.poster_wide || data.poster_wide || data.season.poster || data.poster
+  }
+}</code></pre>
+        </article>
+    </section>
 
 
 
