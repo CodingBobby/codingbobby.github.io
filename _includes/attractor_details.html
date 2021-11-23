@@ -8,11 +8,13 @@ Differential system:
   {{ equation }}
 {% endfor %}
 
+{% if page.constants %}
 Constants:
 
 {% for constant in page.constants %}
   {{ constant }}
 {% endfor %}
+{% endif %}
 
 {% for image in page.images %}
   {% if image.link %}
