@@ -5,10 +5,12 @@ equations:
   - $$\dot{y} = - x + y\, z$$
   - $$\dot{z} = 1 - y^2$$
 constants: false
-thumbnail: sprott-a-01.webp
+thumbnail: sprott-a-02.webp
 images:
   - preview: sprott-a-01.webp
     full: sprott-a-01.png
+  - preview: sprott-a-02.webp
+    full: sprott-a-02.png
 ---
 Searching for (algebraically speaking) the most simple systems that would behave chaotic around an attractor in 1994, Julien Clinton Sprott[^sprott] found 19 distinct cases from A through S which have at most 6 terms across three dimensions[^original-paper].
 They are occasionally called Sprott-Linz attractors because of the contributions by the German physicist Stefan Linz[^linz-one]<sup>,</sup>[^linz-two].
