@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>CachedTraktor - Documentation</title>
+    <title>Post - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -34,7 +34,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">CachedTraktor</h1>
+    <h1 class="page-title">Post</h1>
     
 
     
@@ -47,9 +47,9 @@
 <header>
     
         <h2>
-            <span class="ancestors"><a href="Modules.html">Modules</a><a href="Modules.API.html">.API</a>.</span>
+            <span class="ancestors"><a href="Modules.html">Modules</a><a href="Modules.Renderer.html">.Renderer</a>.</span>
         
-        CachedTraktor
+        Post
         </h2>
         
     
@@ -61,20 +61,12 @@
         
             
 
-    
-
-    <h4 class="name" id="CachedTraktor"><span class="type-signature"></span>new CachedTraktor<span class="signature">(trakt, fanart)</span><span class="type-signature"></span></h4>
-
-
-
-
-
 <dl class="details">
 
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="modules_api_getters.js.html">modules/api/getters.js</a>, <a href="modules_api_getters.js.html#line541">line 541</a>
+        <a href="pages_communicator.js.html">pages/communicator.js</a>, <a href="pages_communicator.js.html#line343">line 343</a>
     </li></ul></dd>
     
 
@@ -110,112 +102,11 @@
 </dl>
 
 
-
-<div class="description usertext">
-    <p>A cached version of the class <a href="Modules.API.Traktor.html"><code>Modules.API.Traktor</code></a> which looks for content saved in cache which could be served instead of doing the actual API request.</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
             
-                <td class="name"><code>trakt</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Trakt</span>
-
-
-            
-            </td>
-
+                <div class="description usertext"><p>Post requests wrapping the trakt.tv API.</p></div>
             
 
             
-
-            <td class="description last"><p>authenticated API instance of trakt.tv</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>fanart</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Fanart</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>authenticated API instance of fanart.tv</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         
         </div>
     
@@ -233,77 +124,6 @@
     
 
     
-        <h3 class="subsection-title">Members</h3>
-
-        
-            
-<h4 class="name" id="cache"><span class="type-signature"></span>cache<span class="type-signature"> :<a href="Object.html">Object</a>.&lt;string, Cache></span></h4>
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="modules_api_getters.js.html">modules/api/getters.js</a>, <a href="modules_api_getters.js.html#line553">line 553</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type"><a href="Object.html">Object</a>.&lt;string, Cache></span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-
-        
-    
 
     
         <h3 class="subsection-title">Methods</h3>
@@ -313,7 +133,7 @@
 
     
 
-    <h4 class="name" id="cacheware"><span class="type-signature"></span>cacheware<span class="signature">(prop, args, overwrite<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise.&lt;*>}</span></h4>
+    <h4 class="name" id=".history"><span class="type-signature">(static) </span>history<span class="signature">(query)</span><span class="type-signature"> &rarr; {Promise.&lt;<a href="Modules.API.html#.TRAKT_POST_RESULT">Modules.API.TRAKT_POST_RESULT</a>>}</span></h4>
 
 
 
@@ -324,7 +144,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="modules_api_getters.js.html">modules/api/getters.js</a>, <a href="modules_api_getters.js.html#line578">line 578</a>
+        <a href="pages_communicator.js.html">pages/communicator.js</a>, <a href="pages_communicator.js.html#line366">line 366</a>
     </li></ul></dd>
     
 
@@ -362,7 +182,7 @@
 
 
 <div class="description usertext">
-    <p>This middleware wraps the original get-methods into <a href="Modules.Manager.Cache.html"><code>Modules.Manager.Cache</code></a>'s <code>retrieval</code> method.</p>
+    <p>Upload one or multiple history updates.</p>
 </div>
 
 
@@ -390,7 +210,47 @@
         <th>Type</th>
 
         
-        <th>Attributes</th>
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>query</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Object.html">Object</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
         
 
         
@@ -404,38 +264,7 @@
 
         <tr>
             
-                <td class="name"><code>prop</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>method's name which to execute from super</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>args</code></td>
+                <td class="name"><code>changes</code></td>
             
 
             <td class="type">
@@ -448,51 +277,135 @@
             </td>
 
             
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last"><p>whatever should be passed to that method</p></td>
-        </tr>
+            <td class="description last">
+                <h6>Properties</h6>
+                
 
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
     
 
         <tr>
             
-                <td class="name"><code>overwrite</code></td>
+                <td class="name"><code>movies</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">boolean</span>
+<span class="param-type">Array.&lt;<a href="Modules.API.html#.TRAKT_HISTORY_POST">Modules.API.TRAKT_HISTORY_POST</a>></span>
 
 
             
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
 
-                
+            
 
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>episodes</code></td>
+            
+
+            <td class="type">
+            
                 
-                </td>
+<span class="param-type">Array.&lt;<a href="Modules.API.html#.TRAKT_HISTORY_POST">Modules.API.TRAKT_HISTORY_POST</a>></span>
+
+
+            
+            </td>
+
             
 
             
 
-            <td class="description last"><p>whether to request without checking cache before</p></td>
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>shows</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>seasons</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
         </tr>
 
     
@@ -517,10 +430,6 @@
 <h5>Returns:</h5>
 
         
-<div class="param-desc">
-    <p>whatever the original method would return</p>
-</div>
-
 
 
 <dl class="param-type">
@@ -529,7 +438,327 @@
     </dt>
     <dd>
         
-<span class="param-type">Promise.&lt;*></span>
+<span class="param-type">Promise.&lt;<a href="Modules.API.html#.TRAKT_POST_RESULT">Modules.API.TRAKT_POST_RESULT</a>></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".rating"><span class="type-signature">(static) </span>rating<span class="signature">(query)</span><span class="type-signature"> &rarr; {Promise.&lt;<a href="Modules.API.html#.TRAKT_POST_RESULT">Modules.API.TRAKT_POST_RESULT</a>>}</span></h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="pages_communicator.js.html">pages/communicator.js</a>, <a href="pages_communicator.js.html#line385">line 385</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+<div class="description usertext">
+    <p>Upload one or multiple rating updates.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>query</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Object.html">Object</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>changes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Object.html">Object</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>movies</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;<a href="Modules.API.html#.TRAKT_RATING_POST">Modules.API.TRAKT_RATING_POST</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>episodes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;<a href="Modules.API.html#.TRAKT_RATING_POST">Modules.API.TRAKT_RATING_POST</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>shows</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>seasons</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;<a href="Modules.API.html#.TRAKT_POST_RESULT">Modules.API.TRAKT_POST_RESULT</a>></span>
 
 
     </dd>
