@@ -221,17 +221,17 @@ function getActionText(type, full, data) {
   switch(type) {
     case 'play':
       shortText = 'play now';
-      fullText = `start playing${data ? ` ${data} ` : ''}?`;
+      fullText = `start playing ${data ? `&lt;span>${data}&lt;/span> ` : ''}?`;
       break;
     case 'history':
       shortText = 'add to history';
-      fullText, shortText = `add${data ? ` ${data} ` : ''}to your history?`;
+      fullText = `add ${data ? `&lt;span>${data}&lt;/span> ` : ''}to your history?`;
       break;
     case 'watchlist':
       shortText = 'add to watchlist';
-      fullText = `add${data ? ` ${data} ` : ''}to your watchlist?`
+      fullText = `add ${data ? `&lt;span>${data}&lt;/span> ` : ''}to your watchlist?`
   }
-
+  
   return full ? fullText : shortText
 }</code></pre>
         </article>
