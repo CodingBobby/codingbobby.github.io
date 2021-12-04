@@ -21,6 +21,8 @@ Case A contains just 5 terms and requires two of them to be nonlinear -- meaning
 
 {% include attractor_details.html %}
 
+![Sprott-A Animation](/assets/images/attractors/sprott-a.gif){:width='max-content'}
+
 [Here](../sprott-d) you can find case D which I also rendered in this series.
 
 ---
