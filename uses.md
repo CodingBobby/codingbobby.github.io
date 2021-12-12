@@ -22,7 +22,7 @@ Could be superseded, but it still handles most of my work easily; the display is
 I'm not a phone-guy and with some manual optimisations it works fine after almost 6 years, so I don't expect to need anything new in the future and I will only get a replacement when the phone is physically broken; the only Google-app left on it is the play store, everything else (not much) is open source and/or carefully selected.
 
 - **Linux / Windows desktop:**
-Very outdated hardware on a µATX board with an AMD 6-core processor from before the Ryzen era, the arguably prettiest GPU ever made (XFX R9 280X DD) and (for my applications) mediocre 16 GB DDR3; the machine is a custom build with a black and light green design; it runs Windows 10 and Manjaro (Ornara, KDE Plasma) in dual-boot; obviously prefer the Linux partition but often I need Windows for the special programs.
+Very outdated hardware on a µATX board with an *AMD* 6-core processor from before the *Ryzen* era, the arguably prettiest GPU ever made (*XFX R9 280X DD*) and (for my applications) mediocre 16 GB DDR3; the machine is a custom build with a black and light green design; it runs *Windows 10* and *Manjaro (Ornara, KDE Plasma)* in dual-boot; obviously prefer the Linux partition but often I need Windows for the special programs.
 
 - **27" *LG* monitor:**
 Okay-ish display with usable colour accuracy (99% sRGB) for photo editing.
@@ -42,7 +42,7 @@ Fully analogue (no badly aging batteries and no misbehaving bluetooth!); superb 
 Very nice sounding open pair if powered adequately ($$100\,\Omega$$ impedance); ear cushions got a new custom padding because the original crumbled and was very uncomfy to wear for extended listening sessions.
 
 - **ancient *Dual CV 61 W* amplifier:**
-This beautiful piece of equipment with a slick white finish is almost 50 years old but works like new after replacing a few caps; produces a wonderfully rich soundstage together with the *B&O*'s.
+This beautiful piece of equipment with a slick white finish is almost 50 years old but works like new after replacing a few caps; produces a wonderfully rich soundstage together with the *B&O*s.
 
 - ***Hartig & Helling MX550* audio mixer:**
 I'm routing all the audio sources through this and have the *Dual* amp connected to the output; PC is permanently connected, phone and laptop get a loose 3.5 mm jack, my turntable (also a *Dual*) and the CD player (from *Sansui*) get their own channels; my computers and the phone are set to 80% volume when connected, this allows haptical volume regulation on the *H&H* while eliminating distortions.
