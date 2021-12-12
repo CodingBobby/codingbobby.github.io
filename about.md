@@ -18,6 +18,7 @@ Take care, *Bob*.
 ---
 
 0. [Who I am](#who-i-am)
+0. [This Site](#this-site)
 0. [Distributed Computing](#distributed-computing)
 0. [Privacy Policy](#privacy-policy)
 0. [Copyright](#copyright)
@@ -36,9 +37,11 @@ My favourite things are:
 If you want to get in touch with me, you can find me on [Twitter](https://twitter.com/BobbyCoding) or write me an [email](mailto:contact@codingbobby.xyz).
 Comments on blog posts are also welcome if you would like to share your thoughts with other readers.
 
----
+You an find a list of the hardware and software I regularly use [here](../uses).
 
-I am a proud member of the orange team of the 512KB Club!
+### This Site
+
+With this website am a proud member of the orange team of the 512KB Club!
 
 <a href="https://512kb.club">
   <img src="https://512kb.club/assets/images/orange-team.svg"/>
