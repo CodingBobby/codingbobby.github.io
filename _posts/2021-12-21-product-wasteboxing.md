@@ -32,7 +32,7 @@ So I could easily recycle the package -- at least I thought so.
 Let me present to you the parts that make up a Chromecast box:
 
 <p><a href="/assets/images/chromecast-wastebox.jpg" target="_blank">
-  <img src="/assets/images/chromecast-wastebox.webp" loading="lazy" alt="Chromecast box taken apart" style="width: 60%"/>
+  <img src="/assets/images/chromecast-wastebox.webp" loading="lazy" alt="Chromecast box taken apart" style="width: 100%"/>
 </a></p>
 
 Can someone please explain to me why, in the name of Boximus Prime, a small $35 device has to be packaged in something that is more complicated to assemble than the device itself?
@@ -72,7 +72,7 @@ Utterly disgusting.
 As a significant portion of consumer electronics is purchased online[^online-purchases], I wonder why the online shops almost never show the packaging.
 Why spend resources, energy, money and time for the elaborate production of a product box that doesn't even contribute to the customer's purchase decision?
 Why construct a box that consists of complexly folded paper compartments, foils and plastic parts that are easily damaged and make reuse of it impossible when the device is returned to the seller?
-Why not simply encase them in a blank cardboard box with a simple crumpled paper padding and include a card saying "Hey dear customer, please don't be disappointed by this uncreative package. It is eco-friendly while perfectly doing its job of protecting the device."
+Why not simply encase them in a blank cardboard box with a simple crumpled paper padding and include a card saying *"Hey dear customer, please don't be disappointed by this uncreative package. It is eco-friendly while perfectly doing its job of protecting the device."*
 The products themselves are wasteful enough, so why the hell do their packages need to be so multipartite that they require an entire assembly line on their own?
 I'm sure that there are clever people that can design something less unnecessary than this.
 
