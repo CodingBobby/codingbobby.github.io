@@ -30,6 +30,19 @@ Where $$\lambda > -\varrho > 0$$.
 
 {% include attractor_details.html %}
 
+
+With different constants:
+
+$$\alpha = -0.45$$
+
+$$\beta = -0.8$$
+
+$$\gamma = 1.1$$
+
+<p><a href="/assets/images/attractors/arneodo-02.png" target="_blank">
+  <img src="/assets/images/attractors/arneodo-02.webp" loading="lazy" alt="Arneodo"/>
+</a></p>
+
 ---
 {: data-content="footnotes"}
 
