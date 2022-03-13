@@ -20,3 +20,8 @@ Find more details on them and the first case A [here](../sprott-a).
 ## Renders
 
 {% include attractor_details.html %}
+
+## Stereographic Animation
+<video controls loop style="width: 100%;" poster="/assets/images/attractors/sprott-g-stereo.png">
+  <source src="/assets/images/attractors/sprott-g-stereo.mp4" type="video/mp4">
+</video>

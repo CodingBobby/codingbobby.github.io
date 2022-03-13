@@ -21,9 +21,13 @@ Case A contains just 5 terms and requires two of them to be nonlinear -- meaning
 
 {% include attractor_details.html %}
 
-![Sprott-A Animation](/assets/images/attractors/sprott-a.gif){:width='max-content'}
+## Stereographic Animation
+<video controls loop style="width: 100%;" poster="/assets/images/attractors/sprott-a-stereo.png">
+  <source src="/assets/images/attractors/sprott-a-stereo.mp4" type="video/mp4">
+</video>
 
 [Here](../sprott-d) you can find case D which I also rendered in this series.
+Case G can be found [here](../sprott-g).
 
 ---
 {: data-content="footnotes"}

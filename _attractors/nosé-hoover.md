@@ -54,6 +54,11 @@ Read more in my [blog post](/blog/printing-digital-art).
 
 ![Printed Nosé-Hoover Attractor](/assets/images/attractors/nose-hoover-print.webp){:width='60%'}
 
+## Stereographic Animation
+<video controls loop style="width: 100%;" poster="/assets/images/attractors/nose-hoover-stereo.png">
+  <source src="/assets/images/attractors/nose-hoover-stereo.mp4" type="video/mp4">
+</video>
+
 ---
 {: data-content="footnotes"}
 

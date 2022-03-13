@@ -59,6 +59,12 @@ You may compare the transitions with the lists above.
 At the beginning (for small $$b$$) you see a very random mess of lines, this is when the system is not bounded and all points can freely escape in all directions.
 Though, the general motion of $$\sin$$-waves is recognisable.
 
+## Stereographic Animation
+
+<video controls loop style="width: 100%;" poster="/assets/images/attractors/thomas-stereo.png">
+  <source src="/assets/images/attractors/thomas-stereo.mp4" type="video/mp4">
+</video>
+
 ---
 {: data-content="footnotes"}
 

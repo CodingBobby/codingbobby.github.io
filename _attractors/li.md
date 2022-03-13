@@ -23,6 +23,12 @@ The system is derived from the [Lorenz system](../lorenz) by generalizing it to 
 
 {% include attractor_details.html %}
 
+## Stereographic Animation
+
+<video controls loop style="width: 100%;" poster="/assets/images/attractors/dequan-li-stereo.png">
+  <source src="/assets/images/attractors/dequan-li-stereo.mp4" type="video/mp4">
+</video>
+
 ---
 {: data-content="footnotes"}
 
