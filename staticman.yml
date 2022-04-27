@@ -6,6 +6,7 @@ comments:
   format: "yaml"
   moderation: true
   path: "_data/comments/{options.slug}"
+  allowedOrigins: ["localhost", "codingbobby.github.io", "codingbobby.xyz"]
   allowedFields: ["name", "email", "url", "message", "replying_to_uid"]
   requiredFields: ["name", "message"]
   generatedFields:
