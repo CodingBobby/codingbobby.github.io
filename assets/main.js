@@ -3,7 +3,8 @@
 (function ($) {
   var $comments = $('.js-comments');
 
-  //showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/CodingBobby/codingbobby.github.io/pulls">pending</a>. It will appear when approved.'); // for testing purposes
+  // for testing purposes:
+  //showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/CodingBobby/codingbobby.github.io/pulls">pending</a>. It will appear when approved.'); 
 
   function getRandomInt(min, max) {
     min = Math.ceil(min);
