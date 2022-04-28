@@ -7,7 +7,7 @@ comments:
   moderation: true
   path: "_data/comments/{options.slug}"
   allowedOrigins: ["localhost", "codingbobby.github.io", "codingbobby.xyz"]
-  allowedFields: ["name", "email", "url", "message", "replying_to_uid"]
+  allowedFields: ["name", "email", "url", "message", "replying_to_uid", "captcha"]
   requiredFields: ["name", "message", "captcha"]
   generatedFields:
     date:
