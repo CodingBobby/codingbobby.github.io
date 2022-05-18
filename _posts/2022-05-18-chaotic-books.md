@@ -19,7 +19,6 @@ I have categorised them roughly:
 
 If you find any book missing in this list, please share it in the comments!
 
-
 ## Popular-Science Books
 
 ### [*Chaos*](https://www.goodreads.com/book/show/64582.Chaos) by J. Gleick (1987)
@@ -31,7 +30,6 @@ In *Chaos*, James Gleick not only describes what happened back then, but lets yo
 ![](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1391275634l/20686518.jpg)
 Steven Strogatz is an exceptionally good lecturer at Cornell University as well as a very good writer that explains strange and complex concepts to you like not many other people can do.
 This book goes a step beyond "simple" chaos and shows you how nature manages to synchronise its elemental randomness back into order.
-
 
 ## Computer-Science oriented Books
 
@@ -51,23 +49,22 @@ Many pseudocodes are included.
 ![](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1415553369l/353884.jpg)
 This could also be included in the [Picture Books](#picture-books) section, because this book contains a large collection of renders of two- and more-dimensional strange attractors.
 But in addition to that, each model is explained in great detail and BASIC program codes are provided you can run on your own PC.
-Although, this book and its programs are old, one can learn a lot of computer-science and mathematics from them.
-
+Although, this book and its programs are old, one can learn a lot of computer-science and 
+mathematics from them.
 
 ## Academic Literature
 
 ### [*Introduction to Dynamical Systems*](https://www.goodreads.com/book/show/410673.Introduction_to_Dynamical_Systems) by Brin and Stuck (2002)
 ![](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348838639l/410673.jpg)
 Relatively little focus on chaos theory itself, but a great support for understanding how a system becomes dynamic and what types of systems there are scattered across different fields of mathematics.
-This basic knowledge helps to understand more advanced theories discussed in more specialised books.
-
+This basic knowledge helps to understand more advanced theories discussed in more specialised 
+books.
 
 ### [*Chaos and Fractals*](https://www.goodreads.com/book/show/371438.Chaos_and_Fractals) by Peitgen, Saupe and Jürgens (1992)
 ![](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347705948l/371438.jpg)
 In my opinion, the standard work in this field.
 With this, you get over 800 pages of condensed knowledge about basically every aspect of chaos theory.
 The beauty you'll find in this book is not necessarily in visually appealing images, but in the mathematics of this enthralling science.
-
 
 ## Picture Books
 
