@@ -39,7 +39,7 @@ My regular audio equipment:
 Fully analogue (no badly aging batteries and no misbehaving bluetooth!); superb sound detail for it's portable form factor as well as great build quality make them the perfect cans for me.
 
 - ***Sennheiser HD 480 classic II* on-ear headphones:**
-Very nice sounding open pair if powered adequately ($$100\,\Omega$$ impedance); ear cushions got a new custom padding because the original crumbled and was very uncomfy to wear for extended listening sessions.
+Very nice sounding open pair if powered adequately ($$100\,\Omega$$ impedance); ear cushions got a new custom padding because the original crumbled and was very uncomfy to wear for even short  listening sessions.
 
 - **ancient *Dual CV 61 W* amplifier:**
 This beautiful piece of equipment with a slick white finish is almost 50 years old but works like new after replacing a few caps; produces a wonderfully rich soundstage together with the *B&O*s.
@@ -60,10 +60,10 @@ Some are permanetly used in projects like *MuonPi*, *PiHole* and a PM 2.5 / weat
 The applications I use every day run on Mac but might have Windows or Linux equivalents:
 
 - ***Spark* e-mail and calendar client:**
-Has simple and functional features without being overloaded; automatic smart folders that filter the inbox.
+Has simple and functional features without being overloaded; automatic smart folders that filter the inbox with custom rules.
 
 - ***Firefox* browser:**
-Modern browser without too many Google dependencies; searching with *DuckDuckGo*, blocking ads and tracking with the *DuckDuckGo addon* and caching CDN requests with *Decentraleyes*.
+Modern browser without too many Google dependencies; searching with *DuckDuckGo*, blocking ads and tracking with the *Privacy Badger* and caching CDN requests with *Decentraleyes*; request filtering and beacon blocking is done by *Request Control*; enabled compact mode and using `userChrome.css` to get rid of the ugly thick tab-buttons.
 
 - ***Jupyter* environment:**
 I do most of my calculations here; everything is possible though Python packages, overall way more flexible and less shit than Excel.
@@ -85,8 +85,8 @@ For photo editing and organisation I'm using Photoshop CC and Lightroom Classic;
 - ***LaTeX* language:**
 Extremely flexible but still standardised language for scientific documents; I always use it if I have the freedom to do so; I manage the *BibTeX* bibliographies with the GUI-tool *JabRef*.
 
-- ***VSCode* and *TextMate* editors:**
-I'm certainly not *VSCode*'s best friend but I still use it for most coding projects; *TextMate* is best for single-document editing.
+- ***VSCodium* and *TextMate* editors:**
+*VSCode* has a big chunk of closed source telemetry and user tracking attached by Microsoft -- I don't want that, so the stripped down build *VSCodium* is what I use; I have very few extensions installed to keep it leightweit but among those are some that change the UI more or less heavily; *TextMate* is best for quick and dirty single-document editing.
 
 - ***Trakt.tv*:**
 Platform for tracking personal progress in TV-shows and movies; also good to manage watchlists.
@@ -101,4 +101,4 @@ Allows creating all sorts of graphics programmatically; very manual, i.e. most a
 Used to access most of my files from multiple devices except those from software development (too many files that change too quickly, I also only develop on my Mac); runs on old and weak hardware that doesn't consume too much power.
 
 - ***Wakatime*:**
-Plugin for text editors to track coding time.
+Plugin for text editors to record coding time.

@@ -86,12 +86,12 @@ The hardback edition is particularly nice to flip through.
 
 
 <style>
-p::after {
+article p::after {
   content: '';
   clear: both;
   display: table;
 }
-img {
+article img {
   float: left;
   padding-right: 1em;
   max-width: 10em;
