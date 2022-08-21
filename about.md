@@ -37,7 +37,7 @@ My favourite things are:
 If you want to get in touch with me, you can find me on [Twitter](https://twitter.com/BobbyCoding) or write me an [email](mailto:contact@codingbobby.xyz).
 Comments on blog posts are also welcome if you would like to share your thoughts with other readers.
 
-You an find a list of the hardware and software I regularly use [here](../uses).
+You can find a list of the hardware and software I regularly use [here](../uses).
 
 ### This Site
 
