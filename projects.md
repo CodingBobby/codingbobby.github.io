@@ -21,6 +21,9 @@ If you like to check out the repository, you can find it [here](https://github.c
 ## Smaller Pieces
 Some other weekend-projects that I have done (and finished so I would show them here).
 
+- [Random Fibonacci Numbers](random-fibonacci):
+  computation of a 13.5 million number long sequence
+
 - [Digits of Pi](pi-graphics):
   visualisations of the digits of pi
 
