@@ -14,7 +14,7 @@ images:
     full: lotka-volterra-01.png
 ---
 
-Decades before Edward N. Lorenz has discovered that differential equations can model a strange attractor[^lorenz-attractor], the chemist Alfred James Lotka and the physitian Vito Volterra have (independently) found a chaotic system.
+Decades before Edward N. Lorenz has discovered that differential equations can model a strange attractor[^lorenz-attractor], the chemist Alfred James Lotka and the physitian Vito Volterra have (independently) found an almost chaotic system.
 They worked on the dynamics of predator-prey relationships and described a very simple model with two equations:
 
 $$\dot{x} = \alpha\,x - \beta\,x\,y$$
@@ -30,6 +30,7 @@ You can explore the basic model in [this Geogebra simulation](https://ggbm.at/y7
 
 However, if you expand the system with a third species, it evolves chaos.
 This was found by the great trio A. Arnéodo, P. Coullet and C. Tresser who have done much more research and found their own [attractor](../arnéodo) before.[^original-paper]
+Lotka and Volterra haven't expanded their equations with more species, so they didn't discover this on their own.
 
 
 ## Renders
