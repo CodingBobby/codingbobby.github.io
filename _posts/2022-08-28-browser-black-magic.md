@@ -43,7 +43,7 @@ And because I looked at every single component to find out how I could modify it
 Because of that I also don't have to write down how it works and since it's my computer, I don't have to explain it to anybody.
 Although I'm doing precisely that right here.
 
-This is how my Firefox looks like:
+So, this is how my Firefox looks like:
 
 ![Transformed Pixels](/assets/images/screenshot-firefox.png){:width='100%'}
 
