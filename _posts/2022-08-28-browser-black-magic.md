@@ -15,7 +15,6 @@ I understand that a basic product which wants to achieve wide accessibility has 
 But keeping the UI as plain as possible results in a boring appearance and a very dull feeling when using it.
 That's what I dislike so much about Material Design by Google.
 It is so much optimised to work in every usecase that it is by far the worst set of icons, colours, button designs and UI elements I have seen yet.
-Hah, you've looked at the screenshot so intensively that you found this text!
 I would rather use a desktop designed like MacOS X Cheetah than one that follows the Material Design guidelines.
 
 And Chromium is also such a product that is so hardly optimised for everyone that is is very badly optimised for each individual user.
