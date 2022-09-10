@@ -41,16 +41,21 @@ You can find a list of the hardware and software I regularly use [here](../uses)
 
 ### This Site
 
-With this website am a proud member of the orange team of the 512KB Club!
+With this website, I am a proud member of the 250kB Club and the orange team of the 512kB Club!
 
-<a href="https://512kb.club">
+
+<a href="https://250kb.club/codingbobby-xyz" target="_blank">
+  <img src="https://250kb.club/simple_badge_dark.png"/>
+</a>
+
+<a href="https://512kb.club" target="_blank">
   <img src="https://512kb.club/assets/images/orange-team.svg"/>
 </a>
 
 The internet has become a bloated mess because of massive JavaScript libraries, tons of popups, huge images and other media that requires years to request and download.
 But we can make a difference -- all it takes is some optimisation.
 
-I am also part of the [IndieWeb Webring](https://xn--sr8hvo.ws/directory) you can explore here:
+I am also part of the [IndieWeb Webring](https://xn--sr8hvo.ws/directory) you can explore here (or in the footer of every page):
 
 <div class="horizon">
   <a href="https://xn--sr8hvo.ws/%F0%9F%8F%86%C2%A9%EF%B8%8F%F0%9F%8C%A8/previous" target="_blank"><-</a> 🕸 💍 <a href="https://xn--sr8hvo.ws/%F0%9F%8F%86%C2%A9%EF%B8%8F%F0%9F%8C%A8/next" target="_blank">-></a>
@@ -59,7 +64,26 @@ I am also part of the [IndieWeb Webring](https://xn--sr8hvo.ws/directory) you ca
 
 This website was last compiled on {{ site.time | date: "%Y-%m-%d" }} with Jekyll and 💚.
 
+<div class="horizon" style="width: 100%;">
+  <div></div>
+  <div>
+  <a href="web3isgoinggreat.com/" target="_blank" rel="me">
+     <img alt="say no to web3" src="/assets/images/antiNFT.gif"/>
+  </a>
+  <a href="https://yesterweb.org/no-to-web3/" target="_blank" rel="me">
+     <img alt="say no to web3" src="/assets/images/saynotoweb3.gif"/>
+  </a>
+  </div>
+  <div></div>
+  <span class="stretch"></span>
+</div>
+
+<a href="https://gossipsweb.net"><img src="https://gossipsweb.net/images/twwmwh-gray.jpg" alt="This website was made with hands." style="height: 43px; border: 1px solid #000;" /></a>
+
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
+<div id="wcb" class="carbonbadge"></div>
+<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
 
 ### Distributed Computing
 I highly recommend you learn about [BOINC](https://boinc.berkeley.edu) if you haven't already.
