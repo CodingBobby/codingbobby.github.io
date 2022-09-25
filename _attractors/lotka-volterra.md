@@ -8,10 +8,12 @@ constants:
   - $$a = 2.73$$
   - $$b = 2.94$$
   - $$c = 2.18$$
-thumbnail: lotka-volterra-01.webp
+thumbnail: lotka-volterra-02.jpeg
 images:
   - preview: lotka-volterra-01.jpg
     full: lotka-volterra-01.png
+  - preview: lotka-volterra-02.jpeg
+    full: lotka-volterra-02.png
 ---
 
 Decades before Edward N. Lorenz has discovered that differential equations can model a strange attractor[^lorenz-attractor], the chemist Alfred James Lotka[^lotka-book] and the physitian Vito Volterra have (independently) found an almost chaotic system.
