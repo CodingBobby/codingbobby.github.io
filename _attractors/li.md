@@ -11,10 +11,12 @@ constants:
   - $$f = 20$$
   - $$e = 0.65$$
   - $$c = 11/6$$
-thumbnail: dequan-li-01.webp
+thumbnail: dequan-li-02.jpg
 images:
   - preview: dequan-li-01.webp
     full: dequan-li-01.png
+  - preview: dequan-li-02.jpg
+    full: dequan-li-02.png
 ---
 This differential system found by Dequan Li in 2008 is the result of a research about the scrollness of attractors and is the first one with smooth quadratic terms that produces three scrolls[^original-paper].
 The system is derived from the [Lorenz system](../lorenz) by generalizing it to a "fuzzy" version which was then simplified.
