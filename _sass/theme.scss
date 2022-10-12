@@ -131,7 +131,7 @@ html[data-theme="rainbow"] {
 html {
     color: var(--main-text-color);
     background-color: var(--page-back-color);
-    font-family: JetBrains;
+    font-family: JetBrains, monospace;
     font-size: 1rem;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;

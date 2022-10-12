@@ -25,3 +25,6 @@ Find more details on them and the first case A [here](../sprott-a).
 <video controls loop style="width: 100%;" poster="/assets/images/attractors/sprott-d-stereo.png">
   <source src="/assets/images/attractors/sprott-d-stereo.mp4" type="video/mp4">
 </video>
+
+You can now get a print of the Sprott attractors in my shop!
+Read more about it [here](/blog/all-sprott-attractors).

@@ -29,6 +29,9 @@ Case A contains just 5 terms and requires two of them to be nonlinear -- meaning
 [Here](../sprott-d) you can find case D which I also rendered in this series.
 Case G can be found [here](../sprott-g).
 
+You can now get a print of the Sprott attractors in my shop!
+Read more about it [here](/blog/all-sprott-attractors).
+
 ---
 {: data-content="footnotes"}
 
