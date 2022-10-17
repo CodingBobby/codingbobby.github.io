@@ -67,7 +67,7 @@ This website was last compiled on {{ site.time | date: "%Y-%m-%d" }} with Jekyll
 <div class="horizon" style="width: 100%;">
   <div></div>
   <div>
-  <a href="web3isgoinggreat.com/" target="_blank" rel="me">
+  <a href="https://web3isgoinggreat.com/" target="_blank" rel="me">
      <img alt="say no to web3" src="/assets/images/antiNFT.gif"/>
   </a>
   <a href="https://yesterweb.org/no-to-web3/" target="_blank" rel="me">

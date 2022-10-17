@@ -302,7 +302,6 @@ a {
 
     .square {
         position: relative;
-        padding-top: 100%;
 
         img {
             position: absolute;
@@ -310,6 +309,29 @@ a {
             left: 0;
             height: 100%;
             object-fit: cover;
+        }
+        
+        .caption {
+            opacity: 0;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            margin: 0;
+            padding: 1rem 0;
+            background: #0009;
+        }
+        
+        &::before {
+            content: "";
+            padding-bottom: 100%;
+            display: block;
+        }
+        
+        &:hover {
+            .caption {
+                opacity: 1;
+            }
         }
     }
 }

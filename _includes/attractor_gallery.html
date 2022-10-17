@@ -6,6 +6,7 @@
   {% assign name = attractor.title | replace: ' ', '-' | append: ' Attractor' %}
   <a class="square" href='{{ attractor.url }}'>
     <img src="{{ gallery_folder }}{{ attractor.thumbnail }}" alt="{{ name }}" title="{{ name }}" loading="lazy" />
+    <p class="caption">{{ attractor.title | replace: ' ', '-' }}</p>
   </a>
 {% endfor %}
 
