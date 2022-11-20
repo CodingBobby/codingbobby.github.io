@@ -2,6 +2,7 @@
 layout: post
 title: CodingBobby | About
 ---
+<style>/* dummy first element to prevent dropped initlial cap */</style>
 Hey!
 
 Awesome to see you here.
@@ -117,7 +118,7 @@ This website and all its original contents including text, images, animations an
 ---
 {: data-content="footnotes"}
 
-[^style]: This website is based on [Riccardo Graziosi](https://github.com/riggraz)'s theme [no-style-please](https://github.com/riggraz/no-style-please) which I (heavily) modified to fit my needs. All icons are from [Icons8](https://icons8.com). Powered by [Jekyll](https://jekyllrb.com).
+[^style]: This website is based on [Riccardo Graziosi](https://github.com/riggraz)'s theme [no-style-please](https://github.com/riggraz/no-style-please) which I (heavily) modified to fit my needs. Powered by [Jekyll](https://jekyllrb.com).
 
 [^myself]: I won't bother you with nationalities etc. because this is the internet which is by definition worldwide. Nobody should care.
 

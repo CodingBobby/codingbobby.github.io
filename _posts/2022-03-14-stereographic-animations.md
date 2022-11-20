@@ -7,7 +7,6 @@ authors: [Bob]
 comments: true
 ---
 Happy Pi-Day everyone!
-
 When I recently found a postcard I got from a friend some years back, I was hooked.
 The front showed one of those magic-eye-autostereograms[^wikipedia] you might as well know.
 You don't?

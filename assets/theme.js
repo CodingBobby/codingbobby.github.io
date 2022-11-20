@@ -1,12 +1,14 @@
 let theme = localStorage.getItem('theme')
 let switchedCounter = 0
 
-let lightModeHTML = `
-   <img src="https://img.icons8.com/material-sharp/64/f0f0f0/sun.png" alt="Light Mode"/>
-`
-let darkModeHTML = `
-   <img src="https://img.icons8.com/material-sharp/64/000000/moon.png" alt="Dark Mode"/>
-`
+let lightModeHTML = '☼☁︎'
+// `
+//    <img src="https://img.icons8.com/material-sharp/64/f0f0f0/sun.png" alt="Light Mode"/>
+// `
+let darkModeHTML = '✧⁺₊'
+// `
+//    <img src="https://img.icons8.com/material-sharp/64/000000/moon.png" alt="Dark Mode"/>
+// `
 let rainModeHTML = `
    <img src="/assets/images/frog.gif" alt="Rain Mode"/>
 `

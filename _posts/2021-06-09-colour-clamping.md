@@ -6,13 +6,6 @@ tags: [photography, visualisation, coding]
 authors: [Bob]
 comments: true
 ---
-<style>
-img.white {
-background-color: white;
-}
-</style>
-
-
 Have you ever wondered why some colours look weird and unnatural when taking a picture of them on your phone?
 I'm seeing this in photos of vibrant flowers quite often.
 For example, take a look at this one I took with a bad phone camera to emphasise the problem:
@@ -119,3 +112,10 @@ So, good day and see you later.
 [^wavelengths]: If you are looking at this on a screen (or did you print it?!?), you'll just see pure red, green and blue wavelengths and not yellow wavelengths for example as RGB pixels create a mixture with them.
 
 [^source-code]: I used [rawpy](https://github.com/letmaik/rawpy) for pixel extraction, [Pillow](https://github.com/python-pillow/Pillow) for image rendering and [colour](https://github.com/colour-science/colour) for the colour space plots. You can find the source-code on [GistHub](https://gist.github.com/CodingBobby/8350fdee45fd49c5217db8605e7b287e).
+
+
+<style>
+img.white {
+background-color: white;
+}
+</style>

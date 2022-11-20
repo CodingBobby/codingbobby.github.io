@@ -1,32 +1,40 @@
 @font-face {
-    font-family: 'JetBrains';
-    src: url('/assets/fonts/JetBrainsMono-Regular.woff') format('woff');
+    font-family: 'iAWriter';
+    src: url('/assets/fonts/iAWriterQuattroS-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: block;
 }
 
 @font-face {
-    font-family: 'JetBrains';
-    src: url('/assets/fonts/JetBrainsMono-Bold.woff') format('woff');
+    font-family: 'iAWriter';
+    src: url('/assets/fonts/iAWriterQuattroS-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
     font-display: block;
 }
 
 @font-face {
-    font-family: 'JetBrains';
-    src: url('/assets/fonts/JetBrainsMono-Italic.woff') format('woff');
+    font-family: 'iAWriter';
+    src: url('/assets/fonts/iAWriterQuattroS-Italic.woff2') format('woff2');
     font-weight: normal;
     font-style: italic;
     font-display: block;
 }
 
 @font-face {
-    font-family: 'JetBrains';
-    src: url('/assets/fonts/JetBrainsMono-Bold-Italic.woff') format('woff');
+    font-family: 'iAWriter';
+    src: url('/assets/fonts/iAWriterQuattroS-BoldItalic.woff2') format('woff2');
     font-weight: bold;
     font-style: italic;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Alegreya';
+    src: url('/assets/fonts/Alegreya-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
     font-display: block;
 }
 
@@ -42,19 +50,8 @@ html[data-theme="light"] {
     --main-text-color: rgb(0, 0, 0);
     --main-back-color: rgb(255, 255, 255);
     --link-text-color: rgb(255, 76, 31);
+    --other-link-color: rgb(120, 217, 113);
     --target-highlight-color: rgb(125, 0, 255);
-    --github-icon-url: url(https://img.icons8.com/material-sharp/64/000000/github.png);
-    --twitter-icon-url: url(https://img.icons8.com/material-sharp/64/000000/twitter-squared.png);
-    --email-icon-url: url(https://img.icons8.com/material-sharp/64/000000/email.png);
-    --coffee-icon-url: url(https://img.icons8.com/material-sharp/64/000000/kawaii-coffee.png);
-    --webring-icon-url: url(https://webring.xxiivv.com/icon.black.svg);
-    --rss-icon-url: url(https://img.icons8.com/material/64/000000/rss.png);
-    --search-icon-url: url(https://img.icons8.com/material-sharp/64/000000/search.png);
-    --cc-icon-url: url(https://img.icons8.com/material-outlined/64/000000/creative-commons.png);
-    --attribution-icon-url: url(https://img.icons8.com/material-outlined/64/000000/creative-commons-by.png);
-    --non_com-icon-url: url(https://img.icons8.com/material-outlined/64/000000/creative-commons-nc.png);
-    --share_alike-icon-url: url(https://img.icons8.com/material-outlined/64/000000/creative-commons-sa.png);
-    --copyright-icon-url: url(https://img.icons8.com/material-outlined/64/000000/copyright.png);
 }
 
 html[data-theme="dark"] {
@@ -62,19 +59,8 @@ html[data-theme="dark"] {
     --main-text-color: rgb(240, 240, 240);
     --main-back-color: rgb(17, 17, 17);
     --link-text-color: rgb(120, 217, 113);
+    --other-link-color: rgb(255, 76, 31);
     --target-highlight-color: rgb(255, 255, 0);
-    --github-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/github.png);
-    --twitter-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/twitter-squared.png);
-    --email-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/email.png);
-    --coffee-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/kawaii-coffee.png);
-    --webring-icon-url: url(https://webring.xxiivv.com/icon.white.svg);
-    --rss-icon-url: url(https://img.icons8.com/material/64/f0f0f0/rss.png);
-    --search-icon-url: url(https://img.icons8.com/material-sharp/64/f0f0f0/search.png);
-    --cc-icon-url: url(https://img.icons8.com/material-outlined/64/f0f0f0/creative-commons.png);
-    --attribution-icon-url: url(https://img.icons8.com/material-outlined/64/f0f0f0/creative-commons-by.png);
-    --non_com-icon-url: url(https://img.icons8.com/material-outlined/64/f0f0f0/creative-commons-nc.png);
-    --share_alike-icon-url: url(https://img.icons8.com/material-outlined/64/f0f0f0/creative-commons-sa.png);
-    --copyright-icon-url: url(https://img.icons8.com/material-outlined/64/f0f0f0/copyright.png);
 }
 
 html[data-theme="rainbow"] {
@@ -82,19 +68,8 @@ html[data-theme="rainbow"] {
     --main-text-color: rgb(0, 0, 0);
     --main-back-color: rgba(17, 17, 17, 0.22);
     --link-text-color: rgb(125, 0, 255);
+    --other-link-color: rgb(255, 76, 31);
     --target-highlight-color: rgb(255, 255, 0);
-    --github-icon-url: url(https://img.icons8.com/material-sharp/64/000000/github.png);
-    --twitter-icon-url: url(https://img.icons8.com/material-sharp/64/000000/twitter-squared.png);
-    --email-icon-url: url(https://img.icons8.com/material-sharp/64/000000/email.png);
-    --coffee-icon-url: url(https://img.icons8.com/material-sharp/64/000000/kawaii-coffee.png);
-    --webring-icon-url: url(https://webring.xxiivv.com/icon.black.svg);
-    --rss-icon-url: url(https://img.icons8.com/material/64/000000/rss.png);
-    --search-icon-url: url(https://img.icons8.com/material-sharp/64/000000/search.png);
-    --cc-icon-url: url(https://img.icons8.com/material-outlined/64/000000/creative-commons.png);
-    --attribution-icon-url: url(https://img.icons8.com/material-outlined/64/000000/creative-commons-by.png);
-    --non_com-icon-url: url(https://img.icons8.com/material-outlined/64/000000/creative-commons-nc.png);
-    --share_alike-icon-url: url(https://img.icons8.com/material-outlined/64/000000/creative-commons-sa.png);
-    --copyright-icon-url: url(https://img.icons8.com/material-outlined/64/000000/copyright.png);
 
     background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
     background-size: 1800% 1800%;
@@ -131,7 +106,7 @@ html[data-theme="rainbow"] {
 html {
     color: var(--main-text-color);
     background-color: var(--page-back-color);
-    font-family: JetBrains, monospace;
+    font-family: iAWriter, sans-serif;
     font-size: 1rem;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -142,9 +117,25 @@ article {
     -ms-hyphens: auto;
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
+    text-align: justify;
+
+    > p:first-child::first-letter {
+        padding: 0.1rem 0.3rem 0 0;
+        margin: 0.3rem 0 0;
+        font-family: Alegreya, serif;
+        font-size: 3.5rem;
+        float: left;
+    }
 }
 
-h2, h3, h4, h5, h6 { margin-top: 3rem; }
+h1, h2, h3, h4, h5, h6 {
+    font-family: Alegreya, serif;
+
+    &:not(h1) {
+        margin-top: 3rem; 
+    }
+}
+
 
 .katex {
     margin-left: 2rem;
@@ -184,10 +175,10 @@ hr {
     color: var(--main-text-color);
 
     &:before {
-        content: '| | | ';
+        content: '· • ─────── ༓ ';
     }
     &:after {
-        content: attr(data-content) ' | | |';
+        content: attr(data-content) ' ༓ ─────── • ·';
     }
 }
 
