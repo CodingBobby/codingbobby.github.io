@@ -7,7 +7,6 @@ authors: [Bob]
 comments: true
 ---
 Today, I have great news!
-
 I have finally taken the time to really work on my website.
 As some of you may know, it originally started as a small project to let off steam.
 As time went by, I did less and less maintenance and neither wrote new posts nor worked on the code in general.
