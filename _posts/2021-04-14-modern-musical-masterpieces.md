@@ -193,4 +193,8 @@ I might have forgotten someone important, so if you are missing anyone, feel fre
    #song_list .song_item a {
       width: auto;
    }
+
+   :not(.comments) h3, :not(.comments) h4 {
+      font-family: iAWriter, sans-serif;
+   }
 </style>

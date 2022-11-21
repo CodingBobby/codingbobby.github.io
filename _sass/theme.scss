@@ -110,6 +110,7 @@ html {
     font-size: 1rem;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    font-optical-sizing: auto;
 }
 
 article {
@@ -128,12 +129,27 @@ article {
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .post_date {
     font-family: Alegreya, serif;
 
-    &:not(h1) {
+    &:not(h1, .post_date) {
         margin-top: 3rem; 
     }
+}
+
+.comments *:not(#figfont-captcha) {
+    font-family: iAWriter, sans-serif;
+}
+
+a {
+    color: var(--link-text-color);
+    cursor: pointer;
+}
+
+.post_date {
+    font-size: 1.3rem;
+    line-height: 1rem;
+    font-weight: bold;
 }
 
 
@@ -173,6 +189,7 @@ hr {
     text-align: center;
     border: 0;
     color: var(--main-text-color);
+    text-transform: uppercase;
 
     &:before {
         content: '· • ─────── ༓ ';
@@ -274,18 +291,6 @@ img {
     max-width: 100%;
 }
 
-a {
-    color: var(--link-text-color);
-    cursor: pointer;
-}
-
-.post_date {
-    font-size: 1rem;
-    font-style: italic;
-    font-weight: bold;
-    margin-bottom: 2rem;
-}
-
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -327,66 +332,8 @@ a {
     }
 }
 
-.github_icon {
-    content: var(--github-icon-url);
-}
-
-.twitter_icon {
-    content: var(--twitter-icon-url);
-}
-
-.email_icon {
-    content: var(--email-icon-url);
-}
-
-.coffee_icon {
-    content: var(--coffee-icon-url);
-}
-
-.search_icon {
-    content: var(--search-icon-url);
-}
-
-.webring_icon {
-    content: var(--webring-icon-url);
-}
-
-.rss_icon {
-    content: var(--rss-icon-url);
-}
-
 a.cc_list {
     text-decoration: none;
-}
-
-.copyright_icon {
-    content: var(--copyright-icon-url);
-    height: 16px;
-    margin: -3px;
-}
-
-.cc_icon {
-    content: var(--cc-icon-url);
-    height: 16px;
-    margin: -3px;
-}
-
-.attribution_icon {
-    content: var(--attribution-icon-url);
-    height: 16px;
-    margin: -3px;
-}
-
-.non_com_icon {
-    content: var(--non_com-icon-url);
-    height: 16px;
-    margin: -3px;
-}
-
-.share_alike_icon {
-    content: var(--share_alike-icon-url);
-    height: 16px;
-    margin: -3px;
 }
 
 // use for optional octicons
