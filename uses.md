@@ -39,7 +39,7 @@ My regular audio equipment:
 Fully analogue (no badly aging batteries and no misbehaving bluetooth!); superb sound detail for it's portable form factor as well as great build quality make them the perfect cans for me.
 
 - ***Sennheiser HD 480 classic II* on-ear headphones:**
-Very nice sounding open pair if powered adequately ($$100\,\Omega$$ impedance); ear cushions got a new custom padding because the original crumbled and was very uncomfy to wear for even short  listening sessions.
+Very nice sounding open-back pair if powered adequately ($$100\,\Omega$$ impedance); ear cushions got a new custom padding (that effectively turned them into over-ears) because the original crumbled and was very uncomfy to wear for even short listening sessions.
 
 - **ancient *Dual CV 61 W* amplifier:**
 This beautiful piece of equipment with a slick white finish is almost 50 years old but works like new after replacing a few caps; produces a wonderfully rich soundstage together with the *B&O*s.
@@ -60,13 +60,13 @@ Some are permanetly used in projects like *MuonPi*, *PiHole* and a PM 2.5 / weat
 The applications I use every day run on Mac but might have Windows or Linux equivalents:
 
 - ***Spark* e-mail and calendar client:**
-Has simple and functional features without being overloaded; automatic smart folders that filter the inbox with custom rules.
+Has simple and functional features without being overloaded; automated folders that filter the inbox with custom rules.
 
 - ***Firefox* browser:**
-Modern browser without too many Google dependencies; searching with *DuckDuckGo*, blocking ads and tracking with the *Privacy Badger* and caching CDN requests with *Decentraleyes*; request filtering and beacon blocking is done by *Request Control*; enabled compact mode and using `userChrome.css` to get rid of the ugly thick tab-buttons.
+Modern browser without too many Google dependencies; searching with *DuckDuckGo*, blocking ads and tracking with the *Privacy Badger* and caching CDN requests with *Decentraleyes*; request filtering and beacon blocking is done by *Request Control*; using `userChrome.css` to rearrange the layout and place the tabs in a vertical list (read my [blog](/blog/browser-black-magic)).
 
-- ***Jupyter* environment:**
-I do most of my calculations here; everything is possible though Python packages, overall way more flexible and less shit than Excel.
+- ***Jupyter* and *Spyder*:**
+I do most of my calculations here; everything is possible though Python packages, overall way more flexible and less shit than Excel; the *Spyder* IDE is sadly not very customisable, but it as minimal as it needs to be for data analysis.
 
 - ***iTerm* terminal emulator:**
 Nothing much to say, other than that it is slick; running *ZSH*, *Fig*, *Oh-My-Zsh* and *Powerlevel10K*.
@@ -77,7 +77,7 @@ Open source app to download, play and organise podcasts on my phone.
 Other software and services:
 
 - ***Spotify*:**
-Mostly using it to discover new artists and to play background music as I prefer the higher quality of FLAC files and the feeling of phyical CDs/LPs; I play HiRes audio files with *VOX* on my Mac and *MusicBee* on the PC.
+Mostly using it to discover new artists and to play background music as I prefer the higher quality of FLAC files and the feeling of phyical CDs/LPs; I play the audio files with *VOX* on my Mac and *MusicBee* on the PC.
 
 - ***Adobe* software:**
 For photo editing and organisation I'm using Photoshop CC and Lightroom Classic; pretty much the standard stuff.
@@ -92,7 +92,7 @@ Extremely flexible but still standardised language for scientific documents; I a
 Platform for tracking personal progress in TV-shows and movies; also good to manage watchlists.
 
 - ***Blender* 3D software:**
-Extremely powerful open source program for 3D modelling; using it for my [attractor artworks](../projects/chaotic-shapes).
+Extremely powerful open source program for 3D modelling; using it for my [attractor artworks](/projects/chaotic-shapes).
 
 - ***Processing* language:**
 Allows creating all sorts of graphics programmatically; very manual, i.e. most algorithms have to be written by hand which is demanding but also fun; most mathematical graphics you find on my site are made with this.

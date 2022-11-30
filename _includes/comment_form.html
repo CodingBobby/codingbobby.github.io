@@ -5,6 +5,19 @@
   <input type="hidden" name="options[slug]" value="{{ page.slug }}">
 
   <hr data-content="write a comment">
+
+  <h3>this is temporarily disabled</h3>
+  <p>Stuff on the backend broke and I'll have to fix the comment server. Please hang tight and enjoy this hold music:</p>
+
+  <audio
+    controls loop
+    src="/assets/audio/polycom.webm">
+  </audio>
+
+  <p style="font-size: smaller;">updated on 2022-11-30</p>
+
+  {% comment %}
+
   <a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">cancel reply</a>
 
   <div class="textfield">
@@ -35,6 +48,8 @@
   <button class="button" id="comment-form-submit">
     Submit
   </button>
+
+  {% endcomment %}
 </form>
 
 {% comment %}

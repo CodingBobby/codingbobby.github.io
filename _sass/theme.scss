@@ -5,7 +5,6 @@
     font-style: normal;
     font-display: block;
 }
-
 @font-face {
     font-family: 'iAWriter';
     src: url('/assets/fonts/iAWriterQuattroS-Bold.woff2') format('woff2');
@@ -13,7 +12,6 @@
     font-style: normal;
     font-display: block;
 }
-
 @font-face {
     font-family: 'iAWriter';
     src: url('/assets/fonts/iAWriterQuattroS-Italic.woff2') format('woff2');
@@ -21,7 +19,6 @@
     font-style: italic;
     font-display: block;
 }
-
 @font-face {
     font-family: 'iAWriter';
     src: url('/assets/fonts/iAWriterQuattroS-BoldItalic.woff2') format('woff2');
@@ -29,7 +26,6 @@
     font-style: italic;
     font-display: block;
 }
-
 @font-face {
     font-family: 'Alegreya';
     src: url('/assets/fonts/Alegreya-Regular.woff') format('woff');
@@ -40,10 +36,8 @@
 
 
 // variables and theme
-
 html {
     @extend [data-theme="light"];
-}
 
 html[data-theme="light"] {
     --page-back-color: rgb(240, 240, 240);
@@ -79,6 +73,7 @@ html[data-theme="rainbow"] {
     -o-animation: rainbow 13s ease infinite;
     animation: rainbow 13s ease infinite;
 }
+
   
 @-webkit-keyframes rainbow {
     0%{background-position:0% 82%}
@@ -113,6 +108,8 @@ html {
     font-optical-sizing: auto;
 }
 
+
+
 article {
     hyphens: auto;
     -ms-hyphens: auto;
@@ -120,6 +117,7 @@ article {
     -webkit-hyphens: auto;
     text-align: justify;
 
+    // dropped initial cap
     > p:first-child::first-letter {
         padding: 0.1rem 0.3rem 0 0;
         margin: 0.3rem 0 0;
@@ -138,6 +136,11 @@ h1, h2, h3, h4, h5, h6, .post_date {
     }
 }
 
+p {
+    margin: 1rem 0;
+}
+
+// fix letter alignment
 .comments *:not(#figfont-captcha) {
     font-family: iAWriter, sans-serif;
 }
@@ -147,30 +150,34 @@ a {
     cursor: pointer;
 }
 
-.post_date {
-    font-size: 1.3rem;
-    line-height: 1rem;
-    font-weight: bold;
+li {
+    margin: 0.4rem 0;
 }
 
-
-.katex {
-    margin-left: 2rem;
-}
-
-p {
-    margin: 1rem 0;
-
-    .katex {
-        margin-left: 0;
-    }
+audio {
+    box-shadow: none;
+    background-color: var(--page-back-color);
+    border-radius: .3em;
+    width: 100%;
 }
 
 .footnotes {
     font-size: smaller;
 }
 
-li { margin: 0.4rem 0; }
+.post_date {
+    font-size: 1.3rem;
+    line-height: 1rem;
+    font-weight: bold;
+}
+
+.katex {
+    margin-left: 2rem;
+
+    p & {
+        margin-left: 0;
+    }
+}
 
 *:target {
     background-color: var(--target-highlight-color);
@@ -333,49 +340,11 @@ img {
     }
 }
 
-a.cc_list {
-    text-decoration: none;
-}
-
 // use for optional octicons
 // html would be:
 /**
 {% include anchor_headings.html html=content beforeHeading=true anchorBody="<svg class='octicon' viewBox='0 0 16 16' version='1.1' width='16' height='32' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>" %}
 **/
-
-.octicon:hover {
-  visibility: hidden;
-}
-
-h1 .octicon {
-    margin-left: -2.4em;
-    margin-right: calc(2.4em - 1.8em);
-}
-
-h2 .octicon {
-    margin-left: -2.9em;
-    margin-right: calc(2.9em - 1.8em);
-}
-
-h3 .octicon {
-    margin-left: -3.4em;
-    margin-right: calc(3.4em - 1.8em);
-}
-
-h4 .octicon {
-    margin-left: -3.9em;
-    margin-right: calc(3.9em - 1.8em);
-}
-
-h5 .octicon {
-    margin-left: -4.4em;
-    margin-right: calc(4.4em - 1.8em);
-}
-
-h6 .octicon {
-    margin-left: -4.9em;
-    margin-right: calc(4.9em - 1.8em);
-}
 
 .octicon {
     fill: currentColor;
@@ -384,4 +353,38 @@ h6 .octicon {
     vertical-align: middle;
     width: 1.2em;
     height: 1.2em;
+
+    &:hover {
+        visibility: hidden;
+    }
+
+    h1 & {
+        margin-left: -2.4em;
+        margin-right: calc(2.4em - 1.8em);
+    }
+
+    h2 & {
+        margin-left: -2.9em;
+        margin-right: calc(2.9em - 1.8em);
+    }
+
+    h3 & {
+        margin-left: -3.4em;
+        margin-right: calc(3.4em - 1.8em);
+    }
+
+    h4 & {
+        margin-left: -3.9em;
+        margin-right: calc(3.9em - 1.8em);
+    }
+
+    h5 & {
+        margin-left: -4.4em;
+        margin-right: calc(4.4em - 1.8em);
+    }
+
+    h6 & {
+        margin-left: -4.9em;
+        margin-right: calc(4.9em - 1.8em);
+    }
 }
