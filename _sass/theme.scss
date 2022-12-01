@@ -39,39 +39,64 @@
 html {
     @extend [data-theme="light"];
 
-html[data-theme="light"] {
-    --page-back-color: rgb(240, 240, 240);
-    --main-text-color: rgb(0, 0, 0);
-    --main-back-color: rgb(255, 255, 255);
-    --link-text-color: rgb(255, 76, 31);
-    --other-link-color: rgb(120, 217, 113);
-    --target-highlight-color: rgb(125, 0, 255);
-}
+    &[data-theme="light"] {
+        --page-back-color: rgb(240, 240, 240);
+        --main-text-color: rgb(0, 0, 0);
+        --main-back-color: rgb(255, 255, 255);
+        --link-text-color: rgb(255, 76, 31);
+        --other-link-color: rgb(120, 217, 113);
+        --target-highlight-color: rgb(125, 0, 255);
+    }
 
-html[data-theme="dark"] {
-    --page-back-color: rgb(27, 27, 27);
-    --main-text-color: rgb(240, 240, 240);
-    --main-back-color: rgb(17, 17, 17);
-    --link-text-color: rgb(120, 217, 113);
-    --other-link-color: rgb(255, 76, 31);
-    --target-highlight-color: rgb(255, 255, 0);
-}
+    &[data-theme="dark"], &:is(html)[data-theme="UA"] {
+        --page-back-color: rgb(27, 27, 27);
+        --main-text-color: rgb(240, 240, 240);
+        --main-back-color: rgb(17, 17, 17);
+        --link-text-color: rgb(120, 217, 113);
+        --other-link-color: rgb(255, 76, 31);
+        --target-highlight-color: rgb(255, 255, 0);
 
-html[data-theme="rainbow"] {
-    --page-back-color: rgba(27, 27, 27, 0);
-    --main-text-color: rgb(0, 0, 0);
-    --main-back-color: rgba(17, 17, 17, 0.22);
-    --link-text-color: rgb(125, 0, 255);
-    --other-link-color: rgb(255, 76, 31);
-    --target-highlight-color: rgb(255, 255, 0);
+        &[data-theme="UA"] {
+            background-image: linear-gradient(
+                180deg,
+                hsl(211deg,100%,36%) 1%,
+                hsl(242deg,43%,54%) 38%,
+                hsl(270deg,44%,53%) 46%,
+                hsl(295deg,42%,52%) 50%,
+                hsl(316deg,59%,56%) 51%,
+                hsl(328deg,82%,61%) 51%,
+                hsl(338deg,100%,65%) 50%,
+                hsl(347deg,100%,67%) 50%,
+                hsl(0deg,100%,71%) 49%,
+                hsl(15deg,100%,67%) 49%,
+                hsl(27deg,100%,63%) 50%,
+                hsl(37deg,100%,58%) 54%,
+                hsl(46deg,100%,53%) 62%,
+                hsl(52deg,100%,50%) 99%
+            );
 
-    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-    background-size: 1800% 1800%;
-    // animation by Milan Nohejl
-    -webkit-animation: rainbow 13s ease infinite;
-    -z-animation: rainbow 13s ease infinite;
-    -o-animation: rainbow 13s ease infinite;
-    animation: rainbow 13s ease infinite;
+            .wrapper {
+                background-color: rgba(17, 17, 17, 0.666);
+            }
+        }
+    }
+
+    &[data-theme="rainbow"] {
+        --page-back-color: rgba(27, 27, 27, 0);
+        --main-text-color: rgb(0, 0, 0);
+        --main-back-color: rgba(17, 17, 17, 0.22);
+        --link-text-color: rgb(125, 0, 255);
+        --other-link-color: rgb(255, 76, 31);
+        --target-highlight-color: rgb(255, 255, 0);
+    
+        background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+        background-size: 1800% 1800%;
+        // animation by Milan Nohejl
+        -webkit-animation: rainbow 13s ease infinite;
+        -z-animation: rainbow 13s ease infinite;
+        -o-animation: rainbow 13s ease infinite;
+        animation: rainbow 13s ease infinite;
+    }
 }
 
   
