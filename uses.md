@@ -16,7 +16,7 @@ Probably, I have forgotten something but I'll keep this page updated in the futu
 Main computer related hardware:
 
 - **relatively old *MacBook Air* from 2017:**
-Could be superseded, but it still handles most of my work easily; the display is bad though, so I'm often connecting it to my monitor.
+Could be superseded, but it still handles most of my work easily; the display is bad though, so I'm often connecting it to my monitor; due to my ultimate power, I recently managed to brick the internal SSD so it got a replacement.
 
 - **even older *Huawei P9* phone:**
 I'm not a phone-guy and with some manual optimisations it works fine after almost 6 years, so I don't expect to need anything new in the future and I will only get a replacement when the phone is physically broken; the only Google-app left on it is the play store, everything else (not much) is open source and/or carefully selected.
@@ -50,7 +50,7 @@ I'm routing all the audio sources through this and have the *Dual* amp connected
 Other stuff:
 
 - **cameras:**
-Mostly old models as photography is just a hobby; for digital photos I'm using the Nikon D300 (main glass is 17–55 mm f2.8, 70–300 mm f4.5–5.6 and the 105 mm f2.8 micro); for film photography I'm experimenting with anything in my collection, like the *Praktica LB*, the fully manual *Zenit 3M* (which is built like a tank) or one of the various folding cameras that take 120 roll film.
+Mostly old models as photography is just a hobby; for digital photos I'm using the lovely Fujifilm X100T and the Nikon D300 (main glass is 17–55 mm f2.8, 70–300 mm f4.5–5.6 and the 105 mm f2.8 micro); for film photography I'm experimenting with anything in my collection, like the *Praktica LB*, the fully manual *Zenit 3M* (which is built like a tank) or one of the various folding cameras that take 120 roll film.
 
 - **several *Raspberry Pis* and *Arduinos*:**
 Some are permanetly used in projects like *MuonPi*, *PiHole* and a PM 2.5 / weather station; others are free and I use them to experiment and in upcoming projects.
@@ -62,7 +62,7 @@ The applications I use every day run on Mac but might have Windows or Linux equi
 - ***Spark* e-mail and calendar client:**
 Has simple and functional features without being overloaded; automated folders that filter the inbox with custom rules.
 
-- ***Firefox* browser:**
+- ***Waterfox* browser:**
 Modern browser without too many Google dependencies; searching with *DuckDuckGo*, blocking ads and tracking with the *Privacy Badger* and caching CDN requests with *Decentraleyes*; request filtering and beacon blocking is done by *Request Control*; using `userChrome.css` to rearrange the layout and place the tabs in a vertical list (read my [blog](/blog/browser-black-magic)).
 
 - ***Jupyter* and *Spyder*:**
@@ -99,6 +99,9 @@ Allows creating all sorts of graphics programmatically; very manual, i.e. most a
 
 - **selfhosted *Nextcloud* server:**
 Used to access most of my files from multiple devices except those from software development (too many files that change too quickly, I also only develop on my Mac); runs on old and weak hardware that doesn't consume too much power.
+
+- **selfhosted *Navidrome* server:**
+As my digital music collection is far too large to fully carry on my laptop, I access them through the musicplayer Sonixd connected to the Navidrome server which links to the flac-files on the Nextcloud drive.
 
 - ***Wakatime*:**
 Plugin for text editors to record coding time.

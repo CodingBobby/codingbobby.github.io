@@ -64,16 +64,20 @@ I am also part of the [IndieWeb Webring](https://xn--sr8hvo.ws/directory) you ca
 </div>
 
 This website was last compiled on {{ site.time | date: "%Y-%m-%d" }} with Jekyll and 💚.
+And now, banners!
 
 <div class="horizon" style="width: 100%;">
   <div></div>
   <div>
-  <a href="https://web3isgoinggreat.com/" target="_blank" rel="me">
-     <img alt="say no to web3" src="/assets/images/antiNFT.gif"/>
-  </a>
-  <a href="https://yesterweb.org/no-to-web3/" target="_blank" rel="me">
-     <img alt="say no to web3" src="/assets/images/saynotoweb3.gif"/>
-  </a>
+    <a href="https://web3isgoinggreat.com/" target="_blank" rel="me">
+      <img alt="say no to web3" src="/assets/images/antiNFT.gif"/>
+    </a>
+    <a href="https://yesterweb.org/no-to-web3/" target="_blank" rel="me">
+      <img alt="say no to web3" src="/assets/images/saynotoweb3.gif"/>
+    </a>
+    <a href="https://doi.org/10.1177/2041669518821702" target="_blank" rel="me">
+      <img alt="best viewed with eyes" src="/assets/images/besteyes.gif"/>
+    </a>
   </div>
   <div></div>
   <span class="stretch"></span>
