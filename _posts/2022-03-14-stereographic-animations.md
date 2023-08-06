@@ -2,7 +2,7 @@
 layout: post
 title: "Stereographic Animations"
 date: 2022-03-14
-tags: [mathematics,coding,visualisation,science]
+tags: [mathematics, coding, visualisation, science]
 authors: [Bob]
 comments: true
 ---

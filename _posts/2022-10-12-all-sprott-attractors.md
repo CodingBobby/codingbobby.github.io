@@ -2,7 +2,7 @@
 layout: post
 title: "The 19 Sprott Attractors"
 date: 2022-10-12
-tags: [journal,visualisation,mathematics]
+tags: [journal, visualisation, mathematics]
 authors: [Bob]
 comments: true
 ---
