@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CodingBobby | Animated Lorenz-Attractor
+title: Animated Lorenz-Attractor
 tags: [attractor, mathematics, chaos, animation]
 ---
 - P to play/pause.

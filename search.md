@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CodingBobby | Search
+title: Search
 ---
 <style type="text/css" media="screen">
   #search-container {

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CodingBobby | Fractals
+title: Fractals
 tags: [artwork, mathematics, fractals, digital-art]
 ---
 

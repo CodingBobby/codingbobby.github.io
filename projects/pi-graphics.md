@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CodingBobby | Pi Graphics
+title: Pi Graphics
 ---
 These are some images I have created to visualise the first few of the infinitely many digits of $$\pi$$.
 

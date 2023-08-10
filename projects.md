@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CodingBobby | Projects
+title: Projects
 ---
 
 ## Shapes of Chaos

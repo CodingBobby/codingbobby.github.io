@@ -1,4 +1,4 @@
 ---
 layout: archive
-title: CodingBobby | Blog Archive
+title: Blog Archive
 ---

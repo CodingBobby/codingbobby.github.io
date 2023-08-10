@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CodingBobby | Reading Updates
+title: Reading Updates
 ---
 
 {% include reading_updates.html %}

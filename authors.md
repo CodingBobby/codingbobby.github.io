@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CodingBobby | The Authors
+title: The Authors
 ---
 
 <h3 id="Bob">Bob</h3>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CodingBobby | About
+title: About
 ---
 <style>/* dummy first element to prevent dropped initlial cap */</style>
 Hey!

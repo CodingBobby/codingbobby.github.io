@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CodingBobby | Tea Machine
+title: Tea Machine
 ---
 This is an idea of a brewing machine that lifts the teabag out after a set time.
 

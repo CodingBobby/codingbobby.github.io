@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CodingBobby | Random Fibonacci Numbers
+title: Random Fibonacci Numbers
 ---
 Here, I calculated a sequence of random Fibonacci numbers to approximate Viswanath's constant $$e^{\gamma_f}$$.
 Below is a Jupyter notbook I used for calculation and plotting.

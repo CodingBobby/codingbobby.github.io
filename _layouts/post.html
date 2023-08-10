@@ -8,7 +8,13 @@ layout: default
   {% assign time = 1 %}
 {% endif %}
 
-<h1>{{ page.title }}</h1>
+{% if page.date %}
+   {% assign title = page.title %}
+{% else %}
+   {% assign title = "CodingBobby / " | append: page.title %}
+{% endif %}
+
+<h1>{{ title }}</h1>
 {% if page.date %}
    <span class="post_date">
       {{ page.date | date: site.theme_config.date_format }}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CodingBobby | Simple Faces
+title: Simple Faces
 ---
 <style>
    .img-grid {

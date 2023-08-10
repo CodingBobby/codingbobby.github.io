@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CodingBobby | Traktify's Logo
+title: Traktify's Logo
 ---
 Designing the icon for [Traktify](/traktify) involved a process of changing and tweaking things to improve it.
 Because the app development started at a fast pace, the icon development didn't have enough time to go through many iterations.

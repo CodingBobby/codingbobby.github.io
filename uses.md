@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CodingBobby | Uses
+title: Uses
 ---
 On this page you'll find things I am using regularly and are worth listing here.
 I found other people's `/uses` pages quite intesting or useful, and maybe you will, too.

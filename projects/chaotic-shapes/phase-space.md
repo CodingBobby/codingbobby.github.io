@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CodingBobby | Phase Space
+title: Phase Space
 tags: [artwork, mathematics, chaos, attractors, digital-art]
 ---
 {% assign gal = '/assets/images/phase-space' %}

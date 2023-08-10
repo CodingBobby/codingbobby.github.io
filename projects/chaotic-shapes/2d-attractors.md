@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CodingBobby | 2D Attractors
+title: 2D Attractors
 tags: [artwork, mathematics, attractor, digital-art]
 ---
 
