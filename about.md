@@ -35,7 +35,7 @@ My favourite things are:
 
 ![github stats](https://github-readme-stats.vercel.app/api?username=CodingBobby&hide=contribs&show_icons=true&hide_border=true&title_color=000)
 
-If you want to get in touch with me, you can find me on [Twitter](https://twitter.com/BobbyCoding) or write me an [email](mailto:contact@codingbobby.xyz).
+If you want to get in touch with me, you can't find me on Twitter anymore but write me an [email](mailto:codingbobby@posteo.org).
 Comments on blog posts are also welcome if you would like to share your thoughts with other readers.
 
 You can find a list of the hardware and software I regularly use [here](../uses).
@@ -94,7 +94,7 @@ And now, banners!
 I highly recommend you learn about [BOINC](https://boinc.berkeley.edu) if you haven't already.
 It gives you the opportunity to join distributed computing networks of your choice and take part in real science research by donating some of your PC's power.
 
-Especially in the current situation, I can only encourage you to join [Rosetta@home](https://boinc.bakerlab.org/rosetta/) to contribute to research on the coronavirus.
+Especially in the current Covid-19 situation, I encourage you to join [Rosetta@home](https://boinc.bakerlab.org/rosetta/) to contribute to research on the coronavirus.
 Together we can provide science with computing capacities that surpass even the most powerful supercomputers.
 
 Here, you can see in which projects I currently participate:
