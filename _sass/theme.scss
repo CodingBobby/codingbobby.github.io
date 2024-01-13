@@ -37,7 +37,7 @@
 
 // variables and theme
 html {
-    @extend [data-theme="light"];
+    @extend [data-theme="dark"];
 
     &[data-theme="light"] {
         --page-back-color: rgb(240, 240, 240);
@@ -141,6 +141,10 @@ article {
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
     text-align: justify;
+    
+    @media screen and (max-width: 450px) {
+        text-align: left;
+    }
 
     // dropped initial cap
     > p:first-child::first-letter {
