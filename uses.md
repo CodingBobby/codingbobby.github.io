@@ -3,7 +3,7 @@ layout: post
 title: Uses
 ---
 On this page you'll find things I am using regularly and are worth listing here.
-I found other people's `/uses` pages quite intesting or useful, and maybe you will, too.
+I found other people's [/uses](https://uses.tech/) pages quite intesting or useful, and maybe you will, too.
 
 My daily drivers aren't any fancy modernities, just good and robust tech I'm working with for quite some time now.
 To prevent waste and to treat resources more respectfully, I try to get the most out of hardware and use it as long as it's build quality allows.
@@ -19,10 +19,10 @@ Main computer related hardware:
 Could be superseded, but it still handles most of my work easily; the display is bad though, so I'm often connecting it to my monitor; due to my ultimate power, I recently managed to brick the internal SSD so it got a replacement.
 
 - **even older *Huawei P9* phone:**
-I'm not a phone-guy and with some manual optimisations it works fine after almost 6 years, so I don't expect to need anything new in the future and I will only get a replacement when the phone is physically broken; the only Google-app left on it is the play store, everything else (not much) is open source and/or carefully selected.
+I'm not a phone-guy and with some manual optimisations it works fine after almost 6 years, so I don't expect to need anything new in the future and I will only get a replacement when the phone is physically broken; the only Google-app left on it is the play store, everything else (not much) is open source and/or carefully selected. **UPDATE:** A friend offered me to take his *iPhone 13* when he got the new *15*, and now it looks like I have accidentally fully switched to Apple. I said yes because the Huawei's battery became really weak and I was about to get a replacement (for which I would have to open the phone myself etc.) and using his (not so) old phone instead of buing a new one in another year or two was a no-brainer. This way I didn't produce any waste.
 
 - **Linux / Windows desktop:**
-Very outdated hardware on a µATX board with an *AMD* 6-core processor from before the *Ryzen* era, the arguably prettiest GPU ever made (*XFX R9 280X DD*) and (for my applications) mediocre 16 GB DDR3; the machine is a custom build with a black and light green design; it runs *Windows 10* and *Manjaro (Ornara, KDE Plasma)* in dual-boot; obviously prefer the Linux partition but often I need Windows for the special programs.
+Very outdated hardware on a µATX board with an *AMD* 6-core processor from before the *Ryzen* era, the arguably prettiest GPU ever made (*XFX R9 280X DD*) and (for my applications) mediocre 16 GB DDR3; the machine is a custom build with a black and light green design; it runs *Windows 10* and *Manjaro (Ornara, KDE Plasma)* in dual-boot; obviously prefer the Linux partition but often I need Windows for the special programs. **UPDATE:** It looks like the GPU has died after almost 11 years. Because of that, I can't see anything (the CPU has no graphics output) so that I'm now practically Windows-free! Yay but also nay, as I sometimes have to boot up Windows for special software. I tried installing it via Bootcamp on my Mac, but somehow the drive partitioning was not successful. So I'm probably getting another laptop sooner or later -- I'll be looking for a used ThinkPad. The mainboard of my old PC seems to have it's problems as well, so replacing the GPU only is not the best solution.
 
 - **27" *LG* monitor:**
 Okay-ish display with usable colour accuracy (99% sRGB) for photo editing.
@@ -40,6 +40,9 @@ Fully analogue (no badly aging batteries and no misbehaving bluetooth!); superb 
 
 - ***Sennheiser HD 480 classic II* on-ear headphones:**
 Very nice sounding open-back pair if powered adequately ($$100\,\Omega$$ impedance); ear cushions got a new custom padding (that effectively turned them into over-ears) because the original crumbled and was very uncomfy to wear for even short listening sessions.
+
+- ***Koss Porta Pro* on-ear headphones:**
+Incredibly tiny and inexpensive headphones that are decades old and produce an impossibly large soundstage. I replaced the padding with [*Yaxis*](https://www.yaxi.jp/product-gallery/porta-pro/) (which make them really comfortable) and use them on the go and surprisingly often at home. The sound representation is nowhere near neutral, but super engaging and dynamic.
 
 - **ancient *Dual CV 61 W* amplifier:**
 This beautiful piece of equipment with a slick white finish is almost 50 years old but works like new after replacing a few caps; produces a wonderfully rich soundstage together with the *B&O*s.
