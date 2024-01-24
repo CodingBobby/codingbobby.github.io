@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CodingBobby | Shapes of Chaos
+title: Shapes of Chaos
 tags: [artwork, mathematics, differential systems, wallpaper, fractals]
 ---
 ## Strange Attractors
