@@ -37,16 +37,16 @@ It was a great time, no doubt, but I was mostly doing things by myself.
 After I graduated, or to be more precise, while I was still writing my thesis, I started with the courses for the masters degree.
 It would have been far too much to attend all lectures, so I skipped most of them but still, somehow, in hindsight I have no idea how, took most exams of that semester.
 In the second semester (which just finished), I could focus on uni a lot more and I had tons of projects and lab courses to complete for it.
-It was a great time, possibly the greatest I had during my time at university so far, but the quick transition from lazily chilling at home with almost nothing to do, over to writing a thesis (not to mention doing the experiments for it) and learning for exams at the same time, and eventually to working two days a week, keeping up with six difficult lectures, working on several lab tasks, giving a tutorial in physics for freshmen every week and preparing and giving my first own lecture was extremely exhausting.
+It was a great time, possibly the greatest I had during my time at university so far, but the quick transition from lazily chilling at home with almost nothing to do, over to writing a thesis (not to mention doing the experiments for it) and learning for exams at the same time, and eventually to working two days a week, keeping up with six difficult lectures, working on several lab tasks, giving a tutorial in physics for freshmen every week and preparing and giving my first own lecture all within one year was extremely exhausting.
 
-I could have prosponed some of those time consuming things, and that would have made the time far less dense, which is good, but also less surprising for me.
+I could have postponed some of those time consuming things, and that would have made the time far less dense, which is good, but also less surprising for me.
 It somewhat proved my capabilities and disproved that my mental limits are reached quicky.
 You need such a pat on your shoulder once in a while telling you that you're actually good at something.
 So here I am, renewed with solidified self-confidence.
 
 
 ## Reading
-In the little freetime I had, I've read the book "This is How You Loose the Time War"[^tihylttw] by A. El-Mohtar and M. Gladstone, and with being just short of 200 pages, I've done it pretty quickly.
+In the little freetime I had, I've read the book "This is How You Lose the Time War"[^tihylttw] by A. El-Mohtar and M. Gladstone, and with being just short of 200 pages, I've done it pretty quickly.
 It's categorised as science-fiction (no surprise here), but also as romance.
 Latter of which really turns me off in books, so I avoided this particular one for some time.
 Even though it was published in 2019, a local bookstore still had it on it's shelf recently and I figured that I should give it a try nevertheless.
@@ -141,7 +141,7 @@ The world is shit and unfair, but remember, we can shape it.
 ---
 {: data-content="footnotes"}
 
-[^tihylttw]: [Goodreads page](https://www.goodreads.com/book/show/46132305-this-is-how-you-lose-the-time-war) of "This is How You Loose the Time War".
+[^tihylttw]: [Goodreads page](https://www.goodreads.com/book/show/46132305-this-is-how-you-lose-the-time-war) of "This is How You Lose the Time War".
 
 [^sentence]: One of my favourite sections is probably this: *"Flowers grow far away on a planet they’ll call Cephalus, and these flowers bloom once a century, when the living star and its black-hole enter conjunction. I want to fix you a bouquet of them, gathered across eight hundred thousand years, so you can draw our whole engagement in a single breath, all the ages we’ve shaped together."* Even as I'm copying this from the book right now, my tears are knocking on the door again.
 
