@@ -1,0 +1,42 @@
+<h2 id="recommendation">Current Recommendation</h2>
+<div id="song_list">
+    {% for track in site.data.recommendations %}
+        {% if forloop.last == true %}
+            <div class="song_item">
+                <h3 class="rank"></h3>
+                <a href="{{track.trackURL}}" target="_blank" rel="noreferrer"><img src="{{track.image}}"></a>
+                <div class="song_info">
+                    <h3>{{track.name}}</h3>
+                    <h4><a href="{{track.artistURL}}" target="_blank" rel="noreferrer">{{track.artist}}</a> {{track.year}}</h4>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+
+<h2 id="all-time-top-15">All-Time Top 15</h2>
+<div id="song_list">
+   {% for track in site.data.top10songs %}        
+         <div class="song_item">
+             <h3 class="rank">{{forloop.index}}.</h3>
+             <a href="{{track.trackURL}}" target="_blank" rel="noreferrer"><img src="{{track.image}}"></a>
+             <div class="song_info">
+                 <h3>{{track.name}}</h3>
+                 <h4><a href="{{track.artistURL}}" target="_blank" rel="noreferrer">{{track.artist}}</a> {{track.year}}</h4>
+             </div>
+         </div>
+         
+         {% if forloop.index == 5 %}
+             <hr>
+         {% else %}
+             <div class="spacer"></div>
+         {% endif %}
+   {% endfor %}
+</div>
+
+<style>
+   h3, h4 {
+      font-family: iAWriter, sans-serif;
+   }
+</style>
