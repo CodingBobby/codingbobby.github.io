@@ -19,10 +19,10 @@ Main computer related hardware:
 Could be superseded, but it still handles most of my work easily; the display is bad though, so I'm often connecting it to my monitor; due to my ultimate power, I recently managed to brick the internal SSD so it got a replacement.
 
 - **even older *Huawei P9* phone:**
-I'm not a phone-guy and with some manual optimisations it works fine after almost 6 years, so I don't expect to need anything new in the future and I will only get a replacement when the phone is physically broken; the only Google-app left on it is the play store, everything else (not much) is open source and/or carefully selected. **UPDATE:** A friend offered me to take his *iPhone 13* when he got the new *15*, and now it looks like I have accidentally fully switched to Apple. I said yes because the Huawei's battery became really weak and I was about to get a replacement (for which I would have to open the phone myself etc.) and using his (not so) old phone instead of buing a new one in another year or two was a no-brainer. This way I didn't produce any waste.
+I'm not a phone-guy and with some manual optimisations it works fine after almost 6 years, so I don't expect to need anything new in the future and I will only get a replacement when the phone is physically broken; the only Google-app left on it is the play store, everything else (not much) is open source and/or carefully selected. **UPDATE:** A friend offered me to take his *iPhone 13* when he got the new *15*, and now it looks like I have accidentally fully switched to Apple. I said yes because the Huawei's battery became really weak and I was about to get a replacement (for which I would have to open the phone myself etc.) and using his (not so) old phone instead of buing a new one in another year or two was a no-brainer. This way I didn't produce any waste.
 
 - **Linux / Windows desktop:**
-Very outdated hardware on a µATX board with an *AMD* 6-core processor from before the *Ryzen* era, the arguably prettiest GPU ever made (*XFX R9 280X DD*) and (for my applications) mediocre 16 GB DDR3; the machine is a custom build with a black and light green design; it runs *Windows 10* and *Manjaro (Ornara, KDE Plasma)* in dual-boot; obviously prefer the Linux partition but often I need Windows for the special programs. **UPDATE:** It looks like the GPU has died after almost 11 years. Because of that, I can't see anything (the CPU has no graphics output) so that I'm now practically Windows-free! Yay but also nay, as I sometimes have to boot up Windows for special software. I tried installing it via Bootcamp on my Mac, but somehow the drive partitioning was not successful. So I'm probably getting another laptop sooner or later -- I'll be looking for a used ThinkPad. The mainboard of my old PC seems to have it's problems as well, so replacing the GPU only is not the best solution.
+Very outdated hardware on a µATX board with an *AMD* 6-core processor from before the *Ryzen* era, the arguably prettiest GPU ever made (*XFX R9 280X DD*) and (for my applications) mediocre 16 GB DDR3; the machine is a custom build with a black and light green design; it runs *Windows 10* and *Manjaro (Ornara, KDE Plasma)* in dual-boot; obviously prefer the Linux partition but often I need Windows for the special programs. **UPDATE:** It looks like the GPU has died after almost 11 years. Because of that, I can't see anything (the CPU has no graphics output) so that I'm now practically Windows-free! Yay but also nay, as I sometimes have to boot up Windows for special software. I tried installing it via Bootcamp on my Mac, but somehow the drive partitioning was not successful. So I'm probably getting another laptop sooner or later -- I'll be looking for a used ThinkPad. The mainboard of my old PC seems to have it's problems as well, so replacing the GPU only is not the best solution.
 
 - **27" *LG* monitor:**
 Okay-ish display with usable colour accuracy (99% sRGB) for photo editing.
@@ -53,10 +53,10 @@ I'm routing all the audio sources through this and have the *Dual* amp connected
 Other stuff:
 
 - **cameras:**
-Mostly old models as photography is just a hobby; for digital photos I'm using the lovely Fujifilm X100T and the Nikon D300 (main glass is 17–55 mm f2.8, 70–300 mm f4.5–5.6 and the 105 mm f2.8 micro); for film photography I'm experimenting with anything in my collection, like the *Praktica LB*, the fully manual *Zenit 3M* (which is built like a tank) or one of the various folding cameras that take 120 roll film.
+Mostly old models as photography is just a hobby; for digital photos I'm using the lovely Fujifilm X100T and the Nikon D300 (main glass is 17–55 mm f2.8 and the 105 mm f2.8 micro); for film photography I'm experimenting with anything in my collection, like the *Praktica LB*, the fully manual *Zenit 3M* (which is built like a tank) or one of the various folding cameras that take 120 roll film.
 
 - **several *Raspberry Pis* and *Arduinos*:**
-Some are permanetly used in projects like *MuonPi*, *PiHole* and a PM 2.5 / weather station; others are free and I use them to experiment and in upcoming projects.
+Some are permanetly used in projects like *MuonPi*, *PiHole* and a PM 2.5 / weather station; others are free and I use them to experiment and in upcoming projects.
 
 
 ## Software
@@ -79,8 +79,8 @@ Open source app to download, play and organise podcasts on my phone.
 
 Other software and services:
 
-- ***Spotify*:**
-Mostly using it to discover new artists and to play background music as I prefer the higher quality of FLAC files and the feeling of phyical CDs/LPs; I play the audio files with *VOX* on my Mac and *MusicBee* on the PC.
+- ***Tidal*:**
+Daily music listening and exploration is okay-ish with Tidal. The sound quality is practically the best you can get on the market (often 24 bit HiRes and MQA, but at least 16 bit); I dislike the playlist management, you can't freely sort them and as I have hundreds, it's a pain to navigate.
 
 - ***Adobe* software:**
 For photo editing and organisation I'm using Photoshop CC and Lightroom Classic; pretty much the standard stuff.
