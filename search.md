@@ -32,4 +32,26 @@ SimpleJekyllSearch({
     </a>
   </li>`
 })
+
+// pre-populate search field if queried through url
+let params = (new URL(document.location)).searchParams
+let query = params.get('q')
+
+window.onload = function () {
+  if (query != undefined) {
+    let searchInput = document.getElementById('search-input')
+    searchInput.value = query
+    
+    if (document.createEvent) {
+        let event = new CustomEvent('input')
+        searchInput.dispatchEvent(event)
+    }
+    // for those insane people that still use IE8 or lower(??)
+    else {
+        let event = document.createEventObject()
+        event.eventName = 'input'
+        element.fireEvent('on' + event.eventType, event)
+    }
+  }
+}
 </script>
