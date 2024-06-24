@@ -195,6 +195,7 @@
         fuzzy: !1,
         debounceTime: null,
         exclude: [],
+        onInit: Function.prototype,
       },
       n;
     const e = function (t, e) {
@@ -211,6 +212,9 @@
               l(t.target.value);
             }, i.debounceTime));
         });
+
+        // callback after eventListener is added
+        i.onInit();
     }
     function c() {
       i.resultsContainer.innerHTML = "";
