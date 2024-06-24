@@ -24,6 +24,8 @@
          </div>
       </main>
 
+      {% include h_card.html %}
+
       {% if site.goat_counter and jekyll.environment == "production" %}
          {% include goat_counter.html %}
       {% endif %}

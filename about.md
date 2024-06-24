@@ -114,7 +114,7 @@ Have fun browsing on this minimalistic site.
 ### Copyright
 This website and all its original contents including text, images, animations and code which are not embedded or cited from other sources[^external-sources] are licensed under a *Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License*:
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" title="This website and all its original contents including text, images, animations and code which are not embedded or cited from other sources are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.">
   <img alt="Creative Commons License" src="/assets/images/cc-by-nc-sa.png"/>
 </a>
 
