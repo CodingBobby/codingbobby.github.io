@@ -14,15 +14,19 @@ layout: default
    {% assign title = "CodingBobby / " | append: page.title %}
 {% endif %}
 
-<h1>{{ title }}</h1>
+{% assign date = page.date | date: site.theme_config.date_format %}
+
+<article lang="en" class="h-entry">
+
+<h1 class="p-name">{{ title }}</h1>
 {% if page.date %}
-   <span class="post_date">
-      {{ page.date | date: site.theme_config.date_format }}
-   </span>|
+   <time class="dt-published" datetime="{{ date }}"><span class="post_date">
+      {{ date }}
+   </span></time>|
    {{ time }} {% if time > 1 %} mins{% else %}min{% endif %}
    {% if page.authors %}|
       {% for author in page.authors %}
-         <a href="/authors#{{ author }}">
+         <a class="p-author h-card" href="/authors#{{ author }}">
          {{ author }}</a>{% if forloop.last == false %}, {% endif %}
       {% endfor %}
    {% endif %}
@@ -36,8 +40,7 @@ layout: default
    {% endif %}
 {% endif %}
 
-<article lang="en">
-{{ content }}
+<div class="e-content">{{ content }}</div>
 </article>
 
 {% if site.posts.size > 0 and page.authors %}
