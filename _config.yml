@@ -1,20 +1,8 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
 title: CodingBobby
 author: Bob Walter
 email: codingbobby@posteo.org
 description: >-
-  Personal blog of Bob Walter, talking about what interests him and what he learned today.
+  Personal blog of Bob, talking about what interests him and what he learned today.
   He is also showing his projects and lists useful resources for developers
   and science students.
 baseurl: ""
@@ -46,10 +34,6 @@ permalink: /blog/:slug/
 favicon: "./favicon.png"
 
 staticman_url: https://codingbobby-staticman.herokuapp.com/v2/entry/CodingBobby/codingbobby.github.io/master/comments
-
-spotify:
-  id: 58a76bb63e7f462c8921ec0b13097434
-  secret: f5d5fab54aa9463eac496d781ff9e9a2
 
 katex:
   math_engine: null
